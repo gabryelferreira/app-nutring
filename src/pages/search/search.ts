@@ -30,7 +30,7 @@ export class SearchPage {
   async findFoods(){
     let result = await this.get.findFoods();
     if (result.success){
-      this.foods = result.foods;
+      this.foods = result.result;
       this.foodsBackup = this.foods;
       console.log("foods = ", this.foods);
     }
