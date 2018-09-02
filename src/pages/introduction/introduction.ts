@@ -38,7 +38,6 @@ export class IntroductionPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad IntroductionPage');
   }
 
   closeIntroduction(){

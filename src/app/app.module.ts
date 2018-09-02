@@ -9,7 +9,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
-import * as service from './service';
 import { SettingsPage } from '../pages/settings/settings';
 import { IntroductionPage } from '../pages/introduction/introduction';
 import { MontarPratoPage } from '../pages/montar-prato/montar-prato';
@@ -45,9 +44,7 @@ import { MeusPratosPage } from '../pages/meus-pratos/meus-pratos';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    service.LoginGetService,
-    service.LoginPostService
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

@@ -1,3 +1,4 @@
+import * as service from './search.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -12,14 +13,45 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-search',
   templateUrl: 'search.html',
+  providers: [service.SearchGetService, service.SearchPostService]
 })
 export class SearchPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  foods = [];
+  foodsBackup = [];
+  public searchInput = {
+    shouldShowCancel: false,
+    searchText: ""
+  }
+  constructor(public navCtrl: NavController, public navParams: NavParams, private get: service.SearchGetService, private post: service.SearchPostService) {
+    this.findFoods();  
+  }
+
+  async findFoods(){
+    let result = await this.get.findFoods();
+    if (result.success){
+      this.foods = result.foods;
+      this.foodsBackup = this.foods;
+      console.log("foods = ", this.foods);
+    }
+  }
+
+  onInput(event){
+    var allFoods = this.foodsBackup;
+    var text = this.searchInput.searchText;
+    var filteredFoods = allFoods.filter(function(element, i){
+      if (element.nome.toLowerCase().indexOf(text.toLowerCase()) != -1)
+        return true
+      return false
+    });
+    this.foods = filteredFoods;
+  }
+
+  onCancel(event){
+    this.foods = this.foodsBackup;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SearchPage');
   }
 
 }

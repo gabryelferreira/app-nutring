@@ -1,8 +1,10 @@
+import { Config } from './config';
 import { HttpClient } from '@angular/common/http';
 
 export abstract class Connect {
 
-    constructor(private http: HttpClient, private method: string, private url: string){
+    url: string = "http://localhost/nutring-api/api/";
+    constructor(private http: HttpClient, private method: string){
     }
 
     protected async callMethod(_function: string, params?: any): Promise<any> {

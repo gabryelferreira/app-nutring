@@ -19,7 +19,6 @@ export class MeusPratosPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MeusPratosPage');
   }
 
 }

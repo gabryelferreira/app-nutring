@@ -1,7 +1,7 @@
 import { TabsPage } from './../tabs/tabs';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import * as service from '../../app/service'
+import * as service from './login.service';
 import { IntroductionPage } from '../introduction/introduction';
 /**
  * Generated class for the LoginPage page.
@@ -14,6 +14,7 @@ import { IntroductionPage } from '../introduction/introduction';
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
+  providers: [service.LoginGetService, service.LoginPostService]
 })
 export class LoginPage {
 
@@ -37,11 +38,11 @@ export class LoginPage {
     let result = await this.post.login(data);
     console.log("RESULT = ", result)
     if (result.success){
-      if (result.message == "INVALID_LOGIN"){
+      if (result.result == "INVALID_LOGIN"){
         
-      } else if(result.message == "SUCCESS") {
-        localStorage.setItem("userData", JSON.stringify(result.user));
-        if (result.user["acessos"] == 1)
+      } else {
+        localStorage.setItem("userData", JSON.stringify(result.result));
+        if (result.result["acessos"] == 1)
           this.navCtrl.push(IntroductionPage)
         else
           this.navCtrl.push(TabsPage);

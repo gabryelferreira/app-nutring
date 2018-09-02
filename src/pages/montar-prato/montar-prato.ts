@@ -19,7 +19,6 @@ export class MontarPratoPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MontarPratoPage');
   }
 
 }

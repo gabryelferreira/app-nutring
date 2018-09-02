@@ -4,138 +4,28 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
 
-  <ion-navbar>
-    <ion-title>NUTRING</ion-title>
-  </ion-navbar>
 
-</ion-header>
 
 
 <ion-content class="list-avatar-page">
-    <ion-list>
+    <ion-searchbar
+    [(ngModel)]="searchInput.searchText"
+    [showCancelButton]="searchInput.shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+    <ion-list *ngIf="foods">
   
       <ion-list-header>Today</ion-list-header>
-  
-      <ion-item>
+      
+      <ion-item *ngFor="let food of foods; let i = index">
         <ion-avatar item-start>
-          <img src="assets/img/avatar-ts-woody.png">
+          <img [src]="food.img_url">
         </ion-avatar>
-        <h2>Maçã</h2>
-        <p>Porção: 165g</p>
-        <ion-note item-end>120kcal</ion-note>
-      </ion-item>
-  
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/avatar-ts-buzz.png">
-        </ion-avatar>
-        <h2>Abacate</h2>
-        <p>Porção: 110g</p>
-        <ion-note item-end>200kcal</ion-note>
-      </ion-item>
-  
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/avatar-ts-jessie.png">
-        </ion-avatar>
-        <h2>Macarrão</h2>
-        <p>Porção: 75g</p>
-        <ion-note item-end>315kcal</ion-note>
-      </ion-item>
-  
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/avatar-ts-potatohead.png">
-        </ion-avatar>
-        <h2>Batata</h2>
-        <p>Porção: 250g</p>
-        <ion-note item-end>500kcal</ion-note>
-      </ion-item>
-  
-    </ion-list>
-  
-    <ion-list>
-  
-      <ion-list-header>Yesterday</ion-list-header>
-  
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/avatar-ts-hamm.png">
-        </ion-avatar>
-        <h2>Hamm</h2>
-        <p>You heard of Kung Fu? Well get ready for pork chop.</p>
-        <ion-note item-end>11:11 pm</ion-note>
-      </ion-item>
-  
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/avatar-ts-slinky.png">
-        </ion-avatar>
-        <h2>Slinky Dog</h2>
-        <p>I may not be a smart dog, but I know what roadkill is.</p>
-        <ion-note item-end>8:54 pm</ion-note>
-      </ion-item>
-  
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/avatar-ts-rex.png">
-        </ion-avatar>
-        <h2>Rex</h2>
-        <p>Were you scared? Tell me honestly.</p>
-        <ion-note item-end>7:22 am</ion-note>
-      </ion-item>
-  
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/avatar-ts-bullseye.png">
-        </ion-avatar>
-        <h2>Bullseye</h2>
-        <p>Neigh!</p>
-        <ion-note item-end>2:08 am</ion-note>
-      </ion-item>
-  
-    </ion-list>
-  
-    <ion-list>
-  
-      <ion-list-header>Last Week</ion-list-header>
-  
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/avatar-ts-barbie.png">
-        </ion-avatar>
-        <h2>Barbie</h2>
-        <p>So, who's ready for Ken's dream tour?</p>
-        <ion-note item-end>Sun</ion-note>
-      </ion-item>
-  
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/avatar-ts-squeeze.png">
-        </ion-avatar>
-        <h2>Squeeze</h2>
-        <p>The claw is our master.</p>
-        <ion-note item-end>Fri</ion-note>
-      </ion-item>
-  
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/avatar-ts-sarge.png">
-        </ion-avatar>
-        <h2>Sarge</h2>
-        <p>Code Red, repeat: We're at Code Red!</p>
-        <ion-note item-end>Wed</ion-note>
-      </ion-item>
-  
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/avatar-ts-bopeep.png">
-        </ion-avatar>
-        <h2>Bo Peep</h2>
-        <p>What would you say if I get someone else to watch the sheep for me tonight?</p>
-        <ion-note item-end>Mon</ion-note>
+        <h2>{{food.nome}}</h2>
+        <p>{{food.kcal | number:'1.0-2'}} kcal</p>
+        <ion-note item-end>#{{i+1}}</ion-note>
       </ion-item>
   
     </ion-list>
