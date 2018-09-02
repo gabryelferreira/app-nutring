@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -13,14 +12,19 @@ import { HttpClientModule } from '@angular/common/http';
 import * as service from './service';
 import { SettingsPage } from '../pages/settings/settings';
 import { IntroductionPage } from '../pages/introduction/introduction';
+import { MontarPratoPage } from '../pages/montar-prato/montar-prato';
+import { SearchPage } from '../pages/search/search';
+import { MeusPratosPage } from '../pages/meus-pratos/meus-pratos';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     TabsPage,
     LoginPage,
     SettingsPage,
-    IntroductionPage
+    IntroductionPage,
+    MontarPratoPage,
+    SearchPage,
+    MeusPratosPage
   ],
   imports: [
     BrowserModule,
@@ -30,11 +34,13 @@ import { IntroductionPage } from '../pages/introduction/introduction';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     TabsPage,
     LoginPage,
     SettingsPage,
-    IntroductionPage
+    IntroductionPage,
+    MontarPratoPage,
+    SearchPage,
+    MeusPratosPage
   ],
   providers: [
     StatusBar,
