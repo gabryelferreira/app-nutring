@@ -38,7 +38,8 @@ $colors: (
   secondary:  #488aff,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  fb:      #3b5998,
 );
 
 $toolbar-background: #32db64;
@@ -50,6 +51,9 @@ ion-navbar {
   }
 }
 
+button {
+  font-family: Roboto Condensed, sans-serif !important;
+}
 
 
 

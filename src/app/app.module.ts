@@ -1,3 +1,4 @@
+import { RegisterPage } from './../pages/register/register';
 import { LoginPage } from './../pages/login/login';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,6 +15,9 @@ import { IntroductionPage } from '../pages/introduction/introduction';
 import { MontarPratoPage } from '../pages/montar-prato/montar-prato';
 import { SearchPage } from '../pages/search/search';
 import { MeusPratosPage } from '../pages/meus-pratos/meus-pratos';
+import { InputMaskModule } from 'ionic-input-mask';
+import { BrMaskerModule } from 'brmasker-ionic-3';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -23,11 +27,14 @@ import { MeusPratosPage } from '../pages/meus-pratos/meus-pratos';
     IntroductionPage,
     MontarPratoPage,
     SearchPage,
-    MeusPratosPage
+    MeusPratosPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    InputMaskModule,
+    BrMaskerModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -39,7 +46,8 @@ import { MeusPratosPage } from '../pages/meus-pratos/meus-pratos';
     IntroductionPage,
     MontarPratoPage,
     SearchPage,
-    MeusPratosPage
+    MeusPratosPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,

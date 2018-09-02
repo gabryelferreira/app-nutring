@@ -26,10 +26,30 @@
     </ion-item>
 
     <div padding>
-      <button ion-button full (click)="login()">Entrar</button>  
+      <button ion-button full (click)="login()">ENTRAR</button>
     </div>
     <div class="align-center">
-      <a href="#">Precisa de ajuda?</a>
+      <a href="#">Esqueceu a senha?</a>
     </div>
   </div>
+  
+  <ion-footer padding no-border>
+      <h2><span>ou</span></h2>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+              <button ion-button full (click)="loginWithFacebook()" color="fb" icon-start >
+                <ion-icon name="logo-facebook"></ion-icon>
+                   ENTRAR COM FACEBOOK
+              </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button full (click)="goToRegister()" icon-start style="color: #32db64; background: #fff; border: 1px solid rgb(222, 222, 222)">
+              <ion-icon name="person-add"></ion-icon>
+                  CRIAR CONTA
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-footer>
 </ion-content>

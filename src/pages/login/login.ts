@@ -1,3 +1,4 @@
+import { RegisterPage } from './../register/register';
 import { TabsPage } from './../tabs/tabs';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -48,7 +49,14 @@ export class LoginPage {
           this.navCtrl.push(TabsPage);
       }
     }
-    
+  }
+
+  goToRegister(){
+    this.navCtrl.push(RegisterPage);
+  }
+
+  loginWithFacebook(){
+    console.log("Boa sorte, @nickmaglowsch.");
   }
 
 }

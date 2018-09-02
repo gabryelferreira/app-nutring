@@ -1,2 +1,21 @@
 page-login {
+    .no-account-span {
+        color: #888;
+    }
+    h2 {
+        width: 94%; 
+        text-align: center; 
+        border-bottom: 1px solid #aaa; 
+        line-height: 0.1em;
+        margin: 10px 0 20px;
+        margin-left: auto;
+        margin-right: auto;
+     } 
+     
+     h2 span { 
+         background:#fff; 
+         padding:0 10px;
+         font-size: 15px;
+         color: #aaa; 
+     }
 }
