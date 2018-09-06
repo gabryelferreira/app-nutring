@@ -4,16 +4,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as service from './login.service';
 import { IntroductionPage } from '../introduction/introduction';
-import {
-  AuthService,
-  FacebookLoginProvider
-} from 'angular-6-social-login-v2';
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 
 @IonicPage()
 @Component({
@@ -28,15 +19,15 @@ export class LoginPage {
     senha: ""
   }
 
-  constructor(private socialAuthService: AuthService, public navCtrl: NavController, public navParams: NavParams, private get: service.LoginGetService, private post: service.LoginPostService) {
-    
+  constructor(public navCtrl: NavController, public navParams: NavParams, private get: service.LoginGetService, private post: service.LoginPostService, private fb: Facebook) {
+
   }
 
   ionViewDidLoad() {
 
   }
 
-  async login(){
+  async login() {
     let data = new FormData()
     data.append("email", this.user.email)
     data.append("senha", this.user.senha)
@@ -45,22 +36,21 @@ export class LoginPage {
     this.entrar(result)
   }
 
-  goToRegister(){
+  goToRegister() {
     this.navCtrl.push(RegisterPage)
   }
 
-  socialSignIn(socialPlatform: string) {
-    this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID).then(
-      async (userData) => {
-        console.log(socialPlatform + " sign in data : ", userData)
-        let result = await this.post.connectWithFacebook(userData)
-        console.log("usuario logado: ", result)
+  loginFacebook() {
+    this.fb.login(['public_profile', 'email', 'email', 'user_birthday', 'user_gender'])
+      .then(async (res: FacebookLoginResponse) => {
+        console.log('Logged into Facebook!', res)
+        let result = await this.post.connectWithFacebook(res)
         this.entrar(result)
-      }
-    );
+      })
+      .catch(e => console.log('Error logging into Facebook', e));
   }
 
-  entrar(result){
+  entrar(result) {
     if (result.success) {
       console.log(result)
       if (result.result == "INVALID_LOGIN") {

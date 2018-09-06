@@ -17,24 +17,7 @@ import { SearchPage } from '../pages/search/search';
 import { MeusPratosPage } from '../pages/meus-pratos/meus-pratos';
 import { InputMaskModule } from 'ionic-input-mask';
 import { BrMaskerModule } from 'brmasker-ionic-3';
-import {
-  SocialLoginModule,
-  AuthServiceConfig,
-  FacebookLoginProvider
-} from "angular-6-social-login-v2"
-
-export function getAuthServiceConfigs() {
-  let config = new AuthServiceConfig(
-    [
-      {
-        id: FacebookLoginProvider.PROVIDER_ID,
-        provider: new FacebookLoginProvider("203136383666725")
-      }
-    ]
-  )
-  return config;
-}
-
+import { Facebook } from '@ionic-native/facebook';
 @NgModule({
   declarations: [
     MyApp,
@@ -52,7 +35,6 @@ export function getAuthServiceConfigs() {
     HttpClientModule,
     InputMaskModule,
     BrMaskerModule,
-    SocialLoginModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -70,8 +52,8 @@ export function getAuthServiceConfigs() {
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    { provide: AuthServiceConfig, useFactory: getAuthServiceConfigs }
   ]
 })
 export class AppModule { }
