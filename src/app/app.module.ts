@@ -19,6 +19,8 @@ import { InputMaskModule } from 'ionic-input-mask';
 import { BrMaskerModule } from 'brmasker-ionic-3';
 import { Facebook } from '@ionic-native/facebook';
 import { SettingsService } from '../pages/settings/settings.service';
+import { SocialSharing } from '@ionic-native/social-sharing';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -55,6 +57,7 @@ import { SettingsService } from '../pages/settings/settings.service';
     SplashScreen,
     Facebook,
     SettingsService,
+    SocialSharing,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })

@@ -34,6 +34,7 @@ export class LoginPage {
     let result = await this.post.login(data)
     console.log("RESULT = ", result)
     this.entrar(result)
+    this.navCtrl.push(TabsPage)
   }
 
   goToRegister() {

@@ -89,5 +89,6 @@
         <variable name="ANDROID_SDK_VERSION" value="4.+" />
     </plugin>
     <plugin name="cordova-plugin-headercolor" spec="^1.0.0" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="^5.4.1" />
     <engine name="android" spec="7.0.0" />
 </widget>

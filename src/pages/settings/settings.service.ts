@@ -19,3 +19,10 @@ export class SettingsService {
         return this.theme.asObservable();
     }
 }
+
+export interface shareApp{
+    message:string;
+    subject:string;
+    file:string;
+    url:string;
+}

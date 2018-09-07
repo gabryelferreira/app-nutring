@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { SettingsService } from './settings.service';
-
+import { SocialSharing } from '@ionic-native/social-sharing';
+import * as settings from './settings.service'
 /**
  * Generated class for the SettingsPage page.
  *
@@ -20,9 +21,16 @@ export class SettingsPage {
 
   darkTheme: boolean = false;
   selectedTheme: String = "";
+  sharing:settings.shareApp = {
+    file : 'https://cdn-images-1.medium.com/max/800/0*KiK6x8QTY0PstmPU.png',
+    message: 'Estou usando o Nutring, baixe agora na Play Store!',
+    subject : null,
+    url : 'https://cdn-images-1.medium.com/max/800/0*KiK6x8QTY0PstmPU.png'
+  };
+  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private settings: SettingsService) {
-    this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private _settings: SettingsService, private socialSharing: SocialSharing) {
+    this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.darkTheme = this.selectedTheme == "dark-theme";
   }
 
@@ -52,12 +60,18 @@ export class SettingsPage {
   }
 
   toggleDarkTheme(e) {
-
     if (this.darkTheme)
-      this.settings.setActiveTheme('dark-theme');
+      this._settings.setActiveTheme('dark-theme');
     else
-      this.settings.setActiveTheme('light-theme');
+      this._settings.setActiveTheme('light-theme');
+  }
 
+  share(){
+    this.socialSharing.share(this.sharing.message, this.sharing.subject, this.sharing.file,this.sharing.url).then(()=>{
+
+    }).catch(()=>{
+
+    });
   }
 
   logout() {
