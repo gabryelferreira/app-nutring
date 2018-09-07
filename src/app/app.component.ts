@@ -5,6 +5,7 @@ import { Platform, Tab } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RegisterPage } from '../pages/register/register';
+import { SettingsService } from '../pages/settings/settings.service';
 
 
 @Component({
@@ -12,8 +13,10 @@ import { RegisterPage } from '../pages/register/register';
 })
 export class MyApp {
   rootPage:any = LoginPage;
+  selectedTheme: String;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private settings: SettingsService) {
+    this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     if (localStorage.getItem("userData"))
       this.rootPage = TabsPage
     else

@@ -19,6 +19,7 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
+    <preference name="HeaderColor" value="#26de81" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
@@ -87,5 +88,6 @@
         <variable name="APP_NAME" value="Nutring" />
         <variable name="ANDROID_SDK_VERSION" value="4.+" />
     </plugin>
+    <plugin name="cordova-plugin-headercolor" spec="^1.0.0" />
     <engine name="android" spec="7.0.0" />
 </widget>

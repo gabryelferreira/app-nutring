@@ -30,9 +30,9 @@
     </ion-item>
 
     <ion-item>
-      <ion-toggle checked="false"></ion-toggle>
+      <ion-toggle checked="false" [(ngModel)]="theme" (ngModelChange)="toggleDarkTheme($event)"></ion-toggle>
       <ion-label>
-        Muggle Studies
+        Dark Theme
       </ion-label>
       <ion-icon name='body' item-start></ion-icon>
     </ion-item>

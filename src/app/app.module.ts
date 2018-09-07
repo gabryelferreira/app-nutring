@@ -18,6 +18,7 @@ import { MeusPratosPage } from '../pages/meus-pratos/meus-pratos';
 import { InputMaskModule } from 'ionic-input-mask';
 import { BrMaskerModule } from 'brmasker-ionic-3';
 import { Facebook } from '@ionic-native/facebook';
+import { SettingsService } from '../pages/settings/settings.service';
 @NgModule({
   declarations: [
     MyApp,
@@ -53,6 +54,7 @@ import { Facebook } from '@ionic-native/facebook';
     StatusBar,
     SplashScreen,
     Facebook,
+    SettingsService,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })
