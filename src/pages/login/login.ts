@@ -4,12 +4,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as service from './login.service';
 import { IntroductionPage } from '../introduction/introduction';
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 
 @IonicPage()
 @Component({
@@ -24,39 +19,50 @@ export class LoginPage {
     senha: ""
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private get: service.LoginGetService, private post: service.LoginPostService) {
-    
+  constructor(public navCtrl: NavController, public navParams: NavParams, private get: service.LoginGetService, private post: service.LoginPostService, private fb: Facebook) {
+
   }
 
   ionViewDidLoad() {
 
   }
 
-  async login(){
-    let data = new FormData();
+  async login() {
+    let data = new FormData()
     data.append("email", this.user.email)
     data.append("senha", this.user.senha)
-    let result = await this.post.login(data);
+    let result = await this.post.login(data)
     console.log("RESULT = ", result)
-    if (result.success){
-      if (result.result == "INVALID_LOGIN"){
-        
+    this.entrar(result)
+  }
+
+  goToRegister() {
+    this.navCtrl.push(RegisterPage)
+  }
+
+  loginFacebook() {
+    this.fb.login(['public_profile', 'email', 'email', 'user_birthday', 'user_gender'])
+      .then(async (res: FacebookLoginResponse) => {
+        console.log('Logged into Facebook!', res)
+        let result = await this.post.connectWithFacebook(res)
+        this.entrar(result)
+      })
+      .catch(e => console.log('Error logging into Facebook', e));
+  }
+
+  entrar(result) {
+    if (result.success) {
+      console.log(result)
+      if (result.result == "INVALID_LOGIN") {
+      } else if (result.result == "ERROR") {
       } else {
-        localStorage.setItem("userData", JSON.stringify(result.result));
+        localStorage.setItem("userData", JSON.stringify(result.result))
         if (result.result["acessos"] == 1)
           this.navCtrl.push(IntroductionPage)
         else
-          this.navCtrl.push(TabsPage);
+          this.navCtrl.push(TabsPage)
       }
     }
-  }
-
-  goToRegister(){
-    this.navCtrl.push(RegisterPage);
-  }
-
-  loginWithFacebook(){
-    console.log("Boa sorte, @nickmaglowsch.");
   }
 
 }

@@ -17,7 +17,7 @@ import { SearchPage } from '../pages/search/search';
 import { MeusPratosPage } from '../pages/meus-pratos/meus-pratos';
 import { InputMaskModule } from 'ionic-input-mask';
 import { BrMaskerModule } from 'brmasker-ionic-3';
-
+import { Facebook } from '@ionic-native/facebook';
 @NgModule({
   declarations: [
     MyApp,
@@ -52,7 +52,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    Facebook,
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })
-export class AppModule {}
+export class AppModule { }
