@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as service from './register.service';
+import { IntroductionPage } from '../introduction/introduction';
 /**
  * Generated class for the RegisterPage page.
  *
@@ -41,7 +42,7 @@ export class RegisterPage {
       console.log("RESULT = ", result);
       if (result.success){
         localStorage.setItem("userData", JSON.stringify(result.result));
-        location.reload();
+          this.navCtrl.push(IntroductionPage)
       }
     } else {
       console.log("nao ta valido")

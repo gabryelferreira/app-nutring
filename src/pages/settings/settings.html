@@ -6,28 +6,35 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>NUTRING</ion-title>
-  </ion-navbar>
+    <ion-navbar>
 
-</ion-header>
+        <ion-buttons left>
+          <button ion-button icon-only (click)="openModal()">
+            <ion-icon name="contact"></ion-icon>
+          </button>
+        </ion-buttons>
+
+      <ion-title text-left>
+        Gabryel Ferreira
+      </ion-title>
+  
+      <ion-buttons end>
+        <button ion-button (click)="openModal()">
+            <ion-note item-end color="white">Ver perfil</ion-note>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  
+  </ion-header>
 
 
 <ion-content>
-    
+
   <ion-list no-border style="border: 0;">
 
     <ion-list-header>
-      Classes
+      Geral
     </ion-list-header>
-
-    <ion-item>
-      <ion-icon name='planet' item-start></ion-icon>
-      Astronomy
-      <ion-note item-end>
-      To the moon
-      </ion-note>
-    </ion-item>
 
     <ion-item>
       <ion-toggle checked="darkTheme" [(ngModel)]="darkTheme" (ngModelChange)="toggleDarkTheme($event)"></ion-toggle>
@@ -37,50 +44,26 @@
       <ion-icon name='moon' item-start></ion-icon>
     </ion-item>
 
-    <ion-item>
-      <ion-icon name='leaf' item-start></ion-icon>
-      Herbology
-      <ion-icon name='rose' item-end color="secondary"></ion-icon>
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name='flask' item-start></ion-icon>
-      Potions
-      <ion-note item-end>
-      Poisonous
-      </ion-note>
-    </ion-item>
-
-
-
   </ion-list>
 
 
   <ion-list>
 
     <ion-list-header>
-      Activities
+      Alimentos
     </ion-list-header>
 
     <ion-item>
-      Incantation
+      Sugerir um alimento
       <ion-icon name='color-wand' item-start></ion-icon>
-      <ion-note item-end>Crucio!</ion-note>
     </ion-item>
 
     <ion-item>
       <ion-toggle checked="true"></ion-toggle>
       <ion-label>
-        Quidditch Practice
+        Receber sugestões
       </ion-label>
-      <ion-icon name='brush' item-start></ion-icon>
-    </ion-item>
-
-
-    <ion-item>
-      <ion-icon name='wine' item-start></ion-icon>
-      Mead Drinking
-      <ion-note item-end>Yes please</ion-note>
+      <ion-icon name='chatboxes' item-start></ion-icon>
     </ion-item>
 
 
@@ -89,20 +72,21 @@
   <ion-list>
 
     <ion-list-header>
-      Friends
+      Outros
     </ion-list-header>
 
     <ion-item>
-      <ion-icon name='flash' item-start></ion-icon>
-      Harry
-      <ion-note item-end>The boy who lived</ion-note>
+      <ion-icon name='help' item-start></ion-icon>
+      Ajuda
+      <ion-note item-end>Precisa de ajuda?</ion-note>
+    </ion-item>
+  <ion-item>
+
+      <ion-icon name='mail-open' item-start></ion-icon>
+      Contate-nos
     </ion-item>
 
-    <ion-item>
-      <ion-icon name='book' item-start></ion-icon>
-      Hermoine
-      <ion-note item-end>Muggle-born</ion-note>
-    </ion-item>
+
 
     <ion-item (click)="showConfirm()">
       <ion-icon name='power' item-start></ion-icon>

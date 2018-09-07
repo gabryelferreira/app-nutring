@@ -57,10 +57,7 @@ export class LoginPage {
       } else if (result.result == "ERROR") {
       } else {
         localStorage.setItem("userData", JSON.stringify(result.result))
-        if (result.result["acessos"] == 1)
-          this.navCtrl.push(IntroductionPage)
-        else
-          this.navCtrl.push(TabsPage)
+        this.navCtrl.push(TabsPage)
       }
     }
   }
