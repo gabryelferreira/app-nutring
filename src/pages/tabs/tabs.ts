@@ -4,6 +4,7 @@ import { SettingsPage } from '../settings/settings';
 import { MontarPratoPage } from '../montar-prato/montar-prato';
 import { SearchPage } from '../search/search';
 import { MeusPratosPage } from '../meus-pratos/meus-pratos';
+import { SettingsService } from '../settings/settings.service';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -14,8 +15,8 @@ export class TabsPage {
   tab2Root = SearchPage;
   tab3Root = MeusPratosPage;
   tab4Root = SettingsPage;
-
-  constructor() {
-
+  selectedTheme: String = "";
+  constructor(private settings: SettingsService) {
+    this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }
 }

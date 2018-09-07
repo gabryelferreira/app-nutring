@@ -1,6 +1,25 @@
 .dark-theme {
     ion-content {
-      background-color: #2f3542;
+      background: #4b4b4b;
+      transition: .3s;
     }
-   
+
+    ion-item {
+      background: #4b4b4b;
+      color: #fff;
+      transition: .3s;
+    }
+
+    ion-list-header {
+      background: #4b4b4b;
+      color: #fff;
+      transition: .3s;
+    }
+
+    ion-header {
+      ion-navbar {
+        background: #000;
+      }
+    }
+
   }

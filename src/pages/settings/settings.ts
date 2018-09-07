@@ -23,6 +23,7 @@ export class SettingsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private settings: SettingsService) {
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+    this.darkTheme = this.selectedTheme == "dark-theme";
   }
 
   ionViewDidLoad() {

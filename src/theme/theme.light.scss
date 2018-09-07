@@ -1,6 +1,17 @@
 .light-theme {
-    ion-content {
-      background-color: #fff;
-    }
-   
+  ion-content {
+    background: #fff;
+    transition: .3s;
   }
+
+  ion-item {
+    background: #fff;
+    transition: .3s;
+  }
+
+  ion-list-header {
+    background: #fff;
+    transition: .3s;
+  }
+   
+}
