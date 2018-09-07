@@ -43,8 +43,9 @@ $colors: (
   white:        #fff,
   dark:       #222,
   fb:      #3b5998,
-  dark-theme: #1e272e,
+  dark-theme: #101010,
   light-theme: #32db64,
+  transparent: transparent,
 );
 
 $toolbar-background: #32db64;
@@ -53,7 +54,6 @@ ion-navbar {
   ion-title {
     text-align: center;
     font-family: Roboto Condensed, sans-serif;
-    
   }
 }
 

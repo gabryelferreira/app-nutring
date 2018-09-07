@@ -43,6 +43,7 @@ export class IntroductionPage {
   closeIntroduction(){
     var storage = localStorage.getItem("userData");
     storage = JSON.parse(storage);
+    console.log("storage", storage)
     storage["acessos"] = storage["acessos"] + 1;
     localStorage.setItem("userData", JSON.stringify(storage));
     this.navCtrl.push(TabsPage);

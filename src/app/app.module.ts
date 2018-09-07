@@ -1,3 +1,4 @@
+import { LoadingService } from './framework/loaders/loading.service';
 import { RegisterPage } from './../pages/register/register';
 import { LoginPage } from './../pages/login/login';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -58,6 +59,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     Facebook,
     SettingsService,
     SocialSharing,
+    LoadingService,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })

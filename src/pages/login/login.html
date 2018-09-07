@@ -26,32 +26,35 @@
     </ion-item>
 
     <div padding>
-      <button ion-button full (click)="login()">ENTRAR</button>
+      <button *ngIf="!loadingLogin" ion-button full (click)="login()">ENTRAR</button>
+      <button *ngIf="loadingLogin" ion-button full><ion-spinner color="white" name="bubbles"></ion-spinner></button>
     </div>
     <div class="align-center">
       <a href="#">Esqueceu a senha?</a>
     </div>
   </form>
-  
-</ion-content>
-<ion-footer padding no-border>
+  <div padding no-border style="position: absolute; bottom: 0; width: 90%;">
     <h2><span>ou</span></h2>
     <ion-grid>
       <ion-row>
         <ion-col>
-            <button ion-button full (click)="loginWithFacebook()" color="fb" icon-start >
+            <button *ngIf="!loadingFacebookLogin" [disabled]="loadingSomething" ion-button full (click)="loginFacebook()" color="fb" icon-start >
               <ion-icon name="logo-facebook"></ion-icon>
                  ENTRAR COM FACEBOOK
+            </button>
+            <button *ngIf="loadingFacebookLogin" ion-button full color="fb" icon-start >
+                <ion-spinner color="white" name="bubbles"></ion-spinner>
             </button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <button ion-button full (click)="goToRegister()" icon-start style="color: #32db64; background: #fff; border: 1px solid rgb(222, 222, 222)">
+          <button [disabled]="loadingSomething" ion-button full (click)="goToRegister()" icon-start style="color: #32db64; background: #fff; border: 1px solid rgb(222, 222, 222)">
             <ion-icon name="person-add"></ion-icon>
                 CRIAR CONTA
           </button>
         </ion-col>
       </ion-row>
     </ion-grid>
-</ion-footer>
+  </div>
+</ion-content>

@@ -9,25 +9,36 @@
 
 
 <ion-content class="list-avatar-page">
-    <ion-searchbar
+  
+  <ion-searchbar
     [(ngModel)]="searchInput.searchText"
     [showCancelButton]="searchInput.shouldShowCancel"
     (ionInput)="onInput($event)"
     (ionCancel)="onCancel($event)">
   </ion-searchbar>
-    <ion-list *ngIf="foods">
-  
-      <ion-list-header>Today</ion-list-header>
-      
-      <ion-item *ngFor="let food of foods; let i = index">
-        <ion-avatar item-start>
-          <img [src]="food.img_url">
-        </ion-avatar>
-        <h2>{{food.nome}}</h2>
-        <p>{{food.kcal | number:'1.0-2'}} kcal</p>
-        <ion-note item-end>#{{i+1}}</ion-note>
-      </ion-item>
-  
-    </ion-list>
-  
-  </ion-content>
+
+  <ion-list *ngIf="foods && foods.length > 0">
+
+    <ion-list-header>
+      Alimentos
+      <button ion-button item-end (click)="buttonClick()" icon-only color="transparent">
+          <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-list-header>
+    
+    <ion-item *ngFor="let food of foods; let i = index">
+      <ion-avatar item-start>
+        <img [src]="food.img_url">
+      </ion-avatar>
+      <h2>{{food.nome}}</h2>
+      <p>{{food.kcal | number:'1.0-2'}} kcal</p>
+      <ion-note item-end>#{{i+1}}</ion-note>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

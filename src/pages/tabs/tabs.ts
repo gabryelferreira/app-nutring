@@ -18,5 +18,7 @@ export class TabsPage {
   selectedTheme: String = "";
   constructor(private settings: SettingsService) {
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+    if (this.selectedTheme == "" || this.selectedTheme == null || this.selectedTheme == undefined)
+      this.selectedTheme = "primary";
   }
 }

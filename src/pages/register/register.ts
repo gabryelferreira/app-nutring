@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as service from './register.service';
 import { IntroductionPage } from '../introduction/introduction';
+import { ToastController } from 'ionic-angular';
+
 /**
  * Generated class for the RegisterPage page.
  *
@@ -28,7 +30,7 @@ export class RegisterPage {
   }
   validUser = ["nome", "data_nasc", "sexo", "email", "usuario", "senha", "telefone"];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private post: service.RegisterPostService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private post: service.RegisterPostService, private toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
@@ -41,11 +43,18 @@ export class RegisterPage {
       let result = await this.post.register(this.user);
       console.log("RESULT = ", result);
       if (result.success){
-        localStorage.setItem("userData", JSON.stringify(result.result));
+        console.log("result = ", result.success)
+        if (result.result == "USER_EXISTS"){
+          this.showToast("Nome de usuário já cadastrado", "top");
+        } else if (result.result == "EMAIL_EXISTS"){
+          this.showToast("E-mail já cadastrado", "top");
+        } else {
+          localStorage.setItem("userData", JSON.stringify(result.result));
           this.navCtrl.push(IntroductionPage)
+        }
       }
     } else {
-      console.log("nao ta valido")
+      this.showToast("Preencha os campos corretamente", "top");
     }
 
   }
@@ -65,6 +74,17 @@ export class RegisterPage {
 
   goToLogin(){
     this.navCtrl.pop();
+  }
+
+  showToast(message: string, position: string) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      showCloseButton: false,
+      duration: 2500,
+      position: position
+    });
+
+    toast.present(toast);
   }
 
 }

@@ -17,6 +17,7 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private settings: SettingsService) {
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+    console.log("local storage = ", localStorage.getItem("userData"))
     if (localStorage.getItem("userData"))
       this.rootPage = TabsPage
     else

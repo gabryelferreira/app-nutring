@@ -7,7 +7,10 @@ export class SettingsService {
     private theme: BehaviorSubject<String>;
  
     constructor() {
-        this.theme = new BehaviorSubject(localStorage.getItem("theme"));
+        let theme = "light-theme";
+        if (localStorage.getItem("theme"))
+            theme = localStorage.getItem("theme");
+        this.theme = new BehaviorSubject(theme);
     }
  
     setActiveTheme(val: string) {

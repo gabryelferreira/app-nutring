@@ -1,3 +1,4 @@
+import { SettingsService } from './../settings/settings.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -15,7 +16,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MeusPratosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  selectedTheme: String = "";
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService) {
+    _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }
 
   ionViewDidLoad() {
