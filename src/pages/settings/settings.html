@@ -9,17 +9,17 @@
     <ion-navbar>
 
         <ion-buttons left>
-          <button ion-button icon-only (click)="openModal()">
+          <button ion-button icon-only>
             <ion-icon name="contact"></ion-icon>
           </button>
         </ion-buttons>
 
       <ion-title text-left>
-        Gabryel Ferreira
+        {{user.nome}}
       </ion-title>
   
       <ion-buttons end>
-        <button ion-button (click)="openModal()">
+        <button ion-button>
             <ion-note item-end color="white">Ver perfil</ion-note>
         </button>
       </ion-buttons>

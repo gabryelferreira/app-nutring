@@ -4,7 +4,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { SettingsService } from './settings.service';
 import { SocialSharing } from '@ionic-native/social-sharing';
-import * as settings from './settings.service'
+import * as settings from './settings.service';
+import * as types from '../../app/types';
 /**
  * Generated class for the SettingsPage page.
  *
@@ -27,11 +28,29 @@ export class SettingsPage {
     subject : null,
     url : 'https://cdn-images-1.medium.com/max/800/0*KiK6x8QTY0PstmPU.png'
   };
-  
+  user:types.IUser = {
+    id_usuario: 0,
+    nome: "",
+    sobrenome: "",
+    data_nasc: "",
+    sexo: "",
+    email: "",
+    usuario: "",
+    peso_kg: "",
+    altura_cm: "",
+    foto: "",
+    cep: "",
+    telefone: "",
+    senha: ""
+  }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private _settings: SettingsService, private socialSharing: SocialSharing) {
     this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.darkTheme = this.selectedTheme == "dark-theme";
+    if (localStorage.getItem("userData")){
+      let data = JSON.parse(localStorage.getItem("userData"));
+      this.user.nome = data["nome"];
+    }
   }
 
   ionViewDidLoad() {
