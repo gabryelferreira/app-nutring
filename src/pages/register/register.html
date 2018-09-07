@@ -14,14 +14,14 @@
 
 
 <ion-content>
-    <div id="cadastro">
+    <form id="cadastro">
       <ion-list>
 
         <ion-item-divider padding color="light">Dados pessoais</ion-item-divider>
         <ion-item>
           <ion-icon name="contact" item-start></ion-icon>
           <ion-label stacked>Nome Completo</ion-label>
-          <ion-input [(ngModel)]="user.nome" type="text"></ion-input>
+          <ion-input [(ngModel)]="user.nome" name="nome" type="text"></ion-input>
         </ion-item>
 
         <ion-item>
@@ -84,5 +84,5 @@
     
       
       
-    </div>
+  </form>
   </ion-content>
