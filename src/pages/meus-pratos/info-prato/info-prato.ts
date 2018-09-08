@@ -22,7 +22,6 @@ export class InfoPratoPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService) {
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.prato = navParams.get("prato");
-    console.log("this", this.prato)
   }
 
   ionViewDidLoad() {

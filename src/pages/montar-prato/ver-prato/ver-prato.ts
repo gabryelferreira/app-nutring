@@ -90,14 +90,17 @@ export class VerPratoPage {
     });
     let result = await this.post.createPrato(JSON.stringify(this.sendPrato));
     let message = "";
+    let title = "";
     this.loadingCtrl.dismiss();
     if (result.success){
+      title = "Sucesso";
       message = "Prato feito com sucesso!";
     } else {
+      title = "Erro";
       message = "Ocorreu um erro! Tente novamente.";
     }
     this.loading = false;
-    this.presentAlert("Sucesso", "Prato feito com sucesso!");
+    this.presentAlert(title, message);
     
   }
 

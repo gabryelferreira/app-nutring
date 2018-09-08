@@ -65,7 +65,6 @@ export class LoginPage {
   }
 
   entrar(result) {
-    console.log("result", result)
     if (result.success) {
       if (result.result == "INVALID_LOGIN") {
         this.showToast("Login inválido", "top");

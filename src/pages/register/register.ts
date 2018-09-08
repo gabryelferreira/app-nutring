@@ -39,7 +39,6 @@ export class RegisterPage {
   async register(){
     if (this.validFields()){
       let result = await this.post.register(JSON.stringify(this.user));
-      console.log("RESULT = ", result);
       if (result.success){
         if (result.result == "USER_EXISTS"){
           this.showToast("Nome de usuário já cadastrado", "top");

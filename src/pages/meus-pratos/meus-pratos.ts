@@ -23,7 +23,6 @@ import { InfoPratoPage } from './info-prato/info-prato';
 export class MeusPratosPage {
 
   selectedTheme: String = "";
-  pratos = [];
   pratosByDate = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService,
@@ -38,10 +37,10 @@ export class MeusPratosPage {
 
   async getPratosByIdUser(id_usuario: number){
     let result = await this.post.getPratosByIdUser(id_usuario);
-    console.log("result = ", result)
     if (result.success){
       let groupByDate = [];
       let groupByPrato = [];
+      this.pratosByDate = [];
       let pratos = result.result;
       pratos.forEach(element => {
         if (groupByDate.indexOf(element.dt_consumo) == -1)
@@ -84,8 +83,6 @@ export class MeusPratosPage {
       });
       
       console.log("Pratos agrupados por data = ", this.pratosByDate)
-
-      this.pratos = result.result
     }
   }
 
