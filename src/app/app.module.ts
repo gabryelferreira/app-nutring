@@ -1,4 +1,4 @@
-import { VerPratoPage } from './../pages/ver-prato/ver-prato';
+import { VerPratoPage } from './../pages/montar-prato/ver-prato/ver-prato';
 import { HomePage } from './../pages/home/home';
 import { LoadingService } from './framework/loaders/loading.service';
 import { RegisterPage } from './../pages/register/register';
@@ -23,6 +23,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
 import { Facebook } from '@ionic-native/facebook';
 import { SettingsService } from '../pages/settings/settings.service';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { InfoPratoPage } from '../pages/meus-pratos/info-prato/info-prato';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     MeusPratosPage,
     RegisterPage,
     HomePage,
-    VerPratoPage
+    VerPratoPage,
+    InfoPratoPage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     MeusPratosPage,
     RegisterPage,
     HomePage,
-    VerPratoPage
+    VerPratoPage,
+    InfoPratoPage
   ],
   providers: [
     StatusBar,

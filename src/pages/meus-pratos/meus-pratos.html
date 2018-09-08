@@ -13,6 +13,29 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+  <div *ngIf="pratosByDate && pratosByDate.length > 0">
+
+    <ion-list *ngFor="let pratoByDate of pratosByDate">
+
+      <ion-list-header>
+        {{pratoByDate.dt_consumo | date:'fullDate'}}
+        <!-- <button ion-button item-end (click)="toggleViewMode()" icon-only color="transparent">
+            <ion-icon name="options"></ion-icon>
+        </button> -->
+      </ion-list-header>
+      
+      <div>
+        <ion-item *ngFor="let prato of pratoByDate.alimentos; let i = index" (click)="openPrato(prato)">
+          <h2>{{prato.dt_consumo | date}}</h2>
+          <p>{{prato.kcal | number:'1.0-2'}} kcal</p>
+          <ion-note item-end>{{prato.hr_consumo}}</ion-note>
+        </ion-item>
+      </div>
+
+    </ion-list>
+
+  </div>
 
 </ion-content>

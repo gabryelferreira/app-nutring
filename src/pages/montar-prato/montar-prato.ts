@@ -1,4 +1,4 @@
-import { VerPratoPage } from './../ver-prato/ver-prato';
+import { VerPratoPage } from './ver-prato/ver-prato';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, ModalController } from 'ionic-angular';
 import { SettingsService } from '../settings/settings.service';
@@ -195,6 +195,9 @@ export class MontarPratoPage {
    
 
   verPrato() {
+    this.foods.forEach(element => {
+      element.selected = false;
+    });
     this.allSelectedFoods.forEach(element => {
       element.selected = false;
     });

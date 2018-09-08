@@ -1,9 +1,9 @@
-import { SettingsService } from './../settings/settings.service';
+import { SettingsService } from '../../settings/settings.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import { VerPratoPostService, VerPratoGetService } from './ver-prato.service';
-import { LoadingService } from '../../app/framework/loaders/loading.service';
-import { MontarPratoPage } from '../montar-prato/montar-prato';
+import { LoadingService } from '../../../app/framework/loaders/loading.service';
+import { MontarPratoPage } from '../../montar-prato/montar-prato';
 
 /**
  * Generated class for the VerPratoPage page.

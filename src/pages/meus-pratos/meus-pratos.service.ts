@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
-export class VerPratoGetService extends Connect {
+export class MeusPratosGetService extends Connect {
     constructor(private _http: HttpClient){
         super(_http, "get");
     }
@@ -11,14 +11,13 @@ export class VerPratoGetService extends Connect {
 }
 
 @Injectable()
-export class VerPratoPostService extends Connect {
+export class MeusPratosPostService extends Connect {
     constructor(private _http: HttpClient){
         super(_http, "post");
     }
 
-
-    createPrato(data: any){
-        return this.callMethod("createPrato", {data});
+    getPratosByIdUser(id_usuario: number){
+        return this.callMethod("getPratosByIdUser", {id_usuario});
     }
 
 }
