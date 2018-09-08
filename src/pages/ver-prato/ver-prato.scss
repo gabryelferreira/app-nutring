@@ -1,3 +1,10 @@
 page-ver-prato {
-
+    .active {
+        .item-inner {
+            border: 0 !important;
+        }
+        .item {
+            border: 0 !important;
+        }
+    }
 }
