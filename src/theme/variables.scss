@@ -46,6 +46,7 @@ $colors: (
   dark-theme: #101010,
   light-theme: #32db64,
   transparent: transparent,
+  lightgray: #ccc,
 );
 
 $toolbar-background: #32db64;
@@ -61,8 +62,10 @@ button {
   font-family: Roboto Condensed, sans-serif !important;
 }
 
+$tabs-md-tab-font-size: 10px;
 
-
+$segment-button-ios-background-color: #fff;
+$segment-button-ios-border-color: #fff;
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here

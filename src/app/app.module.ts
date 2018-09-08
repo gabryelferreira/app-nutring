@@ -1,3 +1,5 @@
+import { VerPratoPage } from './../pages/ver-prato/ver-prato';
+import { HomePage } from './../pages/home/home';
 import { LoadingService } from './framework/loaders/loading.service';
 import { RegisterPage } from './../pages/register/register';
 import { LoginPage } from './../pages/login/login';
@@ -32,7 +34,9 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     MontarPratoPage,
     SearchPage,
     MeusPratosPage,
-    RegisterPage
+    RegisterPage,
+    HomePage,
+    VerPratoPage
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,9 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     MontarPratoPage,
     SearchPage,
     MeusPratosPage,
-    RegisterPage
+    RegisterPage,
+    HomePage,
+    VerPratoPage
   ],
   providers: [
     StatusBar,

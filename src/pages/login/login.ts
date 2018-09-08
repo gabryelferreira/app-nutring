@@ -1,3 +1,4 @@
+import { IntroductionPage } from './../introduction/introduction';
 import { RegisterPage } from './../register/register';
 import { TabsPage } from './../tabs/tabs';
 import { Component } from '@angular/core';
@@ -74,8 +75,14 @@ export class LoginPage {
       } else if (result.result == "ERROR") {
         this.showToast("Ocorreu um erro! Tente novamente.", "top");
       } else {
-        localStorage.setItem("userData", JSON.stringify(result.result))
-        this.navCtrl.push(TabsPage)
+          let userData = result.result;
+          localStorage.setItem("userData", JSON.stringify(userData))
+          if (userData.acessos == 1)
+            this.navCtrl.push(IntroductionPage)
+          else
+            this.navCtrl.push(TabsPage)
+        
+        
       }
     }
     if (!localStorage.getItem("userData"))

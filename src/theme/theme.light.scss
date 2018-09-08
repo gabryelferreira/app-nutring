@@ -18,5 +18,15 @@
       box-shadow: none;
     }
   }
+
+  .food-select-dropdown {
+    background: #eee;
+    ion-list-header {
+        background: #eee !important;
+    }
+    ion-item {
+        background: #eee !important;
+    }
+  }
    
 }

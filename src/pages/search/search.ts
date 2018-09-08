@@ -21,11 +21,15 @@ export class SearchPage {
   foods = [];
   foodsBackup = [];
   foodsFiltered = [];
+
   public searchInput = {
     shouldShowCancel: false,
     searchText: ""
   }
+  
   offset: number = 0;
+  viewMode: number = 0;
+  maxViewMode: number = 1;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
               private get: service.SearchGetService, private post: service.SearchPostService, 
@@ -33,6 +37,11 @@ export class SearchPage {
     this.findFoods();
     
   }
+
+  getMaxViewMode(){return this.maxViewMode;}
+
+  setViewMode(viewMode: number){this.viewMode = viewMode;}
+  getViewMode(){return this.viewMode;}
 
   setInitialOffset(){this.offset = this.getDefaultOffset();}
   setOffset(offset: number){this.offset = offset;}
@@ -59,16 +68,26 @@ export class SearchPage {
   getFoodsFilteredByIndex(index: number){return this.foodsFiltered[index];}
 
   async findFoods(){
-    this.loadingCtrl.presentWithMessage("Buscando alimentos");
-    let result = await this.get.findFoods();
-    if (result.success){
-      let allFoods = result.result;
+    if (localStorage.getItem("allFoods")){
+      let allFoods = JSON.parse(localStorage.getItem("allFoods"));
       this.setFoodsBackup(allFoods)
       this.setFoodsFiltered(allFoods);
       this.setInitialFoods();
       this.setInitialOffset();
+    } else {
+      this.loadingCtrl.presentWithMessage("Buscando alimentos");
+      let result = await this.get.findFoods();
+      if (result.success){
+        let allFoods = result.result;
+        this.setFoodsBackup(allFoods);
+        this.setFoodsFiltered(allFoods);
+        this.setInitialFoods();
+        this.setInitialOffset();
+        localStorage.setItem("allFoods", JSON.stringify(this.getFoodsBackup()));
+      }
+      this.loadingCtrl.dismiss();
     }
-    this.loadingCtrl.dismiss();
+
   }
 
   onInput(event){
@@ -134,6 +153,15 @@ export class SearchPage {
     });
 
     toast.present(toast);
+  }
+
+  toggleViewMode(){
+    console.log("aaa", this.getViewMode())
+    console.log("max = ", this.getMaxViewMode())
+    if (this.getViewMode() == this.getMaxViewMode())
+      this.setViewMode(0);
+    else
+      this.setViewMode(this.getViewMode() + 1);
   }
 
   ionViewDidLoad() {

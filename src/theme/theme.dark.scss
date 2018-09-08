@@ -8,6 +8,10 @@
       background: #4b4b4b;
       color: #fff;
       transition: .3s;
+      border: 0 !important;
+      p {
+        color: #aeaeae;
+      }
     }
 
     ion-list-header {
@@ -27,4 +31,21 @@
       }
     }
 
+    .food-select-dropdown {
+      background: #777;
+      ion-list-header {
+          background: #777 !important;
+          margin: 0 !important;
+          border: 0 !important;
+      }
+      ion-item {
+          background: #777 !important;
+          border: 0 !important;
+          ion-range {
+            border: 0 !important;
+          }
+      }
+    }
+
+    
   }

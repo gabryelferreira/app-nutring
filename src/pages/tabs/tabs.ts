@@ -1,3 +1,4 @@
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 
 import { SettingsPage } from '../settings/settings';
@@ -11,10 +12,11 @@ import { SettingsService } from '../settings/settings.service';
 })
 export class TabsPage {
 
-  tab1Root = MontarPratoPage;
-  tab2Root = SearchPage;
-  tab3Root = MeusPratosPage;
-  tab4Root = SettingsPage;
+  tab1Root = HomePage;
+  tab2Root = MontarPratoPage;
+  tab3Root = SearchPage;
+  tab4Root = MeusPratosPage;
+  tab5Root = SettingsPage;
   selectedTheme: String = "";
   constructor(private settings: SettingsService) {
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
