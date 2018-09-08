@@ -26,7 +26,7 @@ export interface IUser {
     id_usuario?: number
     nome?: string
     sobrenome?: string
-    data_nasc?: string
+    dt_nasc?: string
     sexo?: string
     email?: string
     usuario?: string

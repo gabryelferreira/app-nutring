@@ -32,7 +32,7 @@ export class SettingsPage {
     id_usuario: 0,
     nome: "",
     sobrenome: "",
-    data_nasc: "",
+    dt_nasc: "",
     sexo: "",
     email: "",
     usuario: "",

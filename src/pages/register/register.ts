@@ -21,14 +21,14 @@ export class RegisterPage {
 
   user = {
     nome: "",
-    data_nasc: "",
+    dt_nasc: "",
     sexo: "",
     email: "",
     usuario: "",
     senha: "",
     telefone: ""
   }
-  validUser = ["nome", "data_nasc", "sexo", "email", "usuario", "senha", "telefone"];
+  validUser = ["nome", "dt_nasc", "sexo", "email", "usuario", "senha", "telefone"];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private post: service.RegisterPostService, private toastCtrl: ToastController) {
   }
