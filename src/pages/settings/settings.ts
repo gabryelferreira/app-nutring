@@ -62,15 +62,15 @@ export class SettingsPage {
       message: 'Tem certeza que deseja sair?',
       buttons: [
         {
-          text: 'Sair',
+          text: 'Cancelar',
           handler: () => {
-            this.logout();
+            
           }
         },
         {
-          text: 'Cancelar',
+          text: 'Sair',
           handler: () => {
-
+            this.logout();
           }
         }
       ]

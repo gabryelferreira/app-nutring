@@ -34,7 +34,6 @@ export class RegisterPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegisterPage');
   }
 
   async register(){
@@ -65,8 +64,6 @@ export class RegisterPage {
     this.validUser.forEach(element => {
       this.user[element] != "" ? count++ : '';
     });
-    console.log("LENGTH = ", length)
-    console.log("COUNT = ", count)
     var valid = false;
     count == length ? valid = true : valid = false
     return valid

@@ -1,6 +1,9 @@
 import { SettingsService } from './../settings/settings.service';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
+import { VerPratoPostService, VerPratoGetService } from './ver-prato.service';
+import { LoadingService } from '../../app/framework/loaders/loading.service';
+import { MontarPratoPage } from '../montar-prato/montar-prato';
 
 /**
  * Generated class for the VerPratoPage page.
@@ -13,6 +16,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-ver-prato',
   templateUrl: 'ver-prato.html',
+  providers: [
+    VerPratoPostService,
+    VerPratoGetService
+  ]
 })
 export class VerPratoPage {
 
@@ -30,7 +37,12 @@ export class VerPratoPage {
   
   offset: number = 0;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private settings: SettingsService) {
+  sendPrato = [];
+  loading: boolean = false;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private settings: SettingsService,
+              private post: VerPratoPostService, private loadingCtrl: LoadingService, private toastCtrl: ToastController,
+              private alertCtrl: AlertController) {
     settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }
 
@@ -42,12 +54,14 @@ export class VerPratoPage {
   }
 
   ionViewWillLeave() {
-    this.callback(this.foodsReturn).then(()=>{      
+    this.foods.forEach(element => {
+      element.selected = false;
+    });
+    this.callback(this.foods).then(()=>{
     });
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad VerPratoPage');
   }
 
   selectFood(food: any){
@@ -64,6 +78,66 @@ export class VerPratoPage {
         return;
       }
     });
+  }
+
+  async montarPrato(){
+    this.loading = true;
+    this.loadingCtrl.presentWithMessage("Montando prato")
+    let id_usuario = JSON.parse(localStorage.getItem("userData")).id_usuario;
+    this.sendPrato = [];
+    this.foods.forEach(element => {
+      this.sendPrato.push({id_usuario: parseInt(id_usuario), id_alimento: parseInt(element.id_alimento), quantidade: parseInt(element.porcao_comida)})
+    });
+    let result = await this.post.createPrato(this.sendPrato);
+    let message = "";
+    this.loadingCtrl.dismiss();
+    if (result.success){
+      message = "Prato feito com sucesso!";
+    } else {
+      message = "Ocorreu um erro! Tente novamente.";
+    }
+    this.loading = false;
+    this.presentAlert("Sucesso", "Prato feito com sucesso!");
+    
+  }
+
+  presentConfirm() {
+    let alert = this.alertCtrl.create({
+      title: 'Confirmação',
+      message: 'Deseja montar seu prato?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: () => {
+            
+          }
+        },
+        {
+          text: 'Confirmar',
+          handler: () => {
+            this.montarPrato();
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+  presentAlert(title: string, subTitle: string) {
+    let alert = this.alertCtrl.create({
+      title: title,
+      subTitle: subTitle,
+      buttons: [
+        {
+          text: 'Ok',
+          handler: () => {
+            this.navCtrl.setRoot(MontarPratoPage)
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
 }

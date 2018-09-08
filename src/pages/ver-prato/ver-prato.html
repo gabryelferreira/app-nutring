@@ -8,6 +8,15 @@
 
     <ion-navbar color="{{selectedTheme}}">
         <ion-title text-left>Seu prato</ion-title>
+        <ion-buttons end>
+            <button *ngIf="!loading" [disabled]="!foods || foods.length == 0" (click)="presentConfirm()" ion-button>
+                <ion-note  item-end color="white">Confirmar</ion-note>
+            </button>
+
+            <button *ngIf="loading" ion-button>
+                <ion-note item-end color="white"><ion-spinner color="white"></ion-spinner></ion-note>
+            </button>
+          </ion-buttons>
       </ion-navbar>
 
 </ion-header>

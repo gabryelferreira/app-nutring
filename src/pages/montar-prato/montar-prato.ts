@@ -98,7 +98,7 @@ export class MontarPratoPage {
 
   }
 
-  onInput(event){
+  onInput(){
     let allFoods = this.getFoodsBackup();
     let text = this.searchInput.searchText;
     let foodsFiltered = allFoods.filter(function(element, i){
@@ -189,7 +189,6 @@ export class MontarPratoPage {
   myCallbackFunction = (_params) => {
     return new Promise((resolve, reject) => {
         this.allSelectedFoods = _params;
-        console.log("aaaaaaaaa", this.allSelectedFoods)
         resolve();
     });
    }

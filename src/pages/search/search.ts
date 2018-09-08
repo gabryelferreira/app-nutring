@@ -156,8 +156,6 @@ export class SearchPage {
   }
 
   toggleViewMode(){
-    console.log("aaa", this.getViewMode())
-    console.log("max = ", this.getMaxViewMode())
     if (this.getViewMode() == this.getMaxViewMode())
       this.setViewMode(0);
     else
