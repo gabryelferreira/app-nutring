@@ -32,6 +32,22 @@
     }
   }
 
+
+
+
+
+
+      /* ------------------------------
+    ------------------------------
+    ---------------------------------
+    ----------------------------------
+    ---------------------------------*/
+
+
+
+
+
+    //TELA DE MONTAR PRATO
   .food-select-dropdown {
     background: #eee;
     ion-list-header {
@@ -41,5 +57,31 @@
         background: #eee !important;
     }
   }
+
+
+
+
+    // CARD DE VISUALIZAÇÃO NA TELA MEUS PRATOS
+    .inner {
+      border: 0 !important;
+      background: #fff;
+      .card-prato {
+        background: #fff;
+        box-shadow: none;
+        border: 0 !important;
+        ion-card-content {
+          background: #fff;
+        }
+        .inner-card-prato {
+          box-shadow: 0 7px 4px #777;
+          border: 1px solid #dedede;
+        }
+
+        ion-item {
+          background: #fff;
+        }
+
+      }
+    }
    
 }

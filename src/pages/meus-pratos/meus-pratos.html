@@ -27,11 +27,37 @@
       </ion-list-header>
       
       <div>
-        <ion-item *ngFor="let prato of pratoByDate.alimentos; let i = index" (click)="openPrato(prato)">
+        <!-- <ion-item *ngFor="let prato of pratoByDate.alimentos; let i = index" (click)="openPrato(prato)">
           <h2>{{prato.dt_consumo | date}}</h2>
           <p>{{prato.kcal | number:'1.0-2'}} kcal</p>
           <ion-note item-end>{{prato.hr_consumo}}</ion-note>
-        </ion-item>
+        </ion-item> -->
+        <ion-scroll scrollX="true">
+          <div class="inner">
+            <ion-card class="card-prato" *ngFor="let prato of pratoByDate.pratos; let i = index" (click)="openPrato(prato)">
+              <div class="inner-card-prato">
+                <ion-card-content>
+                    <ion-item text-center>
+                      <ion-badge item-center>{{prato.hr_consumo}}</ion-badge>
+                      <!-- <p>{{food.kcal | number:'1.0-2'}} kcal</p> -->
+                      <!-- <ion-note item-end>#{{i+1}}</ion-note> -->
+                    </ion-item>
+                </ion-card-content>
+            
+                <ion-item>
+                  Calorias
+                  <p>{{prato.kcal | number:'1.0-2'}} kcal</p>
+                  <!-- <ion-badge item-end>{{prato.kcal | number:'1.0-2'}}</ion-badge> -->
+                </ion-item>
+                <ion-item>
+                    Peso
+                    <p>{{prato.quantidade}}g</p>
+                  <!-- <ion-badge item-end>{{prato.quantidade}}</ion-badge> -->
+                </ion-item>
+              </div>
+            </ion-card>
+          </div>
+        </ion-scroll>
       </div>
 
     </ion-list>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SettingsService } from '../../settings/settings.service';
 
 /**
  * Generated class for the InfoPratoPage page.
@@ -16,8 +17,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class InfoPratoPage {
 
   prato = [];
+  selectedTheme: String = "";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService) {
+    _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.prato = navParams.get("prato");
     console.log("this", this.prato)
   }

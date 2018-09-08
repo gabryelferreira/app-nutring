@@ -29,6 +29,9 @@ export class MeusPratosPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService,
                 private post: MeusPratosPostService) {
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+  }
+
+  ionViewWillEnter() {
     let id_usuario = parseInt(JSON.parse(localStorage.getItem("userData")).id_usuario);
     this.getPratosByIdUser(id_usuario)
   }
@@ -57,12 +60,13 @@ export class MeusPratosPage {
           return false;
         });
         if (filtered && filtered.length > 0){
-          let allKcal = parseInt(filtered[0].kcal);
-          if (filtered.length > 1){
-            allKcal = filtered.reduce((a, b) => ({x: parseInt(a.kcal) + parseInt(b.kcal)}));
-            allKcal = allKcal["x"];
-          }
-          pratosAgrupados.push({dt_consumo: filtered[0].dt_consumo, hr_consumo: filtered[0].hr_consumo, kcal: allKcal, alimentos: filtered});
+          let allKcal = 0;
+          let allQuantidade = 0;
+          filtered.forEach(element => {
+            allKcal += parseInt(element.kcal);
+            allQuantidade += parseInt(element.quantidade);
+          });
+          pratosAgrupados.push({dt_consumo: filtered[0].dt_consumo, hr_consumo: filtered[0].hr_consumo, kcal: allKcal, quantidade: allQuantidade, alimentos: filtered});
         }
         
           
@@ -76,7 +80,7 @@ export class MeusPratosPage {
           return false;
         });
         if (filtered && filtered.length > 0)
-          this.pratosByDate.push({dt_consumo: element, alimentos: filtered})
+          this.pratosByDate.push({dt_consumo: element, pratos: filtered})
       });
       
       console.log("Pratos agrupados por data = ", this.pratosByDate)

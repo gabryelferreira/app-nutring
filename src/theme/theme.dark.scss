@@ -58,6 +58,21 @@ ion-card {
       }
     }
 
+
+
+
+
+    /* ------------------------------
+    ------------------------------
+    ---------------------------------
+    ----------------------------------
+    ---------------------------------*/
+
+
+
+
+
+    //TELA DE MONTAR PRATO
     .food-select-dropdown {
       background: #777;
       ion-list-header {
@@ -73,6 +88,28 @@ ion-card {
           }
       }
     }
+
+
+
+    // CARD DE VISUALIZAÇÃO NA TELA MEUS PRATOS
+    .inner {
+      .card-prato {
+        background: #4b4b4b;
+        box-shadow: none;
+        ion-card-content {
+          background: #404040;
+        }
+        .inner-card-prato {
+          box-shadow: 0 7px 4px #222;
+        }
+
+        ion-item {
+          background: #404040;
+        }
+
+      }
+    }
+
 
     
   }
