@@ -46,6 +46,7 @@
         </ion-avatar>
         <h2>{{food.nome}}</h2>
         <p *ngIf="food.porcao_comida > 0" color="primary">{{food.porcao_comida}}g</p>
+        <p *ngIf="!food.porcao_comida || food.porcao_comida <= 0" color="primary"><br></p>
         <ion-icon *ngIf="food.porcao_comida > 0" name="checkmark" color="primary" item-end></ion-icon>
         <ion-icon  *ngIf="!food.porcao_comida || food.porcao_comida <= 0" name="ios-arrow-down" color="lightgray" item-end></ion-icon>
       </ion-item>
