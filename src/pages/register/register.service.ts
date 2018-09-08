@@ -16,7 +16,7 @@ export class RegisterPostService extends Connect {
     }
 
     register(user: any){
-        return this.callMethod("register", user);
+        return this.callMethod("register", {user});
     }
 
 }

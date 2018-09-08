@@ -18,7 +18,7 @@ export class VerPratoPostService extends Connect {
 
 
     createPrato(data: any){
-        return this.callMethod("createPrato", data);
+        return this.callMethod("createPrato", {data});
     }
 
 }

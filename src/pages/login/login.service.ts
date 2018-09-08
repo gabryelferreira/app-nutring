@@ -15,8 +15,8 @@ export class LoginPostService extends Connect {
         super(_http, "post");
     }
 
-    login(loginData: any){
-        return this.callMethod("login", loginData);
+    login(email: string, senha: string){
+        return this.callMethod("login", {email, senha});
     }
 
     register(user: any){

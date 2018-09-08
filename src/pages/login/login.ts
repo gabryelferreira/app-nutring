@@ -45,10 +45,7 @@ export class LoginPage {
 
   async login() {
     this.setLoadingLogin(true);
-    let data = new FormData()
-    data.append("email", this.user.email)
-    data.append("senha", this.user.senha)
-    let result = await this.post.login(data)
+    let result = await this.post.login(this.user.email, this.user.senha)
     this.entrar(result)
   }
 
@@ -68,6 +65,7 @@ export class LoginPage {
   }
 
   entrar(result) {
+    console.log("result", result)
     if (result.success) {
       console.log(result)
       if (result.result == "INVALID_LOGIN") {

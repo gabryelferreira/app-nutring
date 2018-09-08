@@ -1,5 +1,6 @@
 import { Config } from './config';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import { urlencode } from './url';
 
 export abstract class Connect {
 
@@ -7,10 +8,21 @@ export abstract class Connect {
     constructor(private http: HttpClient, private method: string){
     }
 
-    protected async callMethod(_function: string, params?: any): Promise<any> {
+    protected async callMethod(_function: string, args?: { [id: string]: any }): Promise<any> {
+        let options = {
+            headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' }),
+            withCredentials: false,
+            observe: null,
+        }
+        let data = [];
+        for (let i in args) {
+            data[i] = args[i];
+        }
+        let body = urlencode(data);
+        console.log("body = ", body)
         if (this.method.toUpperCase() == "GET"){
             try {
-                var result = await this.http.get(this.url + _function).toPromise().then();
+                var result = await this.http.get(this.url + _function, options).toPromise().then();
                 return result;
             } catch (err){
                 console.error(err);
@@ -19,7 +31,7 @@ export abstract class Connect {
             
         } else if (this.method.toUpperCase() == "POST"){
             try {
-                var result = await this.http.post(this.url + _function, params).toPromise().then();
+                var result = await this.http.post(this.url + _function, body, options).toPromise().then();
                 return result;
             } catch (err){
                 console.error(err);
@@ -30,5 +42,6 @@ export abstract class Connect {
             return "error";
         }
     }
+
 
 }

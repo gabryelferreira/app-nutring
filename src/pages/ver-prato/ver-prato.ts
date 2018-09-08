@@ -88,7 +88,7 @@ export class VerPratoPage {
     this.foods.forEach(element => {
       this.sendPrato.push({id_usuario: parseInt(id_usuario), id_alimento: parseInt(element.id_alimento), quantidade: parseInt(element.porcao_comida)})
     });
-    let result = await this.post.createPrato(this.sendPrato);
+    let result = await this.post.createPrato(JSON.stringify(this.sendPrato));
     let message = "";
     this.loadingCtrl.dismiss();
     if (result.success){
