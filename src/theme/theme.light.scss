@@ -19,6 +19,19 @@
     }
   }
 
+  ion-card {
+    border-top: 1px solid #eee;
+    ion-card-content {
+      border-bottom: 1px solid #eee;
+      ion-item {
+        border: 0 !important;
+      }
+    }
+    ion-item {
+      border: 0 !important;
+    }
+  }
+
   .food-select-dropdown {
     background: #eee;
     ion-list-header {
