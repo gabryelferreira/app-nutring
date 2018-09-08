@@ -19,6 +19,7 @@ export class InfoPratoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.prato = navParams.get("prato");
+    console.log("this", this.prato)
   }
 
   ionViewDidLoad() {

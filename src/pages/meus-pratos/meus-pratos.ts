@@ -62,7 +62,7 @@ export class MeusPratosPage {
             allKcal = filtered.reduce((a, b) => ({x: parseInt(a.kcal) + parseInt(b.kcal)}));
             allKcal = allKcal["x"];
           }
-          pratosAgrupados.push({dt_consumo: filtered[0].dt_consumo, hr_consumo: filtered[0].hr_consumo, kcal: allKcal, prato: filtered});
+          pratosAgrupados.push({dt_consumo: filtered[0].dt_consumo, hr_consumo: filtered[0].hr_consumo, kcal: allKcal, alimentos: filtered});
         }
         
           

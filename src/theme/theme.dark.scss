@@ -13,6 +13,33 @@
         color: #aeaeae;
       }
     }
+ion-card {
+  ion-card-content {
+    background: #555555;
+    ion-item {
+      background: #555555;
+      color: #fff;
+      transition: .3s;
+      border: 0 !important;
+      p {
+        color: #aeaeae;
+      }
+      h2 {
+        color: #fff;
+      }
+    }
+  }
+  ion-item {
+    background: #555555;
+    color: #fff;
+    transition: .3s;
+    border: 0 !important;
+    p {
+      color: #aeaeae;
+    }
+  }
+}
+
 
     ion-list-header {
       background: #4b4b4b;
