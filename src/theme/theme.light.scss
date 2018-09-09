@@ -83,5 +83,29 @@
 
       }
     }
+
+    ion-segment-button {
+      color: #fff !important;
+    }
    
+    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated, .segment-ios .segment-button {
+      border-color: #fff !important;
+      color: #fff !important;
+    }
+
+    .segment-ios .segment-button.segment-activated {
+      background: #fff !important;
+      color: #32db64 !important;
+      border-color: #fff !important;
+    }
+
+
+    .segment-md .segment-button {
+      color: #fff !important;
+    }
+
+    .header-info-prato {
+      background: #32db64 !important;
+    }
+
 }

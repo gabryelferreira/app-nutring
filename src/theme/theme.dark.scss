@@ -13,33 +13,40 @@
         color: #aeaeae;
       }
     }
-ion-card {
-  ion-card-content {
-    background: #555555;
-    ion-item {
-      background: #555555;
-      color: #fff;
-      transition: .3s;
-      border: 0 !important;
-      p {
-        color: #aeaeae;
+    
+    ion-card {
+      ion-card-content {
+        background: #555555;
+        ion-card-title {
+          color: #fff;
+          font-family: Roboto Condensed, sans-serif;
+        }
+        p {
+          color: #aeaeae;
+        }
+        ion-item {
+          background: #555555;
+          color: #fff;
+          transition: .3s;
+          border: 0 !important;
+          p {
+            color: #aeaeae;
+          }
+          h2 {
+            color: #fff;
+          }
+        }
       }
-      h2 {
+      ion-item {
+        background: #555555;
         color: #fff;
+        transition: .3s;
+        border: 0 !important;
+        p {
+          color: #aeaeae;
+        }
       }
     }
-  }
-  ion-item {
-    background: #555555;
-    color: #fff;
-    transition: .3s;
-    border: 0 !important;
-    p {
-      color: #aeaeae;
-    }
-  }
-}
-
 
     ion-list-header {
       background: #4b4b4b;
@@ -111,6 +118,9 @@ ion-card {
       }
     }
 
+    .header-info-prato {
+      background: #101010 !important;
+    }
 
     
   }

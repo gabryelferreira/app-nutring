@@ -51,7 +51,7 @@
               <img [src]="food.img_url">
             </ion-avatar>
             <h2>{{food.nome}}</h2>
-            <p *ngIf="food.porcao_comida > 0" color="primary">{{food.porcao_comida}}g</p>
+            <p *ngIf="food.porcao_comida > 0" color="primary">{{food.porcao_comida}} g</p>
             <ion-icon *ngIf="food.porcao_comida > 0" name="checkmark" color="primary" item-end></ion-icon>
             <ion-icon  *ngIf="!food.porcao_comida || food.porcao_comida <= 0" name="ios-arrow-down" color="lightgray" item-end></ion-icon>
           </ion-item>
@@ -60,7 +60,7 @@
           <div *ngIf="food.selected" class="food-select-dropdown active-food-select-dropdown">
             <ion-list-header>
               Quantidade (em gramas)
-              <ion-badge item-end *ngIf="food.porcao_comida">{{food.porcao_comida}}g</ion-badge>
+              <ion-badge item-end *ngIf="food.porcao_comida">{{food.porcao_comida}} g</ion-badge>
             </ion-list-header>
             <ion-item>
               <ion-range  min="0" max="1000" [(ngModel)]="food.porcao_comida" (ngModelChange)="mudarPorcao($event, food)" color="secondary">

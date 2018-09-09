@@ -8,6 +8,11 @@
 
   <ion-navbar color="{{selectedTheme}}">
     <ion-title>Histórico</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="refreshHistory()">
+          <ion-icon name="refresh" color="white"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -39,11 +44,11 @@
             
                 <ion-item>
                   Calorias
-                  <p>{{prato.kcal_consumida | number:'1.0-2'}} kcal</p>
+                  <p>{{prato.kcal_consumo | number:'1.0-2'}} kcal</p>
                 </ion-item>
                 <ion-item>
                     Quantidade
-                    <p>{{prato.peso}}g</p>
+                    <p>{{prato.peso}} g</p>
                 </ion-item>
               </div>
             </ion-card>

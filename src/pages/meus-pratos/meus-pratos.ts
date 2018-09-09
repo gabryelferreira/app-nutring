@@ -1,3 +1,4 @@
+import { LoadingService } from './../../app/framework/loaders/loading.service';
 import { MeusPratosPostService, MeusPratosGetService } from './meus-pratos.service';
 import { SettingsService } from './../settings/settings.service';
 import { Component } from '@angular/core';
@@ -24,18 +25,24 @@ export class MeusPratosPage {
 
   selectedTheme: String = "";
   pratosByDate = [];
+  id_usuario: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService,
-                private post: MeusPratosPostService) {
+                private post: MeusPratosPostService, private loadingCtrl: LoadingService) {
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+    this.id_usuario = parseInt(JSON.parse(localStorage.getItem("userData")).id_usuario);
+    this.getPratosByIdUser(this.id_usuario)
   }
 
   ionViewWillEnter() {
-    let id_usuario = parseInt(JSON.parse(localStorage.getItem("userData")).id_usuario);
-    this.getPratosByIdUser(id_usuario)
+  }
+
+  refreshHistory(){
+    this.getPratosByIdUser(this.id_usuario);
   }
 
   async getPratosByIdUser(id_usuario: number){
+    this.loadingCtrl.presentWithMessage("Buscando histórico");
     let result = await this.post.getPratosByIdUser(id_usuario);
     if (result.success){
       this.pratosByDate = [];
@@ -56,6 +63,7 @@ export class MeusPratosPage {
       });
 
     }
+    this.loadingCtrl.dismiss();
     // if (result.success){
     //   let groupByDate = [];
     //   let groupByPrato = [];

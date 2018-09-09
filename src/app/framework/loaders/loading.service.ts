@@ -29,7 +29,19 @@ export class LoadingService {
         });
         
         return this.loading.present();
-    }    
+    }
+
+    presentWithCheckmark() {
+        this.loading = this.loadingCtrl.create({
+            spinner: 'hide',
+            content: `
+          <div>
+            <img width="70px" height="70px" src="assets/imgs/checkmark.png" />
+          </div>`
+        });
+        
+        return this.loading.present();
+    }
  
     presentWithMessage(message) {
         this.loading = this.loadingCtrl.create({

@@ -20,4 +20,8 @@ export class MeusPratosPostService extends Connect {
         return this.callMethod("getPratosByIdUser", {id_usuario});
     }
 
+    getPratoInfoById(id_prato: number){
+        return this.callMethod("getPratoInfoById", {id_prato});
+    }
+
 }

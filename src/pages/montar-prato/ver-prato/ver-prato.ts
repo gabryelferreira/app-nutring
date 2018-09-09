@@ -101,7 +101,6 @@ export class VerPratoPage {
     }
     this.loading = false;
     this.presentAlert(title, message);
-    
   }
 
   presentConfirm() {

@@ -4,16 +4,139 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header class="header-info-prato">
 
-  <ion-navbar color="{{selectedTheme}}">
+  <ion-navbar color="{{selectedTheme}}" no-border-bottom style="border-bottom: 0 !important">
     <ion-title text-left>Informações</ion-title>
   </ion-navbar>
+
+  <ion-toolbar color="{{selectedTheme}}" no-border-top style="border-top: 0 !important">
+    <ion-segment  [(ngModel)]="page">
+      <ion-segment-button value="alimentos">
+        Alimentos
+      </ion-segment-button>
+      <ion-segment-button value="nutricionais">
+        Nutricionais
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 
 </ion-header>
 
 
 <ion-content>
 
+  <div *ngIf="prato && foods && foods.length > 0">
+
+  <ion-card *ngIf="page == 'alimentos'">
+
+    <ion-card-content>
+      <ion-card-title>
+        Alimentos
+      </ion-card-title>
+      <p>
+        Todos os alimentos da sua refeição.
+      </p>
+    </ion-card-content>
+
+    <ion-item *ngFor="let food of foods">
+        <ion-avatar item-start>
+          <img [src]="food.img_url">
+        </ion-avatar>
+      {{food.nome}}
+      <ion-badge item-end>{{food.porcao_consumo}} g</ion-badge>
+    </ion-item>
+
+  </ion-card>
+
+  <ion-card *ngIf="page == 'nutricionais'">
+  
+      <ion-card-content>
+        <ion-card-title>
+          Informações Nutricionais
+        </ion-card-title>
+        <p>
+          Saiba as calorias, proteínas e outras informações do seu prato.
+        </p>
+      </ion-card-content>
+  
+      <ion-item>
+        Cálcio
+        <ion-badge item-end>{{prato.calcio_consumo | number:'1.0-2'}} mg</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Calorias
+        <ion-badge item-end>{{prato.kcal_consumo | number:'1.0-2'}} kcal</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Carboidratos
+        <ion-badge item-end>{{prato.carboidrato_consumo | number:'1.0-2'}} g</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Cobre
+        <ion-badge item-end>{{prato.cobre_consumo | number:'1.0-2'}} mg</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Ferro
+        <ion-badge item-end>{{prato.ferro_consumo | number:'1.0-2'}} mg</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Fibra
+        <ion-badge item-end>{{prato.fibra_alimentar_consumo | number:'1.0-2'}} g</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Fósforo
+        <ion-badge item-end>{{prato.fosforo_consumo | number:'1.0-2'}} mg</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Lipídios
+        <ion-badge item-end>{{prato.lipideos_consumo | number:'1.0-2'}}%</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Magnésio
+        <ion-badge item-end>{{prato.magnesio_consumo | number:'1.0-2'}} mg</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Manganês
+        <ion-badge item-end>{{prato.manganes_consumo | number:'1.0-2'}} mg</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Potássio
+        <ion-badge item-end>{{prato.potassio_consumo | number:'1.0-2'}} mg</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Proteínas
+        <ion-badge item-end>{{prato.proteina_consumo | number:'1.0-2'}} kcal</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Sódio
+        <ion-badge item-end>{{prato.sodio_consumo | number:'1.0-2'}} kcal</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Vitamina C
+        <ion-badge item-end>{{prato.vitamina_c_consumo | number:'1.0-2'}} kcal</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        Zinco
+        <ion-badge item-end>{{prato.zinco_consumo | number:'1.0-2'}} kcal</ion-badge>
+      </ion-item>
+  
+    </ion-card>
+
+  </div>
   
 </ion-content>
