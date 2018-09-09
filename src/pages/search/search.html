@@ -27,7 +27,7 @@
       </button>
     </ion-list-header>
     
-    <div *ngIf="viewMode == 1">
+    <div *ngIf="viewMode == 0">
       <ion-item *ngFor="let food of foods; let i = index">
         <ion-avatar item-start>
           <img [src]="food.img_url">
@@ -39,7 +39,7 @@
     </div>
 
 
-    <div *ngIf="viewMode == 0">
+    <div *ngIf="viewMode == 1">
       <ion-card *ngFor="let food of foods; let i = index">
           
         <ion-card-content>

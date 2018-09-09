@@ -114,7 +114,7 @@ export class ProfilePage {
   }
 
   validNumericField(field){
-    if (field.length > 5)
+    if (field && field.length > 5)
       return false;
   }
 
