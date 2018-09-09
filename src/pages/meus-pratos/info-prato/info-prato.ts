@@ -39,13 +39,11 @@ export class InfoPratoPage {
     let result = await this.post.getPratoInfoById(id_prato);
     if (result.success){
       this.foods = result.result;
-      console.log("alimentos ", this.foods)
     }
     this.loadingCtrl.dismiss();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad InfoPratoPage');
   }
 
 }

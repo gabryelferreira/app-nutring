@@ -31,7 +31,7 @@ export interface IUser {
     email?: string
     usuario?: string
     peso_kg?: string
-    altura_cm?: string
+    altura_m?: string
     foto?: string
     cep?: string
     telefone?: string

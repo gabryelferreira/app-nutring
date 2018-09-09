@@ -19,7 +19,7 @@
       </ion-title>
   
       <ion-buttons end>
-        <button ion-button icon-only>
+        <button ion-button icon-only (click)="verPerfil()">
             <ion-note item-end color="white">Ver perfil</ion-note>
         </button>
       </ion-buttons>
@@ -92,7 +92,7 @@
       Contate-nos
     </ion-item>
 
-    <ion-item (click)="showConfirm()">
+    <ion-item (click)="showConfirmLogout()">
       <ion-icon name='power' item-start></ion-icon>
       Sair
       

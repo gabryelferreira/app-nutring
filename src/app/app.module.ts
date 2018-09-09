@@ -24,6 +24,7 @@ import { Facebook } from '@ionic-native/facebook';
 import { SettingsService } from '../pages/settings/settings.service';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { InfoPratoPage } from '../pages/meus-pratos/info-prato/info-prato';
+import { ProfilePage } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { InfoPratoPage } from '../pages/meus-pratos/info-prato/info-prato';
     RegisterPage,
     HomePage,
     VerPratoPage,
-    InfoPratoPage
+    InfoPratoPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ import { InfoPratoPage } from '../pages/meus-pratos/info-prato/info-prato';
     RegisterPage,
     HomePage,
     VerPratoPage,
-    InfoPratoPage
+    InfoPratoPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

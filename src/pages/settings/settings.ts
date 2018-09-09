@@ -6,6 +6,7 @@ import { SettingsService } from './settings.service';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import * as settings from './settings.service';
 import * as types from '../../app/types';
+import { ProfilePage } from '../profile/profile';
 /**
  * Generated class for the SettingsPage page.
  *
@@ -37,7 +38,7 @@ export class SettingsPage {
     email: "",
     usuario: "",
     peso_kg: "",
-    altura_cm: "",
+    altura_m: "",
     foto: "",
     cep: "",
     telefone: "",
@@ -56,7 +57,11 @@ export class SettingsPage {
   ionViewDidLoad() {
   }
 
-  showConfirm() {
+  verPerfil(){
+    this.navCtrl.push(ProfilePage);
+  }
+
+  showConfirmLogout() {
     const confirm = this.alertCtrl.create({
       title: 'Confirmação',
       message: 'Tem certeza que deseja sair?',

@@ -112,7 +112,6 @@ export class MeusPratosPage {
   }
 
   openPrato(prato){
-    console.log("prato = ", prato)
     this.navCtrl.push(InfoPratoPage, {
       prato: prato
     })

@@ -56,33 +56,29 @@
       </ion-list>
 
       <ion-list>
-      <ion-item-divider padding color="light">Dados para acesso</ion-item-divider>
+        <ion-item-divider padding color="light">Dados para acesso</ion-item-divider>
 
-      <ion-item padding-right>
-        <ion-label floating>Nome de usuário</ion-label>
-        <ion-input [(ngModel)]="user.usuario" name="usuario" type="text"></ion-input>
-      </ion-item>
+        <ion-item padding-right>
+          <ion-label floating>Nome de usuário</ion-label>
+          <ion-input [(ngModel)]="user.usuario" name="usuario" type="text"></ion-input>
+        </ion-item>
 
-      <ion-item padding-right>
-        <ion-label floating>Senha</ion-label>
-        <ion-input [(ngModel)]="user.senha" name="senha" type="password"></ion-input>
-      </ion-item>
+        <ion-item padding-right>
+          <ion-label floating>Senha</ion-label>
+          <ion-input [(ngModel)]="user.senha" name="senha" type="password"></ion-input>
+        </ion-item>
 
-      <div padding>
-        <button ion-button full (click)="register()">CADASTRAR</button>  
-      </div>
-      <div class="align-center">
-        <a href="#" (click)="goToLogin()">Já tenho uma conta</a>
-      </div>
-    </ion-list>
-      
-
+        <div padding>
+          <button ion-button full (click)="register()">CADASTRAR</button>  
+        </div>
+        <div class="align-center">
+          <a href="#" (click)="goToLogin()">Já tenho uma conta</a>
+        </div>
+      </ion-list>
       
 
       
+
       
-    
-      
-      
-  </form>
+    </form>
   </ion-content>
