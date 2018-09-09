@@ -38,42 +38,15 @@ export class MeusPratosPage {
   async getPratosByIdUser(id_usuario: number){
     let result = await this.post.getPratosByIdUser(id_usuario);
     if (result.success){
-      let groupByDate = [];
-      let groupByPrato = [];
       this.pratosByDate = [];
-      let pratos = result.result;
+      let groupByDate = [];
+      let pratos = result.result
       pratos.forEach(element => {
         if (groupByDate.indexOf(element.dt_consumo) == -1)
           groupByDate.push(element.dt_consumo);
-        if (groupByPrato.indexOf(element.id_prato) == -1)
-          groupByPrato.push(element.id_prato)
       });
-      groupByPrato.forEach(element => {
-        
-      });
-      let pratosAgrupados = [];
-      groupByPrato.forEach(element => {
+        groupByDate.forEach(element => {
         let filtered = pratos.filter(e => {
-          if (e.id_prato == element)
-            return true;
-          return false;
-        });
-        if (filtered && filtered.length > 0){
-          let allKcal = 0;
-          let allQuantidade = 0;
-          filtered.forEach(element => {
-            allKcal += parseInt(element.kcal);
-            allQuantidade += parseInt(element.quantidade);
-          });
-          pratosAgrupados.push({dt_consumo: filtered[0].dt_consumo, hr_consumo: filtered[0].hr_consumo, kcal: allKcal, quantidade: allQuantidade, alimentos: filtered});
-        }
-        
-          
-      });
-      console.log("pratos agrupados = ", pratosAgrupados)
-
-      groupByDate.forEach(element => {
-        let filtered = pratosAgrupados.filter(e => {
           if (e.dt_consumo == element)
             return true;
           return false;
@@ -81,9 +54,53 @@ export class MeusPratosPage {
         if (filtered && filtered.length > 0)
           this.pratosByDate.push({dt_consumo: element, pratos: filtered})
       });
-      
-      console.log("Pratos agrupados por data = ", this.pratosByDate)
+
     }
+    // if (result.success){
+    //   let groupByDate = [];
+    //   let groupByPrato = [];
+    //   this.pratosByDate = [];
+    //   let pratos = result.result;
+    //   pratos.forEach(element => {
+    //     if (groupByDate.indexOf(element.dt_consumo) == -1)
+    //       groupByDate.push(element.dt_consumo);
+    //     if (groupByPrato.indexOf(element.id_prato) == -1)
+    //       groupByPrato.push(element.id_prato)
+    //   });
+    //   groupByDate = groupByDate.reverse();
+    //   let pratosAgrupados = [];
+    //   groupByPrato.forEach(element => {
+    //     let filtered = pratos.filter(e => {
+    //       if (e.id_prato == element)
+    //         return true;
+    //       return false;
+    //     });
+    //     if (filtered && filtered.length > 0){
+    //       let allKcal = 0;
+    //       let allQuantidade = 0;
+    //       filtered.forEach(element => {
+    //         allKcal += parseInt(element.kcal);
+    //         allQuantidade += parseInt(element.quantidade);
+    //       });
+    //       pratosAgrupados.push({dt_consumo: filtered[0].dt_consumo, hr_consumo: filtered[0].hr_consumo, kcal: allKcal, quantidade: allQuantidade, alimentos: filtered});
+    //     }
+        
+          
+    //   });
+    //   console.log("pratos agrupados = ", pratosAgrupados)
+
+    //   groupByDate.forEach(element => {
+    //     let filtered = pratosAgrupados.filter(e => {
+    //       if (e.dt_consumo == element)
+    //         return true;
+    //       return false;
+    //     });
+    //     if (filtered && filtered.length > 0)
+    //       this.pratosByDate.push({dt_consumo: element, pratos: filtered})
+    //   });
+      
+    //   console.log("Pratos agrupados por data = ", this.pratosByDate)
+    // }
   }
 
   openPrato(prato){
