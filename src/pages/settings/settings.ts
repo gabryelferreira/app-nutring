@@ -7,6 +7,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import * as settings from './settings.service';
 import * as types from '../../app/types';
 import { ProfilePage } from '../profile/profile';
+import { ContactUsPage } from '../contact-us/contact-us';
 /**
  * Generated class for the SettingsPage page.
  *
@@ -48,6 +49,9 @@ export class SettingsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private _settings: SettingsService, private socialSharing: SocialSharing) {
     this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.darkTheme = this.selectedTheme == "dark-theme";
+  }
+
+  ionViewWillEnter() {
     if (localStorage.getItem("userData")){
       let data = JSON.parse(localStorage.getItem("userData"));
       this.user.nome = data["nome"];
@@ -96,6 +100,10 @@ export class SettingsPage {
     }).catch(()=>{
 
     });
+  }
+
+  openContactUsPage(){
+    this.navCtrl.push(ContactUsPage);
   }
 
   logout() {

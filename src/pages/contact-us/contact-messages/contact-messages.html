@@ -1,0 +1,53 @@
+<!--
+  Generated template for the ContactMessagesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="{{selectedTheme}}">
+    <ion-title text-left>Suas mensagens</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+
+  <div *ngIf="messages">
+
+    <div *ngFor="let messageByDate of messagesByDate">
+      <ion-list >
+
+          <ion-list-header>
+            {{messageByDate.dt_duvida | date:'fullDate'}}
+            <!-- <button ion-button item-end (click)="toggleViewMode()" icon-only color="transparent">
+                <ion-icon name="options"></ion-icon>
+            </button> -->
+          </ion-list-header>
+          <div *ngFor="let message of messageByDate.messages; let i = index">
+            <div padding-left padding-right text-left>
+              <ion-badge item-end>{{message.hr_duvida}}</ion-badge>
+              
+            </div>
+            <ion-card>
+                <ion-card-content>
+                    {{message.duvida}}
+                </ion-card-content>
+                <ion-card-content class="resposta-message" *ngIf="message.resposta">
+                    {{message.resposta}} -<span> {{message.hr_resposta}}</span>
+                </ion-card-content>
+                <ion-card-content class="resposta-message" *ngIf="!message.resposta">
+                    <p>Essa mensagem ainda não foi respondida.</p>
+                </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-list>
+      </div>
+
+  </div>
+
+
+</ion-content>

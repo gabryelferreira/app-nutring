@@ -69,7 +69,19 @@ export class ProfilePage {
     }
   }
 
-  async updateUserPersonalInfo()
+  async updateUserPersonalInfo(){
+    if (this.validPersonalFields()){
+      this.loadingPersonal = true;
+      let result = await this.post.updateUserPersonalInfo(JSON.stringify(this.user));
+      if (result.success){
+        localStorage.setItem("userData", JSON.stringify(result.result))
+        this.showToast("Dados salvos com sucesso!", "top");
+      } else {
+        this.showToast("Ocorreu um erro! Tente novamente.", "top");
+      }
+      this.loadingPersonal = false;
+    }
+  }
 
   validFields(){
     let regexp = /^\d*\.?\d*\,?\d*$/;
@@ -84,6 +96,10 @@ export class ProfilePage {
       this.optionalData[this.checkOptional[i].field] = this.user[this.checkOptional[i].field];
     }
     return true;
+  }
+
+  validPersonalFields(){
+    return this.user["nome"] != null && this.user["nome"] != "" && this.user["nome"].length > 0;
   }
 
   showToast(message: string, position: string) {

@@ -1,3 +1,4 @@
+import { ContactMessagesPage } from './../pages/contact-us/contact-messages/contact-messages';
 import { VerPratoPage } from './../pages/montar-prato/ver-prato/ver-prato';
 import { HomePage } from './../pages/home/home';
 import { LoadingService } from './framework/loaders/loading.service';
@@ -25,6 +26,7 @@ import { SettingsService } from '../pages/settings/settings.service';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { InfoPratoPage } from '../pages/meus-pratos/info-prato/info-prato';
 import { ProfilePage } from '../pages/profile/profile';
+import { ContactUsPage } from '../pages/contact-us/contact-us';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { ProfilePage } from '../pages/profile/profile';
     HomePage,
     VerPratoPage,
     InfoPratoPage,
-    ProfilePage
+    ProfilePage,
+    ContactUsPage,
+    ContactMessagesPage
   ],
   imports: [
     BrowserModule,
@@ -63,7 +67,9 @@ import { ProfilePage } from '../pages/profile/profile';
     HomePage,
     VerPratoPage,
     InfoPratoPage,
-    ProfilePage
+    ProfilePage,
+    ContactUsPage,
+    ContactMessagesPage
   ],
   providers: [
     StatusBar,

@@ -3,25 +3,24 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
-export class ProfileGetService extends Connect {
+export class ContactUsGetService extends Connect {
     constructor(private _http: HttpClient){
         super(_http, "get");
     }
-
 }
 
 @Injectable()
-export class ProfilePostService extends Connect {
+export class ContactUsPostService extends Connect {
     constructor(private _http: HttpClient){
         super(_http, "post");
     }
 
-    updateUserOptionalInfo(data: any){
-        return this.callMethod("updateUserOptionalInfo", {data});
+    sendMessageToNutring(data: any){
+        return this.callMethod("sendMessageToNutring", {data});
     }
 
-    updateUserPersonalInfo(data: any){
-        return this.callMethod("updateUserPersonalInfo", {data});
+    getUserMessages(id_usuario: number){
+        return this.callMethod("getUserMessages", {id_usuario});
     }
 
 }
