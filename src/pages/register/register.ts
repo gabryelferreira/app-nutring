@@ -29,6 +29,7 @@ export class RegisterPage {
     telefone: ""
   }
   validUser = ["nome", "dt_nasc", "sexo", "email", "usuario", "senha", "telefone"];
+  loading: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private post: service.RegisterPostService, private toastCtrl: ToastController) {
   }
@@ -38,6 +39,7 @@ export class RegisterPage {
 
   async register(){
     if (this.validFields()){
+      this.loading = true;
       let result = await this.post.register(JSON.stringify(this.user));
       if (result.success){
         if (result.result == "USER_EXISTS"){
@@ -49,6 +51,7 @@ export class RegisterPage {
           this.navCtrl.push(IntroductionPage)
         }
       }
+      this.loading = false;
     } else {
       this.showToast("Preencha os campos corretamente", "top");
     }

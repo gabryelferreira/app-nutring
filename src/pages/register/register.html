@@ -69,7 +69,8 @@
         </ion-item>
 
         <div padding>
-          <button ion-button full (click)="register()">CADASTRAR</button>  
+          <button *ngIf="!loading" ion-button full (click)="register()">CADASTRAR</button>
+          <button *ngIf="loading" ion-button full><ion-spinner color="white" name="bubbles"></ion-spinner></button>
         </div>
         <div class="align-center">
           <a href="#" (click)="goToLogin()">Já tenho uma conta</a>
