@@ -45,15 +45,18 @@ export class ProfilePage {
   async updateUserOptionalInfo(){
     if(this.validFields()){
       this.loadingOptional = true;
-      
-      this.optionalData.forEach(element => {
-        let field = element.field;
+        let field = this.optionalData["peso_kg"];
         if (field != null && field != "" && field != undefined){
           if (field.indexOf(',') != -1){
-            element.field = field.replace(',', '.');
+            this.optionalData["peso_kg"] = field.replace(',', '.');
           }
         }
-      });
+        field = this.optionalData["altura_m"];
+        if (field != null && field != "" && field != undefined){
+          if (field.indexOf(',') != -1){
+            this.optionalData["altura_m"] = field.replace(',', '.');
+          }
+        }
 
       let altura = parseFloat(this.optionalData["altura_m"]);
       let peso = parseFloat(this.optionalData["peso_kg"]);
