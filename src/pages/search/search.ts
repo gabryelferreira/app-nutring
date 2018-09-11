@@ -1,3 +1,4 @@
+import { SettingsService } from './../settings/settings.service';
 import { LoadingService } from './../../app/framework/loaders/loading.service';
 import * as service from './search.service';
 import { Component } from '@angular/core';
@@ -30,10 +31,13 @@ export class SearchPage {
   offset: number = 0;
   viewMode: number = 0;
   maxViewMode: number = 1;
+  selectedTheme: String = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
               private get: service.SearchGetService, private post: service.SearchPostService, 
-              private toastCtrl: ToastController, private loadingCtrl: LoadingService) {
+              private toastCtrl: ToastController, private loadingCtrl: LoadingService,
+              private _settings: SettingsService) {
+    _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.findFoods();
     
   }
