@@ -6,6 +6,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as service from './login.service';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { ToastController } from 'ionic-angular';
+import { Keyboard } from '@ionic-native/keyboard';
 
 @IonicPage()
 @Component({
@@ -20,13 +21,14 @@ export class LoginPage {
     senha: ""
   }
   
+  showSignupButtons: boolean = true;
   loadingLogin: boolean = false;
   loadingFacebookLogin: boolean = false;
   loadingSomething: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
               private get: service.LoginGetService, private post: service.LoginPostService, 
-              private fb: Facebook, private toastCtrl: ToastController) {      
+              private fb: Facebook, private toastCtrl: ToastController, private kb:Keyboard) {      
   }
 
   getLoadingLogin(){return this.loadingLogin;}
@@ -41,6 +43,11 @@ export class LoginPage {
 
   ionViewDidLoad() {
 
+  }
+
+  ionViewDidEnter() {
+    this.kb.onKeyboardShow().subscribe(() => { this.showSignupButtons = false })
+    this.kb.onKeyboardHide().subscribe(() => { this.showSignupButtons = true })
   }
 
   async login() {
@@ -77,8 +84,6 @@ export class LoginPage {
             this.navCtrl.push(IntroductionPage)
           else
             this.navCtrl.push(TabsPage)
-        
-        
       }
     }
     if (!localStorage.getItem("userData"))
