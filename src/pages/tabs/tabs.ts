@@ -1,6 +1,6 @@
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-
+import { Keyboard } from '@ionic-native/keyboard';
 import { SettingsPage } from '../settings/settings';
 import { MontarPratoPage } from '../montar-prato/montar-prato';
 import { SearchPage } from '../search/search';
@@ -18,9 +18,15 @@ export class TabsPage {
   tab4Root = MeusPratosPage;
   tab5Root = SettingsPage;
   selectedTheme: String = "";
-  constructor(private settings: SettingsService) {
+  showTabs: boolean = true;
+  constructor(private settings: SettingsService,  private kb: Keyboard) {
     this.settings.getTabActiveTheme().subscribe(val => this.selectedTheme = val);
     if (this.selectedTheme == "" || this.selectedTheme == null || this.selectedTheme == undefined)
       this.selectedTheme = "light-theme-tab";
+  }
+
+  ionViewDidEnter() {
+    this.kb.onKeyboardShow().subscribe(() => { this.showTabs = false })
+    this.kb.onKeyboardHide().subscribe(() => { this.showTabs = true })
   }
 }

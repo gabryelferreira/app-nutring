@@ -27,7 +27,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { InfoPratoPage } from '../pages/meus-pratos/info-prato/info-prato';
 import { ProfilePage } from '../pages/profile/profile';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
-
+import { Keyboard } from '@ionic-native/keyboard';
 @NgModule({
   declarations: [
     MyApp,
@@ -78,6 +78,7 @@ import { ContactUsPage } from '../pages/contact-us/contact-us';
     SettingsService,
     SocialSharing,
     LoadingService,
+    Keyboard,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })
