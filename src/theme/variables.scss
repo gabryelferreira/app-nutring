@@ -36,20 +36,22 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #32db64,
+  primary:    #27ae60,
   secondary:  #488aff,
   danger:     #f53d3d,
   light:      #f4f4f4,
   white:        #fff,
   dark:       #222,
   fb:      #3b5998,
-  dark-theme: #101010,
-  light-theme: #32db64,
+  dark-theme: #202020,
+  dark-theme-tab: #202020,
+  light-theme: #27ae60,
+  light-theme-tab: #fff,
   transparent: transparent,
   lightgray: #ccc,
 );
 
-$toolbar-background: #32db64;
+$toolbar-background: #27ae60;
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 ion-navbar {
   ion-title {
@@ -63,6 +65,15 @@ button {
 }
 
 $tabs-md-tab-font-size: 10px;
+
+.tabbar {
+	a.tab-button[aria-selected=true] {
+		color: color($colors,primary);
+		.tab-button-icon {
+			color: color($colors,primary);
+		}
+	}
+}
 
 // App iOS Variables
 // --------------------------------------------------

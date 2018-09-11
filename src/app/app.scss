@@ -31,3 +31,8 @@ h1, h2, h3, h4, h5, h6, p,
 ion-card-title, ion-badge, ion-item, ion-list-header, ion-note, ion-button, ion-title, button, ion-card-content {
     font-family: Roboto Condensed, sans-serif !important;
 }
+
+ion-header {
+    border: 0 !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;
+}

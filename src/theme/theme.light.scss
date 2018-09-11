@@ -36,7 +36,6 @@
 
 
 
-
       /* ------------------------------
     ------------------------------
     ---------------------------------
@@ -85,27 +84,27 @@
     }
 
     ion-segment-button {
-      color: #fff !important;
+      color: #32db64 !important;
     }
    
     .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated, .segment-ios .segment-button {
-      border-color: #fff !important;
-      color: #fff !important;
+      border-color: #32db64 !important;
+      color: #32db64 !important;
     }
 
     .segment-ios .segment-button.segment-activated {
-      background: #fff !important;
+      background: #32db64 !important;
       color: #32db64 !important;
       border-color: #fff !important;
     }
 
 
     .segment-md .segment-button {
-      color: #fff !important;
+      color: #32db64 !important;
     }
 
     .header-segment {
-      background: #32db64 !important;
+      background: #aaa !important;
     }
 
 }

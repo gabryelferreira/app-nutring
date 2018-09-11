@@ -88,10 +88,16 @@ export class SettingsPage {
   }
 
   toggleDarkTheme(e) {
-    if (this.darkTheme)
+    if (this.darkTheme){
       this._settings.setActiveTheme('dark-theme');
-    else
+      this._settings.setTabActiveTheme('dark-theme-tab');
+    } else {
       this._settings.setActiveTheme('light-theme');
+      this._settings.setTabActiveTheme('light-theme-tab');
+    }
+    
+      
+    
   }
 
   share(){
