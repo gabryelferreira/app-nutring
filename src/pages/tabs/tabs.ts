@@ -19,8 +19,8 @@ export class TabsPage {
   tab5Root = SettingsPage;
   selectedTheme: String = "";
   constructor(private settings: SettingsService) {
-    this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+    this.settings.getTabActiveTheme().subscribe(val => this.selectedTheme = val);
     if (this.selectedTheme == "" || this.selectedTheme == null || this.selectedTheme == undefined)
-      this.selectedTheme = "primary";
+      this.selectedTheme = "light-theme-tab";
   }
 }
