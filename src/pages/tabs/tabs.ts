@@ -18,14 +18,9 @@ export class TabsPage {
   tab4Root = MeusPratosPage;
   tab5Root = SettingsPage;
   selectedTheme: String = "";
-<<<<<<< HEAD
   showTabs: boolean = true;
-  constructor(private settings: SettingsService, private kb: Keyboard) {
-    this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
-=======
-  constructor(private settings: SettingsService) {
+  constructor(private settings: SettingsService,  private kb: Keyboard) {
     this.settings.getTabActiveTheme().subscribe(val => this.selectedTheme = val);
->>>>>>> 3428cd282fad7b0353b5e884dc860d2d8469de01
     if (this.selectedTheme == "" || this.selectedTheme == null || this.selectedTheme == undefined)
       this.selectedTheme = "light-theme-tab";
   }
