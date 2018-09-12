@@ -4,7 +4,7 @@ import { urlencode } from './url';
 
 export abstract class Connect {
 
-    url: string = "http://localhost/nutring-api/api/";
+    url: string = "http://carnebal.store/api/";
     constructor(private http: HttpClient, private method: string){
     }
 
@@ -31,6 +31,7 @@ export abstract class Connect {
             
         } else if (this.method.toUpperCase() == "POST"){
             try {
+                console.log(body)
                 var result = await this.http.post(this.url + _function, body, options).toPromise().then();
                 console.log(result);
                 return result;

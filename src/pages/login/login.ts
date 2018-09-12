@@ -20,34 +20,28 @@ export class LoginPage {
     email: "",
     senha: ""
   }
-  
-  showSignupButtons: boolean = true;
+
   loadingLogin: boolean = false;
   loadingFacebookLogin: boolean = false;
   loadingSomething: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, 
-              private get: service.LoginGetService, private post: service.LoginPostService, 
-              private fb: Facebook, private toastCtrl: ToastController, private kb:Keyboard) {      
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private get: service.LoginGetService, private post: service.LoginPostService,
+    private fb: Facebook, private toastCtrl: ToastController, private keyboard: Keyboard) {
   }
 
-  getLoadingLogin(){return this.loadingLogin;}
-  setLoadingLogin(loadingLogin: boolean){this.loadingLogin = loadingLogin; this.loadingSomething = loadingLogin;}
+  getLoadingLogin() { return this.loadingLogin; }
+  setLoadingLogin(loadingLogin: boolean) { this.loadingLogin = loadingLogin; this.loadingSomething = loadingLogin; }
 
-  getLoadingFacebookLogin(){return this.loadingFacebookLogin;}
-  setLoadingFacebookLogin(loadingFacebookLogin: boolean){this.loadingFacebookLogin = loadingFacebookLogin; this.loadingSomething = loadingFacebookLogin;}
+  getLoadingFacebookLogin() { return this.loadingFacebookLogin; }
+  setLoadingFacebookLogin(loadingFacebookLogin: boolean) { this.loadingFacebookLogin = loadingFacebookLogin; this.loadingSomething = loadingFacebookLogin; }
 
-  getLoadingSomething(){return this.loadingSomething;}
+  getLoadingSomething() { return this.loadingSomething; }
 
-  stopLoading(){this.loadingFacebookLogin = false; this.loadingLogin = false; this.loadingSomething = false;}
+  stopLoading() { this.loadingFacebookLogin = false; this.loadingLogin = false; this.loadingSomething = false; }
 
   ionViewDidLoad() {
-
-  }
-
-  ionViewDidEnter() {
-    this.kb.onKeyboardShow().subscribe(() => { this.showSignupButtons = false })
-    this.kb.onKeyboardHide().subscribe(() => { this.showSignupButtons = true })
+    this.keyboard.disableScroll(true);
   }
 
   async login() {
@@ -62,13 +56,13 @@ export class LoginPage {
 
   loginFacebook() {
     this.setLoadingFacebookLogin(true);
-    this.fb.login(['public_profile', 'email', 'email', 'user_birthday', 'user_gender'])
-      .then(async (res: FacebookLoginResponse) => {
+    this.fb.login(['public_profile', 'email', 'user_birthday', 'user_gender'])
+      .then(() => this.fb.api('/me?fields=id,name,email,birthday,gender', []).then(async (res) => {
         console.log('Logged into Facebook!', res)
         let result = await this.post.connectWithFacebook(res)
         this.entrar(result)
-      })
-      .catch(e => {console.log('Error logging into Facebook', e); this.stopLoading()});
+      }))
+      .catch(e => { console.log('Error logging into Facebook', e); this.stopLoading() });
   }
 
   entrar(result) {
@@ -78,12 +72,12 @@ export class LoginPage {
       } else if (result.result == "ERROR") {
         this.showToast("Ocorreu um erro! Tente novamente.", "top");
       } else {
-          let userData = result.result;
-          localStorage.setItem("userData", JSON.stringify(userData))
-          if (userData.acessos == 1)
-            this.navCtrl.push(IntroductionPage)
-          else
-            this.navCtrl.push(TabsPage)
+        let userData = result.result;
+        localStorage.setItem("userData", JSON.stringify(userData))
+        if (userData.acessos == 1)
+          this.navCtrl.push(IntroductionPage)
+        else
+          this.navCtrl.push(TabsPage)
       }
     }
     if (!localStorage.getItem("userData"))

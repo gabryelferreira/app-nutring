@@ -17,6 +17,9 @@ import { SettingsService } from '../settings/settings.service';
 export class HomePage {
 
   selectedTheme: String = "";
+  public chartLabels:string[] = ['Kcal consumidas', 'Kcal restante'];
+  public chartData:number[] = [1200,1000];
+  public chartType:string = 'doughnut';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService) {
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);

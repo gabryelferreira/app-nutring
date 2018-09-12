@@ -28,6 +28,7 @@ import { InfoPratoPage } from '../pages/meus-pratos/info-prato/info-prato';
 import { ProfilePage } from '../pages/profile/profile';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { Keyboard } from '@ionic-native/keyboard';
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     MyApp,
@@ -51,6 +52,7 @@ import { Keyboard } from '@ionic-native/keyboard';
     HttpClientModule,
     InputMaskModule,
     BrMaskerModule,
+    ChartsModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

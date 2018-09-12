@@ -23,8 +23,10 @@ export class LoginPostService extends Connect {
         return this.callMethod("register", user);
     }
 
-    connectWithFacebook(facebookUser) {
-        return this.callMethod('fbLogin', facebookUser)
+    connectWithFacebook(facebookUser:any) {
+        console.log("facebook indo pro back", facebookUser)
+        facebookUser = JSON.stringify(facebookUser)
+        return this.callMethod('fbLogin', {facebookUser})
     }
 
 }
