@@ -28,8 +28,13 @@
 }
 
 h1, h2, h3, h4, h5, h6, p,
-ion-card-title, ion-badge, ion-item, ion-list-header, ion-note, ion-button, ion-title, button, ion-card-content {
+ion-card-title, ion-badge, ion-item, ion-list-header, ion-note, ion-button, ion-title, button, ion-card-content,
+input[type="text"], input[type="password"] {
     font-family: Roboto Condensed, sans-serif !important;
+}
+
+button {
+    border-radius: 5px !important;
 }
 
 ion-header {

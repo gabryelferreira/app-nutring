@@ -24,6 +24,7 @@ export class LoginPage {
   loadingLogin: boolean = false;
   loadingFacebookLogin: boolean = false;
   loadingSomething: boolean = false;
+  validLogin: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private get: service.LoginGetService, private post: service.LoginPostService,
@@ -39,6 +40,9 @@ export class LoginPage {
   getLoadingSomething() { return this.loadingSomething; }
 
   stopLoading() { this.loadingFacebookLogin = false; this.loadingLogin = false; this.loadingSomething = false; }
+
+  setValidLogin(validLogin: boolean){this.validLogin = validLogin;}
+
 
   ionViewDidLoad() {
     this.keyboard.disableScroll(true);
@@ -93,6 +97,13 @@ export class LoginPage {
     });
 
     toast.present(toast);
+  }
+
+  validateLogin(){
+    if (this.user.email.length > 0 && this.user.senha.length > 0)
+      this.setValidLogin(true);
+    else
+      this.setValidLogin(false);
   }
 
 }

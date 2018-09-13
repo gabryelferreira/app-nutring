@@ -14,26 +14,29 @@
 
 
 <ion-content padding>
-  <form id="login">
-    <ion-item padding-right>
-      <ion-label floating>Nome de usuário ou e-mail</ion-label>
-      <ion-input [(ngModel)]="user.email" name="email" type="text"></ion-input>
-    </ion-item>
+  <form id="login" padding>
+    <!-- <ion-item padding-right no-border> -->
+        <!-- <ion-label floating>Nome de usuário ou e-mail</ion-label> -->
+        <input type="text" [(ngModel)]="user.email" name="email" (keyup)="validateLogin()" placeholder="Nome de usuário ou e-mail">
+      <!-- <ion-input [(ngModel)]="user.email" name="email" type="text"></ion-input> -->
+    <!-- </ion-item> -->
 
-    <ion-item padding-right>
-      <ion-label floating>Senha</ion-label>
-      <ion-input [(ngModel)]="user.senha" name="senha" type="password"></ion-input>
-    </ion-item>
+    <!-- <ion-item padding-right> -->
+        <!-- <ion-label floating>Senha</ion-label> -->
+      <input type="password" [(ngModel)]="user.senha" name="senha" (keyup)="validateLogin()" placeholder="Senha">
+      <!-- <ion-input [(ngModel)]="user.senha" name="senha" type="password"></ion-input> -->
+    <!-- </ion-item> -->
 
-    <div padding>
-      <button *ngIf="!loadingLogin" ion-button full (click)="login()">ENTRAR</button>
+    <div>
+      <button [disabled]="!validLogin" ion-button [style.background]="validLogin ? '#27ae60' : 'none'"
+      [style.color]="validLogin ? '#fff' : '#27ae60'" type="submit" id="loginButton" *ngIf="!loadingLogin" full (click)="login()">Entrar</button>
       <button *ngIf="loadingLogin" ion-button full>
         <ion-spinner color="white" name="bubbles"></ion-spinner>
       </button>
     </div>
-    <div class="align-center">
+    <!-- <div class="align-center">
       <a href="#">Esqueceu a senha?</a>
-    </div>
+    </div> -->
   </form>
 
 </ion-content>
