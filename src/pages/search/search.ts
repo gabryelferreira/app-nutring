@@ -1,5 +1,4 @@
 import { SettingsService } from './../settings/settings.service';
-import { LoadingService } from './../../app/framework/loaders/loading.service';
 import * as service from './search.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
@@ -32,10 +31,11 @@ export class SearchPage {
   viewMode: number = 0;
   maxViewMode: number = 1;
   selectedTheme: String = "";
+  loading: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
               private get: service.SearchGetService, private post: service.SearchPostService, 
-              private toastCtrl: ToastController, private loadingCtrl: LoadingService,
+              private toastCtrl: ToastController,
               private _settings: SettingsService) {
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.findFoods();
@@ -79,7 +79,7 @@ export class SearchPage {
       this.setInitialFoods();
       this.setInitialOffset();
     } else {
-      this.loadingCtrl.presentWithMessage("Buscando alimentos");
+      this.loading = true;
       let result = await this.get.findFoods();
       if (result.success){
         let allFoods = result.result;
@@ -89,7 +89,7 @@ export class SearchPage {
         this.setInitialOffset();
         localStorage.setItem("allFoods", JSON.stringify(this.getFoodsBackup()));
       }
-      this.loadingCtrl.dismiss();
+      this.loading = false;
     }
 
   }

@@ -20,6 +20,8 @@
 
 <ion-content class="list-avatar-page">
 
+  <loader *ngIf="loading"></loader>
+
   <ion-list *ngIf="foods && foods.length > 0">
 
     <ion-list-header>

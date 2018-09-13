@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, ModalController } from 'ionic-angular';
 import { SettingsService } from '../settings/settings.service';
 import * as service from './montar-prato.service';
-import { LoadingService } from '../../app/framework/loaders/loading.service';
 import * as types from '../../app/types';
 /**
  * Generated class for the MontarPratoPage page.
@@ -23,7 +22,7 @@ import * as types from '../../app/types';
 export class MontarPratoPage {
   
   selectedTheme: String = "";
-
+  loading: boolean = false;
 
   foods = [];
   foodsBackup = [];
@@ -41,7 +40,7 @@ export class MontarPratoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
               private get: service.MontarPratoGetService, private post: service.MontarPratoPostService, 
-              private toastCtrl: ToastController, private loadingCtrl: LoadingService, 
+              private toastCtrl: ToastController,
               private settings: SettingsService, public modalCtrl: ModalController) {
 
     settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
@@ -83,7 +82,7 @@ export class MontarPratoPage {
       this.setInitialFoods();
       this.setInitialOffset();
     } else {
-      this.loadingCtrl.presentWithMessage("Buscando alimentos");
+      this.loading = true;
       let result = await this.get.findFoods();
       if (result.success){
         let allFoods = result.result;
@@ -93,7 +92,7 @@ export class MontarPratoPage {
         this.setInitialOffset();
         localStorage.setItem("allFoods", JSON.stringify(this.getFoodsBackup()));
       }
-      this.loadingCtrl.dismiss();
+      this.loading = false;
     }
 
   }

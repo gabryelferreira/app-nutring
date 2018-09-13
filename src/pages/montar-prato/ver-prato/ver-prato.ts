@@ -2,7 +2,6 @@ import { SettingsService } from '../../settings/settings.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import { VerPratoPostService, VerPratoGetService } from './ver-prato.service';
-import { LoadingService } from '../../../app/framework/loaders/loading.service';
 import { MontarPratoPage } from '../../montar-prato/montar-prato';
 
 /**
@@ -41,7 +40,7 @@ export class VerPratoPage {
   loading: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private settings: SettingsService,
-              private post: VerPratoPostService, private loadingCtrl: LoadingService, private toastCtrl: ToastController,
+              private post: VerPratoPostService, private toastCtrl: ToastController,
               private alertCtrl: AlertController) {
     settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }
@@ -82,7 +81,6 @@ export class VerPratoPage {
 
   async montarPrato(){
     this.loading = true;
-    this.loadingCtrl.presentWithMessage("Montando prato")
     let id_usuario = JSON.parse(localStorage.getItem("userData")).id_usuario;
     this.sendPrato = [];
     this.foods.forEach(element => {
@@ -91,7 +89,6 @@ export class VerPratoPage {
     let result = await this.post.createPrato(JSON.stringify(this.sendPrato));
     let message = "";
     let title = "";
-    this.loadingCtrl.dismiss();
     if (result.success){
       title = "Sucesso";
       message = "Prato feito com sucesso!";

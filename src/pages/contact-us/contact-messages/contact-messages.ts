@@ -25,6 +25,7 @@ export class ContactMessagesPage {
   user = [];
   messages = [];
   messagesByDate = [];
+  loading: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
               private _settings: SettingsService, private post: ContactUsPostService) {
@@ -34,6 +35,9 @@ export class ContactMessagesPage {
   }
 
   async getUserMessages(id_usuario: number){
+    this.messagesByDate = [];
+    this.messages = [];
+    this.loading = true;
     let result = await this.post.getUserMessages(id_usuario);
     if (result.success){
       this.messagesByDate = [];
@@ -54,6 +58,7 @@ export class ContactMessagesPage {
       });
 
     }
+    this.loading = false;
   }
 
   ionViewDidLoad() {

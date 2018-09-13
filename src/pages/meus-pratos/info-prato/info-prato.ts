@@ -1,4 +1,3 @@
-import { LoadingService } from './../../../app/framework/loaders/loading.service';
 import { MeusPratosPostService, MeusPratosGetService } from './../meus-pratos.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -26,21 +25,22 @@ export class InfoPratoPage {
   foods = [];
   selectedTheme: String = "";
   page: string = "alimentos";
+  loading: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService,
-              private post: MeusPratosPostService, private loadingCtrl: LoadingService) {
+              private post: MeusPratosPostService) {
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.prato = navParams.get("prato");
     this.getPratoInfoById(this.prato["id_prato"]);
   }
 
   async getPratoInfoById(id_prato: number){
-    this.loadingCtrl.presentWithMessage("Buscando prato");
+    this.loading = true;
     let result = await this.post.getPratoInfoById(id_prato);
     if (result.success){
       this.foods = result.result;
     }
-    this.loadingCtrl.dismiss();
+    this.loading = false;
   }
 
   ionViewDidLoad() {

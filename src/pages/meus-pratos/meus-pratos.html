@@ -24,7 +24,7 @@
 
 
 <ion-content>
-
+  <loader *ngIf="loading"></loader>
   <div *ngIf="pratosByDate && pratosByDate.length > 0">
 
     <ion-list *ngFor="let pratoByDate of pratosByDate">

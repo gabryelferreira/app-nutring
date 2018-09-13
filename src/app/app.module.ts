@@ -1,7 +1,7 @@
+import { LoaderComponent } from './../components/loader/loader';
 import { ContactMessagesPage } from './../pages/contact-us/contact-messages/contact-messages';
 import { VerPratoPage } from './../pages/montar-prato/ver-prato/ver-prato';
 import { HomePage } from './../pages/home/home';
-import { LoadingService } from './framework/loaders/loading.service';
 import { RegisterPage } from './../pages/register/register';
 import { LoginPage } from './../pages/login/login';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -29,6 +29,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { Keyboard } from '@ionic-native/keyboard';
 import { ChartsModule } from 'ng2-charts';
+import { ChartComponent } from '../components/chart/chart';
 @NgModule({
   declarations: [
     MyApp,
@@ -45,7 +46,9 @@ import { ChartsModule } from 'ng2-charts';
     InfoPratoPage,
     ProfilePage,
     ContactUsPage,
-    ContactMessagesPage
+    ContactMessagesPage,
+    ChartComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +82,6 @@ import { ChartsModule } from 'ng2-charts';
     Facebook,
     SettingsService,
     SocialSharing,
-    LoadingService,
     Keyboard,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]

@@ -17,6 +17,9 @@ import { SettingsService } from '../settings/settings.service';
 export class HomePage {
 
   selectedTheme: String = "";
+  waterChartColor: String = "green";
+  loading: boolean = false;
+
   public chartLabels:string[] = ['Kcal consumidas', 'Kcal restante'];
   public chartData:number[] = [1200,1000];
   public chartType:string = 'doughnut';

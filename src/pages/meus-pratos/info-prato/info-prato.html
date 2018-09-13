@@ -25,7 +25,7 @@
 
 
 <ion-content>
-
+  <loader *ngIf="loading"></loader>
   <div *ngIf="prato && foods && foods.length > 0">
 
   <ion-card *ngIf="page == 'alimentos'">
