@@ -6,96 +6,97 @@
 -->
 <ion-header>
 
-    <ion-navbar color="{{selectedTheme}}">
+  <ion-navbar color="{{selectedTheme}}">
 
 
 
-      <ion-title text-left>
-        {{user.nome}}
-      </ion-title>
-  
-      <ion-buttons end>
-        <button ion-button icon-only (click)="verPerfil()">
-            <ion-note item-end color="white">Ver perfil</ion-note>
-        </button>
-      </ion-buttons>
-    </ion-navbar>
-  
-  </ion-header>
+    <ion-title text-left>
+      {{user.nome}}
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="verPerfil()">
+        <ion-note item-end color="white">Ver perfil</ion-note>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
 
 
 <ion-content>
+  <div (swipe)="swipe($event)">
 
-  <ion-list no-border style="border: 0;">
+    <ion-list no-border style="border: 0;">
 
-    <ion-list-header>
-      Geral
-    </ion-list-header>
+      <ion-list-header>
+        Geral
+      </ion-list-header>
 
-    <ion-item>
-      <ion-toggle checked="darkTheme" [(ngModel)]="darkTheme" (ngModelChange)="toggleDarkTheme($event)"></ion-toggle>
-      <ion-label>
-        Tema Escuro
-      </ion-label>
-      <ion-icon name='moon' item-start></ion-icon>
-    </ion-item>
+      <ion-item>
+        <ion-toggle checked="darkTheme" [(ngModel)]="darkTheme" (ngModelChange)="toggleDarkTheme($event)"></ion-toggle>
+        <ion-label>
+          Tema Escuro
+        </ion-label>
+        <ion-icon name='moon' item-start></ion-icon>
+      </ion-item>
 
-  </ion-list>
-
-
-  <ion-list>
-
-    <ion-list-header>
-      Alimentos
-    </ion-list-header>
-
-    <ion-item>
-      Sugerir um alimento
-      <ion-icon name='color-wand' item-start></ion-icon>
-    </ion-item>
-
-    <ion-item>
-      <ion-toggle checked="true"></ion-toggle>
-      <ion-label>
-        Receber sugestões
-      </ion-label>
-      <ion-icon name='chatboxes' item-start></ion-icon>
-    </ion-item>
+    </ion-list>
 
 
-  </ion-list>
+    <ion-list>
 
-  <ion-list>
+      <ion-list-header>
+        Alimentos
+      </ion-list-header>
 
-    <ion-list-header>
-      Outros
-    </ion-list-header>
+      <ion-item>
+        Sugerir um alimento
+        <ion-icon name='color-wand' item-start></ion-icon>
+      </ion-item>
 
-
-    <ion-item (click)="share()">
-      <ion-icon name='share-alt' item-start></ion-icon>
-      Compartilhar com amigos
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name='help' item-start></ion-icon>
-      Ajuda
-      <ion-note item-end>Precisa de ajuda?</ion-note>
-    </ion-item>
-
-    <ion-item (click)="openContactUsPage()">
-      <ion-icon name='mail-open' item-start></ion-icon>
-      Contate-nos
-    </ion-item>
-
-    <ion-item (click)="showConfirmLogout()">
-      <ion-icon name='power' item-start></ion-icon>
-      Sair
-      
-    </ion-item>
+      <ion-item>
+        <ion-toggle checked="true"></ion-toggle>
+        <ion-label>
+          Receber sugestões
+        </ion-label>
+        <ion-icon name='chatboxes' item-start></ion-icon>
+      </ion-item>
 
 
-  </ion-list>
+    </ion-list>
+
+    <ion-list>
+
+      <ion-list-header>
+        Outros
+      </ion-list-header>
 
 
+      <ion-item (click)="share()">
+        <ion-icon name='share-alt' item-start></ion-icon>
+        Compartilhar com amigos
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name='help' item-start></ion-icon>
+        Ajuda
+        <ion-note item-end>Precisa de ajuda?</ion-note>
+      </ion-item>
+
+      <ion-item (click)="openContactUsPage()">
+        <ion-icon name='mail-open' item-start></ion-icon>
+        Contate-nos
+      </ion-item>
+
+      <ion-item (click)="showConfirmLogout()">
+        <ion-icon name='power' item-start></ion-icon>
+        Sair
+
+      </ion-item>
+
+
+    </ion-list>
+
+  </div>
 </ion-content>

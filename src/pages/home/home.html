@@ -14,35 +14,37 @@
 
 
 <ion-content>
-  <ion-list>
-    <ion-item text-center>
+  <div (swipe)="swipe($event)">
+    <ion-list>
+      <ion-item text-center>
 
-      <h1>Bem vindo {{user.nome}}!</h1>
-      <img [src]='user.foto' width="192" height="192" style="border-radius: 50%">
+        <h1>Bem vindo {{user.nome}}!</h1>
+        <img [src]='user.foto' width="192" height="192" style="border-radius: 50%">
 
-      <loader *ngIf="loading"></loader>
-      <h1><strong>Performance</strong></h1>
-      <ion-grid >
-        <ion-row>
-          <ion-col>
-            Hoje
-            <div padding-top>
-              <chart [percent]="55" [color]="waterChartColor" (click)="gotoHistorico()" ></chart>
-            </div>
-          </ion-col>
-          <ion-col>
-            Essa semana
-            <div padding-top>
-              <chart [percent]="55" [color]="waterChartColor"></chart>
-            </div>
+        <loader *ngIf="loading"></loader>
+        <h1><strong>Performance</strong></h1>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              Hoje
+              <div padding-top>
+                <chart [percent]="55" [color]="waterChartColor" (click)="gotoHistorico()"></chart>
+              </div>
+            </ion-col>
+            <ion-col>
+              Essa semana
+              <div padding-top>
+                <chart [percent]="55" [color]="waterChartColor"></chart>
+              </div>
 
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
-      <hr>
-      <h1> Detalhes da Performance</h1>
-      meta de calorias do dia : {{kcalMeta}}
-    </ion-item>
-  </ion-list>
+        <hr>
+        <h1> Detalhes da Performance</h1>
+        meta de calorias do dia : {{kcalMeta}}
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

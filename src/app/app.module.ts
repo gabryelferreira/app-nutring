@@ -29,6 +29,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { Keyboard } from '@ionic-native/keyboard';
 import { ChartComponent } from '../components/chart/chart';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 @NgModule({
   declarations: [
     MyApp,
@@ -81,6 +82,7 @@ import { ChartComponent } from '../components/chart/chart';
     SettingsService,
     SocialSharing,
     Keyboard,
+    NativePageTransitions,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })

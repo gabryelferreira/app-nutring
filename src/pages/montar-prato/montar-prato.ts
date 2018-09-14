@@ -206,4 +206,13 @@ export class MontarPratoPage {
     });
   }
 
+  swipe(ev: any){
+    if(ev.direction === 2) {
+      this.navCtrl.parent.select(2);
+      
+    }
+    if(ev.direction === 4){
+      this.navCtrl.parent.select(0);
+    }
+  }
 }

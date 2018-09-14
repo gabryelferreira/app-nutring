@@ -40,9 +40,17 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
+    
   }
 
   gotoHistorico(){
     this.tabs.select(3)
+  }
+
+  swipe(ev: any){
+    if(ev.direction === 2) {
+      this.navCtrl.parent.select(1);
+      
+    }
   }
 }

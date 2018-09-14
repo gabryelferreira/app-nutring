@@ -9,13 +9,13 @@
   <ion-navbar color="{{selectedTheme}}">
     <ion-buttons left>
       <button ion-button (click)="refreshHistory()">
-          <ion-icon name="clipboard"></ion-icon>
+        <ion-icon name="clipboard"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>Histórico</ion-title>
     <ion-buttons end>
       <button ion-button (click)="refreshHistory()">
-          <ion-icon name="refresh"></ion-icon>
+        <ion-icon name="refresh"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -24,45 +24,46 @@
 
 
 <ion-content>
-  <loader *ngIf="loading"></loader>
-  <div *ngIf="pratosByDate && pratosByDate.length > 0">
+  <div (swipe)="swipe($event)">
+    <loader *ngIf="loading"></loader>
+    <div *ngIf="pratosByDate && pratosByDate.length > 0">
 
-    <ion-list *ngFor="let pratoByDate of pratosByDate">
+      <ion-list *ngFor="let pratoByDate of pratosByDate">
 
-      <ion-list-header>
-        {{pratoByDate.dt_consumo | date:'fullDate'}}
-        <!-- <button ion-button item-end (click)="toggleViewMode()" icon-only color="transparent">
+        <ion-list-header>
+          {{pratoByDate.dt_consumo | date:'fullDate'}}
+          <!-- <button ion-button item-end (click)="toggleViewMode()" icon-only color="transparent">
             <ion-icon name="options"></ion-icon>
         </button> -->
-      </ion-list-header>
-      
-      <div>
-        <ion-scroll scrollX="true">
-          <div class="inner">
-            <ion-card class="card-prato" *ngFor="let prato of pratoByDate.pratos; let i = index" (click)="openPrato(prato)">
-              <div class="inner-card-prato">
-                <ion-card-content>
+        </ion-list-header>
+
+        <div>
+          <ion-scroll scrollX="true">
+            <div class="inner">
+              <ion-card class="card-prato" *ngFor="let prato of pratoByDate.pratos; let i = index" (click)="openPrato(prato)">
+                <div class="inner-card-prato">
+                  <ion-card-content>
                     <ion-item text-center>
                       <ion-badge item-center>{{prato.hr_consumo}}</ion-badge>
                     </ion-item>
-                </ion-card-content>
-            
-                <ion-item>
-                  Calorias
-                  <p>{{prato.kcal_consumo | number:'1.0-2'}} kcal</p>
-                </ion-item>
-                <ion-item>
+                  </ion-card-content>
+
+                  <ion-item>
+                    Calorias
+                    <p>{{prato.kcal_consumo | number:'1.0-2'}} kcal</p>
+                  </ion-item>
+                  <ion-item>
                     Quantidade
                     <p>{{prato.peso}} g</p>
-                </ion-item>
-              </div>
-            </ion-card>
-          </div>
-        </ion-scroll>
-      </div>
+                  </ion-item>
+                </div>
+              </ion-card>
+            </div>
+          </ion-scroll>
+        </div>
 
-    </ion-list>
+      </ion-list>
 
+    </div>
   </div>
-
 </ion-content>
