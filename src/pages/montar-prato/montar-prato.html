@@ -6,20 +6,21 @@
 -->
 <ion-header>
 
-  <ion-navbar color="{{selectedTheme}}">
+  <ion-navbar color="{{selectedTheme}}" [scrollHide]="headerScrollConfig" [scrollContent]="pageContent">
     <ion-title>Montar prato</ion-title>
   </ion-navbar>
+  <ion-searchbar [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" [(ngModel)]="searchInput.searchText" [showCancelButton]="searchInput.shouldShowCancel" (ionInput)="onInput()"
+      (ionCancel)="onCancel($event)" placeholder="Buscar">
+    </ion-searchbar>
 
 </ion-header>
 
 
-<ion-content class="outer-content">
+<ion-content class="outer-content" #pageContent fullscreen>
     <loader *ngIf="loading"></loader>
 
 
-    <ion-searchbar [(ngModel)]="searchInput.searchText" [showCancelButton]="searchInput.shouldShowCancel" (ionInput)="onInput()"
-      (ionCancel)="onCancel($event)" placeholder="Buscar">
-    </ion-searchbar>
+    
 
 
 

@@ -31,6 +31,7 @@ import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { Keyboard } from '@ionic-native/keyboard';
 import { ChartComponent } from '../components/chart/chart';
 import { SugestaoAlimentoPage } from '../pages/sugestao-alimento/sugestao-alimento';
+import { ScrollHideDirective } from '../components/hide-on-scrolling/scroll-hide-directive';
 @NgModule({
   declarations: [
     MyApp,
@@ -51,7 +52,8 @@ import { SugestaoAlimentoPage } from '../pages/sugestao-alimento/sugestao-alimen
     ContactMessagesPage,
     ChartComponent,
     LoaderComponent,
-    NtSearchbarComponent
+    NtSearchbarComponent,
+    ScrollHideDirective
   ],
   imports: [
     BrowserModule,

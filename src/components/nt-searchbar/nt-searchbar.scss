@@ -1,7 +1,9 @@
 nt-searchbar {
+    @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
     .searchbar {
         height: 50px;
         width: 100%;
+        position: relative;
         input[type="search"]{
             width: 100%;
             border: 0;
@@ -10,6 +12,13 @@ nt-searchbar {
             padding: 0 10px;
             background: #fcfcfc;
             font-size: 16px;
+            text-indent: 30px
         }
     }
+.searchbar .fa-search { 
+  position: absolute;
+  top: 17px;
+  left: 15px;
+  font-size: 15px;
+}
 }

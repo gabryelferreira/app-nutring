@@ -10,11 +10,11 @@
 
 
 
- <ion-header >
-    <nt-searchbar (callback)="onInput($event)">
+ <ion-header [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" >
+   <nt-searchbar (callback)="onInput($event)">
       </nt-searchbar>
  </ion-header>
-<ion-content class="list-avatar-page" (onscroll)="hideScroll($event)">
+<ion-content class="list-avatar-page" (onscroll)="hideScroll($event)" #pageContent  fullscreen>
     
     <loader *ngIf="loading"></loader>
 

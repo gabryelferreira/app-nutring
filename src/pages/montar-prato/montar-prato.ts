@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams, ToastController, ModalController }
 import { SettingsService } from '../settings/settings.service';
 import * as service from './montar-prato.service';
 import * as types from '../../app/types';
+import { ScrollHideConfig } from '../../components/hide-on-scrolling/scroll-hide-directive';
 /**
  * Generated class for the MontarPratoPage page.
  *
@@ -20,6 +21,8 @@ import * as types from '../../app/types';
     service.MontarPratoPostService]
 })
 export class MontarPratoPage {
+
+  headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 44 };
   
   selectedTheme: String = "";
   loading: boolean = false;

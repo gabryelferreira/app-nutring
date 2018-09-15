@@ -2,7 +2,7 @@ import { SettingsService } from './../settings/settings.service';
 import * as service from './search.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-
+import { ScrollHideConfig } from '../../components/hide-on-scrolling/scroll-hide-directive';
 /**
  * Generated class for the SearchPage page.
  *
@@ -17,6 +17,9 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
   providers: [service.SearchGetService, service.SearchPostService]
 })
 export class SearchPage {
+
+  headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 44 };
+  
 
   foods = [];
   foodsBackup = [];
