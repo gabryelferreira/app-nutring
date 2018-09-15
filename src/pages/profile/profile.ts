@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { SettingsService } from '../settings/settings.service';
 import { elementEnd } from '@angular/core/src/render3/instructions';
 import { ProfilePostService, ProfileGetService } from './profile.service';
+import { IUser } from '../../app/types';
 
 /**
  * Generated class for the ProfilePage page.
@@ -24,7 +25,7 @@ import { ProfilePostService, ProfileGetService } from './profile.service';
 export class ProfilePage {
 
   selectedTheme: String = "";
-  user = {};
+  user:IUser = {altura_m:"", cep:"",usuario:"",telefone:"",sobrenome:"",sexo:"",email:"",senha:"",dt_nasc:"",peso_kg:"",foto:"",nome:"",id_usuario:0,};
   page = "pessoais";
 
   loadingOptional: boolean = false;
@@ -37,6 +38,9 @@ export class ProfilePage {
               private toastCtrl: ToastController, private post: ProfilePostService) {
     this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.user = JSON.parse(localStorage.getItem("userData"));
+    this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
+    let altura = parseFloat(this.user.altura_m)/100
+    this.user.altura_m = altura.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
   }
 
   ionViewDidLoad() {
@@ -59,6 +63,7 @@ export class ProfilePage {
         }
 
       let altura = parseFloat(this.optionalData["altura_m"]);
+      altura *= 100
       let peso = parseFloat(this.optionalData["peso_kg"]);
       let data = {id_usuario: this.user["id_usuario"], altura_m: altura, peso_kg: peso}
       let result = await this.post.updateUserOptionalInfo(JSON.stringify(data))
@@ -117,8 +122,10 @@ export class ProfilePage {
   }
 
   validNumericField(field){
+    console.log(field);
     if (field && field.length > 5)
       return false;
+    field = (0+field).replace(/^-?\d+(?:\.\d{0,2})?/)[0]
+      
   }
-
 }
