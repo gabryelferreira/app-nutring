@@ -1,0 +1,36 @@
+<!--
+  Generated template for the SugestaoAlimentoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="{{selectedTheme}}">
+    <ion-title text-left>Sugira um Alimento</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="seeSuggestions()">
+        <ion-icon name="md-book"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card-content>
+    <ion-card-title>
+      {{user.nome}},
+    </ion-card-title>
+    <p>
+      Todos os dias trabalhamos para que sua experiência no Nutring seja a melhor possível, e se você quiser pode fazer parte disso!
+      Nos escreva sugestões de alimentos que você deseja ver na plataforma.
+    </p>
+  </ion-card-content>
+
+
+</ion-content>
