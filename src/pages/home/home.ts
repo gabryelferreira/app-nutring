@@ -25,6 +25,7 @@ export class HomePage {
   kcalMeta:number = 0;
   kcalConsumida:number;
   imgTeste = "http://www.leisureopportunities.com/images/247215_898310.jpg";
+  sizeTeste = "small";
 
   constructor(private tabs:Tabs,public navCtrl: NavController, public navParams: NavParams, 
               private _settings: SettingsService, private post:service.HomePostService, private get:service.HomeGetService) {
