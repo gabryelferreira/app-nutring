@@ -5,16 +5,17 @@
   Ionic pages and navigation.
 -->
 
-<ion-header>
-
-  <ion-searchbar [(ngModel)]="searchInput.searchText" [showCancelButton]="searchInput.shouldShowCancel" (ionInput)="onInput($event)"
-    (ionCancel)="onCancel($event)" placeholder="Buscar">
-  </ion-searchbar>
-</ion-header>
 
 
 
-<ion-content class="list-avatar-page">
+
+
+ <ion-header >
+    <nt-searchbar (callback)="onInput($event)">
+      </nt-searchbar>
+ </ion-header>
+<ion-content class="list-avatar-page" (onscroll)="hideScroll($event)">
+    
     <loader *ngIf="loading"></loader>
 
     <ion-list *ngIf="foods && foods.length > 0">

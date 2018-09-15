@@ -94,9 +94,13 @@ export class SearchPage {
 
   }
 
+  hideScroll(ev:any){
+    console.log("to auqiii" , ev)
+  }
+
   onInput(event){
     let allFoods = this.getFoodsBackup();
-    let text = this.searchInput.searchText;
+    let text = event;
     let foodsFiltered = allFoods.filter(function(element, i){
       if (element.nome.toLowerCase().indexOf(text.toLowerCase()) != -1 ||parseFloat(element.kcal).toFixed(2).toString().indexOf(text.toLowerCase()) != -1)
         return true

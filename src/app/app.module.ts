@@ -1,3 +1,4 @@
+import { NtSearchbarComponent } from './../components/nt-searchbar/nt-searchbar';
 import { LoaderComponent } from './../components/loader/loader';
 import { ContactMessagesPage } from './../pages/contact-us/contact-messages/contact-messages';
 import { VerPratoPage } from './../pages/montar-prato/ver-prato/ver-prato';
@@ -49,7 +50,8 @@ import { SugestaoAlimentoPage } from '../pages/sugestao-alimento/sugestao-alimen
     SugestaoAlimentoPage,
     ContactMessagesPage,
     ChartComponent,
-    LoaderComponent
+    LoaderComponent,
+    NtSearchbarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { ChartComponent } from './chart/chart';
 import { LoaderComponent } from './loader/loader';
+import { NtSearchbarComponent } from './nt-searchbar/nt-searchbar';
 @NgModule({
 	declarations: [ChartComponent,
-    LoaderComponent],
+    LoaderComponent,
+    NtSearchbarComponent],
 	imports: [],
 	exports: [ChartComponent,
-    LoaderComponent]
+    LoaderComponent,
+    NtSearchbarComponent]
 })
 export class ComponentsModule {}

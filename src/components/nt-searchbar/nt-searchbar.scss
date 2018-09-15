@@ -1,0 +1,15 @@
+nt-searchbar {
+    .searchbar {
+        height: 50px;
+        width: 100%;
+        input[type="search"]{
+            width: 100%;
+            border: 0;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 0 10px;
+            background: #fcfcfc;
+            font-size: 16px;
+        }
+    }
+}
