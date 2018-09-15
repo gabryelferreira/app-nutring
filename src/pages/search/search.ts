@@ -169,12 +169,4 @@ export class SearchPage {
   ionViewDidLoad() {
   }
 
-  swipe(ev: any){
-    if(ev.direction === 2) {
-      this.navCtrl.parent.select(3);
-    }
-    if(ev.direction === 4){
-      this.navCtrl.parent.select(1);
-    }
-  }
 }

@@ -121,12 +121,4 @@ export class MeusPratosPage {
   ionViewDidLoad() {
   }
 
-  swipe(ev: any){
-    if(ev.direction === 2) {
-      this.navCtrl.parent.select(4);
-    }
-    if(ev.direction === 4){
-      this.navCtrl.parent.select(2);
-    }
-  }
 }

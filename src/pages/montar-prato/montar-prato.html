@@ -14,7 +14,6 @@
 
 
 <ion-content class="outer-content">
-  <div (swipe)="swipe($event)">
     <loader *ngIf="loading"></loader>
 
 
@@ -80,5 +79,4 @@
     <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
       <ion-infinite-scroll-content></ion-infinite-scroll-content>
     </ion-infinite-scroll>
-  </div>
 </ion-content>

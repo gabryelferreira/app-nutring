@@ -24,7 +24,6 @@
 
 
 <ion-content>
-  <div (swipe)="swipe($event)">
     <loader *ngIf="loading"></loader>
     <div *ngIf="pratosByDate && pratosByDate.length > 0">
 
@@ -65,5 +64,4 @@
       </ion-list>
 
     </div>
-  </div>
 </ion-content>

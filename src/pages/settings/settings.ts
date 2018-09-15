@@ -117,10 +117,4 @@ export class SettingsPage {
     location.reload();
   }
 
-  swipe(ev: any){
-    if(ev.direction === 4){
-      this.navCtrl.parent.select(3);
-    }
-  }
-
 }
