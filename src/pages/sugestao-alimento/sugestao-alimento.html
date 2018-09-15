@@ -22,15 +22,37 @@
 
 
 <ion-content padding>
-  <ion-card-content>
-    <ion-card-title>
-      {{user.nome}},
-    </ion-card-title>
-    <p>
-      Todos os dias trabalhamos para que sua experiência no Nutring seja a melhor possível, e se você quiser pode fazer parte disso!
-      Nos escreva sugestões de alimentos que você deseja ver na plataforma.
-    </p>
-  </ion-card-content>
+  <ion-card *ngIf="user">
+
+    <ion-card-content>
+      <ion-card-title>
+        {{user.nome}},
+      </ion-card-title>
+      <p>
+        Todos os dias trabalhamos para que sua experiência no Nutring seja a melhor possível, e se você quiser pode
+        fazer parte disso!
+        Nos escreva sugestões de alimentos que você deseja ver na plataforma.
+        Será muito rápido, só precisamos do nome do alimento e uma descrição, que é opcional.
+      </p>
+    </ion-card-content>
+    <ion-item>
+        <ion-label color="primary"  floating>Nome do Alimento</ion-label>
+        <ion-input [(ngModel)]="alimento_nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>breve descrição</ion-label>
+      <ion-textarea [(ngModel)]="descricao" name="descricao" rows="4"></ion-textarea>
+    </ion-item>
+
+  </ion-card>
+  <div padding text-right>
+    <button [disabled]="alimento_nome.length < 3" *ngIf="!loading" ion-button full (click)="sendSuggestionToNutring()">ENVIAR
+      SUGESTÃO</button>
+    <button *ngIf="loading" ion-button full>
+      <ion-spinner color="white" name="bubbles"></ion-spinner>
+    </button>
+  </div>
 
 
 </ion-content>

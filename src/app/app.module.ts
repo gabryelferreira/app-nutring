@@ -29,6 +29,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { Keyboard } from '@ionic-native/keyboard';
 import { ChartComponent } from '../components/chart/chart';
+import { SugestaoAlimentoPage } from '../pages/sugestao-alimento/sugestao-alimento';
 @NgModule({
   declarations: [
     MyApp,
@@ -45,6 +46,7 @@ import { ChartComponent } from '../components/chart/chart';
     InfoPratoPage,
     ProfilePage,
     ContactUsPage,
+    SugestaoAlimentoPage,
     ContactMessagesPage,
     ChartComponent,
     LoaderComponent
@@ -70,6 +72,7 @@ import { ChartComponent } from '../components/chart/chart';
     HomePage,
     VerPratoPage,
     InfoPratoPage,
+    SugestaoAlimentoPage,
     ProfilePage,
     ContactUsPage,
     ContactMessagesPage

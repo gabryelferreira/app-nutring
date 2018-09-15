@@ -8,6 +8,7 @@ import * as settings from './settings.service';
 import * as types from '../../app/types';
 import { ProfilePage } from '../profile/profile';
 import { ContactUsPage } from '../contact-us/contact-us';
+import { SugestaoAlimentoPage } from '../sugestao-alimento/sugestao-alimento';
 /**
  * Generated class for the SettingsPage page.
  *
@@ -112,9 +113,15 @@ export class SettingsPage {
     this.navCtrl.push(ContactUsPage);
   }
 
+  openSuggestionPage(){
+    this.navCtrl.push(SugestaoAlimentoPage);
+  }
+
   logout() {
     localStorage.clear();
     location.reload();
   }
+
+
 
 }
