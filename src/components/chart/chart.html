@@ -3,6 +3,7 @@
   
   <div [class]="classes" style="margin: auto">
     <span>{{text}}</span>
+    <img class="img-chart-nt" *ngIf="img" [src]="img">
     <div class="slice">
         <div class="bar"></div>
         <div class="fill"></div>

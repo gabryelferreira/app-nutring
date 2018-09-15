@@ -14,6 +14,7 @@ export class ChartComponent {
 
   @Input('percent') percent;
   @Input('color') color;
+  @Input('img') img;
 
   text: String = "";
   classes: String = "c100 ";
