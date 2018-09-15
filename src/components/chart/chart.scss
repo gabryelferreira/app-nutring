@@ -89,6 +89,7 @@ chart {
     -moz-transition-timing-function: ease-out;
     -o-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
+    z-index: 6;
   }
   .c100:after {
     position: absolute;
@@ -845,36 +846,52 @@ chart {
   }
   .c100.dark > span {
     color: #777777;
+    z-index: 6;
   }
   .c100.dark:after {
     background-color: #666666;
   }
   .c100.dark > span {
     color: #c6ff00;
+    z-index: 6;
   }
   .c100.green .bar, .c100.green .fill {
     border-color: #4db53c !important;
   }
   .c100.green > span {
     color: #4db53c;
+    z-index: 6;
   }
   .c100.green.dark .bar, .c100.green.dark .fill {
     border-color: #5fd400 !important;
   }
   .c100.green.dark > span {
     color: #5fd400;
+    z-index: 6;
   }
   .c100.orange .bar, .c100.orange .fill {
     border-color: #dd9d22 !important;
   }
   .c100.orange > span {
     color: #dd9d22;
+    z-index: 6;
   }
   .c100.orange.dark .bar, .c100.orange.dark .fill {
     border-color: #e08833 !important;
   }
   .c100.orange.dark > span {
     color: #e08833;
+    z-index: 6;
+  }
+
+  .inner-img {
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%; 
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    z-index:5;
   }
   
   .img-chart-nt {
