@@ -51,8 +51,8 @@ export class HomePage {
               private _settings: SettingsService, private post:service.HomePostService, private get:service.HomeGetService) {
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.user = JSON.parse(localStorage.getItem("userData"));
-    let nome = this.user.nome.split(' '); 
-    this.user.nome =  nome[0] + " " +nome[1]
+    // let nome = this.user.nome.split(' '); 
+    // this.user.nome =  nome[0] + " " +nome[1]
     this.post.getDailyKcal(this.user.id_usuario).then((kcalMeta)=> this.kcalMeta= kcalMeta.result.kcal_diaria)
     this.validateRate();
   }
@@ -77,8 +77,7 @@ export class HomePage {
   }
 
   async ionViewWillEnter() {
-    //this.user = JSON.parse(localStorage.getItem("userData"));
-    
+    this.user = JSON.parse(localStorage.getItem("userData"));
   }
 
   ionViewDidLoad() {

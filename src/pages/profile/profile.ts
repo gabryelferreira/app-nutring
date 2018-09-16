@@ -48,9 +48,11 @@ export class ProfilePage {
               private toastCtrl: ToastController, private post: ProfilePostService) {
     this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.user = JSON.parse(localStorage.getItem("userData"));
-    this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
-    this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
     this.validateRate();
+  }
+
+  async ionViewWillEnter() {
+    this.user = JSON.parse(localStorage.getItem("userData"));
   }
 
   editProfile(){
@@ -85,86 +87,4 @@ export class ProfilePage {
   ionViewDidLoad() {
   }
 
-  async updateUserOptionalInfo(){
-    if(this.validFields()){
-      this.loadingOptional = true;
-        let field = this.optionalData["peso_kg"];
-        if (field != null && field != "" && field != undefined){
-          if (field.indexOf(',') != -1){
-            this.optionalData["peso_kg"] = field.replace(',', '.');
-          }
-        }
-        field = this.optionalData["altura_m"];
-        if (field != null && field != "" && field != undefined){
-          if (field.indexOf(',') != -1){
-            this.optionalData["altura_m"] = field.replace(',', '.');
-          }
-        }
-
-      let altura = parseFloat(this.optionalData["altura_m"]);
-      altura *= 100
-      let peso = parseFloat(this.optionalData["peso_kg"]);
-      let data = {id_usuario: this.user["id_usuario"], altura_m: altura, peso_kg: peso}
-      let result = await this.post.updateUserOptionalInfo(JSON.stringify(data))
-      if (result.success){
-        localStorage.setItem("userData", JSON.stringify(result.result))
-        this.showToast("Dados salvos com sucesso!", "top");
-      } else {
-        this.showToast("Ocorreu um erro! Tente novamente.", "top");
-      }
-      this.loadingOptional = false;
-    }
-  }
-
-  async updateUserPersonalInfo(){
-    if (this.validPersonalFields()){
-      this.loadingPersonal = true;
-      let result = await this.post.updateUserPersonalInfo(JSON.stringify(this.user));
-      if (result.success){
-        localStorage.setItem("userData", JSON.stringify(result.result))
-        this.showToast("Dados salvos com sucesso!", "top");
-      } else {
-        this.showToast("Ocorreu um erro! Tente novamente.", "top");
-      }
-      this.loadingPersonal = false;
-    }
-  }
-
-  validFields(){
-    let regexp = /^\d*\.?\d*\,?\d*$/;
-    
-    for (var i = 0; i < this.checkOptional.length; i++){
-      let field = this.user[this.checkOptional[i].field];
-      if (!regexp.test(field) && field != null && field != undefined && field != ""){
-        let message = this.checkOptional[i].name + " " + this.checkOptional[i].end;
-        this.showToast(message, "top");
-        return false;
-      }
-      this.optionalData[this.checkOptional[i].field] = this.user[this.checkOptional[i].field];
-    }
-    return true;
-  }
-
-  validPersonalFields(){
-    return this.user["nome"] != null && this.user["nome"] != "" && this.user["nome"].length > 0;
-  }
-
-  showToast(message: string, position: string) {
-    let toast = this.toastCtrl.create({
-      message: message,
-      showCloseButton: false,
-      duration: 2500,
-      position: position
-    });
-
-    toast.present(toast);
-  }
-
-  validNumericField(field){
-    console.log(field);
-    if (field && field.length > 5)
-      return false;
-    field = (0+field).replace(/^-?\d+(?:\.\d{0,2})?/)[0]
-      
-  }
 }

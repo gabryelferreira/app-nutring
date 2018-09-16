@@ -48,10 +48,18 @@ export class EditProfilePage {
               private _settings: SettingsService, private post: ProfilePostService,
               private toastCtrl: ToastController) {
     this.user = navParams.get("user");
+    this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
+    this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
     this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }
 
   ionViewDidLoad() {
+  }
+
+  async ionViewWillEnter() {
+    this.user = JSON.parse(localStorage.getItem("userData"));
+    this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
+    this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
   }
 
   async setOptionalInfo(){
