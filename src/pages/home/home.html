@@ -13,7 +13,8 @@
 
     <div class="user-data">
       <div class="div-user-img">
-        <img class="user-img" [src]='user.foto'>
+        <img class="user-img" *ngIf="!user.foto" [src]='user.foto'>
+        <img class="user-img" *ngIf="user.foto" [src]='user.foto'>
       </div>
       
       <h1>{{user.nome}}</h1>
