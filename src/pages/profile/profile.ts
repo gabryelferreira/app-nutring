@@ -1,9 +1,11 @@
+import { SettingsPage } from './../settings/settings';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { SettingsService } from '../settings/settings.service';
 import { elementEnd } from '@angular/core/src/render3/instructions';
 import { ProfilePostService, ProfileGetService } from './profile.service';
 import { IUser } from '../../app/types';
+import { EditProfilePage } from './edit-profile/edit-profile';
 
 /**
  * Generated class for the ProfilePage page.
@@ -33,14 +35,51 @@ export class ProfilePage {
 
   checkOptional = [{field: 'peso_kg', name: 'Peso', end: 'inválido'}, {field: 'altura_m', name: 'Altura', end: 'inválida'}];
   optionalData = [];
+  rate: number = 3.55245;
+  stars = [
+    {star: 'md-star-outline', value: 1},
+    {star: 'md-star-outline', value: 2},
+    {star: 'md-star-outline', value: 3},
+    {star: 'md-star-outline', value: 4},
+    {star: 'md-star-outline', value: 5}
+  ]
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService, 
               private toastCtrl: ToastController, private post: ProfilePostService) {
     this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.user = JSON.parse(localStorage.getItem("userData"));
     this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
-    let altura = parseFloat(this.user.altura_m)/100
-    this.user.altura_m = altura.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
+    this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
+    this.validateRate();
+  }
+
+  editProfile(){
+    this.navCtrl.push(EditProfilePage, {
+      user: this.user
+    })
+  }
+
+  openSettings(){
+    this.navCtrl.push(SettingsPage)
+  }
+
+  validateRate(){
+    let full = 'md-star';
+    let half = 'md-star-half';
+    let none = 'md-star-outline';
+
+    let rate = this.rate;
+
+    this.stars.forEach(element => {
+      if (element.value <= rate + 0.25)
+        element.star = full;
+      else if (element.value <= rate + 0.75)
+        element.star = half;
+      else
+        element.star = none;
+    });
+
+
   }
 
   ionViewDidLoad() {

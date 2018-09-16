@@ -24,4 +24,8 @@ export class ProfilePostService extends Connect {
         return this.callMethod("updateUserPersonalInfo", {data});
     }
 
+    updateUserInfo(data: any){
+        return this.callMethod("updateUserInfo", {data})
+    }
+
 }

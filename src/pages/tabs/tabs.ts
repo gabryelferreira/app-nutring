@@ -1,3 +1,4 @@
+import { ProfilePage } from './../profile/profile';
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { SettingsPage } from '../settings/settings';
@@ -15,7 +16,7 @@ export class TabsPage {
   tab2Root = MontarPratoPage;
   tab3Root = SearchPage;
   tab4Root = MeusPratosPage;
-  tab5Root = SettingsPage;
+  tab5Root = ProfilePage;
   selectedTheme: String = "";
 
   constructor(private settings: SettingsService) {

@@ -36,7 +36,7 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #1dd1a1,
+  primary:    #27ae60,
   success:    #4cd137,
   secondary:  #488aff,
   danger:     #f53d3d,
@@ -46,14 +46,14 @@ $colors: (
   fb:      #3b5998,
   dark-theme: #202020,
   dark-theme-tab: #202020,
-  light-theme: #1dd1a1,
+  light-theme: #27ae60,
   light-theme-tab: #fff,
   transparent: transparent,
   lightgray: #ccc,
   pink: #e84393,
 );
 
-$toolbar-background: #1dd1a1;
+$toolbar-background: #27ae60;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Gamja+Flower');

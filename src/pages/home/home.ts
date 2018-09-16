@@ -45,7 +45,7 @@ export class HomePage {
     {star: 'md-star-outline', value: 3},
     {star: 'md-star-outline', value: 4},
     {star: 'md-star-outline', value: 5}
-]
+  ]
 
   constructor(private tabs:Tabs,public navCtrl: NavController, public navParams: NavParams, 
               private _settings: SettingsService, private post:service.HomePostService, private get:service.HomeGetService) {

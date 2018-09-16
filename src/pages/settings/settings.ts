@@ -62,10 +62,6 @@ export class SettingsPage {
   ionViewDidLoad() {
   }
 
-  verPerfil(){
-    this.navCtrl.push(ProfilePage);
-  }
-
   showConfirmLogout() {
     const confirm = this.alertCtrl.create({
       title: 'Confirmação',

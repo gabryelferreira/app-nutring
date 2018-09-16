@@ -32,6 +32,7 @@ import { Keyboard } from '@ionic-native/keyboard';
 import { ChartComponent } from '../components/chart/chart';
 import { SugestaoAlimentoPage } from '../pages/sugestao-alimento/sugestao-alimento';
 import { ScrollHideDirective } from '../components/hide-on-scrolling/scroll-hide-directive';
+import { EditProfilePage } from '../pages/profile/edit-profile/edit-profile';
 @NgModule({
   declarations: [
     MyApp,
@@ -53,7 +54,8 @@ import { ScrollHideDirective } from '../components/hide-on-scrolling/scroll-hide
     ChartComponent,
     LoaderComponent,
     NtSearchbarComponent,
-    ScrollHideDirective
+    ScrollHideDirective,
+    EditProfilePage
   ],
   imports: [
     BrowserModule,
@@ -79,7 +81,8 @@ import { ScrollHideDirective } from '../components/hide-on-scrolling/scroll-hide
     SugestaoAlimentoPage,
     ProfilePage,
     ContactUsPage,
-    ContactMessagesPage
+    ContactMessagesPage,
+    EditProfilePage
   ],
   providers: [
     StatusBar,

@@ -14,4 +14,115 @@ page-profile {
     .show-tabbar {
         display: none !important;
     }
+
+
+
+
+
+
+
+
+
+
+
+    .profile-header {
+        transition: .25s linear;
+        position: relative;
+        height: 270px;
+        width: 100%;
+        background-color: #1dd1a1;
+        background-image: url('../../assets/imgs/blur.jpg');
+        background-position: center;
+        background-size: cover;
+        .user-data {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            .div-user-img {
+                position: relative;
+                height: 96px;
+                width: 96px;
+                margin: auto;
+                background: #fff;
+                border-radius: 50%;
+                text-align: center;
+                img {
+                    position: absolute;
+                    left: 3px;
+                    top: 3px;
+                    margin: auto;
+                    height: 90px;
+                    width: 90px;
+                    border-radius: 50%;
+                }
+            }
+            h1 {
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 0;
+                max-height: 20px;
+                overflow: hidden;
+            }
+            h2 {
+                color: #fbfbfb;
+                font-size: 14px;
+                margin-top: 3px;
+                max-height: 16px;
+                overflow: hidden;
+            }
+            
+            .stars {
+                width: 130px;
+                // height: 10px;
+                // background: #27ae60;
+                // border-radius: 25px;
+                margin: auto;
+                margin-top: 15px;
+            }
+
+            #edit-profile {
+                margin-top: 15px;
+                height: 30px;
+                padding: 0 38px;
+                border-radius: 40px !important;
+                background: #fcfcfc;
+                color: #222;
+            }
+
+        }
+    }
+
+    .input-user-info {
+        background: transparent;
+        border: 0;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    ion-item {
+        h3 {
+            font-size: 22px !important;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
