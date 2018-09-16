@@ -1,3 +1,17 @@
 page-profile {
+    ion-tabs {
+        display: none !important;
+    }
 
+    .tabs {
+        display: none !important;
+    }
+
+    .tabs.tabs-md.tabs-md-light-theme-tab {
+        display: none !important;
+    }
+
+    .show-tabbar {
+        display: none !important;
+    }
 }

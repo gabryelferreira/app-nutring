@@ -9,6 +9,12 @@
     transition: .3s;
   }
 
+  ion-navbar {
+    ion-title {
+      color: #fff !important;
+    }
+  }
+
   ion-list-header {
     background: #fff;
     transition: .3s;

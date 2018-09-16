@@ -4,17 +4,55 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
 
-  <ion-navbar color="{{selectedTheme}}">
-    <ion-title>NUTRING</ion-title>
-  </ion-navbar>
-
-</ion-header>
 
 
 <ion-content>
+
+  <div class="homepage-header">
+
+    <div class="user-data">
+      <div class="div-user-img">
+        <img class="user-img" [src]='user.foto'>
+      </div>
+      
+      <h1>{{user.nome}}</h1>
+      <h2>{{user.idade}} anos</h2>
+      <div class="div-percentage-day">
+        <ion-icon *ngFor="let star of stars" [name]="star.star" color="white"></ion-icon>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="homepage-info">
     <ion-list>
+      <ion-item>
+        <ion-icon name="checkmark" color="success" item-start></ion-icon>
+        <h2>Dias na meta</h2>
+        <p>dias</p>
+        <h3 item-end>3</h3>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="ios-restaurant-outline" color="secondary" item-start></ion-icon>
+        <h2>Pratos montados</h2>
+        <p>quantidade</p>
+        <h3 item-end>15</h3>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="heart" color="pink" item-start></ion-icon>
+        <h2>Calorias consumidas</h2>
+        <p>calorias</p>
+        <h3 item-end>1764</h3>
+      </ion-item>
+    </ion-list>
+  </div>
+
+    
+
+    <!-- <ion-list>
       <ion-item text-center>
 
         <h1>Bem vindo {{user.nome}}!</h1>
@@ -44,5 +82,5 @@
         <h1> Detalhes da Performance</h1>
         meta de calorias do dia : {{kcalMeta}}
       </ion-item>
-    </ion-list>
+    </ion-list> -->
 </ion-content>

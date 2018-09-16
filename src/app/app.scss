@@ -15,6 +15,7 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+
 .align-center {
     text-align: center;
 }
@@ -30,7 +31,7 @@
 h1, h2, h3, h4, h5, h6, p,
 ion-card-title, ion-badge, ion-item, ion-list-header, ion-note, ion-button, ion-title, button, ion-card-content,
 input[type="text"], input[type="password"] {
-    font-family: Roboto Condensed, sans-serif !important;
+    font-family: 'Slabo 27px', serif !important;
 }
 
 button {
@@ -44,6 +45,12 @@ ion-header {
 }
 ion-content {
     min-height: 100% !important;
+}
+
+ion-fab {
+    button {
+        border-radius: 50% !important;
+    }
 }
 
 
