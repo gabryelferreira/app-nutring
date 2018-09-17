@@ -4,80 +4,86 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header [scrollHide]="headerScrollConfig" [scrollContent]="pageContent">
   <!-- [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" -->
-  <ion-navbar color="{{selectedTheme}}" >
-    <ion-title>Montar prato</ion-title>
+  <ion-navbar color="{{selectedTheme}}">
+    <ion-title *ngIf="!isSearching">Montar prato</ion-title>
+    <div *ngIf="isSearching" style="position: relative;margin: -10px -8px -50px -6px; padding-top: 5px">
+      <ion-buttons style="background-color: #ffff; width: 30px;position: absolute;height: 50px;"> <button ion-button
+          icon-only *ngIf="isSearching" (click)="isSearching=false">
+          <ion-icon name="arrow-back" style="color:#303030;padding-top: 17px;"></ion-icon>
+        </button></ion-buttons>
+      <nt-searchbar style="width:95%;float: right;z-index: 10;" (callback)="onInput($event)">
+      </nt-searchbar>
+    </div>
+    <ion-buttons end> <button ion-button icon-only *ngIf="!isSearching" (click)="isSearching=true">
+        <ion-icon name="search"></ion-icon>
+      </button></ion-buttons>
   </ion-navbar>
-  
+
 </ion-header>
 
 
 <ion-content class="outer-content" #pageContent fullscreen>
-    <loader *ngIf="loading"></loader>
-<ion-searchbar [(ngModel)]="searchInput.searchText" [showCancelButton]="searchInput.shouldShowCancel" (ionInput)="onInput()"
-      (ionCancel)="onCancel($event)" placeholder="Buscar">
-    </ion-searchbar>
+  <loader *ngIf="loading"></loader>
+  <!-- <ion-searchbar [(ngModel)]="searchInput.searchText" [showCancelButton]="searchInput.shouldShowCancel" (ionInput)="onInput()"
+    (ionCancel)="onCancel($event)" placeholder="Buscar">
+  </ion-searchbar> -->
 
+  <ion-list *ngIf="foods && foods.length > 0">
 
-    
-
-
-
-    <ion-list *ngIf="foods && foods.length > 0">
-
-      <ion-list-header>
-        Alimentos
-        <!-- <button ion-button item-end (click)="buttonClick()" icon-only color="transparent">
+    <ion-list-header>
+      Alimentos
+      <!-- <button ion-button item-end (click)="buttonClick()" icon-only color="transparent">
           <ion-icon name="options"></ion-icon>
       </button> -->
-      </ion-list-header>
+    </ion-list-header>
 
 
-      <div [class.active]="food.selected" (click)="selectFood(food)" *ngFor="let food of foods; let i = index">
+    <div [class.active]="food.selected" (click)="selectFood(food)" *ngFor="let food of foods; let i = index">
 
 
+      <ion-item>
+        <ion-avatar item-start>
+          <img [src]="food.img_url">
+        </ion-avatar>
+        <h2>{{food.nome}}</h2>
+        <p *ngIf="food.porcao_comida > 0" color="primary">{{food.porcao_comida}} g</p>
+        <p *ngIf="!food.porcao_comida || food.porcao_comida <= 0" color="primary"><br></p>
+        <ion-icon *ngIf="food.porcao_comida > 0" name="checkmark" color="primary" item-end></ion-icon>
+        <ion-icon *ngIf="!food.porcao_comida || food.porcao_comida <= 0" name="ios-arrow-down" color="lightgray"
+          item-end></ion-icon>
+      </ion-item>
+
+
+      <div *ngIf="food.selected" class="food-select-dropdown active-food-select-dropdown">
+        <ion-list-header>
+          Quantidade (em gramas)
+          <ion-badge item-end *ngIf="food.porcao_comida">{{food.porcao_comida}} g</ion-badge>
+        </ion-list-header>
         <ion-item>
-          <ion-avatar item-start>
-            <img [src]="food.img_url">
-          </ion-avatar>
-          <h2>{{food.nome}}</h2>
-          <p *ngIf="food.porcao_comida > 0" color="primary">{{food.porcao_comida}} g</p>
-          <p *ngIf="!food.porcao_comida || food.porcao_comida <= 0" color="primary"><br></p>
-          <ion-icon *ngIf="food.porcao_comida > 0" name="checkmark" color="primary" item-end></ion-icon>
-          <ion-icon *ngIf="!food.porcao_comida || food.porcao_comida <= 0" name="ios-arrow-down" color="lightgray"
-            item-end></ion-icon>
+          <ion-range min="0" max="1000" [(ngModel)]="food.porcao_comida" (ngModelChange)="mudarPorcao($event, food)"
+            color="secondary">
+            <ion-label range-left>0</ion-label>
+            <ion-label range-right>1000</ion-label>
+          </ion-range>
         </ion-item>
-
-
-        <div *ngIf="food.selected" class="food-select-dropdown active-food-select-dropdown">
-          <ion-list-header>
-            Quantidade (em gramas)
-            <ion-badge item-end *ngIf="food.porcao_comida">{{food.porcao_comida}} g</ion-badge>
-          </ion-list-header>
-          <ion-item>
-            <ion-range min="0" max="1000" [(ngModel)]="food.porcao_comida" (ngModelChange)="mudarPorcao($event, food)"
-              color="secondary">
-              <ion-label range-left>0</ion-label>
-              <ion-label range-right>1000</ion-label>
-            </ion-range>
-          </ion-item>
-        </div>
-
-
-
       </div>
 
-    </ion-list>
 
-    <ion-fab [style.opacity]="allSelectedFoods.length > 0 ? 1 : 0" [style.pointer-events]="allSelectedFoods.length > 0 ? 'visible' : 'none !important'"
-      right bottom>
-      <button (click)="verPrato()" ion-fab color="primary">
-        <ion-icon name="restaurant"></ion-icon>
-      </button>
-    </ion-fab>
 
-    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-      <ion-infinite-scroll-content></ion-infinite-scroll-content>
-    </ion-infinite-scroll>
+    </div>
+
+  </ion-list>
+
+  <ion-fab [style.opacity]="allSelectedFoods.length > 0 ? 1 : 0" [style.pointer-events]="allSelectedFoods.length > 0 ? 'visible' : 'none !important'"
+    right bottom>
+    <button (click)="verPrato()" ion-fab color="primary">
+      <ion-icon name="restaurant"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

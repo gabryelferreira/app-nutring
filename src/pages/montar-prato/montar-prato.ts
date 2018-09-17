@@ -26,6 +26,8 @@ export class MontarPratoPage {
   
   selectedTheme: String = "";
   loading: boolean = false;
+  
+  isSearching:boolean = false;
 
   foods = [];
   foodsBackup = [];
@@ -100,9 +102,9 @@ export class MontarPratoPage {
 
   }
 
-  onInput(){
+  onInput(event){
     let allFoods = this.getFoodsBackup();
-    let text = this.searchInput.searchText;
+    let text = event;//this.searchInput.searchText;
     let foodsFiltered = allFoods.filter(function(element, i){
       if (element.nome.toLowerCase().indexOf(text.toLowerCase()) != -1 ||parseFloat(element.kcal).toFixed(2).toString().indexOf(text.toLowerCase()) != -1)
         return true
