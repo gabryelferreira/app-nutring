@@ -48,7 +48,9 @@
           
           <div *ngFor="let prato of pratos; let i = index" class="padding-prato" (click)="openPrato(prato)">
             <div class="prato">
-              <div class="{{prato.kcal_consumo | ntPorcao}}"></div>
+              <div *ngIf="prato.kcal_consumo < 750" class="traco great"></div>
+              <div *ngIf="prato.kcal_consumo >= 750 && prato.kcal_consumo < 1250" class="traco warning"></div>
+              <div *ngIf="prato.kcal_consumo >= 1250" class="traco bad"></div>
                 <div class="info-prato">
                     <p>{{prato.hr_consumo}}</p>
                     <h1>{{prato.hr_consumo | ntNomePrato}}</h1>
