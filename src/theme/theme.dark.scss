@@ -134,5 +134,42 @@
     }
 
 
+
+
+
+
+
+
+    //HISTORICO DOS PRATOS
+    .date-pratos {
+      background: #4b4b4b;
+      border-right: 1px solid #808080;
+      .date-prato {
+        background: #4c4c4c;
+      }
+      .selected {
+        background: #3c3c3c;
+        border-top: 1px solid #808080;
+        border-bottom: 1px solid #808080;
+        h1 {
+          color: #fff !important;
+        }
+        h2 {
+            color: #fff !important;
+        }
+      }
+    }
+
+    .padding-prato {
+      border-bottom: 2px solid #808080;
+      .prato {
+        background: #4b4b4b;
+        h1 {
+          color: #eee;
+        }
+      }
+    }
+
+
     
   }

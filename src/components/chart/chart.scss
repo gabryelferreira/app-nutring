@@ -827,9 +827,13 @@ chart {
   .c100 > span {
     width: 3.33em;
     line-height: 3.33em;
-    font-size: 0.3em;
+    font-size: 0.2em;
     color: #307bbb;
+    font-weight: bold;
     z-index: 6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .c100:after {
     top: 0.04em;
@@ -859,7 +863,7 @@ chart {
     border-color: #4db53c !important;
   }
   .c100.green > span {
-    color: #4db53c;
+    color: #ededed;
     z-index: 6;
   }
   .c100.green.dark .bar, .c100.green.dark .fill {

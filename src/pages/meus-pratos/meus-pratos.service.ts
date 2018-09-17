@@ -24,4 +24,12 @@ export class MeusPratosPostService extends Connect {
         return this.callMethod("getPratoInfoById", {id_prato});
     }
 
+    getMonthsOfPratos(id_usuario: number){
+        return this.callMethod("getMonthsOfPratos", {id_usuario});
+    }
+
+    getPratosByDate(id_usuario: number, date: any){
+        return this.callMethod("getPratosByDate", {id_usuario, date});
+    }
+
 }

@@ -15,9 +15,9 @@ export class ChartComponent {
   @Input('percent') percent;
   @Input('color') color;
   @Input('size') size;
+  @Input('text') text;
   @Input('img') img;
 
-  text: String = "";
   classes: String = "c100 ";
 
   constructor() {
@@ -25,8 +25,10 @@ export class ChartComponent {
 
   ngAfterViewInit(){
     this.percent = Math.floor(this.percent);
-    this.text = this.percent.toString() + "%";
+    if (!this.text)
+      this.text = this.percent.toString() + "%";
     this.classes = this.classes + "p" + this.percent.toString() + " " + this.color + " " + this.size;
+    console.log("classes = ", this.classes)
     console.log("img = ", this.img)
     console.log("color = ", this.color)
   }

@@ -33,6 +33,7 @@ import { ChartComponent } from '../components/chart/chart';
 import { SugestaoAlimentoPage } from '../pages/sugestao-alimento/sugestao-alimento';
 import { ScrollHideDirective } from '../components/hide-on-scrolling/scroll-hide-directive';
 import { EditProfilePage } from '../pages/profile/edit-profile/edit-profile';
+import { PipesModule } from '../pipes/pipes.module';
 @NgModule({
   declarations: [
     MyApp,
@@ -62,6 +63,7 @@ import { EditProfilePage } from '../pages/profile/edit-profile/edit-profile';
     HttpClientModule,
     InputMaskModule,
     BrMaskerModule,
+    PipesModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

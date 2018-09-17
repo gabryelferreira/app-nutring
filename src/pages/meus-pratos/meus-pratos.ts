@@ -27,89 +27,46 @@ export class MeusPratosPage {
   id_usuario: number;
   loading: boolean = false;
 
+  dateSeparator = [];
+  selectedDate: number = 0;
+  pratos = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService,
                 private post: MeusPratosPostService) {
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.id_usuario = parseInt(JSON.parse(localStorage.getItem("userData")).id_usuario);
-    this.getPratosByIdUser(this.id_usuario)
+    this.getMonthsOfPratos(this.id_usuario);
   }
 
   ionViewWillEnter() {
   }
 
-  refreshHistory(){
-    this.getPratosByIdUser(this.id_usuario);
+  selectDate(index: number){
+    this.dateSeparator[this.selectedDate].selected = false;
+    this.dateSeparator[index].selected = true;
+    this.selectedDate = index;
+    this.getPratosByDate(this.id_usuario, this.dateSeparator[index])
   }
 
-  async getPratosByIdUser(id_usuario: number){
+  async getPratosByDate(id_usuario: number, date: any){
     this.loading = true;
-    this.pratosByDate = [];
-    let result = await this.post.getPratosByIdUser(id_usuario);
+    this.pratos = [];
+    let result = await this.post.getPratosByDate(id_usuario, JSON.stringify(date))
     if (result.success){
-      this.pratosByDate = [];
-      let groupByDate = [];
-      let pratos = result.result
-      pratos.forEach(element => {
-        if (groupByDate.indexOf(element.dt_consumo) == -1)
-          groupByDate.push(element.dt_consumo);
-      });
-        groupByDate.forEach(element => {
-        let filtered = pratos.filter(e => {
-          if (e.dt_consumo == element)
-            return true;
-          return false;
-        });
-        if (filtered && filtered.length > 0)
-          this.pratosByDate.push({dt_consumo: element, pratos: filtered})
-      });
-
+      this.pratos = result.result;
     }
     this.loading = false;
-    // if (result.success){
-    //   let groupByDate = [];
-    //   let groupByPrato = [];
-    //   this.pratosByDate = [];
-    //   let pratos = result.result;
-    //   pratos.forEach(element => {
-    //     if (groupByDate.indexOf(element.dt_consumo) == -1)
-    //       groupByDate.push(element.dt_consumo);
-    //     if (groupByPrato.indexOf(element.id_prato) == -1)
-    //       groupByPrato.push(element.id_prato)
-    //   });
-    //   groupByDate = groupByDate.reverse();
-    //   let pratosAgrupados = [];
-    //   groupByPrato.forEach(element => {
-    //     let filtered = pratos.filter(e => {
-    //       if (e.id_prato == element)
-    //         return true;
-    //       return false;
-    //     });
-    //     if (filtered && filtered.length > 0){
-    //       let allKcal = 0;
-    //       let allQuantidade = 0;
-    //       filtered.forEach(element => {
-    //         allKcal += parseInt(element.kcal);
-    //         allQuantidade += parseInt(element.quantidade);
-    //       });
-    //       pratosAgrupados.push({dt_consumo: filtered[0].dt_consumo, hr_consumo: filtered[0].hr_consumo, kcal: allKcal, quantidade: allQuantidade, alimentos: filtered});
-    //     }
-        
-          
-    //   });
-    //   console.log("pratos agrupados = ", pratosAgrupados)
+  }
 
-    //   groupByDate.forEach(element => {
-    //     let filtered = pratosAgrupados.filter(e => {
-    //       if (e.dt_consumo == element)
-    //         return true;
-    //       return false;
-    //     });
-    //     if (filtered && filtered.length > 0)
-    //       this.pratosByDate.push({dt_consumo: element, pratos: filtered})
-    //   });
-      
-    //   console.log("Pratos agrupados por data = ", this.pratosByDate)
-    // }
+  async getMonthsOfPratos(id_usuario: number){
+    this.loading = true;
+    let result = await this.post.getMonthsOfPratos(id_usuario);
+    if (result.success){
+      await this.getPratosByDate(this.id_usuario, result.result[0]);
+      this.dateSeparator = result.result;
+      this.dateSeparator[0].selected = true;
+    }
+    this.loading = false;
   }
 
   openPrato(prato){
