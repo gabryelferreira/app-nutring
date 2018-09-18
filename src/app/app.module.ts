@@ -28,7 +28,6 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { InfoPratoPage } from '../pages/meus-pratos/info-prato/info-prato';
 import { ProfilePage } from '../pages/profile/profile';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
-import { Keyboard } from '@ionic-native/keyboard';
 import { ChartComponent } from '../components/chart/chart';
 import { SugestaoAlimentoPage } from '../pages/sugestao-alimento/sugestao-alimento';
 import { ScrollHideDirective } from '../components/hide-on-scrolling/scroll-hide-directive';
@@ -92,7 +91,6 @@ import { PipesModule } from '../pipes/pipes.module';
     Facebook,
     SettingsService,
     SocialSharing,
-    Keyboard,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })

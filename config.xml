@@ -82,7 +82,6 @@
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
-    <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-facebook4" spec="^2.3.0">
         <variable name="APP_ID" value="237274320282553" />
         <variable name="APP_NAME" value="Nutring" />
@@ -91,10 +90,9 @@
     <plugin name="cordova-plugin-headercolor" spec="^1.0.0" />
     <plugin name="cordova-plugin-x-socialsharing" spec="^5.4.1" />
     <plugin name="cordova-wheel-selector-plugin" spec="^1.1.1" />
-    <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="com.telerik.plugins.nativepagetransitions" spec="^0.6.5" />
-    <engine name="android" spec="7.0.0" />
     <plugin name="phonegap-plugin-push" spec="^2.1.3">
         <variable name="FCM_VERSION" value="11.6.2" />
     </plugin>
+    <engine name="android" spec="7.0.0" />
 </widget>

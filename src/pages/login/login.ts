@@ -6,7 +6,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as service from './login.service';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { ToastController } from 'ionic-angular';
-import { Keyboard } from '@ionic-native/keyboard';
+
 
 @IonicPage()
 @Component({
@@ -28,7 +28,7 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private get: service.LoginGetService, private post: service.LoginPostService,
-    private fb: Facebook, private toastCtrl: ToastController, private keyboard: Keyboard) {
+    private fb: Facebook, private toastCtrl: ToastController) {
   }
 
   getLoadingLogin() { return this.loadingLogin; }
@@ -45,7 +45,6 @@ export class LoginPage {
 
 
   ionViewDidLoad() {
-    this.keyboard.disableScroll(true);
   }
 
   async login() {
