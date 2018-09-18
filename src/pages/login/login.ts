@@ -41,7 +41,7 @@ export class LoginPage {
 
   stopLoading() { this.loadingFacebookLogin = false; this.loadingLogin = false; this.loadingSomething = false; }
 
-  setValidLogin(validLogin: boolean){this.validLogin = validLogin;}
+  setValidLogin(validLogin: boolean) { this.validLogin = validLogin; }
 
 
   ionViewDidLoad() {
@@ -78,9 +78,9 @@ export class LoginPage {
         let userData = result.result;
         localStorage.setItem("userData", JSON.stringify(userData))
         if (userData.acessos == 1)
-          this.navCtrl.push(IntroductionPage)
+          this.navCtrl.setRoot(IntroductionPage, {}, {animate: true, direction: 'forward'});
         else
-          this.navCtrl.push(TabsPage)
+          this.navCtrl.setRoot(TabsPage, {}, {animate: true, direction: 'forward'});
       }
     }
     if (!localStorage.getItem("userData"))
@@ -98,7 +98,7 @@ export class LoginPage {
     toast.present(toast);
   }
 
-  validateLogin(){
+  validateLogin() {
     if (this.user.email.length > 0 && this.user.senha.length > 0)
       this.setValidLogin(true);
     else
