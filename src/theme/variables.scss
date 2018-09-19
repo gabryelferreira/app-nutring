@@ -55,6 +55,16 @@ $colors: (
 );
 
 $toolbar-background: #27ae60;
+$searchbar-ios-padding-horizontal:0px !important;
+$searchbar-md-padding-top:0px !important;
+$searchbar-md-padding-bottom:0px !important;
+$searchbar-md-padding-start:0px !important;
+$searchbar-md-padding-end:0px !important;
+$searchbar-md-input-height:20px !important;
+$searchbar-ios-min-height:20px !important;
+$searchbar-md-input-height:0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0) !important;
+$searchbar-md-input-border-radius:0px !important;
+$searchbar-md-input-line-height:30px !important;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Gamja+Flower');

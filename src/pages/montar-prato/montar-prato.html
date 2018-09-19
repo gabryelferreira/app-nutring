@@ -4,21 +4,15 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header [scrollHide]="headerScrollConfig" [scrollContent]="pageContent">
+<ion-header [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" no-padding>
   <!-- [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" -->
   <ion-navbar color="{{selectedTheme}}">
-    <ion-title *ngIf="!isSearching">Montar prato</ion-title>
-    <div *ngIf="isSearching" style="position: relative;margin: -10px -8px -50px -6px; padding-top: 5px">
-      <ion-buttons style="background-color: #ffff; width: 30px;position: absolute;height: 50px;"> <button ion-button
-          icon-only *ngIf="isSearching" (click)="isSearching=false">
-          <ion-icon name="arrow-back" style="color:#303030;padding-top: 17px;"></ion-icon>
-        </button></ion-buttons>
-      <nt-searchbar style="width:95%;float: right;z-index: 10;" (callback)="onInput($event)">
-      </nt-searchbar>
-    </div>
+    <ion-searchbar *ngIf="isSearching" animated="true" placeholder="Buscar..." showCancelButton="true" (ionCancel)="onCancel()"
+      (ionInput)="onInput($event)"></ion-searchbar>
     <ion-buttons end> <button ion-button icon-only *ngIf="!isSearching" (click)="isSearching=true">
         <ion-icon name="search"></ion-icon>
       </button></ion-buttons>
+    <ion-title *ngIf="!isSearching">Montar prato</ion-title>
   </ion-navbar>
 
 </ion-header>

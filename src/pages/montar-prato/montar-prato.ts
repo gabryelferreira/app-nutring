@@ -104,7 +104,9 @@ export class MontarPratoPage {
 
   onInput(event){
     let allFoods = this.getFoodsBackup();
-    let text = event;//this.searchInput.searchText;
+    let text = event.target.value;//this.searchInput.searchText;
+    if (text == undefined) 
+      text = ""
     let foodsFiltered = allFoods.filter(function(element, i){
       if (element.nome.toLowerCase().indexOf(text.toLowerCase()) != -1 ||parseFloat(element.kcal).toFixed(2).toString().indexOf(text.toLowerCase()) != -1)
         return true
@@ -130,6 +132,7 @@ export class MontarPratoPage {
     this.setOffset(0);
     this.setInitialFoods();
     this.setFoodsFiltered(this.getFoodsBackup());
+    this.isSearching=false;
   }
 
   doInfinite(infiniteScroll) {
