@@ -10,9 +10,12 @@
 
 
 
-<ion-header [scrollHide]="headerScrollConfig" [scrollContent]="pageContent">
-  <nt-searchbar (callback)="onInput($event)">
-  </nt-searchbar>
+<ion-header [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" no-padding>
+  <!-- [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" -->
+  <ion-navbar color="{{selectedTheme}}">
+    <nt-searchbar placeholder="Buscar" showCancelButton="true" (callback)="onInput($event)"></nt-searchbar>
+  </ion-navbar>
+
 </ion-header>
 <ion-content class="list-avatar-page" (onscroll)="hideScroll($event)" #pageContent fullscreen>
 

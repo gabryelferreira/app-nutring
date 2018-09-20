@@ -104,7 +104,7 @@ export class MontarPratoPage {
 
   onInput(event){
     let allFoods = this.getFoodsBackup();
-    let text = event.target.value;//this.searchInput.searchText;
+    let text = event;
     if (text == undefined) 
       text = ""
     let foodsFiltered = allFoods.filter(function(element, i){

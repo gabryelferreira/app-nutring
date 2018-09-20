@@ -1,7 +1,7 @@
 nt-searchbar {
     @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
     .searchbar {
-        height: 50px;
+        height: 46px;
         width: 100%;
         position: relative;
         input[type="search"]{
@@ -10,16 +10,26 @@ nt-searchbar {
             height: 100%;
             box-sizing: border-box;
             padding: 0 10px;
-            background: #fcfcfc;
+            background-color: transparent;
             font-size: 16px;
-            text-indent: 30px
+            text-indent: 30px;
+            color: #fff;
+        }
+        input[type="search"]::placeholder,
+        input[type="search"]::-webkit-input-placeholder {
+            color: #fff;
         }
     }
-.searchbar .fa-search { 
-  position: absolute;
-  top: 17px;
-  left: 15px;
-  font-size: 15px;
-  color: #666;
-}
+    .searchbar .fa { 
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 15px;
+    color: #fff;
+    }
+    #on-header {
+        input[type="search"]{
+            text-indent: 40px;
+        }
+    }
 }

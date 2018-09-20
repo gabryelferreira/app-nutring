@@ -28,9 +28,6 @@ export class ChartComponent {
     if (!this.text)
       this.text = this.percent.toString() + "%";
     this.classes = this.classes + "p" + this.percent.toString() + " " + this.color + " " + this.size;
-    console.log("classes = ", this.classes)
-    console.log("img = ", this.img)
-    console.log("color = ", this.color)
   }
 
 }

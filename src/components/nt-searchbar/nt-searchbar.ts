@@ -15,10 +15,19 @@ export class NtSearchbarComponent {
 
   // @Input("item") item;
   @Output() callback: EventEmitter<any> = new EventEmitter();
+  @Output() backButton: EventEmitter<any> = new EventEmitter();
   @Input('placeholder') placeholder = "Buscar";
+  @Input('onHeader') onHeader = false;
   item: String = "";
 
   constructor(){
+  }
+
+  ngAfterViewInit(){
+  }
+
+  goBack(){
+    this.backButton.emit();
   }
 
   onChange(){

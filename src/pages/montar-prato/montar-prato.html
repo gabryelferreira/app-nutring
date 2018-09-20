@@ -7,11 +7,12 @@
 <ion-header [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" no-padding>
   <!-- [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" -->
   <ion-navbar color="{{selectedTheme}}">
-    <ion-searchbar *ngIf="isSearching" animated="true" placeholder="Buscar..." showCancelButton="true" (ionCancel)="onCancel()"
-      (ionInput)="onInput($event)"></ion-searchbar>
-    <ion-buttons end> <button ion-button icon-only *ngIf="!isSearching" (click)="isSearching=true">
+    <nt-searchbar *ngIf="isSearching" (backButton)="isSearching=false" [onHeader]="true" (callback)="onInput($event)"></nt-searchbar>
+    <ion-buttons end>
+      <button ion-button *ngIf="!isSearching" (click)="isSearching=true">
         <ion-icon name="search"></ion-icon>
-      </button></ion-buttons>
+      </button>
+    </ion-buttons>
     <ion-title *ngIf="!isSearching">Montar prato</ion-title>
   </ion-navbar>
 

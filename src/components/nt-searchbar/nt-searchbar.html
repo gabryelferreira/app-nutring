@@ -1,3 +1,5 @@
-<div class="searchbar">
-  <span class="fa fa-search"></span><input type="search" [(ngModel)]="item" [placeholder]="placeholder" (keyup)="onChange()">
+<div class="searchbar" [id]="onHeader ? 'on-header' : 'not-on-header'">
+  <span *ngIf="!onHeader" class="fa fa-search"></span>
+  <span *ngIf="onHeader" class="fa fa-arrow-left" (click)="goBack()"></span>
+  <input type="search" [(ngModel)]="item" [placeholder]="placeholder" (keyup)="onChange()">
 </div>
