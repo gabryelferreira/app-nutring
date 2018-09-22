@@ -31,11 +31,13 @@ export class SearchPage {
     searchText: ""
   };
 
+  showWelcome:number = 1;
   offset: number = 0;
   viewMode: number = 0;
   maxViewMode: number = 1;
   selectedTheme: String = "";
   loading: boolean = false;
+  showSad:boolean = false;
 
   constructor(
     public navCtrl: NavController,
@@ -139,6 +141,11 @@ export class SearchPage {
   onInput(event) {
     let allFoods = this.getFoodsBackup();
     let text = event;
+    if (text) {
+      this.showWelcome = 0;
+    } else{
+      this.showWelcome = 1;
+    }
     let foodsFiltered = allFoods.filter(function(element, i) {
       if (
         element.nome.toLowerCase().indexOf(text.toLowerCase()) != -1 ||
@@ -161,6 +168,8 @@ export class SearchPage {
       foods.push(this.getFoodsFilteredByIndex(i));
     }
     this.setFoods(foods);
+    this.showSad = this.getFoods().length == 0
+    console.log(this.showSad)
     this.increaseOffset();
   }
 
