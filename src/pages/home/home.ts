@@ -17,6 +17,7 @@ import * as service from "./home.service";
   providers: [service.HomePostService, service.HomeGetService]
 })
 export class HomePage {
+  //merda
   selectedTheme: String = "";
   user: IUser = {
     altura_m: "",
