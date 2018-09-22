@@ -8,11 +8,14 @@ export class NtNumberPipe extends DeprecatedDecimalPipe implements PipeTransform
 
 
   transform(input: any, args?: any): any {
+    if (!input || input == "" || input == null || input == undefined)
+      return 0;
+
     var exp, rounded,
       suffixes = ['k', 'M', 'G', 'T', 'P', 'E'];
 
     if (Number.isNaN(input)) {
-      return null;
+      return 0;
     }
 
     if (input < 1000000) {
