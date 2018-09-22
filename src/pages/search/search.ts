@@ -17,7 +17,7 @@ import { ScrollHideConfig } from '../../components/hide-on-scrolling/scroll-hide
   providers: [service.SearchGetService, service.SearchPostService]
 })
 export class SearchPage {
-
+  //merda
   headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 44 };
   
 
