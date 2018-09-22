@@ -4,7 +4,7 @@ import { urlencode } from './url';
 
 export abstract class Connect {
 
-    url: string = "http://localhost/nutring-api/api/";
+    url: string = "http://nutring.com.br/api/";
     constructor(private http: HttpClient, private method: string){
     }
 

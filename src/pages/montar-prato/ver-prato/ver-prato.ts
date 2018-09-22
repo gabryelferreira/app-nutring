@@ -84,9 +84,8 @@ export class VerPratoPage {
     this.loading = true;
     let id_usuario = JSON.parse(localStorage.getItem("userData")).id_usuario;
     this.sendPrato = [];
-    let dataSql:DateTimeSQL = new DateTimeSQL(new Date())
     this.foods.forEach(element => {
-      this.sendPrato.push({id_usuario: parseInt(id_usuario), id_alimento: parseInt(element.id_alimento), quantidade: parseInt(element.porcao_comida), dataHr: dataSql.getSqlDateTime()  })
+      this.sendPrato.push({id_usuario: parseInt(id_usuario), id_alimento: parseInt(element.id_alimento), quantidade: parseInt(element.porcao_comida)})
     });
     let result = await this.post.createPrato(JSON.stringify(this.sendPrato));
     let message = "";
