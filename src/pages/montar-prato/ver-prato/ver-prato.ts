@@ -118,6 +118,7 @@ export class VerPratoPage {
           text: 'Confirmar',
           handler: () => {
             this.montarPrato();
+            localStorage.setItem("loadHistorico","True");
           }
         }
       ]

@@ -31,6 +31,7 @@ export class MeusPratosPage {
   selectedDate: number = 0;
   pratos = [];
 
+  
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -44,7 +45,15 @@ export class MeusPratosPage {
     this.getMonthsOfPratos(this.id_usuario);
   }
 
-  ionViewWillEnter() {}
+  ionViewDidEnter() {
+    let load = localStorage.getItem("loadHistorico")
+    if (load){
+      this.getMonthsOfPratos(this.id_usuario);
+      localStorage.removeItem("loadHistorico");
+
+    }
+  }
+  
 
   selectDate(index: number) {
     this.dateSeparator[this.selectedDate].selected = false;
