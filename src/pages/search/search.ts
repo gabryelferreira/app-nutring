@@ -8,12 +8,6 @@ import {
   ToastController
 } from "ionic-angular";
 import { ScrollHideConfig } from "../../components/hide-on-scrolling/scroll-hide-directive";
-/**
- * Generated class for the SearchPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -22,7 +16,7 @@ import { ScrollHideConfig } from "../../components/hide-on-scrolling/scroll-hide
   providers: [service.SearchGetService, service.SearchPostService]
 })
 export class SearchPage {
-  //merda
+  //merda que merda
   headerScrollConfig: ScrollHideConfig = {
     cssProperty: "margin-top",
     maxValue: 44
