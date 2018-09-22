@@ -21,7 +21,7 @@
         <ion-item>
           <ion-icon name="contact" item-start></ion-icon>
           <ion-label stacked>Nome Completo</ion-label>
-          <ion-input [(ngModel)]="user.nome" name="nome" type="text"></ion-input>
+          <ion-input maxlength="60" [(ngModel)]="user.nome" name="nome" type="text"></ion-input>
         </ion-item>
 
         <ion-item>
@@ -33,7 +33,7 @@
         <ion-item>
           <ion-icon name="at" item-start></ion-icon>
           <ion-label stacked>E-mail</ion-label>
-          <ion-input [(ngModel)]="user.email" name="email" type="email"></ion-input>
+          <ion-input maxlength="90" [(ngModel)]="user.email" name="email" type="email"></ion-input>
         </ion-item>
 
         <ion-item>
@@ -60,16 +60,16 @@
 
         <ion-item padding-right>
           <ion-label floating>Nome de usuário</ion-label>
-          <ion-input [(ngModel)]="user.usuario" name="usuario" type="text"></ion-input>
+          <ion-input maxlength="30" [(ngModel)]="user.usuario" name="usuario" type="text"></ion-input>
         </ion-item>
 
         <ion-item padding-right>
           <ion-label floating>Senha</ion-label>
-          <ion-input [(ngModel)]="user.senha" name="senha" type="password"></ion-input>
+          <ion-input maxlength="60" [(ngModel)]="user.senha" name="senha" type="password"></ion-input>
         </ion-item>
 
         <div padding>
-          <button *ngIf="!loading" ion-button full (click)="register()">CADASTRAR</button>
+          <button *ngIf="!loading" ion-button full (click)="register()">Cadastrar</button>
           <button *ngIf="loading" ion-button full><ion-spinner color="white" name="bubbles"></ion-spinner></button>
         </div>
         <div class="align-center">
