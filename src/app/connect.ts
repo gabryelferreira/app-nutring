@@ -15,13 +15,14 @@ export abstract class Connect {
             observe: null,
         }
         let data = [];
+        let result;
         for (let i in args) {
             data[i] = args[i];
         }
         let body = urlencode(data);
         if (this.method.toUpperCase() == "GET"){
             try {
-                var result = await this.http.get(this.url + _function, options).toPromise().then();
+                result = await this.http.get(this.url + _function, options).toPromise().then();
                 console.log(result);
                 return result;
             } catch (err){
@@ -32,7 +33,7 @@ export abstract class Connect {
         } else if (this.method.toUpperCase() == "POST"){
             try {
                 console.log(body)
-                var result = await this.http.post(this.url + _function, body, options).toPromise().then();
+                result = await this.http.post(this.url + _function, body, options).toPromise().then();
                 console.log(result);
                 return result;
             } catch (err){

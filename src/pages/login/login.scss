@@ -1,53 +1,50 @@
 page-login {
+  .no-account-span {
+    color: #888;
+  }
+  h2 {
+    width: 94%;
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  h2 span {
+    background: #fff;
+    padding: 0 10px;
+    font-size: 15px;
+    color: #aaa;
+  }
 
-    .no-account-span {
-        color: #888;
+  #login {
+    display: block;
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      margin-bottom: 15px;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      box-sizing: border-box;
+      padding: 10px 15px;
+      height: 40px;
+      background: #f5f5f5;
     }
-    h2 {
-        width: 94%; 
-        text-align: center; 
-        border-bottom: 1px solid #aaa; 
-        line-height: 0.1em;
-        margin: 10px 0 20px;
-        margin-left: auto;
-        margin-right: auto;
-     } 
-     
-     h2 span { 
-         background:#fff; 
-         padding:0 10px;
-         font-size: 15px;
-         color: #aaa; 
-     }
+  }
 
-    #login {
-        display: block;
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            margin-bottom: 15px;
-            border: 1px solid lightgray;
-            border-radius: 5px;
-            box-sizing: border-box;
-            padding: 10px 15px;
-            height: 40px;
-            background: #f5f5f5;
-        }
+  #loginButton {
+    border: 1px solid #27ae60;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 5px;
+  }
+
+  ion-footer {
+    button {
+      margin-bottom: 15px !important;
     }
-
-    #loginButton {
-        border: 1px solid #27ae60;
-        width: 100%;
-        box-sizing: border-box;
-        height: 40px;
-        border-radius: 5px;
-    }
-
-    ion-footer {
-        button {
-            margin-bottom: 15px !important;
-        }
-    }
-
+  }
 }

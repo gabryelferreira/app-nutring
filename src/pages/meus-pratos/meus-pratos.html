@@ -26,49 +26,50 @@
 <ion-content>
 
   <loader *ngIf="loading"></loader>
- 
+
   <div *ngIf="dateSeparator && dateSeparator.length > 0" class="allPratos">
 
 
-      <div class="date-pratos">
+    <div class="date-pratos">
 
-          <div *ngFor="let date of dateSeparator; let i = index" [class]="date.selected ? 'date-prato selected' : 'date-prato'" (click)="selectDate(i)">
-            <div class="info-date-prato">
-              <h1>{{date.dia}}</h1>
-              <h2>{{date.mes | ntMonth}}</h2>
+      <div *ngFor="let date of dateSeparator; let i = index" [class]="date.selected ? 'date-prato selected' : 'date-prato'"
+        (click)="selectDate(i)">
+        <div class="info-date-prato">
+          <h1>{{date.dia}}</h1>
+          <h2>{{date.mes | ntMonth}}</h2>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <div class="pratos">
+
+      <div *ngFor="let prato of pratos; let i = index" class="padding-prato" (click)="openPrato(prato)">
+        <div class="prato">
+          <div *ngIf="prato.kcal_consumo < 750" class="traco great"></div>
+          <div *ngIf="prato.kcal_consumo >= 750 && prato.kcal_consumo < 1250" class="traco warning"></div>
+          <div *ngIf="prato.kcal_consumo >= 1250" class="traco bad"></div>
+          <div class="info-prato">
+            <p>{{prato.hr_consumo}}</p>
+            <h1>{{prato.hr_consumo | ntNomePrato}}</h1>
+            <div class="info-icon">
+              <div class="info">
+                <ion-icon name="md-heart" color="claro"></ion-icon>
+                <p>{{prato.kcal_consumo | number:'1.0-2'}} kcal</p>
+              </div>
+              <div class="info">
+                <ion-icon name="md-restaurant" color="claro"></ion-icon>
+                <p>{{prato.peso | number:'1.0-2'}}g</p>
+              </div>
             </div>
           </div>
-          
         </div>
+      </div>
 
-
-
-
-        <div class="pratos">
-          
-          <div *ngFor="let prato of pratos; let i = index" class="padding-prato" (click)="openPrato(prato)">
-            <div class="prato">
-              <div *ngIf="prato.kcal_consumo < 750" class="traco great"></div>
-              <div *ngIf="prato.kcal_consumo >= 750 && prato.kcal_consumo < 1250" class="traco warning"></div>
-              <div *ngIf="prato.kcal_consumo >= 1250" class="traco bad"></div>
-                <div class="info-prato">
-                    <p>{{prato.hr_consumo}}</p>
-                    <h1>{{prato.hr_consumo | ntNomePrato}}</h1>
-                    <div class="info-icon">
-                        <div class="info">
-                          <ion-icon name="md-heart" color="claro"></ion-icon>
-                          <p>{{prato.kcal_consumo | number:'1.0-2'}} kcal</p>
-                        </div>
-                        <div class="info">
-                          <ion-icon name="md-restaurant" color="claro"></ion-icon>
-                          <p>{{prato.peso | number:'1.0-2'}}g</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-          
-        </div>
+    </div>
 
 
 

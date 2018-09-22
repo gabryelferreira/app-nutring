@@ -1,147 +1,135 @@
 page-meus-pratos {
+  ion-scroll {
+    height: 220px;
+    display: flex;
+    overflow: visible;
+    border: 0 !important;
+  }
 
-    ion-scroll {
-        height: 220px; 
-        display: flex; 
-        overflow: visible;
-        border: 0 !important;
+  .inner {
+    // max-width: 2000px;
+    height: 100%;
+    background: #4e4e4e;
+    ion-card {
+      display: table-cell;
+      height: 100%;
+      padding: 10px;
+
+      .inner-card-prato {
+        width: 150px;
+        ion-item {
+          font-size: 13px;
+          ion-badge {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .allPratos {
+    display: flex;
+    .date-pratos {
+      * {
+        margin: 0 !important;
+      }
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 90px;
+      height: calc(100vh - 50px) !important;
+      overflow-y: scroll;
+      .date-prato {
+        text-align: center;
+        position: relative;
+        height: 84px;
+        width: 100%;
+        box-sizing: border-box;
+        .info-date-prato {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          h1 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #aaa;
+            transition: 0.2s;
+          }
+          h2 {
+            font-size: 18px;
+            color: #aaa;
+            transition: 0.2s;
+          }
+        }
+      }
+      .selected {
+        h1 {
+          transition: 0.2s;
+        }
+        h2 {
+          transition: 0.2s;
+        }
+      }
     }
 
-    .inner {
-        // max-width: 2000px;
-        height: 100%;
-        background: #4e4e4e;
-        ion-card {
-            display: table-cell;
-            height: 100%;
-            padding: 10px;
+    .pratos {
+      position: absolute;
+      width: calc(100% - 90px);
+      left: 90px;
+      .padding-prato {
+        position: relative;
+        padding: 39px 39px 29px 39px;
+        box-sizing: border-box;
+        .prato {
+          position: relative;
+          width: 100%;
+          h1 {
+            margin: 0;
+            font-size: 22px;
+            margin-bottom: 17px;
+          }
+          p {
+            color: #bbb;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 8px;
+          }
+          .info-icon {
+            margin-bottom: 5px;
+            display: flex;
+            .info {
+              margin-right: 32px;
+              display: flex;
+              p {
+                display: flex;
+                margin-left: 5px;
+                color: #bbb;
+              }
+            }
+          }
 
-            .inner-card-prato {
-                width: 150px;
-                ion-item {
-                    font-size: 13px;
-                    ion-badge {
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-    }
+          .great {
+            background: #27ae60;
+          }
 
-    .allPratos {
-        display: flex;
-        .date-pratos {
-            * {
-                margin: 0 !important;
-            }
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 90px;
-            height: calc(100vh - 50px) !important;
-            overflow-y: scroll;
-            .date-prato {
-                text-align: center;
-                position: relative;
-                height: 84px;
-                width: 100%;
-                box-sizing: border-box;
-                .info-date-prato {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    h1 {
-                        font-size: 22px;
-                        font-weight: 600;
-                        color: #aaa;
-                        transition: .2s;
-                    }
-                    h2 {
-                        font-size: 18px;
-                        color: #aaa;
-                        transition: .2s;
-                    }
-                    
-                }
-                
-            }
-            .selected {
-                h1 {
-                    transition: .2s;
-                }
-                h2 {
-                    transition: .2s;
-                }
-            }
-        }
-    
-    
-        .pratos {
+          .warning {
+            background: #f39c12;
+          }
+
+          .bad {
+            background: #f53d3d;
+          }
+
+          .traco {
+            height: 25px;
+            width: 3px;
             position: absolute;
-            width: calc(100% - 90px);
-            left: 90px;
-            .padding-prato {
-                position: relative;
-                padding: 39px 39px 29px 39px;
-                box-sizing: border-box;
-                .prato {
-                    position: relative;
-                    width: 100%;
-                    h1 {
-                        margin: 0;
-                        font-size: 22px;
-                        margin-bottom: 17px;
-                    }
-                    p {
-                        color: #bbb;
-                        font-weight: bold;
-                        margin: 0;
-                        margin-bottom: 8px;
-                    }
-                    .info-icon {
-                        margin-bottom: 5px;
-                        display: flex;
-                        .info {
-                            margin-right: 32px;
-                            display: flex;
-                            p {
-                                display: flex;
-                                margin-left: 5px;
-                                color: #bbb;
-                            }
-                        }
-                        
-                    }
-    
-                    .great {
-                        background: #27ae60;
-                    }
-
-                    .warning {
-                        background: #f39c12;
-                    }
-
-                    .bad {
-                        background: #f53d3d;
-                    }
-    
-                    .traco {
-                        height: 25px;
-                        width: 3px;
-                        position: absolute;
-                        right: 5px;
-                        top: 5px;
-                    }
-    
-                }
-            }
+            right: 5px;
+            top: 5px;
+          }
         }
+      }
     }
-
-        
-
-
-
-
+  }
 }

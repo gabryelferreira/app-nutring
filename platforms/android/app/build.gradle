@@ -91,6 +91,8 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "../cordova-plugin-badge/nutring-badge.gradle"
+apply from: "../cordova-plugin-local-notification/nutring-localnotification.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -262,6 +264,7 @@ dependencies {
     compile "com.android.support:support-annotations:27.+"
     compile "com.facebook.android:facebook-android-sdk:4.+"
     compile "com.android.support:support-v4:24.1.1+"
+    compile "com.android.support:support-v4:26.+"
     // SUB-PROJECT DEPENDENCIES END
 }
 
