@@ -6,7 +6,6 @@ import { SettingsService } from "./../settings/settings.service";
 import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams, DateTime } from "ionic-angular";
 import { InfoPratoPage } from "./info-prato/info-prato";
-import { DateTimeSQL } from "../../app/dateTimeSQL";
 
 /**
  * Generated class for the MeusPratosPage page.

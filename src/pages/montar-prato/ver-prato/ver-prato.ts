@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import { VerPratoPostService, VerPratoGetService } from './ver-prato.service';
 import { MontarPratoPage } from '../../montar-prato/montar-prato';
-import { DateTimeSQL } from '../../../app/dateTimeSQL';
 
 /**
  * Generated class for the VerPratoPage page.
