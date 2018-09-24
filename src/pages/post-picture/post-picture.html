@@ -13,26 +13,18 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-card>
+<ion-content class="image" [ngStyle]="{ 'background-image': 'url(' + picture + ')'}">
+  <!-- <button (click)="openCamera()" style="width: 100%;height: 92%;position: relative;">
+    <img [src]="picture" class="transparent" no-padding>
+  </button> -->
+  <div style="height: 92%;background-color: rgba(0,255,0,0.0)">
 
-    <ion-card-content>
-      <ion-card-title>
-        Post
-      </ion-card-title>
-      <button (click)="openCamera()">
-        <img [src]="picture" class="transparent" padding>
-      </button>
-    </ion-card-content>
-    <ion-item>
-      <ion-label color="primary" stacked>Descrição</ion-label>
-      <ion-textarea type="text" placeholder="Escreva sua descrição"></ion-textarea>
-    </ion-item>
-  </ion-card>
-  <div padding>
-    <button ion-button round icon-end float-right>
-      post
-      <ion-icon name="browsers"></ion-icon>
+  </div>
+
+  <div class="description" no-padding style="width: 100%">
+    <ion-input type="text" placeholder="Escreva sua descrição" style="width: 75%" float-left></ion-input>
+    <button ion-button icon-only float-right style="border-radius: 50%">
+      <ion-icon name="arrow-round-forward"></ion-icon>
     </button>
   </div>
 
