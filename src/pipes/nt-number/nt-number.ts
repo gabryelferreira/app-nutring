@@ -12,7 +12,7 @@ export class NtNumberPipe extends DeprecatedDecimalPipe implements PipeTransform
       return 0;
 
     var exp, rounded,
-      suffixes = ['k', 'M', 'G', 'T', 'P', 'E'];
+      suffixes = ['k', 'M', 'B', 'T', 'Q', 'QQ'];
 
     if (Number.isNaN(input)) {
       return 0;

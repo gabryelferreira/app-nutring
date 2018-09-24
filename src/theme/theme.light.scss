@@ -154,4 +154,32 @@
       }
     }
 
+    .food-select-dropdown {
+      .food-quantidade {
+        background: #fff;
+        box-shadow: inset 0px 11px 8px -10px #CCC;
+      }
+    }
+
+
+    .content-profile {
+      background: #fff !important;
+      .profile-tabs {
+        background: #fff;
+        .profile-tab {
+          background: #fff;
+        }
+      }
+      .profile-info {
+        background: #fff !important;
+        ion-list {
+          background: #fff !important;
+          ion-item {
+            background: #fff !important;
+          }
+        }
+        
+      }
+    }
+
 }

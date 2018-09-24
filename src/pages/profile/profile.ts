@@ -44,6 +44,14 @@ export class ProfilePage {
     {star: 'md-star-outline', value: 5}
   ]
 
+  selectedTab: string = "user";
+
+  tabs = [
+    {name: 'user', image: 'ios-person-outline', selected: true},
+    {name: 'food', image: 'ios-paper-outline', selected: false},
+    {name: 'info', image: 'ios-podium-outline', selected: false}
+  ]
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService, 
               private toastCtrl: ToastController, private post: ProfilePostService) {
     this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
@@ -53,6 +61,14 @@ export class ProfilePage {
 
   async ionViewWillEnter() {
     this.user = JSON.parse(localStorage.getItem("userData"));
+  }
+
+  selectTab(tab){
+    this.selectedTab = tab["name"];
+    this.tabs.forEach(tab => {
+      tab.selected = false;
+    });
+    tab.selected = true;
   }
 
   editProfile(){

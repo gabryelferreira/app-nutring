@@ -28,9 +28,8 @@ page-profile {
     .profile-header {
         transition: .25s linear;
         position: relative;
-        height: 270px;
+        height: 230px;
         width: 100%;
-        background-color: #1dd1a1;
         background-image: url('../../assets/imgs/blur.jpg');
         background-position: center;
         background-size: cover;
@@ -94,6 +93,61 @@ page-profile {
 
         }
     }
+
+    .profile-tabs {
+        position: relative;
+        width: 100%;
+        display: flex;
+        transition: .3s;
+        .profile-tab {
+            text-align: center;
+            margin: auto;
+            width: 100%;
+            padding: 15px;
+            transition: .3s;
+            ion-icon {
+                font-size: 30px;
+                color: #ccc;
+                transition: .3s;
+            }
+        }
+        .profile-tab.active {
+            ion-icon {
+                color: #4cd137;
+            }
+            
+        }
+    }
+
+
+    .all-feed {
+        .feed-img {
+            width: 100%;
+            .img{
+                position: relative;
+                float: left;
+                width: 33%;
+                margin: 0.16%;
+                vertical-align: middle;
+                background: #f3f3f3;
+            }
+            .img:before{
+                content: "";
+                display: block;
+                padding-top: 100%;
+            }
+            .content{
+                position:  absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                object-fit: cover;
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }
+    }
+
 
     .input-user-info {
         background: transparent;

@@ -32,6 +32,7 @@ import { ScrollHideDirective } from '../components/hide-on-scrolling/scroll-hide
 import { EditProfilePage } from '../pages/profile/edit-profile/edit-profile';
 import { PipesModule } from '../pipes/pipes.module';
 import { LocalNotifications } from '@ionic-native/local-notifications'
+import { NtListHeaderComponent } from '../components/nt-list-header/nt-list-header';
 @NgModule({
   declarations: [
     MyApp,
@@ -54,7 +55,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications'
     LoaderComponent,
     NtSearchbarComponent,
     ScrollHideDirective,
-    EditProfilePage
+    EditProfilePage,
+    NtListHeaderComponent
   ],
   imports: [
     BrowserModule,

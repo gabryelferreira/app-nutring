@@ -35,37 +35,51 @@
     </ion-list-header>
 
 
-    <div [class.active]="food.selected" (click)="selectFood(food)" *ngFor="let food of foods; let i = index">
+    <div *ngFor="let food of foods; let i = index">
+      <div [class.active]="food.selected" (click)="selectFood(food)">
 
 
-      <ion-item>
-        <ion-avatar item-start>
-          <img [src]="food.img_url">
-        </ion-avatar>
-        <h2>{{food.nome}}</h2>
-        <p *ngIf="food.porcao_comida > 0" color="primary">{{food.porcao_comida}} g</p>
-        <p *ngIf="!food.porcao_comida || food.porcao_comida <= 0" color="primary"><br></p>
-        <ion-icon *ngIf="food.porcao_comida > 0" name="checkmark" color="primary" item-end></ion-icon>
-        <ion-icon *ngIf="!food.porcao_comida || food.porcao_comida <= 0" name="ios-arrow-down" color="lightgray"
-          item-end></ion-icon>
-      </ion-item>
+        <ion-item>
+          <ion-avatar item-start>
+            <img [src]="food.img_url">
+          </ion-avatar>
+          <h2>{{food.nome}}</h2>
+          <p *ngIf="food.porcao_comida > 0" color="primary">{{food.porcao_comida}} g</p>
+          <p *ngIf="!food.porcao_comida || food.porcao_comida <= 0" color="primary"><br></p>
+          <ion-icon *ngIf="food.porcao_comida > 0" name="checkmark" color="primary" item-end></ion-icon>
+          <ion-icon *ngIf="!food.porcao_comida || food.porcao_comida <= 0" name="ios-arrow-down" color="lightgray"
+            item-end></ion-icon>
+        </ion-item>
 
+
+        
+
+      </div>
 
       <div *ngIf="food.selected" class="food-select-dropdown active-food-select-dropdown">
         <ion-list-header>
-          Quantidade (em gramas)
+          Quantidade
           <ion-badge item-end *ngIf="food.porcao_comida">{{food.porcao_comida}} g</ion-badge>
         </ion-list-header>
         <ion-item>
-          <ion-range min="0" max="1000" [(ngModel)]="food.porcao_comida" (ngModelChange)="mudarPorcao($event, food)"
+          <input type="text" name="porcao_comida" [(ngModel)]="food.porcao_comida"
+          (ngModelChange)="mudarPorcao(food.porcao_comida, food)" class="food-quantidade">
+          <!-- <ion-input type="text" class="food-quantidade"></ion-input> -->
+          <!-- <ion-select class="food-quantidade" [(ngModel)]="gender" interface="popover">
+            <ion-option value="f">Female</ion-option>
+            <ion-option value="m">Male</ion-option>
+          </ion-select> -->
+          <select class="food-quantidade">
+            <option value="G">Gramas</option>
+            <option value="P">Porção</option>
+          </select>
+          <!-- <ion-range min="0" max="1000" [(ngModel)]="food.porcao_comida" (ngModelChange)="mudarPorcao($event, food)"
             color="secondary">
             <ion-label range-left>0</ion-label>
             <ion-label range-right>1000</ion-label>
-          </ion-range>
+          </ion-range> -->
         </ion-item>
       </div>
-
-
 
     </div>
 

@@ -33,12 +33,9 @@
 
   <ion-list *ngIf="foods && foods.length > 0">
 
-    <ion-list-header>
-      Alimentos
-      <button ion-button item-end (click)="toggleViewMode()" icon-only color="transparent">
-        <ion-icon name="options"></ion-icon>
-      </button>
-    </ion-list-header>
+    <!-- <nt-list-header *ngIf="!showSad && showWelcome != 1" [text]="'Alimentos'">
+
+    </nt-list-header> -->
 
     <div *ngIf="viewMode == 0 && showWelcome == 0 && !showSad">
       <ion-item *ngFor="let food of foods; let i = index">

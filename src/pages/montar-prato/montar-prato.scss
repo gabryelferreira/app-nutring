@@ -31,4 +31,33 @@ page-montar-prato {
         padding: 0px !important;
         margin: 0px !important;
     }
+    
+    .food-select-dropdown {
+        ion-list-header {
+            margin: 0 !important;
+            padding: 0 15px !important;
+            box-sizing: border-box !important;
+            border: 0 !important;
+        }
+        ion-item {
+            border: 0 !important;
+            margin: 0 !important;
+            padding: 0 15px !important;
+            box-sizing: border-box !important;
+            display: flex;
+            .food-quantidade {
+                position: relative;
+                box-sizing: border-box;
+                padding-left: 10px;
+                padding-right: 10px;
+                width: 45%;
+                margin: 0 10px;
+                border: 0;
+                height: 40px;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    
 }
