@@ -1,0 +1,40 @@
+<!--
+  Generated template for the PostPicturePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>post-picture</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+
+    <ion-card-content>
+      <ion-card-title>
+        Post
+      </ion-card-title>
+      <button (click)="openCamera()">
+        <img [src]="picture" class="transparent" padding>
+      </button>
+    </ion-card-content>
+    <ion-item>
+      <ion-label color="primary" stacked>Descrição</ion-label>
+      <ion-textarea type="text" placeholder="Escreva sua descrição"></ion-textarea>
+    </ion-item>
+  </ion-card>
+  <div padding>
+    <button ion-button round icon-end float-right>
+      post
+      <ion-icon name="browsers"></ion-icon>
+    </button>
+  </div>
+
+
+</ion-content>

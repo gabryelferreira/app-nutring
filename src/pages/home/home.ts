@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, Tabs } from "ionic-angular";
 import { SettingsService } from "../settings/settings.service";
 import { IUser } from "../../app/types";
 import * as service from "./home.service";
+import { PostPicturePage } from "../post-picture/post-picture";
 /**
  * Generated class for the HomePage page.
  *
@@ -88,4 +89,9 @@ export class HomePage {
   gotoHistorico() {
     this.tabs.select(3);
   }
+
+  gotoFotoPage(){
+    this.navCtrl.push(PostPicturePage);
+  }
+
 }
