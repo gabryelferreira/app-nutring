@@ -20,6 +20,7 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
+    "@ionic-native/camera": "^4.14.0",
     "@ionic-native/core": "~4.12.0",
     "@ionic-native/facebook": "^4.12.2",
     "@ionic-native/header-color": "^4.12.2",
@@ -33,6 +34,7 @@
     "com.telerik.plugins.nativepagetransitions": "^0.6.5",
     "cordova-android": "7.0.0",
     "cordova-plugin-badge": "^0.8.7",
+    "cordova-plugin-camera": "^4.0.3",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-facebook4": "^2.5.0",
     "cordova-plugin-headercolor": "^1.0.0",
@@ -81,7 +83,8 @@
       "phonegap-plugin-push": {
         "FCM_VERSION": "11.6.2"
       },
-      "cordova-plugin-local-notification": {}
+      "cordova-plugin-local-notification": {},
+      "cordova-plugin-camera": {}
     },
     "platforms": [
       "android"

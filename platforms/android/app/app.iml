@@ -133,6 +133,7 @@
     <orderEntry type="library" name="Gradle: com.facebook.android:facebook-marketing-4.36.1" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.android:facebook-login-4.36.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-core-utils-27.0.2" level="project" />
+    <orderEntry type="library" name="Gradle: me.leolin:ShortcutBadger-1.1.21" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-fragment-27.0.2" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.android:facebook-core-4.36.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7-27.0.2" level="project" />

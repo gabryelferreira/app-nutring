@@ -1,6 +1,5 @@
 // http://ionicframework.com/docs/theming/
 
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -15,74 +14,96 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-
 .align-center {
-    text-align: center;
+  text-align: center;
 }
 
-.tab-item-active{
-    background:green;
-  }
+.tab-item-active {
+  background: green;
+}
 
 .no-padding {
-    padding: 0px !important;
+  padding: 0px !important;
 }
 
-h1, h2, h3, h4, h5, h6, p,
-ion-card-title, ion-badge, ion-item, ion-list-header, ion-note, ion-button, ion-title, button, ion-card-content,
-input[type="text"], input[type="password"], .item-inner {
-    font-family: 'Slabo 27px', serif !important;
-    border: 0 !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ion-card-title,
+ion-badge,
+ion-item,
+ion-list-header,
+ion-note,
+ion-button,
+ion-title,
+button,
+ion-card-content,
+input[type="text"],
+input[type="password"],
+.item-inner {
+  font-family: "Slabo 27px", serif !important;
+  border: 0 !important;
 }
 
 ion-avatar img {
-    border-radius: 50% !important;
+  border-radius: 50% !important;
 }
 
 button {
-    border-radius: 5px !important;
-    transition: .3s !important;
+  border-radius: 5px !important;
+  transition: 0.3s !important;
 }
 
 ion-header {
-    border: 0 !important;
-    box-shadow: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
 ion-content {
-    min-height: 100% !important;
+  min-height: 100% !important;
 }
 
 ion-fab {
-    button {
-        border-radius: 50% !important;
-    }
+  button {
+    border-radius: 50% !important;
+  }
 }
-
-
 
 //Removendo bordas da ion-list/ion-item
 .item-input {
-    .item-inner {
-        border-bottom: 1px solid lightgray !important;
-        padding: 0 !important;
-    }
+  .item-inner {
+    border-bottom: 1px solid lightgray !important;
+    padding: 0 !important;
+  }
 }
-
 
 .item-divider {
-    .item-inner {
-        border-bottom: 0 !important;
-        padding: 0 !important;
-    }
+  .item-inner {
+    border-bottom: 0 !important;
+    padding: 0 !important;
+  }
 }
 
-.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
-    box-shadow: none !important;
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus)
+  .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus)
+  .item-inner {
+  box-shadow: none !important;
 }
 
 .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
-    border-bottom: 0 !important;
-    box-shadow: none !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
 }
 
-
+.transparent {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}

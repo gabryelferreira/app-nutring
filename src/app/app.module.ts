@@ -33,6 +33,8 @@ import { EditProfilePage } from '../pages/profile/edit-profile/edit-profile';
 import { PipesModule } from '../pipes/pipes.module';
 import { LocalNotifications } from '@ionic-native/local-notifications'
 import { NtListHeaderComponent } from '../components/nt-list-header/nt-list-header';
+import { PostPicturePage } from '../pages/post-picture/post-picture';
+import { Camera } from '@ionic-native/camera';
 @NgModule({
   declarations: [
     MyApp,
@@ -45,6 +47,7 @@ import { NtListHeaderComponent } from '../components/nt-list-header/nt-list-head
     MeusPratosPage,
     RegisterPage,
     HomePage,
+    PostPicturePage,
     VerPratoPage,
     InfoPratoPage,
     ProfilePage,
@@ -70,6 +73,7 @@ import { NtListHeaderComponent } from '../components/nt-list-header/nt-list-head
   entryComponents: [
     MyApp,
     TabsPage,
+    PostPicturePage,
     LoginPage,
     SettingsPage,
     IntroductionPage,
@@ -93,6 +97,7 @@ import { NtListHeaderComponent } from '../components/nt-list-header/nt-list-head
     SettingsService,
     SocialSharing,
     LocalNotifications,
+    Camera,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })
