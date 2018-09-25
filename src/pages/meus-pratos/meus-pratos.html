@@ -29,6 +29,11 @@
 
   <div *ngIf="dateSeparator && dateSeparator.length > 0" class="allPratos">
 
+      <ion-fab right bottom>
+        <button (click)="goToMontarPrato()" ion-fab color="primary">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-fab>
 
     <div class="date-pratos">
 
@@ -73,6 +78,12 @@
 
 
 
+  </div>
+
+  <div class="no-food" *ngIf="!loading && (!dateSeparator || dateSeparator.length == 0)">
+    <h1>Seus pratos</h1>
+    <h2>Você ainda não possui nenhum prato. Monte seu primeiro agora mesmo.</h2>
+    <button type="button" class="default-button green" (click)="goToMontarPrato()">Montar prato</button>
   </div>
 
 

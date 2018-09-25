@@ -132,4 +132,33 @@ page-meus-pratos {
       }
     }
   }
+
+
+
+
+  .no-food {
+    position: fixed;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    text-align: center;
+    h1 {
+      font-size: 15px;
+      font-weight: bold;
+      color: #111;
+    }
+    h2 {
+      font-size: 14px;
+      color: #232323;
+    }
+    button {
+      margin-top: 15px;
+    }
+    ion-fab {
+      transform: translateX(-50%);
+    }
+  }
+
 }

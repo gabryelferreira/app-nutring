@@ -87,6 +87,34 @@ ion-fab {
   }
 }
 
+.default-button {
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.blue {
+  background: #488aff;
+  color: white;
+}
+
+.red {
+  background: #f53d3d;
+  color: white;
+}
+
+.green {
+  background: #27ae60;
+  color: white;
+}
+
+.success {
+  background: #4cd137;
+  color: white;
+}
+
 .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus)
   .item-inner,
 .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus)

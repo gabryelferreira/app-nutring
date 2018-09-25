@@ -1,3 +1,4 @@
+import { MontarPratoPage } from './../montar-prato/montar-prato';
 import {
   MeusPratosPostService,
   MeusPratosGetService
@@ -90,6 +91,10 @@ export class MeusPratosPage {
     this.navCtrl.push(InfoPratoPage, {
       prato: prato
     });
+  }
+
+  goToMontarPrato(){
+    this.navCtrl.parent.select(1);
   }
 
   ionViewDidLoad() {}
