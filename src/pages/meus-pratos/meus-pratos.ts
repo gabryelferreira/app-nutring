@@ -80,7 +80,8 @@ export class MeusPratosPage {
     if (result.success) {
       await this.getPratosByDate(this.id_usuario, result.result[0]);
       this.dateSeparator = result.result;
-      this.dateSeparator[0].selected = true;
+      if (this.dateSeparator && this.dateSeparator.length > 0)
+        this.dateSeparator[0].selected = true;
     }
     this.loading = false;
   }
