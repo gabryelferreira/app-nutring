@@ -26,9 +26,9 @@ export class SugestaoAlimentoPage {
   descricao:string = ""
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              private post: SugestaoPostService, private _settings: SettingsService,
+              private post: SugestaoPostService, _settings: SettingsService,
               private toastCtrl: ToastController) {
-    this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+    _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.user = JSON.parse(localStorage.getItem("userData"));
   }
 

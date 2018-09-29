@@ -28,9 +28,9 @@ export class ContactUsPage {
   loading: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-              private post: ContactUsPostService, private _settings: SettingsService, 
+              private post: ContactUsPostService, _settings: SettingsService, 
               private toastCtrl: ToastController) {
-    this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+    _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.user = JSON.parse(localStorage.getItem("userData"));
   }
 

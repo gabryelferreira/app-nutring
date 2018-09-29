@@ -35,7 +35,7 @@ export class MeusPratosPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private _settings: SettingsService,
+    _settings: SettingsService,
     private post: MeusPratosPostService
   ) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));

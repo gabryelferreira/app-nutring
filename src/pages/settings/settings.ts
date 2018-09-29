@@ -48,7 +48,7 @@ export class SettingsPage {
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private _settings: SettingsService, private socialSharing: SocialSharing) {
-    this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+    _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.darkTheme = this.selectedTheme == "dark-theme";
   }
 

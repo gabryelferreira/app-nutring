@@ -16,6 +16,7 @@ export class PostPicturePostService extends Connect {
   }
 
   postPicture(data) {
+    console.log("data", data);
     return this.callMethod("postPicture", { data });
   }
 }

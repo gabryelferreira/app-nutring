@@ -10,11 +10,34 @@ INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidMa
 		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:20:75-99
 	android:name
 		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:20:135-183
+provider#de.appplant.cordova.plugin.notification.util.AssetProvider
+INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:23:9-25:20
+	android:grantUriPermissions
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:23:92-126
+	android:authorities
+		INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:23:19-66
+	android:exported
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:23:67-91
+	android:name
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:23:127-200
+provider#org.apache.cordova.camera.FileProvider
+INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:29:9-31:20
+	android:grantUriPermissions
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:29:92-126
+	android:authorities
+		INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:29:19-66
+	android:exported
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:29:67-91
+	android:name
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:29:127-180
 manifest
-ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-36:12
+MERGED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:2:1-52:12
 MERGED from [com.facebook.android:facebook-android-sdk:4.36.1] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.36.1.aar\b5f927d68433d82ac099cbf89495af14\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-login:4.36.1] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\facebook-login-4.36.1.aar\3fa067f1c10e4a582f7ec3d35bdc81b3\AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-share:4.36.1] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\facebook-share-4.36.1.aar\469cdbc89dcac2355f9b143a91647457\AndroidManifest.xml:21:1-31:12
@@ -37,9 +60,9 @@ MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Blade\.gr
 MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\9a7aac39a9a5cc669be2491ab50cc234\AndroidManifest.xml:17:1-22:12
 MERGED from [:CordovaLib] C:\wamp64\www\app-nutring\platforms\android\CordovaLib\build\intermediates\manifests\full\release\AndroidManifest.xml:20:1-27:12
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\31f046e5b4d9d2027ad525cd38d4597f\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:1-36:12
 	package
 		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:2:98-127
 		INJECTED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml
@@ -75,7 +98,7 @@ ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManif
 	android:name
 		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:5:5-23:19
+ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:5:5-32:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.36.1] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.36.1.aar\b5f927d68433d82ac099cbf89495af14\AndroidManifest.xml:28:5-29:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.36.1] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.36.1.aar\b5f927d68433d82ac099cbf89495af14\AndroidManifest.xml:28:5-29:19
 MERGED from [com.facebook.android:facebook-login:4.36.1] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\facebook-login-4.36.1.aar\3fa067f1c10e4a582f7ec3d35bdc81b3\AndroidManifest.xml:28:5-29:19
@@ -164,8 +187,32 @@ action#android.intent.action.SEND
 ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
 		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:17:25-66
+receiver#de.appplant.cordova.plugin.localnotification.TriggerReceiver
+ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:26:9-122
+	android:exported
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:26:19-43
+	android:name
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:26:44-119
+receiver#de.appplant.cordova.plugin.localnotification.ClearReceiver
+ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:27:9-120
+	android:exported
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:27:19-43
+	android:name
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:27:44-117
+activity#de.appplant.cordova.plugin.localnotification.ClickReceiver
+ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:28:9-205
+	android:launchMode
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:28:44-79
+	android:exported
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:28:19-43
+	android:theme
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:28:154-202
+	android:name
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:28:80-153
 uses-sdk
-ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:24:5-74
+ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:33:5-74
+MERGED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:7:5-9:41
+MERGED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.android:facebook-android-sdk:4.36.1] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.36.1.aar\b5f927d68433d82ac099cbf89495af14\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-android-sdk:4.36.1] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.36.1.aar\b5f927d68433d82ac099cbf89495af14\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-login:4.36.1] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\facebook-login-4.36.1.aar\3fa067f1c10e4a582f7ec3d35bdc81b3\AndroidManifest.xml:24:5-26:41
@@ -211,19 +258,87 @@ MERGED from [:CordovaLib] C:\wamp64\www\app-nutring\platforms\android\CordovaLib
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\31f046e5b4d9d2027ad525cd38d4597f\AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\31f046e5b4d9d2027ad525cd38d4597f\AndroidManifest.xml:20:5-22:41
 	android:targetSdkVersion
-		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:24:42-71
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:33:42-71
 	android:minSdkVersion
-		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:24:15-41
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:33:15-41
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:25:5-81
+ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:34:5-81
 	android:name
-		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:25:22-78
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:34:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:35:5-68
+	android:name
+		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:35:22-65
 meta-data#android.support.FILE_PROVIDER_PATHS
 ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:21:13-115
 	android:resource
 		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:21:75-112
 	android:name
 		ADDED from C:\wamp64\www\app-nutring\platforms\android\app\src\main\AndroidManifest.xml:21:24-74
+uses-permission#com.sec.android.provider.badge.permission.READ
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:19:5-86
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:19:22-83
+uses-permission#com.sec.android.provider.badge.permission.WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:20:5-87
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:20:22-84
+uses-permission#com.htc.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:23:22-78
+uses-permission#com.htc.launcher.permission.UPDATE_SHORTCUT
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:24:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:24:22-80
+uses-permission#com.sonyericsson.home.permission.BROADCAST_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:27:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:27:22-85
+uses-permission#com.sonymobile.home.permission.PROVIDER_INSERT_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:28:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:28:22-89
+uses-permission#com.anddoes.launcher.permission.UPDATE_COUNT
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:31:5-84
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:31:22-81
+uses-permission#com.majeur.launcher.permission.UPDATE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:34:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:34:22-80
+uses-permission#com.huawei.android.launcher.permission.CHANGE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:37:5-91
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:37:22-88
+uses-permission#com.huawei.android.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:38:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:38:22-89
+uses-permission#com.huawei.android.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:39:5-93
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:39:22-90
+uses-permission#android.permission.READ_APP_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:42:5-73
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:42:22-70
+uses-permission#com.oppo.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:45:5-82
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:45:22-79
+uses-permission#com.oppo.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:46:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:46:22-80
+uses-permission#me.everything.badger.permission.BADGE_COUNT_READ
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:49:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:49:22-85
+uses-permission#me.everything.badger.permission.BADGE_COUNT_WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:50:5-89
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.21] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.21.aar\40aba92d0d4d9c03cad0f085287c68b5\AndroidManifest.xml:50:22-86
 activity#com.facebook.CustomTabMainActivity
 ADDED from [com.facebook.android:facebook-common:4.36.1] C:\Users\Blade\.gradle\caches\transforms-1\files-1.1\facebook-common-4.36.1.aar\147f310d4f9f9b7b3173a8966ae96fc5\AndroidManifest.xml:33:9-71
 	android:name

@@ -45,12 +45,12 @@ export class EditProfilePage {
   optionalData = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-              private _settings: SettingsService, private post: ProfilePostService,
+              _settings: SettingsService, private post: ProfilePostService,
               private toastCtrl: ToastController) {
     this.user = navParams.get("user");
     this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
     this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
-    this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+    _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }
 
   ionViewDidLoad() {

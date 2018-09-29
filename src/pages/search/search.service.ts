@@ -1,26 +1,29 @@
-import { Connect } from '../../app/connect';
+import { Connect } from "../../app/connect";
 import { Injectable } from "@angular/core";
-import { HttpClient } from '@angular/common/http';
+import { HttpClient } from "@angular/common/http";
 
 @Injectable()
 export class SearchGetService extends Connect {
-    constructor(private _http: HttpClient){
-        super(_http, "get");
-    }
+  constructor(private _http: HttpClient) {
+    super(_http, "get");
+  }
 
-    getFood(food: string){
-        return this.callMethod("getFood?food_name=" + food);
-    }
-
-    findFoods(){
-        return this.callMethod("findFoods");
-    }
-
+  findFoods() {
+    return this.callMethod("findFoods");
+  }
 }
 
 @Injectable()
 export class SearchPostService extends Connect {
-    constructor(private _http: HttpClient){
-        super(_http, "post");
-    }
+  constructor(private _http: HttpClient) {
+    super(_http, "post");
+  }
+
+  getFood(food: string, offset: number = 0) {
+    return this.callMethod("getFood", { food, offset });
+  }
+
+  getPeople(name: string, offset: number = 0) {
+    return this.callMethod("getPeople", { name, offset });
+  }
 }

@@ -45,10 +45,11 @@ export class PostPicturePage {
     );
   }
 
-  postPicture() {
+  async postPicture() {
     let user: IUser = JSON.parse(localStorage.getItem("userData"));
     let data = JSON.stringify({ id_usuario: user.id_usuario, img: this.picture});
-    this.post.postPicture(data);
+    let result = await this.post.postPicture(data);
+    console.log("result =",result);
   }
 
   //seta Para img padrão

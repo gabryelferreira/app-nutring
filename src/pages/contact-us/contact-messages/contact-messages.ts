@@ -28,8 +28,8 @@ export class ContactMessagesPage {
   loading: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-              private _settings: SettingsService, private post: ContactUsPostService) {
-    this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+              _settings: SettingsService, private post: ContactUsPostService) {
+    _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.user = JSON.parse(localStorage.getItem("userData"));
     this.getUserMessages(this.user["id_usuario"]);
   }
