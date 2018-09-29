@@ -4,66 +4,159 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" no-padding>
+<ion-header>
+
   <ion-navbar color="{{selectedTheme}}">
-    <ion-buttons float-start>
-      <button ion-button>
-        <ion-icon name="information"></ion-icon>
-      </button>
-    </ion-buttons>
+
+
+
+    <ion-title text-left>
+      Nutring
+    </ion-title>
+
     <ion-buttons end>
       <button ion-button (click)="gotoFotoPage()">
         <ion-icon name="camera"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>Home</ion-title>
+
   </ion-navbar>
+
 </ion-header>
 
 
 <ion-content>
 
-  <div class="homepage-header">
 
-    <div class="user-data">
-      <div class="div-user-img">
-        <img class="user-img" *ngIf="!user.foto" src="../../assets/imgs/user.jpg">
-        <img class="user-img" *ngIf="user.foto" [src]='user.foto'>
+  <div class="feed">
+    <div class="feed-info">
+      <div class="user-info">
+          <img class="user-picture" [src]="user.foto">
+          <div class="text">
+            <h1>Gabryel Ferreira</h1>
+            <p>5h atrás</p>
+          </div>
       </div>
-
-      <h1>{{user.nome}}</h1>
-      <h2>{{user.idade}} anos</h2>
-      <div class="div-percentage-day">
-        <ion-icon *ngFor="let star of stars" [name]="star.star" color="white"></ion-icon>
+      
+      <div class="post-info">
+          <img class="info-picture" src="../../assets/imgs/foods/food3.jpg">
+      </div>
+      
+      <div class="tabs-info">
+        <div class="tab">
+            <div class="align">
+              <ion-icon name="ios-thumbs-up-outline"></ion-icon>
+              <p>Gostei</p>
+            </div>
+        </div>
+        <div class="tab">
+          <div class="align">
+            <ion-icon name="ios-chatbubbles-outline"></ion-icon>
+            <p>Comentar</p>
+          </div>
+        </div>
+      </div>
+      <div class="description-info">
+        <h2>344 curtidas</h2>
+        <p>Eai irmãos. Esse é meu prato de hoje. Muita salada com feijão e arroz com batata palha no cu. Curtiram?</p>
+      </div>
+      <div class="likes-info">
+        <!-- <p>32 gostaram</p> -->
+      </div>
+      <div class="comment-info">
+        <p (click)="seeComments()">Ver comentários</p>
       </div>
     </div>
+    <div class="divider"></div>
 
+
+
+
+    <div class="feed-info">
+      <div class="user-info">
+          <img class="user-picture" src="https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/26113754_1737094206365772_4187501352879553596_n.jpg?_nc_cat=110&oh=538acca2d00f5c0ca12ff3ff611442d8&oe=5C16432A">
+          <div class="text">
+            <h1>Nicholas Maglowsch</h1>
+            <p>agora</p>
+          </div>
+      </div>
+      
+      <div class="post-info">
+          <img class="info-picture" src="../../assets/imgs/foods/food2.jpg">
+      </div>
+      
+      <div class="tabs-info">
+        <div class="tab">
+            <div class="align">
+              <ion-icon name="ios-thumbs-up-outline"></ion-icon>
+              <p>Gostei</p>
+            </div>
+        </div>
+        <div class="tab">
+          <div class="align">
+            <ion-icon name="ios-chatbubbles-outline"></ion-icon>
+            <p>Comentar</p>
+          </div>
+        </div>
+      </div>
+      <div class="description-info">
+        <h2>1.242 curtidas</h2>
+        <p>To aqui pra cuidar de estagiário merda.</p>
+      </div>
+      <div class="likes-info">
+        <!-- <p>32 gostaram</p> -->
+      </div>
+      <div class="comment-info">
+        <p>Ver comentários</p>
+      </div>
+    </div>
+    <!-- <div class="feed-info">
+      <div class="user-info">
+          <img class="user-picture" src="https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/26113754_1737094206365772_4187501352879553596_n.jpg?_nc_cat=110&oh=538acca2d00f5c0ca12ff3ff611442d8&oe=5C16432A">
+          <div class="text">
+            <h1>Nicholas Maglowsch</h1>
+            <p>3h atrás</p>
+          </div>
+      </div>
+      <div class="post-info">
+          <img class="info-picture" src="../../assets/imgs/foods/food1.jpg">
+      </div>
+      <div class="comment-info">
+
+      </div>
+    </div>
+    <div class="feed-info">
+      <div class="user-info">
+          <img class="user-picture" src="https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/18010155_1392382814116844_7245139448341220707_n.jpg?_nc_cat=104&oh=229207b9999908f1859a9585e38f9375&oe=5C5FEE51">
+          <div class="text">
+            <h1>Larissa Lilian</h1>
+            <p>Agora</p>
+          </div>
+      </div>
+      <div class="post-info">
+          <img class="info-picture" src="../../assets/imgs/foods/food2.jpg">
+      </div>
+      <div class="comment-info">
+
+      </div>
+    </div>
+    <div class="feed-info">
+      <div class="user-info">
+          <img class="user-picture" src="https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/37070641_1824252077664484_8757820791971643392_n.jpg?_nc_cat=104&oh=4ec901fc656337847a38180b3a536da8&oe=5C61E6EE">
+          <div class="text">
+            <h1>Brunno Panfilo</h1>
+            <p>Ontem</p>
+          </div>
+      </div>
+      <div class="post-info">
+          <img class="info-picture" src="../../assets/imgs/foods/food3.jpg">
+      </div>
+      <div class="comment-info">
+
+      </div>
+    </div> -->
   </div>
-
-  <div class="homepage-info">
-    <ion-list>
-      <ion-item>
-        <ion-icon name="checkmark" color="success" item-start></ion-icon>
-        <h2>Dias na meta</h2>
-        <p>dias</p>
-        <h3 item-end>3</h3>
-      </ion-item>
-
-      <ion-item>
-        <ion-icon name="ios-restaurant-outline" color="secondary" item-start></ion-icon>
-        <h2>Pratos montados</h2>
-        <p>quantidade</p>
-        <h3 item-end>15</h3>
-      </ion-item>
-
-      <ion-item>
-        <ion-icon name="heart" color="pink" item-start></ion-icon>
-        <h2>Calorias consumidas</h2>
-        <p>calorias</p>
-        <h3 item-end>1764</h3>
-      </ion-item>
-    </ion-list>
-  </div>
+  
 
 
 

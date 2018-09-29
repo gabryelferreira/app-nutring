@@ -6,6 +6,7 @@ import { elementEnd } from '@angular/core/src/render3/instructions';
 import { ProfilePostService, ProfileGetService } from './profile.service';
 import { IUser } from '../../app/types';
 import { EditProfilePage } from './edit-profile/edit-profile';
+import { DomSanitizer } from '@angular/platform-browser';
 
 /**
  * Generated class for the ProfilePage page.
@@ -44,18 +45,29 @@ export class ProfilePage {
     {star: 'md-star-outline', value: 5}
   ]
 
-  selectedTab: string = "user";
+  selectedTab: string = "food";
 
   tabs = [
-    {name: 'user', image: 'ios-person-outline', selected: true},
-    {name: 'food', image: 'ios-paper-outline', selected: false},
+    {name: 'food', image: 'ios-paper-outline', selected: true},
+    {name: 'user', image: 'ios-person-outline', selected: false},
     {name: 'info', image: 'ios-podium-outline', selected: false}
   ]
 
+  profileImage: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService, 
-              private toastCtrl: ToastController, private post: ProfilePostService) {
+              private toastCtrl: ToastController, private post: ProfilePostService,
+              private sanitizer: DomSanitizer) {
     this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.user = JSON.parse(localStorage.getItem("userData"));
+
+    if (this.user.foto){
+      this.profileImage = sanitizer.bypassSecurityTrustStyle(`url(${this.user.foto})`);
+    } else {
+      let url = '../../assets/imgs/user.jpg';
+      this.profileImage = sanitizer.bypassSecurityTrustStyle(`url(${url})`);
+    }
+
     this.validateRate();
   }
 

@@ -183,5 +183,82 @@
     }
 
 
+
+
+
+
+
+
+    //PERFIL
+    .profile-tabs {
+      border-bottom-color: #555;
+      border-top-color: #555;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    //FEED TELA INICIAL
+    .feed {
+
+      .divider {
+        background: #666;
+      }
+
+      .feed-info {
+
+
+        .user-info {
+          .user-picture {
+            border: 1px solid #333;
+          }
+          .text {
+            h1 {
+              color: #fff;
+            }
+            p {
+              color: #ccc;
+            }
+          }
+        }
+
+
+        .tabs-info {
+          border-bottom: 1px solid #666;
+          .tab {
+            .align {
+              p {
+                color: #bbb;
+              }
+              ion-icon {
+                color: #bbb;
+              }
+            }
+          }
+        }
+
+        .description-info {
+          h2, p {
+            color: #fff;
+          }
+        }
+
+        .comment-info {
+          p {
+            color: #aaa;
+          }
+        }
+
+      }
+    }
+
+
     
   }
