@@ -22,12 +22,13 @@ export class SearchPage {
     maxValue: 44
   };
 
-  foods = [];
-  users = [];
+  private foods = [];
+  private users = [];
+  old = [];
 
   showPeople: boolean = true;
   showFood: boolean = true;
-
+  lastType: string = "";
   showWelcome: number = 1;
   viewMode: number = 0;
   maxViewMode: number = 1;
@@ -46,9 +47,16 @@ export class SearchPage {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
   }
 
+  ionViewWillEnter() {
+    if (this.lastType == "food") {
+      this.foods = this.old;
+    } else if (this.lastType == "people") {
+      this.users = this.old;
+    }
+  }
   async findFoods(name) {
     this.loading = true;
-    let result = await this.post.getFood(name);
+    let result = await this.post.getFood(name, 0, 4);
     if (result.success) {
       this.foods = result.result;
       console.log(this.foods);
@@ -58,7 +66,7 @@ export class SearchPage {
 
   async findPeople(name) {
     this.loading = true;
-    let result = await this.post.getPeople(name);
+    let result = await this.post.getPeople(name, 0, 4);
     if (result.success) {
       this.users = result.result;
       this.loading = false;
@@ -66,15 +74,14 @@ export class SearchPage {
   }
 
   async onInput(event) {
-    console.log("ver div", this.showWelcome == 0 && !this.showSad && this.showFood)
     let name = event;
-    this.showSad = false
+    this.showSad = false;
     this.searched = name;
     if (name == "") {
       this.showFood = true;
       this.showPeople = true;
     }
-    console.log("search",this.searched)
+    console.log("search", this.searched);
     if (name && !this.showSad) {
       this.showWelcome = 0;
       await this.findFoods(name);
@@ -85,9 +92,26 @@ export class SearchPage {
     }
   }
 
-  pushSearchResultPage(typeOfResult:string){
+  pushSearchResultPage(typeOfResult: string) {
     let searched = this.searched;
-    this.navCtrl.push(SearchResultPage,{searched, typeOfResult})
+    let firstLoaded = [];
+
+    if (typeOfResult == "food") {
+      firstLoaded = this.foods;
+      this.old = [];
+      firstLoaded.forEach(item=>this.old.push(item))
+      this.lastType = typeOfResult;
+    } else {
+      firstLoaded = this.users;
+      this.old = [];
+      firstLoaded.forEach(item=>this.old.push(item))
+      this.lastType = typeOfResult;
+    }
+    this.navCtrl.push(SearchResultPage, {
+      searched,
+      typeOfResult,
+      firstLoaded
+    });
   }
 
   showToast(message: string, position: string) {

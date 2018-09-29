@@ -25,7 +25,7 @@ export class SearchResultPage {
   selectedTheme: String = "";
   typeOfResult: string;
   searched: string;
-  searchResults = [];
+  private searchResults = [];
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -34,16 +34,35 @@ export class SearchResultPage {
     _settings: SettingsService
   ) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
-  }
-  ionViewWillEnter() {
     this.typeOfResult = this.navParams.data.typeOfResult;
     this.searched = this.navParams.data.searched;
+    this.searchResults = this.navParams.data.firstLoaded;
   }
+  async ionViewWillEnter() {
+    this.typeOfResult = this.navParams.data.typeOfResult;
+    this.searched = this.navParams.data.searched;
+    this.searchResults = this.navParams.data.firstLoaded;
+    let result;
+
+    if (this.typeOfResult == "food")
+      result = await this.post.getFood(
+        this.searched,
+        this.searchResults.length
+      );
+    else
+      result = await this.post.getPeople(
+        this.searched,
+        this.searchResults.length
+      );
+    if (result && result.result.length > 0)
+      result.result.forEach(item => this.searchResults.push(item));
+  }
+  
 
   async doInfinite(infiniteScroll) {
     let result;
 
-    if ((this.typeOfResult = "food"))
+    if (this.typeOfResult == "food")
       result = await this.post.getFood(
         this.searched,
         this.searchResults.length

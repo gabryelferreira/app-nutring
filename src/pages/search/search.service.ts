@@ -19,11 +19,11 @@ export class SearchPostService extends Connect {
     super(_http, "post");
   }
 
-  getFood(food: string, offset: number = 0) {
-    return this.callMethod("getFood", { food, offset });
+  getFood(food: string, offset: number = 0, limit:number = 10) {
+    return this.callMethod("getFood", { food, offset, limit });
   }
 
-  getPeople(name: string, offset: number = 0) {
-    return this.callMethod("getPeople", { name, offset });
+  getPeople(name: string, offset: number = 0, limit:number = 10) {
+    return this.callMethod("getPeople", { name, offset, limit });
   }
 }
