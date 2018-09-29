@@ -53,7 +53,7 @@ export class HomePage {
     private tabs: Tabs,
     public navCtrl: NavController,
     public navParams: NavParams,
-    private _settings: SettingsService,
+    _settings: SettingsService,
     private post: service.HomePostService,
     private get: service.HomeGetService
   ) {

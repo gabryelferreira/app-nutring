@@ -27,7 +27,7 @@ export class InfoPratoPage {
   page: string = "alimentos";
   loading: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService,
+  constructor(public navCtrl: NavController, public navParams: NavParams, _settings: SettingsService,
               private post: MeusPratosPostService) {
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.prato = navParams.get("prato");

@@ -55,10 +55,10 @@ export class ProfilePage {
 
   profileImage: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private _settings: SettingsService, 
+  constructor(public navCtrl: NavController, public navParams: NavParams, _settings: SettingsService, 
               private toastCtrl: ToastController, private post: ProfilePostService,
               private sanitizer: DomSanitizer) {
-    this._settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
+    _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.user = JSON.parse(localStorage.getItem("userData"));
 
     if (this.user.foto){
