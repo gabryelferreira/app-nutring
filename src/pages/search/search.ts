@@ -66,6 +66,7 @@ export class SearchPage {
   }
 
   async onInput(event) {
+    console.log("ver div", this.showWelcome == 0 && !this.showSad && this.showFood)
     let name = event;
     this.showSad = false
     this.searched = name;
