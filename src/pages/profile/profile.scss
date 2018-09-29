@@ -99,6 +99,9 @@ page-profile {
         width: 100%;
         display: flex;
         transition: .3s;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        z-index: 999999;
         .profile-tab {
             text-align: center;
             margin: auto;
