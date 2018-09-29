@@ -62,8 +62,9 @@
     </div>
 
     <div class="comment-bar">
-      <img src="https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/18010155_1392382814116844_7245139448341220707_n.jpg?_nc_cat=104&oh=229207b9999908f1859a9585e38f9375&oe=5C5FEE51">
-      <textarea class="txt-send-comment" placeholder="Deixe um comentário"></textarea>
+      <img [src]="user.foto">
+      <!-- <textarea class="txt-send-comment" placeholder="Deixe um comentário"></textarea> -->
+      <input type="text" class="txt-send-comment" placeholder="Deixe um comentário">
       <button type="button" class="btn-send-comment">Comentar</button>
     </div>
 
