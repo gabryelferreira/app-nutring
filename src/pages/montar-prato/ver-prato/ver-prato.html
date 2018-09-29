@@ -34,14 +34,6 @@
   </ion-searchbar> -->
 
     <ion-list *ngIf="foods && foods.length > 0">
-
-        <ion-list-header>
-          Alimentos
-          <!-- <button ion-button item-end (click)="buttonClick()" icon-only color="transparent">
-              <ion-icon name="options"></ion-icon>
-          </button> -->
-        </ion-list-header>
-    
     
         <div [class.active]="food.selected" (click)="selectFood(food)" *ngFor="let food of foods; let i = index">
     

@@ -1,3 +1,4 @@
+import { CommentsPage } from './../pages/home/comments/comments';
 import { NtSearchbarComponent } from './../components/nt-searchbar/nt-searchbar';
 import { LoaderComponent } from './../components/loader/loader';
 import { ContactMessagesPage } from './../pages/contact-us/contact-messages/contact-messages';
@@ -59,6 +60,7 @@ import { Camera } from '@ionic-native/camera';
     NtSearchbarComponent,
     ScrollHideDirective,
     EditProfilePage,
+    CommentsPage,
     NtListHeaderComponent
   ],
   imports: [
@@ -88,7 +90,8 @@ import { Camera } from '@ionic-native/camera';
     ProfilePage,
     ContactUsPage,
     ContactMessagesPage,
-    EditProfilePage
+    EditProfilePage,
+    CommentsPage
   ],
   providers: [
     StatusBar,

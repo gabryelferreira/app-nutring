@@ -4,6 +4,7 @@ import { SettingsService } from "../settings/settings.service";
 import { IUser } from "../../app/types";
 import * as service from "./home.service";
 import { PostPicturePage } from "../post-picture/post-picture";
+import { CommentsPage } from "./comments/comments";
 /**
  * Generated class for the HomePage page.
  *
@@ -82,6 +83,10 @@ export class HomePage {
 
   async ionViewWillEnter() {
     this.user = JSON.parse(localStorage.getItem("userData"));
+  }
+
+  seeComments(){
+    this.navCtrl.push(CommentsPage)
   }
 
   ionViewDidLoad() {}
