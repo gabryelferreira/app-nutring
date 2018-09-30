@@ -1,5 +1,12 @@
 page-home {
 
+    ion-title {
+        img {
+            margin-top: 3px;
+            max-height: 24px;
+        }
+    }
+
     .feed {
         position: relative;
         width: 100%;
@@ -31,12 +38,12 @@ page-home {
                 .text {
                     position: relative;
                     h1 {
-                        font-size: 15px;
+                        font-size: 13px;
                         margin: 3px 6px 2px 6px;
                         font-weight: lighter;
                     }
                     p {
-                        font-size: 13px;
+                        font-size: 11px;
                         margin: 2px 6px 3px 6px;
                         color: #222;
                     }
@@ -67,14 +74,31 @@ page-home {
                         display: flex;
                         text-align: center;
                         margin: auto;
+                        .liked {
+                            color: #27ae60;
+                        }
+                        #liked {
+                            color: #27ae60;
+                            -webkit-animation: like .55s;
+                            -moz-animation: like .55s;
+                            animation: like .55s;
+                        }
+                        #unliked {
+                            -webkit-animation: unlike .55s;
+                            -moz-animation: unlike .55s;
+                            animation: unlike .55s;
+                        }
                         p {
                             margin: 0;
                             margin-left: 6px;
                             color: #555;
+                            transition: .15s;
+                            font-size: 11px;
                         }
                         ion-icon {
-                            font-size: 18px;
+                            font-size: 16px;
                             color: #555;
+                            transition: .15s;
                         }
                     }
                     
@@ -87,13 +111,13 @@ page-home {
                 padding: 0 10px;
                 display: block;
                 h2 {
-                    font-size: 14px;
+                    font-size: 12px;
                     font-weight: 700;
-                    margin: 7px 0 0 0;
+                    margin: 10px 0 0 0;
                 }
                 p {
                     color: #111;
-                    font-size: 15px;
+                    font-size: 13px;
                     margin: 7px 0;
                     line-height: 20px;
                     
@@ -109,7 +133,7 @@ page-home {
                 p {
                     margin: 0;
                     margin-right: 5px;
-                    font-size: 15px;
+                    font-size: 12px;
                     color: #777;
                 }
             }
@@ -117,7 +141,31 @@ page-home {
         }
     }
 
-    
+    @keyframes like
+    {
+        0%  {
+            transform: rotate(0) translateY(0);
+        }
+        50% {
+            transform: rotate(-35deg) translateY(-5px);
+        }
+        100% {
+            transform: rotate(0) translateY(0);
+        }
+    }
 
+    @keyframes unlike
+    {
+        0%  {
+            transform: rotate(0) translateY(0);
+        }
+        50% {
+            transform: rotate(-35deg) translateY(-5px);
+        }
+        100% {
+            transform: rotate(0) translateY(0);
+        }
+    }
+    
 
 }

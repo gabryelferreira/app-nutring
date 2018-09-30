@@ -213,7 +213,7 @@
       }
 
       .feed-info {
-
+        // background: #fff;
 
         .user-info {
           .user-picture {
@@ -256,6 +256,47 @@
           }
         }
 
+      }
+    }
+
+
+
+
+
+
+
+
+    //COMENTARIOS FEED
+    .comments {
+      .comment {
+        .user-info {
+          .user-picture {
+            border: 1px solid #333;
+          }
+          .text {
+            .info {
+              h1 {
+                color: #fff;
+              }
+              p {
+                color: #eee;
+              }
+            }
+            .comment-info {
+              p {
+                color: #fff;
+              }
+              .options {
+                ion-icon {
+                  color: #ccc;
+                }
+                p {
+                  color: #ccc;
+                }
+              }
+            }
+          }
+        }
       }
     }
 

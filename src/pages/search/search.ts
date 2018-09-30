@@ -26,8 +26,6 @@ export class SearchPage {
   private users = [];
   old = [];
 
-  showPeople: boolean = true;
-  showFood: boolean = true;
   lastType: string = "";
   showWelcome: number = 1;
   viewMode: number = 0;
@@ -77,10 +75,6 @@ export class SearchPage {
     let name = event;
     this.showSad = false;
     this.searched = name;
-    if (name == "") {
-      this.showFood = true;
-      this.showPeople = true;
-    }
     console.log("search", this.searched);
     if (name && !this.showSad) {
       this.showWelcome = 0;
@@ -96,21 +90,20 @@ export class SearchPage {
     let searched = this.searched;
     let firstLoaded = [];
 
-    if (typeOfResult == "food") {
-      firstLoaded = this.foods;
-      this.old = [];
-      firstLoaded.forEach(item=>this.old.push(item))
-      this.lastType = typeOfResult;
-    } else {
-      firstLoaded = this.users;
-      this.old = [];
-      firstLoaded.forEach(item=>this.old.push(item))
-      this.lastType = typeOfResult;
-    }
+    // if (typeOfResult == "food") {
+    //   firstLoaded = this.foods;
+    //   this.old = [];
+    //   firstLoaded.forEach(item=>this.old.push(item))
+    //   this.lastType = typeOfResult;
+    // } else {
+    //   firstLoaded = this.users;
+    //   this.old = [];
+    //   firstLoaded.forEach(item=>this.old.push(item))
+    //   this.lastType = typeOfResult;
+    // }
     this.navCtrl.push(SearchResultPage, {
       searched,
-      typeOfResult,
-      firstLoaded
+      typeOfResult
     });
   }
 

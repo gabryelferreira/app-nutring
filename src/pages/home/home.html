@@ -11,7 +11,7 @@
 
 
     <ion-title text-left>
-      Nutring
+      <img src="../../assets/imgs/nutring-no-color.png">
     </ion-title>
 
     <ion-buttons end>
@@ -27,89 +27,56 @@
 
 <ion-content>
 
+  <loader *ngIf="loading && (!posts || (posts && posts.length == 0))"></loader>
 
-  <div class="feed">
-    <div class="feed-info">
-      <div class="user-info">
-          <img class="user-picture" [src]="user.foto">
-          <div class="text">
-            <h1>Gabryel Ferreira</h1>
-            <p>5h atrás</p>
-          </div>
-      </div>
-      
-      <div class="post-info">
-          <img class="info-picture" src="../../assets/imgs/foods/food3.jpg">
-      </div>
-      
-      <div class="tabs-info">
-        <div class="tab">
-            <div class="align">
-              <ion-icon name="ios-thumbs-up-outline"></ion-icon>
-              <p>Gostei</p>
+  <div class="feed" *ngIf="!loading || (posts && posts.length > 0)">
+    <div *ngFor="let post of posts; let i = index">
+      <div class="feed-info">
+        <div class="user-info">
+            <img *ngIf="!post.foto" class="user-picture" src="../../assets/imgs/user.jpg">
+            <img *ngIf="post.foto" class="user-picture" [src]="post.foto">
+            <div class="text">
+              <h1>{{ post.nome }}</h1>
+              <p>5h atrás</p>
             </div>
         </div>
-        <div class="tab">
-          <div class="align">
-            <ion-icon name="ios-chatbubbles-outline"></ion-icon>
-            <p>Comentar</p>
-          </div>
+        
+        <div class="post-info">
+            <img class="info-picture" [src]="post.post">
         </div>
-      </div>
-      <div class="description-info">
-        <h2>344 curtidas</h2>
-        <p>Eai irmãos. Esse aqui é o pratin da galera. Come ele e depois come a galera.</p>
-      </div>
-      <div class="likes-info">
-        <!-- <p>32 gostaram</p> -->
-      </div>
-      <div class="comment-info">
-        <p (click)="seeComments()">Ver comentários</p>
-      </div>
-    </div>
-    <div class="divider"></div>
-
-
-
-
-    <div class="feed-info">
-      <div class="user-info">
-          <img class="user-picture" src="https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/26113754_1737094206365772_4187501352879553596_n.jpg?_nc_cat=110&oh=538acca2d00f5c0ca12ff3ff611442d8&oe=5C16432A">
-          <div class="text">
-            <h1>Nicholas Maglowsch</h1>
-            <p>agora</p>
+        
+        <div class="tabs-info">
+          <div (click)="setLike(post)" class="tab">
+              <div class="align">
+                <ion-icon [id]="post.gostei ? 'liked' : 'unliked'" name="md-thumbs-up"></ion-icon>
+                <p [class]="post.gostei ? 'liked' : ''">Gostei</p>
+              </div>
           </div>
-      </div>
-      
-      <div class="post-info">
-          <img class="info-picture" src="../../assets/imgs/foods/food2.jpg">
-      </div>
-      
-      <div class="tabs-info">
-        <div class="tab">
+          <div (click)="commentPost(post)" class="tab">
             <div class="align">
-              <ion-icon name="ios-thumbs-up-outline"></ion-icon>
-              <p>Gostei</p>
+              <ion-icon name="md-chatbubbles"></ion-icon>
+              <p>Comentar</p>
             </div>
-        </div>
-        <div class="tab">
-          <div class="align">
-            <ion-icon name="ios-chatbubbles-outline"></ion-icon>
-            <p>Comentar</p>
           </div>
         </div>
+        <div (click)="seeComments(post)" class="description-info">
+            <h2 *ngIf="!post.curtidas || (post.curtidas && post.curtidas == 0)">Seja o primeiro a curtir</h2>
+          <h2 *ngIf="post.curtidas && post.curtidas == 1">{{ post.curtidas | curtidas }} curtida</h2>
+          <h2 *ngIf="post.curtidas && post.curtidas > 1">{{ post.curtidas | curtidas }} curtidas</h2>
+          <p>{{ post.descricao }}</p>
+        </div>
+        <div (click)="seeComments(post)" *ngIf="post.comentarios && post.comentarios > 0" class="comment-info">
+          <p>Ver comentários</p>
+        </div>
       </div>
-      <div class="description-info">
-        <h2>1.242 curtidas</h2>
-        <p>To aqui pra cuidar de estagiário merda.</p>
-      </div>
-      <div class="likes-info">
-        <!-- <p>32 gostaram</p> -->
-      </div>
-      <div class="comment-info">
-        <p (click)="seeComments()">Ver comentários</p>
-      </div>
+      <div *ngIf="i < posts.length - 1" class="divider"></div>
     </div>
+    
+
+
+
+
+
     <!-- <div class="feed-info">
       <div class="user-info">
           <img class="user-picture" src="https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/26113754_1737094206365772_4187501352879553596_n.jpg?_nc_cat=110&oh=538acca2d00f5c0ca12ff3ff611442d8&oe=5C16432A">

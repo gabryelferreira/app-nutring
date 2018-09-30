@@ -19,7 +19,7 @@
 </ion-header>
 <ion-content class="list-avatar-page" #pageContent fullscreen>
 
-  <loader *ngIf="loading"></loader>
+  <loader *ngIf="loading && (!users || (users && users.length == 0)) && (!foods || (foods && foods.length == 0))"></loader>
 
   <div *ngIf="showSad && searched !=''" padding>
     <div padding center>
@@ -32,29 +32,32 @@
 
   <ion-list>
 
-    <div *ngIf="showWelcome == 0 && !showSad && showFood">
-      <h2 text-center>Comidas</h2>
-      <ion-item *ngFor="let food of foods">
-        <ion-avatar item-start>
-          <img [src]="food.img_url">
-        </ion-avatar>
-        <h2>{{food.nome}}</h2>
-        <p>{{food.kcal | number:'1.0-2'}} kcal</p>
-      </ion-item>
-      <button *ngIf="showPeople" ion-button small outline (click)="pushSearchResultPage('food')">ver todas</button>
-    </div>
 
-    <div *ngIf="showWelcome == 0 && !showSad && showPeople">
-      <h2 text-center>Pessoas</h2>
-      <ion-item *ngFor="let user of users">
-        <ion-avatar item-start>
-          <img [src]="user.foto">
-        </ion-avatar>
-        <h2>{{user.nome}}</h2>
-        <!-- <p>seguidores: {{food.kcal | number:'1.0-2'}} kcal</p> -->
-        <!-- <ion-note item-end>#{{i+1}}</ion-note> -->
-      </ion-item>
-      <button *ngIf="showFood" ion-button small outline (click)="pushSearchResultPage('people')">ver todas</button>
+    <div *ngIf="showWelcome == 0 && !showSad && (!loading || (users && users.length > 0) || (foods && foods.length > 0))">
+      <div *ngIf="foods && foods.length > 0">
+        <h2 text-center>Alimentos</h2>
+        <ion-item *ngFor="let food of foods">
+          <ion-avatar item-start>
+            <img [src]="food.img_url">
+          </ion-avatar>
+          <h2>{{food.nome}}</h2>
+          <p>{{food.kcal | number:'1.0-2'}} kcal</p>
+        </ion-item>
+        <button ion-button small outline (click)="pushSearchResultPage('food')">ver todas</button>
+      </div>
+
+      <div *ngIf="users && users.length > 0">
+        <h2 text-center>Pessoas</h2>
+        <ion-item *ngFor="let user of users">
+          <ion-avatar item-start>
+            <img [src]="user.foto">
+          </ion-avatar>
+          <h2>{{user.nome}}</h2>
+          <!-- <p>seguidores: {{food.kcal | number:'1.0-2'}} kcal</p> -->
+          <!-- <ion-note item-end>#{{i+1}}</ion-note> -->
+        </ion-item>
+        <button ion-button small outline (click)="pushSearchResultPage('people')">ver todas</button>
+      </div>
     </div>
 
     <div *ngIf="showWelcome == 1" padding>

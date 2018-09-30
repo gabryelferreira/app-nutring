@@ -25,6 +25,8 @@ export class SearchResultPage {
   selectedTheme: String = "";
   typeOfResult: string;
   searched: string;
+  searchedName: string;
+  loading: boolean = false;
   private searchResults = [];
   constructor(
     public navCtrl: NavController,
@@ -34,14 +36,20 @@ export class SearchResultPage {
     _settings: SettingsService
   ) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
-    this.typeOfResult = this.navParams.data.typeOfResult;
-    this.searched = this.navParams.data.searched;
-    this.searchResults = this.navParams.data.firstLoaded;
   }
   async ionViewWillEnter() {
+    this.loading = true;
     this.typeOfResult = this.navParams.data.typeOfResult;
     this.searched = this.navParams.data.searched;
-    this.searchResults = this.navParams.data.firstLoaded;
+    if (this.typeOfResult == 'food'){
+      this.searchedName = 'alimentos'
+    } else if (this.typeOfResult == 'people'){
+      this.searchedName = 'pessoas'
+    } else {
+      this.searchedName = this.typeOfResult
+    }
+
+    this.searchResults = [];
     let result;
 
     if (this.typeOfResult == "food")
@@ -56,6 +64,8 @@ export class SearchResultPage {
       );
     if (result && result.result.length > 0)
       result.result.forEach(item => this.searchResults.push(item));
+
+    this.loading = false;
   }
   
 

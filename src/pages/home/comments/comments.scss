@@ -3,6 +3,31 @@ page-comments {
     .comments {
         position: relative;
         width: 100%;
+        box-sizing: border-box;
+        padding-bottom: 40px;
+        .like-button {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            margin-right: 5px;
+            margin-left: 6px;
+            font-size: 17px;
+            color: rgba(17, 17, 17, 0.8);
+            z-index: 9999;
+        }
+        #liked2 {
+            color: #27ae60;
+            -webkit-animation: like2 .55s;
+            -moz-animation: like2 .55s;
+            animation: like2 .55s;
+        }
+        #unliked2 {
+            -webkit-animation: unlike2 .55s;
+            -moz-animation: unlike2 .55s;
+            animation: unlike2 .55s;
+        }
+        
         .comment {
             position: relative;
             width: 100%;
@@ -13,7 +38,7 @@ page-comments {
                 width: 100%;
                 box-sizing: border-box;
                 margin: 0;
-                padding: 0 5px 0 5px;
+                padding: 0 35px 0 5px;
                 .user-picture {
                     position: relative;
                     height: 34px;
@@ -26,35 +51,38 @@ page-comments {
                     position: relative;
                     .info {
                         display: flex;
+                        overflow: hidden;
                         h1 {
-                            font-size: 14px;
+                            font-size: 13px;
                             margin: 3px 3px 0 6px;
-                            font-weight: lighter;
+                            line-height: 17px;
+                            height: 16px;
+                            overflow: hidden;
+                            font-weight: 600;
                         }
                         p {
-                            font-size: 12px;
-                            margin: 3px 3px 0 5px;
+                            font-size: 11px;
+                            margin: 3px 3px 0 3px;
                             color: #222;
                         }
                     }
                     .comment-info {
                         p {
                             color: #111;
-                            font-size: 14px;
-                            margin: 2px 6px 4px 6px;
+                            font-size: 13px;
+                            margin: 2px 6px 2px 6px;
                         }
-                        .options {
+                        
+                        .likes-info {
                             position: relative;
                             display: flex;
-                            ion-icon {
-                                margin-right: 5px;
-                                margin-left: 6px;
-                                font-size: 19px;
-                                color: rgba(17, 17, 17, 0.8);
-                            }
                             p {
-                                margin: 0;
-                                color: rgba(17, 17, 17, 0.8);
+                                color: #777;
+                                font-size: 11px;
+                                margin: 0 15px 4px 6px;
+                            }
+                            .likes {
+                                font-weight: bold;
                             }
                         }
                     }
@@ -62,35 +90,68 @@ page-comments {
             }
         }
 
-        .comment-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: scroll;
-            border-top: 1px solid lightgray;
-            display: flex;
-            img {
-                width: 33px;
-                height: 33px;
-                border-radius: 50%;
-                margin: 3px 12px;
-                border: 1px solid lightgray;
-            }
-            .txt-send-comment {
-                position: relative;
-                width: 100%;
-                border: 0;
-                resize: none;
-                max-height: 150px;
-                margin: auto;
-            }
-            .btn-send-comment {
-                background: transparent;
-                padding: 5px 15px;
-            }
-        }
+        
 
+    }
+
+
+    .comment-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: scroll;
+        border-top: 1px solid lightgray;
+        display: flex;
+        background: #fff;
+        z-index: 9999;
+        img {
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            margin: 5px 12px;
+            border: 1px solid lightgray;
+        }
+        .txt-send-comment {
+            position: relative;
+            width: 100%;
+            border: 0;
+            resize: none;
+            max-height: 150px;
+            margin: auto;
+            font-size: 12px;
+        }
+        .btn-send-comment {
+            background: transparent;
+            padding: 5px 15px;
+            font-size: 11px;
+        }
+    }
+
+    @keyframes like2
+    {
+        0%  {
+            transform: rotate(0) translateY(-50%);
+        }
+        50% {
+            transform: rotate(-35deg) translateY(-50%) translateY(-5px);
+        }
+        100% {
+            transform: rotate(0) translateY(-50%);
+        }
+    }
+
+    @keyframes unlike2
+    {
+        0%  {
+            transform: rotate(0) translateY(-50%);
+        }
+        50% {
+            transform: rotate(-35deg) translateY(-50%) translateY(-5px);
+        }
+        100% {
+            transform: rotate(0) translateY(-50%);
+        }
     }
 
 }

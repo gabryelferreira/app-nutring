@@ -12,6 +12,18 @@ page-montar-prato {
     ion-fab {
         transition: .3s !important;
     }
+
+    ion-item {
+        h2 {
+            font-size: 13px !important;
+        }
+        p {
+            font-size: 11px !important;
+        }
+        ion-icon {
+            font-size: 18px !important;
+        }
+    }
     
     ion-searchbar{
         box-shadow: none !important;
@@ -38,6 +50,10 @@ page-montar-prato {
             padding: 0 15px !important;
             box-sizing: border-box !important;
             border: 0 !important;
+            font-size: 12px !important;
+            ion-badge {
+                font-size: 11px;
+            }
         }
         ion-item {
             border: 0 !important;
@@ -55,6 +71,11 @@ page-montar-prato {
                 border: 0;
                 height: 40px;
                 border-radius: 20px;
+            }
+        }
+        ion-range {
+            ion-label {
+                font-size: 12px;
             }
         }
     }

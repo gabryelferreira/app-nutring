@@ -19,55 +19,41 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content #content>
 
-  <div class="comments">
+  <loader *ngIf="loading && !comments || (loading && comments && comments.length == 0)"></loader>
 
-    <div class="comment">
-        <div class="user-info">
-          <img class="user-picture" src="https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/26113754_1737094206365772_4187501352879553596_n.jpg?_nc_cat=110&oh=538acca2d00f5c0ca12ff3ff611442d8&oe=5C16432A">
-          <div class="text">
-            <div class="info">
-              <h1>Nicholas Maglowsch</h1>
-              <p>5h atrás</p>
-            </div>
-            <div class="comment-info">
-                <p>Po man que prato foda kk ctz q vai meter aquele mc SAFE dps</p>
-                <div class="options">
-                    <ion-icon name="thumbs-up"></ion-icon>
-                    <p>23</p>
-                  </div>
-            </div>
+  <div class="comments" *ngIf="!loading && comments && comments.length > 0">
+
+    <div *ngFor="let comment of comments" class="comment">
+      <div class="absolute">
+        <ion-icon class="like-button" (click)="setLike(comment)" [id]="comment.gostei ? 'liked2' : 'unliked2'" name="thumbs-up"></ion-icon>
+      </div>
+      <div class="user-info">
+        <img class="user-picture" [src]="comment.foto">
+        <div class="text">
+          <div class="info">
+            <h1>{{comment.nome}}</h1>
+          </div>
+          <div class="comment-info">
+              <p>{{comment.comentario}}</p>
+              <div class="likes-info">
+                <p>Ontem</p>
+                <p class="likes" *ngIf="comment.curtidas && comment.curtidas == 1">{{comment.curtidas | curtidas}} curtida</p>
+                <p class="likes" *ngIf="comment.curtidas && comment.curtidas > 1">{{comment.curtidas | curtidas}} curtidas</p>
+              </div>
           </div>
         </div>
-    </div>
-
-    <div class="comment">
-        <div class="user-info">
-          <img class="user-picture" src="https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/18010155_1392382814116844_7245139448341220707_n.jpg?_nc_cat=104&oh=229207b9999908f1859a9585e38f9375&oe=5C5FEE51">
-          <div class="text">
-            <div class="info">
-              <h1>Larissa Lilian</h1>
-              <p>agora</p>
-            </div>
-            <div class="comment-info">
-                <p>pqppp eu quero</p>
-                <div class="options">
-                    <ion-icon name="thumbs-up"></ion-icon>
-                    <p>2</p>
-                  </div>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="comment-bar">
-      <img [src]="user.foto">
-      <!-- <textarea class="txt-send-comment" placeholder="Deixe um comentário"></textarea> -->
-      <input type="text" class="txt-send-comment" placeholder="Deixe um comentário">
-      <button type="button" class="btn-send-comment">Comentar</button>
+      </div>
     </div>
 
   </div>
+
+  <form class="comment-bar" (ngSubmit)="sendComment()">
+    <img [src]="user.foto">
+    <!-- <textarea class="txt-send-comment" placeholder="Deixe um comentário"></textarea> -->
+    <input type="text" [(ngModel)]="comment" name="comment" id="send-comment" class="txt-send-comment" placeholder="Deixe um comentário">
+    <button type="submit" class="btn-send-comment">Comentar</button>
+  </form>
 
 </ion-content>

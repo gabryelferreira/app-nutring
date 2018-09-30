@@ -4,17 +4,20 @@ import { NtMonthPipe } from './nt-month/nt-month';
 import { NtNomePratoPipe } from './nt-nome-prato/nt-nome-prato';
 import { NtDatePipe } from './nt-date/nt-date';
 import { NtGenderPipe } from './nt-gender/nt-gender';
+import { NtCurtidasPipe } from './nt-curtidas/nt-curtidas';
 @NgModule({
 	declarations: [NtNumberPipe,
     NtMonthPipe,
     NtNomePratoPipe,
     NtDatePipe,
-    NtGenderPipe],
+    NtGenderPipe,
+    NtCurtidasPipe],
 	imports: [],
 	exports: [NtNumberPipe,
     NtMonthPipe,
     NtNomePratoPipe,
     NtDatePipe,
-    NtGenderPipe]
+    NtGenderPipe,
+    NtCurtidasPipe]
 })
 export class PipesModule {}

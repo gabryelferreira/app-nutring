@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { IonicPage, NavController, NavParams, Tabs } from "ionic-angular";
 import { SettingsService } from "../settings/settings.service";
-import { IUser } from "../../app/types";
+import * as types from "../../app/types";
 import * as service from "./home.service";
 import { PostPicturePage } from "../post-picture/post-picture";
 import { CommentsPage } from "./comments/comments";
@@ -21,7 +21,7 @@ import { CommentsPage } from "./comments/comments";
 export class HomePage {
   //merda
   selectedTheme: String = "";
-  user: IUser = {
+  user: types.IUser = {
     altura_m: "",
     cep: "",
     dt_nasc: "",
@@ -36,6 +36,7 @@ export class HomePage {
     telefone: "",
     usuario: ""
   };
+
   kcalMeta: number = 0;
   kcalConsumida: number;
   imgTeste = "http://www.leisureopportunities.com/images/247215_898310.jpg";
@@ -49,22 +50,45 @@ export class HomePage {
     { star: "md-star-outline", value: 5 }
   ];
 
-  constructor(
-    private tabs: Tabs,
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    _settings: SettingsService,
-    private post: service.HomePostService,
-    private get: service.HomeGetService
-  ) {
+  posts: types.IPost[] = []
+
+  loading: boolean = false;
+
+  constructor(private tabs: Tabs, public navCtrl: NavController,
+              public navParams: NavParams, _settings: SettingsService,
+              private post: service.HomePostService, private get: service.HomeGetService) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
     this.user = JSON.parse(localStorage.getItem("userData"));
-    // let nome = this.user.nome.split(' ');
-    // this.user.nome =  nome[0] + " " +nome[1]
-    this.post
-      .getDailyKcal(this.user.id_usuario)
-      .then(kcalMeta => (this.kcalMeta = kcalMeta.result.kcal_diaria));
+    this.post.getDailyKcal(this.user.id_usuario).then(kcalMeta => (this.kcalMeta = kcalMeta.result.kcal_diaria));
     this.validateRate();
+    this.getFeed();
+  }
+
+  async getFeed(){
+    this.loading = true;
+    let result = await this.post.getFeed(this.user.id_usuario, this.posts.length);
+    if (result.success){
+      this.posts = result.result;
+      console.log("posts = ", this.posts)
+    }
+    this.loading = false;
+  }
+
+  setLike(post: any){
+    post.gostei = !post.gostei;
+    if (!post.curtidas) post.curtidas = 0
+    if (post.gostei){
+      post.curtidas = parseInt(post.curtidas) + 1;
+    } else {
+      post.curtidas = parseInt(post.curtidas) - 1;
+    }
+  }
+
+  commentPost(post: any){
+    this.navCtrl.push(CommentsPage, {
+      selectKeyboard: true,
+      post: post
+    })
   }
 
   validateRate() {
@@ -85,8 +109,10 @@ export class HomePage {
     this.user = JSON.parse(localStorage.getItem("userData"));
   }
 
-  seeComments(){
-    this.navCtrl.push(CommentsPage)
+  seeComments(post: any){
+    this.navCtrl.push(CommentsPage, {
+      post: post
+    })
   }
 
   ionViewDidLoad() {}

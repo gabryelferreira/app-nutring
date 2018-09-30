@@ -1,31 +1,5 @@
 page-meus-pratos {
-  ion-scroll {
-    height: 220px;
-    display: flex;
-    overflow: visible;
-    border: 0 !important;
-  }
 
-  .inner {
-    // max-width: 2000px;
-    height: 100%;
-    background: #4e4e4e;
-    ion-card {
-      display: table-cell;
-      height: 100%;
-      padding: 10px;
-
-      .inner-card-prato {
-        width: 150px;
-        ion-item {
-          font-size: 13px;
-          ion-badge {
-            font-size: 12px;
-          }
-        }
-      }
-    }
-  }
 
   .allPratos {
     display: flex;
@@ -51,13 +25,13 @@ page-meus-pratos {
           left: 50%;
           transform: translate(-50%, -50%);
           h1 {
-            font-size: 22px;
+            font-size: 16px;
             font-weight: 600;
             color: #aaa;
             transition: 0.2s;
           }
           h2 {
-            font-size: 18px;
+            font-size: 14px;
             color: #aaa;
             transition: 0.2s;
           }
@@ -86,7 +60,7 @@ page-meus-pratos {
           width: 100%;
           h1 {
             margin: 0;
-            font-size: 22px;
+            font-size: 15px;
             margin-bottom: 17px;
           }
           p {
@@ -94,6 +68,7 @@ page-meus-pratos {
             font-weight: bold;
             margin: 0;
             margin-bottom: 8px;
+            font-size: 11px;
           }
           .info-icon {
             margin-bottom: 5px;

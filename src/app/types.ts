@@ -56,3 +56,26 @@ export interface IFoodApi {
     nf_potassium?: number
     nf_p?: number
 }
+
+export interface IPost {
+    id_post?: number
+    id_usuario?: number
+    nome?: string
+    hora?: string
+    foto?: string
+    post?: string
+    curtidas?: number
+    descricao?: string
+    comentarios?: number
+    gostei?: boolean
+}
+
+export interface IPostComments {
+    id_comment?: number,
+    nome: string,
+    foto: string,
+    hora: string,
+    comentario: string,
+    gostei: boolean,
+    curtidas: number
+}
