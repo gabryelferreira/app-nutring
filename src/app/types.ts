@@ -68,14 +68,17 @@ export interface IPost {
     descricao?: string
     comentarios?: number
     gostei?: boolean
+    actualComment?: string
 }
 
-export interface IPostComments {
-    id_comment?: number,
-    nome: string,
-    foto: string,
-    hora: string,
-    comentario: string,
-    gostei: boolean,
-    curtidas: number
+export interface IPostComment {
+    id_comentario?: number,
+    id_usuario?: number,
+    nome?: string,
+    foto?: string,
+    hora?: string,
+    comentario?: string,
+    gostei?: boolean,
+    curtidas?: number,
+    selecionado?: boolean
 }

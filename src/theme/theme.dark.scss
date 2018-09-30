@@ -268,6 +268,9 @@
 
     //COMENTARIOS FEED
     .comments {
+      .like-button {
+        color: #bbb;
+      }
       .comment {
         .user-info {
           .user-picture {
@@ -294,11 +297,33 @@
                   color: #ccc;
                 }
               }
+              .likes-info {
+                p {
+                  color: #aaa;
+                }
+              }
             }
           }
         }
       }
     }
+    .comment-bar {
+      border-top: 1px solid #393939;
+      background: #4b4b4b;
+      img {
+          border: 1px solid #444;
+      }
+      .txt-send-comment {
+        color: #fff;
+      }
+      .txt-send-comment::placeholder {
+        color: #ddd;
+      }
+      
+      .btn-send-comment {
+        color: #fff;
+      }
+  }
 
 
     

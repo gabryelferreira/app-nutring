@@ -74,21 +74,28 @@ export class HomePage {
     this.loading = false;
   }
 
-  setLike(post: any){
+  async likeUnlikePost(post: types.IPost){
     post.gostei = !post.gostei;
     if (!post.curtidas) post.curtidas = 0
     if (post.gostei){
-      post.curtidas = parseInt(post.curtidas) + 1;
+      post.curtidas = post.curtidas + 1;
     } else {
-      post.curtidas = parseInt(post.curtidas) - 1;
+      post.curtidas = post.curtidas - 1;
     }
+    this.post.likeUnlikePost(post.id_post, this.user.id_usuario);
   }
 
-  commentPost(post: any){
+  openPostComments(post: types.IPost){
     this.navCtrl.push(CommentsPage, {
       selectKeyboard: true,
       post: post
     })
+  }
+
+  async commentPost(post: types.IPost){
+    let comentario = post.actualComment;
+    post.actualComment = "";
+    let result = await this.post.commentPost(post.id_post, this.user.id_usuario, comentario);
   }
 
   validateRate() {

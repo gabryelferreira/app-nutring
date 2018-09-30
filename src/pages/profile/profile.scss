@@ -41,8 +41,8 @@ page-profile {
             text-align: center;
             .div-user-img {
                 position: relative;
-                height: 96px;
-                width: 96px;
+                height: 86px;
+                width: 86px;
                 margin: auto;
                 background: #fff;
                 border-radius: 50%;
@@ -52,14 +52,14 @@ page-profile {
                     left: 3px;
                     top: 3px;
                     margin: auto;
-                    height: 90px;
-                    width: 90px;
+                    height: 80px;
+                    width: 80px;
                     border-radius: 50%;
                 }
             }
             h1 {
                 color: #fff;
-                font-size: 18px;
+                font-size: 14px;
                 font-weight: bold;
                 margin-bottom: 0;
                 max-height: 20px;
@@ -67,7 +67,7 @@ page-profile {
             }
             h2 {
                 color: #fbfbfb;
-                font-size: 14px;
+                font-size: 12px;
                 margin-top: 3px;
                 max-height: 16px;
                 overflow: hidden;
@@ -109,7 +109,7 @@ page-profile {
             padding: 15px;
             transition: .3s;
             ion-icon {
-                font-size: 30px;
+                font-size: 24px;
                 color: #ccc;
                 transition: .3s;
             }
@@ -161,8 +161,14 @@ page-profile {
     }
 
     ion-item {
+        h2 {
+            font-size: 13px !important;
+        }
+        p {
+            font-size: 12px !important;
+        }
         h3 {
-            font-size: 22px !important;
+            font-size: 14px !important;
         }
     }
 

@@ -1,5 +1,19 @@
 page-comments {
 
+    #headerSelected {
+        background: #4cd137;
+        width: 100%;
+        height: 46px;
+        top: 0;
+        left: 0;
+        position: fixed;
+    }
+
+    #close-options-button {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
     .comments {
         position: relative;
         width: 100%;
@@ -9,6 +23,7 @@ page-comments {
             position: absolute;
             top: 50%;
             right: 10px;
+            padding: 0;
             transform: translateY(-50%);
             margin-right: 5px;
             margin-left: 6px;
@@ -18,27 +33,35 @@ page-comments {
         }
         #liked2 {
             color: #27ae60;
-            -webkit-animation: like2 .55s;
-            -moz-animation: like2 .55s;
-            animation: like2 .55s;
+            -webkit-animation: like2 .25s;
+            -moz-animation: like2 .25s;
+            animation: like2 .25s;
         }
         #unliked2 {
-            -webkit-animation: unlike2 .55s;
-            -moz-animation: unlike2 .55s;
-            animation: unlike2 .55s;
+            -webkit-animation: unlike2 .25s;
+            -moz-animation: unlike2 .25s;
+            animation: unlike2 .25s;
         }
         
         .comment {
             position: relative;
             width: 100%;
-            margin: 15px 0 15px 0;
+            padding: 6px 0 5px 0 !important;
+            .selected {
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: rgba(72, 216, 72, .2);
+                width: 100%;
+                height: 100%;
+            }
             .user-info {
                 position: relative;
                 display: flex;
                 width: 100%;
                 box-sizing: border-box;
                 margin: 0;
-                padding: 0 35px 0 5px;
+                padding: 0 35px 0 5px !important;
                 .user-picture {
                     position: relative;
                     height: 34px;
@@ -120,6 +143,7 @@ page-comments {
             max-height: 150px;
             margin: auto;
             font-size: 12px;
+            background: transparent;
         }
         .btn-send-comment {
             background: transparent;
@@ -131,26 +155,26 @@ page-comments {
     @keyframes like2
     {
         0%  {
-            transform: rotate(0) translateY(-50%);
+            transform: translateY(-50%) scale(1);
         }
         50% {
-            transform: rotate(-35deg) translateY(-50%) translateY(-5px);
+            transform: translateY(-50%) scale(1.13);
         }
         100% {
-            transform: rotate(0) translateY(-50%);
+            transform: translateY(-50%) scale(1);
         }
     }
 
     @keyframes unlike2
     {
         0%  {
-            transform: rotate(0) translateY(-50%);
+            transform: translateY(-50%) scale(1);
         }
         50% {
-            transform: rotate(-35deg) translateY(-50%) translateY(-5px);
+            transform: translateY(-50%) scale(1.13);
         }
         100% {
-            transform: rotate(0) translateY(-50%);
+            transform: translateY(-50%) scale(1);
         }
     }
 

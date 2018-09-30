@@ -6,16 +6,31 @@
 -->
 <ion-header>
 
-  <ion-navbar color="{{selectedTheme}}">
 
-
-
+  <ion-navbar [style.display]="!selectedComments || (selectedComments && selectedComments.length == 0) ? '' : 'none'" color="{{selectedTheme}}">
     <ion-title text-left>
       Comentários
     </ion-title>
-
   </ion-navbar>
 
+  <ion-navbar [style.display]="selectedComments && selectedComments.length > 0 ? '' : 'none'" color="success">
+    <ion-buttons left>
+      <button (click)="closeOptions()" ion-button>
+        <ion-icon id="close-options-button" name="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title *ngIf="selectedComments.length == 1" text-left>
+      {{selectedComments.length}} selecionado
+    </ion-title>
+    <ion-title *ngIf="selectedComments.length > 1" text-left>
+      {{selectedComments.length}} selecionados
+    </ion-title>
+    <ion-buttons *ngIf="allSelectedIsMine" end>
+      <button (click)="deleteComments()" ion-button>
+        <ion-icon name="md-trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 
 
@@ -24,12 +39,11 @@
   <loader *ngIf="loading && !comments || (loading && comments && comments.length == 0)"></loader>
 
   <div class="comments" *ngIf="!loading && comments && comments.length > 0">
-
+    
     <div *ngFor="let comment of comments" class="comment">
-      <div class="absolute">
-        <ion-icon class="like-button" (click)="setLike(comment)" [id]="comment.gostei ? 'liked2' : 'unliked2'" name="thumbs-up"></ion-icon>
-      </div>
-      <div class="user-info">
+        <div [class]="comment.selecionado ? 'selected' : ''"></div>
+        <ion-icon class="like-button" (click)="likeUnlikeComment(comment)" [id]="comment.gostei ? 'liked2' : 'unliked2'" name="thumbs-up"></ion-icon>
+      <div (click)="openOptions(comment)" class="user-info">
         <img class="user-picture" [src]="comment.foto">
         <div class="text">
           <div class="info">
@@ -49,7 +63,7 @@
 
   </div>
 
-  <form class="comment-bar" (ngSubmit)="sendComment()">
+  <form class="comment-bar" (ngSubmit)="commentPost()">
     <img [src]="user.foto">
     <!-- <textarea class="txt-send-comment" placeholder="Deixe um comentário"></textarea> -->
     <input type="text" [(ngModel)]="comment" name="comment" id="send-comment" class="txt-send-comment" placeholder="Deixe um comentário">

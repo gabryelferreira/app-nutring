@@ -7,4 +7,26 @@ page-ver-prato {
             border: 0 !important;
         }
     }
+
+
+    ion-item {
+        h2 {
+            font-size: 13px !important;
+        }
+        p {
+            font-size: 12px !important;
+        }
+        ion-icon {
+            font-size: 20px !important;
+        }
+    }
+
+    ion-buttons {
+        button {
+            ion-note {
+                font-size: 11px !important;
+            }
+        }
+    }
+
 }

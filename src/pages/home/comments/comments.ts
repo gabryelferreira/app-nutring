@@ -26,14 +26,16 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class CommentsPage {
 
   selectedTheme: String = "";
-  user;
+  user: types.IUser = {};
   profileImage;
   comment: string = "";
 
-  comments: types.IPostComments[] = []
+  comments: types.IPostComment[] = []
 
-  selectedPost: types.IPost[] = [];
+  selectedPost: types.IPost = {};
   loading: boolean = false;
+  selectedComments: types.IPostComment[] = [];
+  allSelectedIsMine: boolean = false;
 
   @ViewChild('content') content:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -52,7 +54,7 @@ export class CommentsPage {
 
   async getComments(){
     this.loading = true;
-    let result = await this.post.getCommentsByIdPost(this.selectedPost["id_post"], this.user.id_usuario, this.comments.length);
+    let result = await this.post.getCommentsByIdPost(this.selectedPost.id_post, this.user.id_usuario, this.comments.length);
     if (result.success){
       this.comments = result.result;
     }
@@ -70,21 +72,23 @@ export class CommentsPage {
     // }
   }
 
-  setLike(comment: any){
+  async likeUnlikeComment(comment: types.IPostComment){
     comment.gostei = !comment.gostei;
     if (comment.gostei){
       comment.curtidas += 1;
     } else {
       comment.curtidas -= 1;
     }
-    console.log("aa")
+    this.post.likeUnlikeComment(comment.id_comentario, this.user.id_usuario);
   }
 
-  sendComment(){
-    console.log("Enviando comentário");
+  async commentPost(){
     if (this.comment && this.comment.length > 0){
+      var id_comentario = -Math.floor((Math.random() * 1000000) + 1);
+      console.log("id_comentario = ", id_comentario)
       var comment = {
-        id_comment: 0,
+        id_comentario: id_comentario,
+        id_usuario: this.user.id_usuario,
         nome: this.user.nome,
         foto: this.user.foto,
         hora: "agora",
@@ -97,7 +101,71 @@ export class CommentsPage {
       setTimeout(() => {
         this.content.scrollToBottom(300);
       })
+      let result = await this.post.commentPost(this.selectedPost.id_post, this.user.id_usuario, comment.comentario);
+      if (result.success){
+        var data = result.result;
+        this.comments.forEach(element => {
+          if (element.id_comentario == id_comentario){
+            element.id_comentario = data.id_comentario;
+          }
+        });
+      }
     }
+  }
+
+  openOptions(comment: types.IPostComment){
+    var isSelected = false;
+    var comments = this.selectedComments.filter(element => {
+      if (element.id_comentario == comment.id_comentario){
+        isSelected = true;
+        comment.selecionado = false;
+        return false;
+      }
+        return true;
+    });
+    if (!isSelected){
+      comment.selecionado = true;
+      comments.push(comment);
+    }
+    this.selectedComments = comments;
+    var allSelectedIsMine = true;
+    this.selectedComments.forEach(element => {
+      if (element.id_usuario != this.user.id_usuario){
+        allSelectedIsMine = false;
+        return;
+      }
+    });
+    this.allSelectedIsMine = allSelectedIsMine;
+  }
+
+  closeOptions(){
+    this.selectedComments = [];
+    this.comments.forEach(element => {
+      element.selecionado = false;
+    });
+  }
+
+  deleteComments(){
+    var selectedComments = [];
+    var commentsIds = [];
+    this.selectedComments.forEach(element => {
+      selectedComments.push(element);
+      commentsIds.push(element.id_comentario);
+    });
+
+    console.log("this.selectedComments = ", this.selectedComments)
+    console.log("selected = ", selectedComments)
+    
+    this.selectedComments = [];
+    var allComments = this.comments.filter(element => {
+      if (commentsIds.indexOf(element.id_comentario) != -1){
+        return false;
+      }
+      return true;
+    });
+    this.comments = allComments;
+    
+    this.post.deleteComments(JSON.stringify(selectedComments));
   }
 
 }

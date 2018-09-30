@@ -46,13 +46,13 @@
         </div>
         
         <div class="tabs-info">
-          <div (click)="setLike(post)" class="tab">
+          <div (click)="likeUnlikePost(post)" class="tab">
               <div class="align">
                 <ion-icon [id]="post.gostei ? 'liked' : 'unliked'" name="md-thumbs-up"></ion-icon>
                 <p [class]="post.gostei ? 'liked' : ''">Gostei</p>
               </div>
           </div>
-          <div (click)="commentPost(post)" class="tab">
+          <div (click)="openPostComments(post)" class="tab">
             <div class="align">
               <ion-icon name="md-chatbubbles"></ion-icon>
               <p>Comentar</p>
@@ -68,6 +68,12 @@
         <div (click)="seeComments(post)" *ngIf="post.comentarios && post.comentarios > 0" class="comment-info">
           <p>Ver comentários</p>
         </div>
+        <form class="comment-bar" (ngSubmit)="commentPost(post)">
+          <img [src]="user.foto">
+          <!-- <textarea class="txt-send-comment" placeholder="Deixe um comentário"></textarea> -->
+          <input type="text" [(ngModel)]="post.actualComment" name="actualComment" id="send-comment" class="txt-send-comment" placeholder="Deixe um comentário">
+          <button type="submit" class="btn-send-comment">Comentar</button>
+        </form>
       </div>
       <div *ngIf="i < posts.length - 1" class="divider"></div>
     </div>

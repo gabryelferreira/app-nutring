@@ -2,4 +2,19 @@ page-settings {
     ion-title {
         font-size: 5px !important;
     }
+
+    ion-list {
+        ion-list-header {
+            font-size: 11px !important;
+        }
+        ion-item {
+            ion-label {
+                font-size: 13px !important;
+            }
+            ion-note {
+                font-size: 12px !important;
+            }
+        }
+    }
+
 }

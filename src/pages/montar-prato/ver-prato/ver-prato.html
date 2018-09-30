@@ -10,7 +10,7 @@
         <ion-title text-left>Seu prato</ion-title>
         <ion-buttons end>
             <button *ngIf="!loading" [disabled]="!foods || foods.length == 0" (click)="presentConfirm()" ion-button>
-                <ion-note  item-end color="white">Confirmar</ion-note>
+                <ion-note item-end color="white">Confirmar</ion-note>
             </button>
 
             <button *ngIf="loading" ion-button>
@@ -38,7 +38,7 @@
         <div [class.active]="food.selected" (click)="selectFood(food)" *ngFor="let food of foods; let i = index">
     
     
-          <ion-item >
+          <ion-item>
             <ion-avatar item-start>
               <img [src]="food.img_url">
             </ion-avatar>
