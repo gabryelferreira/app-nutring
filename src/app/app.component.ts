@@ -17,14 +17,11 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private settings: SettingsService ) {
     this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
-    if (localStorage.getItem("userData"))
+    if (localStorage.getItem("userData")){
       this.rootPage = TabsPage
-    else
+    } else {
       this.rootPage = LoginPage
-    // if (localStorage.getItem("userData"))
-    //   this.rootPage = TabsPage
-    // else
-    //   this.rootPage = LoginPage
+    }
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
