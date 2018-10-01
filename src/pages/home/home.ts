@@ -69,7 +69,6 @@ export class HomePage {
     let result = await this.post.getFeed(this.user.id_usuario, this.posts.length);
     if (result.success){
       this.posts = result.result;
-      console.log("posts = ", this.posts)
     }
     this.loading = false;
   }

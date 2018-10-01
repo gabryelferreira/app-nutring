@@ -85,7 +85,6 @@ export class CommentsPage {
   async commentPost(){
     if (this.comment && this.comment.length > 0){
       var id_comentario = -Math.floor((Math.random() * 1000000) + 1);
-      console.log("id_comentario = ", id_comentario)
       var comment = {
         id_comentario: id_comentario,
         id_usuario: this.user.id_usuario,
@@ -152,9 +151,6 @@ export class CommentsPage {
       selectedComments.push(element);
       commentsIds.push(element.id_comentario);
     });
-
-    console.log("this.selectedComments = ", this.selectedComments)
-    console.log("selected = ", selectedComments)
     
     this.selectedComments = [];
     var allComments = this.comments.filter(element => {

@@ -62,7 +62,6 @@ export class SugestaoAlimentoPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SugestaoAlimentoPage');
   }
 
 }

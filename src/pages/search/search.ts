@@ -57,7 +57,6 @@ export class SearchPage {
     let result = await this.post.getFood(name, 0, 4);
     if (result.success) {
       this.foods = result.result;
-      console.log(this.foods);
       this.loading = false;
     }
   }
@@ -75,7 +74,6 @@ export class SearchPage {
     let name = event;
     this.showSad = false;
     this.searched = name;
-    console.log("search", this.searched);
     if (name && !this.showSad) {
       this.showWelcome = 0;
       await this.findFoods(name);

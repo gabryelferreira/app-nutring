@@ -83,13 +83,11 @@ export class LoginPage {
         this.fb
           .api("/me?fields=id,name,email,birthday,gender", [])
           .then(async res => {
-            console.log("Logged into Facebook!", res);
             let result = await this.post.connectWithFacebook(res);
             this.entrar(result);
           })
       )
       .catch(e => {
-        console.log("Error logging into Facebook", e);
         this.stopLoading();
       });
   }

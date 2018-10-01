@@ -24,7 +24,6 @@ export class LoginPostService extends Connect {
   }
 
   connectWithFacebook(facebookUser: any) {
-    console.log("facebook indo pro back", facebookUser);
     facebookUser = JSON.stringify(facebookUser);
     return this.callMethod("fbLogin", { facebookUser });
   }

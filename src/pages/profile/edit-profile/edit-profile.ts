@@ -86,7 +86,6 @@ export class EditProfilePage {
     if (this.validPersonalFields() && this.validFields()){
       this.loading = true;
       this.setOptionalInfo();
-      console.log("user = ", this.user)
       let result = await this.post.updateUserInfo(JSON.stringify(this.user));
       if (result.success){
         localStorage.setItem("userData", JSON.stringify(result.result))
@@ -129,7 +128,6 @@ export class EditProfilePage {
   }
 
   validNumericField(field){
-    console.log(field);
     if (field && field.length > 5)
       return false;
     field = (0+field).replace(/^-?\d+(?:\.\d{0,2})?/)[0]
