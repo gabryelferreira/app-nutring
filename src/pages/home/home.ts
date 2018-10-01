@@ -92,9 +92,11 @@ export class HomePage {
   }
 
   async commentPost(post: types.IPost){
-    let comentario = post.actualComment;
-    post.actualComment = "";
-    let result = await this.post.commentPost(post.id_post, this.user.id_usuario, comentario);
+    if (post.actualComment && post.actualComment.length > 0){
+      let comentario = post.actualComment;
+      post.actualComment = "";
+      let result = await this.post.commentPost(post.id_post, this.user.id_usuario, comentario);
+    }
   }
 
   validateRate() {

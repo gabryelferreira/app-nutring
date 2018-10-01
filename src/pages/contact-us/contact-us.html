@@ -22,8 +22,8 @@
 
 
 <ion-content>
-
-    <ion-card *ngIf="user">
+  <form (ngSubmit)="sendMessageToNutring()" *ngIf="user">
+    <ion-card>
 
         <ion-card-content>
           <ion-card-title>
@@ -42,8 +42,9 @@
     
       </ion-card>
       <div padding text-right>
-          <button [disabled]="message.length < 6" *ngIf="!loading" ion-button full (click)="sendMessageToNutring()">ENVIAR</button>
-          <button *ngIf="loading" ion-button full><ion-spinner color="white" name="bubbles"></ion-spinner></button>
-        </div>
+        <button type="submit" [disabled]="message.length < 6" class="default-button green full" *ngIf="!loading">Enviar</button>
+        <button *ngIf="loading" class="default-button green"><ion-spinner color="white" name="bubbles"></ion-spinner></button>
+      </div>
+  </form>
 
 </ion-content>

@@ -1,3 +1,22 @@
 page-contact-us {
 
+    ion-card {
+        ion-card-content {
+            ion-card-title {
+                font-size: 16px !important;
+            }
+            p {
+                font-size: 13px !important;
+            }
+        }
+        ion-item {
+            ion-label {
+                font-size: 13px !important;
+            }
+            ion-textarea {
+                font-size: 13px !important;
+            }
+        }
+    }
+
 }

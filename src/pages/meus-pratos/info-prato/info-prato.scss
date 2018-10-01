@@ -1,2 +1,29 @@
 page-info-prato {
+
+    ion-toolbar {
+        ion-segment {
+            ion-segment-button {
+                font-size: 12px !important;
+            }
+        }
+    }
+
+
+    ion-card {
+        ion-card-content {
+            ion-card-title {
+                font-size: 16px !important;
+            }
+            p {
+                font-size: 12px !important;
+            }
+        }
+        ion-item {
+            font-size: 12px !important;
+            ion-badge {
+                font-size: 12px !important;
+            }
+        }
+    }
+
 }
