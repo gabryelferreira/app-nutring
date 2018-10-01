@@ -255,6 +255,23 @@
             color: #aaa;
           }
         }
+        
+        .comment-bar {
+          background: #4b4b4b;
+          img {
+              border: 1px solid #444;
+          }
+          .txt-send-comment {
+            color: #fff;
+          }
+          .txt-send-comment::placeholder {
+            color: #ddd;
+          }
+          
+          .btn-send-comment {
+            color: #fff;
+          }
+        }
 
       }
     }
@@ -323,7 +340,7 @@
       .btn-send-comment {
         color: #fff;
       }
-  }
+    }
 
 
     
