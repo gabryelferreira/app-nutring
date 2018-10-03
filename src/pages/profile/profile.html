@@ -14,7 +14,7 @@
       </button>
     </ion-buttons>
   </ion-navbar> -->
-  <!-- <ion-toolbar color="{{selectedTheme}}" no-border-top>
+<!-- <ion-toolbar color="{{selectedTheme}}" no-border-top>
     <ion-segment  [(ngModel)]="page">
       <ion-segment-button value="pessoais">
         Dados pessoais
@@ -44,7 +44,7 @@
           <img class="user-img" *ngIf="!user.foto" src="../../assets/imgs/user.jpg">
           <img class="user-img" *ngIf="user.foto" [src]='user.foto'>
         </div>
-        
+
         <h1>{{user.nome}}</h1>
         <h2>{{user.idade}} anos</h2>
         <!-- <div class="div-percentage-day">
@@ -52,10 +52,12 @@
         </div> -->
         <!-- <button type="button" id="edit-profile" (click)="editProfile()">Editar perfil</button> -->
       </div>
-  
+
     </div>
-    <div class="profile-tabs" >
-      <div *ngFor="let tab of tabs" (click)="selectTab(tab)" class="profile-tab" [class.active]="tab.selected" ><ion-icon [name]="tab.image"></ion-icon></div>
+    <div class="profile-tabs">
+      <div *ngFor="let tab of tabs" (click)="selectTab(tab)" class="profile-tab" [class.active]="tab.selected">
+        <ion-icon [name]="tab.image"></ion-icon>
+      </div>
     </div>
 
     <div *ngIf="selectedTab == 'user'" class="profile-info">
@@ -64,12 +66,12 @@
           <h2>Nome</h2>
           <p>{{user.nome}}</p>
         </ion-item>
-  
+
         <ion-item>
           <h2>Data de nascimento</h2>
           <p>{{user.dt_nasc | ntDate}}</p>
         </ion-item>
-  
+
         <ion-item>
           <h2>Sexo</h2>
           <p>{{user.sexo | ntGender}}</p>
@@ -78,28 +80,18 @@
     </div>
 
     <div *ngIf="selectedTab == 'food'" class="profile-info">
+      <!-- <ion-list no-padding> -->
       <div class="all-feed">
-        <div class="feed-img">
-          <div class="img">
-            <img class="content" src="../../assets/imgs/foods/food1.jpg">
-          </div>
-        </div>
-        <div class="feed-img">
-          <div class="img">
-            <img class="content" src="../../assets/imgs/foods/food2.jpg">
-          </div>
-        </div>
-        <div class="feed-img">
-          <div class="img">
-            <img class="content" src="../../assets/imgs/foods/food3.jpg">
-          </div>
-        </div>
-        <div class="feed-img">
-          <div class="img">
-            <img class="content" src="../../assets/imgs/foods/food4.jpg">
+        <div class="feed-img" >
+          <div class="img" *ngFor="let userPost of posts">
+            <img class="content" [src]='userPost.foto' (click)="openPostComments(userPost)" (dblclick)="likeUnlikePost(post)">
           </div>
         </div>
       </div>
+      <!-- </ion-list> -->
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
     </div>
 
     <div *ngIf="selectedTab == 'info'" class="profile-info">
@@ -110,7 +102,7 @@
           <p>dias</p>
           <h3 item-end>3</h3>
         </ion-item>
-  
+
         <ion-item>
           <ion-icon name="ios-restaurant-outline" color="secondary" item-start></ion-icon>
           <h2>Pratos montados</h2>
@@ -124,7 +116,7 @@
           <p>kcal</p>
           <h3 item-end>{{user.kcal_pratos | ntNumber}}</h3>
         </ion-item>
-  
+
       </ion-list>
     </div>
 

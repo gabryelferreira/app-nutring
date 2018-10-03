@@ -15,7 +15,7 @@ export class PostPicturePostService extends Connect {
     super(_http, "post");
   }
 
-  postPicture(data) {
-    return this.callMethod("postPicture", { data });
+  postPicture(id, img, descricao) {
+    return this.callMethod("postPicture", { id, img, descricao });
   }
 }
