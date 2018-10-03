@@ -1,7 +1,7 @@
 [
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_com_facebook_button_send_background.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.36.1.aar\\469cdbc89dcac2355f9b143a91647457\\res\\drawable\\com_facebook_button_send_background.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.37.0.aar\\f726990c3324f199f5d5d1a36ee954bc\\res\\drawable\\com_facebook_button_send_background.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -13,15 +13,15 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_background.9.png"
-    },
-    {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_screen_content_include.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\layout\\abc_screen_content_include.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\xml_config.xml.flat",
         "source": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\src\\main\\res\\xml\\config.xml"
+    },
+    {
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_screen_content_include.xml.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\layout\\abc_screen_content_include.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -33,7 +33,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_xout.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_ic_voice_search_api_material.xml.flat",
@@ -44,12 +44,12 @@
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\9a7aac39a9a5cc669be2491ab50cc234\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_tint_spinner.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\color\\abc_tint_spinner.xml"
-    },
-    {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_ic_menu_overflow_material.xml.flat",
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_tint_spinner.xml.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\color\\abc_tint_spinner.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_action_mode_close_item_material.xml.flat",
@@ -64,28 +64,28 @@
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_alert_dialog_title_material.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\layout\\abc_alert_dialog_title_material.xml"
-    },
-    {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_alert_dialog_title_material.xml.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_secondary_text_material_light.xml.flat",
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\color\\abc_secondary_text_material_light.xml"
     },
     {
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_ratingbar_indicator_material.xml.flat",
@@ -101,7 +101,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_com_facebook_button_login_silver_background.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable\\com_facebook_button_login_silver_background.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable\\com_facebook_button_login_silver_background.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_alert_dialog_material.xml.flat",
@@ -128,12 +128,12 @@
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
-    },
-    {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_list_selector_background_transition_holo_light.xml.flat",
@@ -144,16 +144,16 @@
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_ratingbar_material.xml.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable\\abc_ratingbar_material.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-xxhdpi_screen.png.flat",
         "source": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\src\\main\\res\\drawable-land-xxhdpi\\screen.png"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_ratingbar_material.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable\\abc_ratingbar_material.xml"
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_part_time.xml.flat",
@@ -209,11 +209,11 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_close.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-mdpi-v4\\com_facebook_close.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-mdpi-v4\\com_facebook_close.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_messenger_bubble_small_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-hdpi-v4\\messenger_bubble_small_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-hdpi-v4\\messenger_bubble_small_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -224,12 +224,12 @@
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_item_background_holo_light.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable\\abc_item_background_holo_light.xml"
-    },
-    {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_search_view.xml.flat",
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_item_background_holo_light.xml.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_activity_chooser_view.xml.flat",
@@ -241,7 +241,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_messenger_bubble_small_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-mdpi-v4\\messenger_bubble_small_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-mdpi-v4\\messenger_bubble_small_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldrtl-xhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -256,16 +256,16 @@
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_select_dialog_item_material.xml.flat",
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\layout\\select_dialog_item_material.xml"
     },
     {
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_button_send_icon_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.36.1.aar\\469cdbc89dcac2355f9b143a91647457\\res\\drawable-hdpi-v4\\com_facebook_button_send_icon_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.37.0.aar\\f726990c3324f199f5d5d1a36ee954bc\\res\\drawable-hdpi-v4\\com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -285,7 +285,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_com_facebook_device_auth_dialog_fragment.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\layout\\com_facebook_device_auth_dialog_fragment.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\layout\\com_facebook_device_auth_dialog_fragment.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color-v11_abc_background_cache_hint_selector_material_light.xml.flat",
@@ -309,19 +309,19 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_messenger_bubble_large_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-xhdpi-v4\\messenger_bubble_large_blue.png"
-    },
-    {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_media_custom.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\993c416c4c4715f4dab38f7e07acdfb8\\res\\layout\\notification_template_media_custom.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-xhdpi-v4\\messenger_bubble_large_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_media_custom.xml.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\993c416c4c4715f4dab38f7e07acdfb8\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_messenger_button_send_round_shadow.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-xxhdpi-v4\\messenger_button_send_round_shadow.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-xxhdpi-v4\\messenger_button_send_round_shadow.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -337,7 +337,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_messenger_bubble_small_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-xxhdpi-v4\\messenger_bubble_small_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-xxhdpi-v4\\messenger_bubble_small_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -357,7 +357,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_messenger_button_send_round_shadow.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-xhdpi-v4\\messenger_button_send_round_shadow.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-xhdpi-v4\\messenger_button_send_round_shadow.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -381,19 +381,19 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_messenger_button_send_round_shadow.png.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-mdpi-v4\\messenger_button_send_round_shadow.png"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_messenger_button_send_round_shadow.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-mdpi-v4\\messenger_button_send_round_shadow.png"
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -401,7 +401,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_profile_picture_blank_portrait.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_portrait.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_portrait.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_list_longpressed_holo.9.png.flat",
@@ -413,23 +413,23 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
-    },
-    {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_tile_bg.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\9a7aac39a9a5cc669be2491ab50cc234\\res\\drawable\\notification_tile_bg.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_tile_bg.xml.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\9a7aac39a9a5cc669be2491ab50cc234\\res\\drawable\\notification_tile_bg.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-v23_abc_control_background_material.xml.flat",
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-v23\\abc_control_background_material.xml"
+    },
+    {
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -449,7 +449,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_messenger_bubble_large_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-xhdpi-v4\\messenger_bubble_large_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-xhdpi-v4\\messenger_bubble_large_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_list_longpressed_holo.9.png.flat",
@@ -461,7 +461,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_messenger_bubble_large_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-mdpi-v4\\messenger_bubble_large_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-mdpi-v4\\messenger_bubble_large_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\anim_abc_popup_exit.xml.flat",
@@ -477,11 +477,11 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-hdpi-v4\\com_facebook_button_like_icon_selected.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-hdpi-v4\\com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_topnub.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -548,16 +548,16 @@
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\color-v23\\abc_tint_switch_track.xml"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout-v21_notification_action.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\9a7aac39a9a5cc669be2491ab50cc234\\res\\layout-v21\\notification_action.xml"
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_list_menu_item_layout.xml.flat",
         "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\16e7f9a4c7a3f68bf7a6d38c4c7e982e\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
+        "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout-v21_notification_action.xml.flat",
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\9a7aac39a9a5cc669be2491ab50cc234\\res\\layout-v21\\notification_action.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -621,7 +621,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_topnub.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-v21_abc_action_bar_item_background_material.xml.flat",
@@ -629,15 +629,15 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_com_facebook_favicon_blue.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable\\com_facebook_favicon_blue.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable\\com_facebook_favicon_blue.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_button_icon_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-xhdpi-v4\\com_facebook_button_icon_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-xhdpi-v4\\com_facebook_button_icon_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_com_facebook_login_fragment.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\layout\\com_facebook_login_fragment.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\layout\\com_facebook_login_fragment.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_tooltip.xml.flat",
@@ -669,7 +669,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_profile_picture_blank_square.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_square.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_square.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -681,7 +681,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_messenger_bubble_large_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-hdpi-v4\\messenger_bubble_large_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-hdpi-v4\\messenger_bubble_large_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -689,7 +689,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_close.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-hdpi-v4\\com_facebook_close.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-hdpi-v4\\com_facebook_close.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color-v23_abc_tint_edittext.xml.flat",
@@ -705,7 +705,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_xout.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -717,7 +717,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_messenger_button_white_bg_round.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable\\messenger_button_white_bg_round.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable\\messenger_button_white_bg_round.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_ic_search_api_material.xml.flat",
@@ -725,7 +725,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_close.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-xhdpi-v4\\com_facebook_close.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-xhdpi-v4\\com_facebook_close.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -741,7 +741,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_tooltip_black_xout.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_xout.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -809,7 +809,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_messenger_bubble_small_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-hdpi-v4\\messenger_bubble_small_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-hdpi-v4\\messenger_bubble_small_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_search_url_text.xml.flat",
@@ -829,7 +829,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_messenger_button_blue_bg_round.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable\\messenger_button_blue_bg_round.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable\\messenger_button_blue_bg_round.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_action.xml.flat",
@@ -845,7 +845,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_background.9.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_background.9.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
@@ -853,7 +853,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_com_facebook_tooltip_bubble.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\layout\\com_facebook_tooltip_bubble.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\layout\\com_facebook_tooltip_bubble.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -861,7 +861,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-xhdpi-v4\\com_facebook_button_icon_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-xhdpi-v4\\com_facebook_button_icon_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_btn_radio_material.xml.flat",
@@ -889,7 +889,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_messenger_button_send_round_shadow.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-hdpi-v4\\messenger_button_send_round_shadow.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-hdpi-v4\\messenger_button_send_round_shadow.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-ldpi_screen.png.flat",
@@ -921,7 +921,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_messenger_bubble_small_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-xhdpi-v4\\messenger_bubble_small_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-xhdpi-v4\\messenger_bubble_small_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_hint_foreground_material_dark.xml.flat",
@@ -953,11 +953,11 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_messenger_button_blue_bg_selector.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable\\messenger_button_blue_bg_selector.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable\\messenger_button_blue_bg_selector.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_com_facebook_button_login_logo.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable\\com_facebook_button_login_logo.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable\\com_facebook_button_login_logo.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -989,11 +989,11 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_button_send_icon_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.36.1.aar\\469cdbc89dcac2355f9b143a91647457\\res\\drawable-mdpi-v4\\com_facebook_button_send_icon_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.37.0.aar\\f726990c3324f199f5d5d1a36ee954bc\\res\\drawable-mdpi-v4\\com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_button_icon_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-mdpi-v4\\com_facebook_button_icon_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-mdpi-v4\\com_facebook_button_icon_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -1009,7 +1009,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-hdpi-v4\\com_facebook_button_icon_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-hdpi-v4\\com_facebook_button_icon_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-xxxhdpi_screen.png.flat",
@@ -1049,11 +1049,11 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_tooltip_black_xout.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_xout.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_messenger_bubble_small_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-mdpi-v4\\messenger_bubble_small_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-mdpi-v4\\messenger_bubble_small_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_bg.xml.flat",
@@ -1069,7 +1069,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_com_facebook_button_background.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable\\com_facebook_button_background.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable\\com_facebook_button_background.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -1109,7 +1109,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-xhdpi-v4\\com_facebook_button_like_icon_selected.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-xhdpi-v4\\com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_ratingbar_small_material.xml.flat",
@@ -1117,11 +1117,11 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_com_facebook_smart_device_dialog_fragment.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\layout\\com_facebook_smart_device_dialog_fragment.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\layout\\com_facebook_smart_device_dialog_fragment.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-port-xhdpi_screen.png.flat",
@@ -1141,7 +1141,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_com_facebook_auth_dialog_cancel_background.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -1161,7 +1161,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_messenger_button_white_bg_selector.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable\\messenger_button_white_bg_selector.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable\\messenger_button_white_bg_selector.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_btn_colored_material.xml.flat",
@@ -1173,7 +1173,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_com_facebook_button_icon.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable\\com_facebook_button_icon.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable\\com_facebook_button_icon.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_expanded_menu_layout.xml.flat",
@@ -1201,7 +1201,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_com_facebook_auth_dialog_header_background.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable\\com_facebook_auth_dialog_header_background.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable\\com_facebook_auth_dialog_header_background.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_activity_chooser_view_list_item.xml.flat",
@@ -1217,7 +1217,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_xout.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -1225,7 +1225,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_com_facebook_send_button_icon.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.36.1.aar\\469cdbc89dcac2355f9b143a91647457\\res\\drawable\\com_facebook_send_button_icon.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.37.0.aar\\f726990c3324f199f5d5d1a36ee954bc\\res\\drawable\\com_facebook_send_button_icon.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_cab_background_top_material.xml.flat",
@@ -1265,11 +1265,11 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_topnub.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_messenger_button_send_white_large.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\layout\\messenger_button_send_white_large.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\layout\\messenger_button_send_white_large.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_icon_background.xml.flat",
@@ -1285,11 +1285,11 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_button_send_icon_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.36.1.aar\\469cdbc89dcac2355f9b143a91647457\\res\\drawable-xhdpi-v4\\com_facebook_button_send_icon_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.37.0.aar\\f726990c3324f199f5d5d1a36ee954bc\\res\\drawable-xhdpi-v4\\com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_com_facebook_activity_layout.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\layout\\com_facebook_activity_layout.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\layout\\com_facebook_activity_layout.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_icon.png.flat",
@@ -1305,7 +1305,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_messenger_bubble_large_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-hdpi-v4\\messenger_bubble_large_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-hdpi-v4\\messenger_bubble_large_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_abc_screen_simple_overlay_action_mode.xml.flat",
@@ -1337,7 +1337,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_messenger_bubble_small_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-xxhdpi-v4\\messenger_bubble_small_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-xxhdpi-v4\\messenger_bubble_small_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_support_simple_spinner_dropdown_item.xml.flat",
@@ -1349,7 +1349,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color_com_facebook_button_text_color.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\color\\com_facebook_button_text_color.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\color\\com_facebook_button_text_color.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\anim_abc_popup_enter.xml.flat",
@@ -1393,7 +1393,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_com_facebook_button_icon_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-xxhdpi-v4\\com_facebook_button_icon_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-xxhdpi-v4\\com_facebook_button_icon_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\anim_abc_shrink_fade_out_from_bottom.xml.flat",
@@ -1401,7 +1401,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-xxhdpi-v4\\com_facebook_button_like_icon_selected.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-xxhdpi-v4\\com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
@@ -1421,7 +1421,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_button_send_icon_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.36.1.aar\\469cdbc89dcac2355f9b143a91647457\\res\\drawable-xhdpi-v4\\com_facebook_button_send_icon_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.37.0.aar\\f726990c3324f199f5d5d1a36ee954bc\\res\\drawable-xhdpi-v4\\com_facebook_button_send_icon_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -1429,19 +1429,19 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-mdpi-v4\\com_facebook_button_icon_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-mdpi-v4\\com_facebook_button_icon_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_background.9.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_button_send_icon_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.36.1.aar\\469cdbc89dcac2355f9b143a91647457\\res\\drawable-mdpi-v4\\com_facebook_button_send_icon_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.37.0.aar\\f726990c3324f199f5d5d1a36ee954bc\\res\\drawable-mdpi-v4\\com_facebook_button_send_icon_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_topnub.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -1453,7 +1453,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_background.9.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_background.9.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\anim_abc_grow_fade_in_from_bottom.xml.flat",
@@ -1469,7 +1469,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_messenger_button_send_white_small.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\layout\\messenger_button_send_white_small.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\layout\\messenger_button_send_white_small.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color_switch_thumb_material_light.xml.flat",
@@ -1481,7 +1481,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_com_facebook_button_login_background.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable\\com_facebook_button_login_background.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable\\com_facebook_button_login_background.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_tint_edittext.xml.flat",
@@ -1493,7 +1493,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_tooltip_black_xout.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_xout.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -1521,7 +1521,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_com_facebook_button_icon_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-xxhdpi-v4\\com_facebook_button_icon_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-xxhdpi-v4\\com_facebook_button_icon_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -1537,7 +1537,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_com_facebook_button_send_icon_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.36.1.aar\\469cdbc89dcac2355f9b143a91647457\\res\\drawable-xxhdpi-v4\\com_facebook_button_send_icon_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.37.0.aar\\f726990c3324f199f5d5d1a36ee954bc\\res\\drawable-xxhdpi-v4\\com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_btn_check_material.xml.flat",
@@ -1657,7 +1657,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_messenger_bubble_small_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-xhdpi-v4\\messenger_bubble_small_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-xhdpi-v4\\messenger_bubble_small_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -1665,7 +1665,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_background.9.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_black_background.9.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color_abc_tint_seek_thumb.xml.flat",
@@ -1685,7 +1685,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_topnub.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-hdpi-v4\\com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color-v23_abc_tint_spinner.xml.flat",
@@ -1693,11 +1693,11 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_topnub.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_messenger_bubble_large_white.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-xxhdpi-v4\\messenger_bubble_large_white.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-xxhdpi-v4\\messenger_bubble_large_white.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
@@ -1705,7 +1705,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_messenger_bubble_large_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-xxhdpi-v4\\messenger_bubble_large_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-xxhdpi-v4\\messenger_bubble_large_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -1721,7 +1721,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -1729,7 +1729,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_messenger_bubble_large_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\drawable-mdpi-v4\\messenger_bubble_large_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\drawable-mdpi-v4\\messenger_bubble_large_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
@@ -1737,7 +1737,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-mdpi-v4\\com_facebook_button_like_icon_selected.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-mdpi-v4\\com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -1793,7 +1793,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_messenger_button_send_white_round.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\layout\\messenger_button_send_white_round.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\layout\\messenger_button_send_white_round.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-v21_abc_edit_text_material.xml.flat",
@@ -1813,11 +1813,11 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\color_com_facebook_send_button_text_color.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.36.1.aar\\469cdbc89dcac2355f9b143a91647457\\res\\color\\com_facebook_send_button_text_color.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.37.0.aar\\f726990c3324f199f5d5d1a36ee954bc\\res\\color\\com_facebook_send_button_text_color.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\xml_camera_provider_paths.xml.flat",
@@ -1865,7 +1865,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_messenger_button_send_blue_large.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\layout\\messenger_button_send_blue_large.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\layout\\messenger_button_send_blue_large.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_action_tombstone.xml.flat",
@@ -1881,7 +1881,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_messenger_button_send_blue_small.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\layout\\messenger_button_send_blue_small.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\layout\\messenger_button_send_blue_small.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_abc_item_background_holo_dark.xml.flat",
@@ -1905,7 +1905,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_com_facebook_auth_dialog_background.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable\\com_facebook_auth_dialog_background.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable\\com_facebook_auth_dialog_background.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -1917,7 +1917,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\3fa067f1c10e4a582f7ec3d35bdc81b3\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_background.9.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.37.0.aar\\874aaa3504c9f470e10d9241cadb20ee\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
@@ -1957,7 +1957,7 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_messenger_button_send_blue_round.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.36.1.aar\\7062c57d122fb2dd3dcbc117a5b0884e\\res\\layout\\messenger_button_send_blue_round.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-messenger-4.37.0.aar\\f16aa468903032afd67812fa46afbb7b\\res\\layout\\messenger_button_send_blue_round.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -1973,11 +1973,11 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_button_send_icon_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.36.1.aar\\469cdbc89dcac2355f9b143a91647457\\res\\drawable-hdpi-v4\\com_facebook_button_send_icon_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-share-4.37.0.aar\\f726990c3324f199f5d5d1a36ee954bc\\res\\drawable-hdpi-v4\\com_facebook_button_send_icon_blue.png"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_com_facebook_button_like_background.xml.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable\\com_facebook_button_like_background.xml"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable\\com_facebook_button_like_background.xml"
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
@@ -2005,6 +2005,6 @@
     },
     {
         "merged": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_com_facebook_button_icon_blue.png.flat",
-        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\drawable-hdpi-v4\\com_facebook_button_icon_blue.png"
+        "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\drawable-hdpi-v4\\com_facebook_button_icon_blue.png"
     }
 ]

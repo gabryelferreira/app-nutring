@@ -24,6 +24,7 @@
     "@ionic-native/core": "~4.12.0",
     "@ionic-native/facebook": "^4.12.2",
     "@ionic-native/header-color": "^4.12.2",
+    "@ionic-native/keyboard": "^4.15.0",
     "@ionic-native/local-notifications": "^4.14.0",
     "@ionic-native/push": "^4.13.0",
     "@ionic-native/social-sharing": "^4.12.2",

@@ -71,7 +71,7 @@
         <form class="comment-bar" (ngSubmit)="commentPost(post)">
           <img [src]="user.foto">
           <!-- <textarea class="txt-send-comment" placeholder="Deixe um comentário"></textarea> -->
-          <input type="text" [(ngModel)]="post.actualComment" name="actualComment" id="send-comment" class="txt-send-comment" placeholder="Deixe um comentário">
+          <ion-input type="text" [(ngModel)]="post.actualComment" name="actualComment" id="send-comment" class="txt-send-comment" placeholder="Deixe um comentário"></ion-input>
           <button type="submit" class="btn-send-comment">Comentar</button>
         </form>
       </div>

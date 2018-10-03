@@ -4,7 +4,7 @@
             "outputFile": "C:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-id\\values-id.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.36.1.aar\\147f310d4f9f9b7b3173a8966ae96fc5\\res\\values-id\\values-id.xml",
+                    "source": "C:\\Users\\Blade\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-common-4.37.0.aar\\03c0fc9326ca09b085d508d8f078ba91\\res\\values-id\\values-id.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
