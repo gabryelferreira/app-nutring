@@ -125,10 +125,6 @@ export class HomePage {
 
   ionViewDidLoad() {}
 
-  gotoHistorico() {
-    this.tabs.select(3);
-  }
-
   gotoFotoPage(){
     this.navCtrl.push(PostPicturePage);
   }

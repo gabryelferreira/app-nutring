@@ -37,6 +37,7 @@ import { NtListHeaderComponent } from "../components/nt-list-header/nt-list-head
 import { PostPicturePage } from "../pages/post-picture/post-picture";
 import { Camera } from "@ionic-native/camera";
 import { SearchResultPage } from "../pages/search/search-result/search-result";
+import { VerPostPage } from "../pages/ver-post/ver-post";
 @NgModule({
   declarations: [
     MyApp,
@@ -63,7 +64,8 @@ import { SearchResultPage } from "../pages/search/search-result/search-result";
     EditProfilePage,
     CommentsPage,
     SearchResultPage,
-    NtListHeaderComponent
+    NtListHeaderComponent,
+    VerPostPage
   ],
   imports: [
     BrowserModule,
@@ -94,7 +96,8 @@ import { SearchResultPage } from "../pages/search/search-result/search-result";
     ContactMessagesPage,
     EditProfilePage,
     CommentsPage,
-    SearchResultPage
+    SearchResultPage,
+    VerPostPage
   ],
   providers: [
     StatusBar,

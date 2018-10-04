@@ -66,7 +66,7 @@
           <p>{{ post.descricao }}</p>
         </div>
         <div (click)="seeComments(post)" *ngIf="post.comentarios && post.comentarios > 0" class="comment-info">
-          <p>Ver comentários</p>
+          <p>Ver todos os {{post.comentarios}} comentários</p>
         </div>
         <form class="comment-bar" (ngSubmit)="commentPost(post)">
           <img [src]="user.foto">
@@ -78,90 +78,6 @@
       <div *ngIf="i < posts.length - 1" class="divider"></div>
     </div>
     
-
-
-
-
-
-    <!-- <div class="feed-info">
-      <div class="user-info">
-          <img class="user-picture" src="https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/26113754_1737094206365772_4187501352879553596_n.jpg?_nc_cat=110&oh=538acca2d00f5c0ca12ff3ff611442d8&oe=5C16432A">
-          <div class="text">
-            <h1>Nicholas Maglowsch</h1>
-            <p>3h atrás</p>
-          </div>
-      </div>
-      <div class="post-info">
-          <img class="info-picture" src="../../assets/imgs/foods/food1.jpg">
-      </div>
-      <div class="comment-info">
-
-      </div>
-    </div>
-    <div class="feed-info">
-      <div class="user-info">
-          <img class="user-picture" src="https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/18010155_1392382814116844_7245139448341220707_n.jpg?_nc_cat=104&oh=229207b9999908f1859a9585e38f9375&oe=5C5FEE51">
-          <div class="text">
-            <h1>Larissa Lilian</h1>
-            <p>Agora</p>
-          </div>
-      </div>
-      <div class="post-info">
-          <img class="info-picture" src="../../assets/imgs/foods/food2.jpg">
-      </div>
-      <div class="comment-info">
-
-      </div>
-    </div>
-    <div class="feed-info">
-      <div class="user-info">
-          <img class="user-picture" src="https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/37070641_1824252077664484_8757820791971643392_n.jpg?_nc_cat=104&oh=4ec901fc656337847a38180b3a536da8&oe=5C61E6EE">
-          <div class="text">
-            <h1>Brunno Panfilo</h1>
-            <p>Ontem</p>
-          </div>
-      </div>
-      <div class="post-info">
-          <img class="info-picture" src="../../assets/imgs/foods/food3.jpg">
-      </div>
-      <div class="comment-info">
-
-      </div>
-    </div> -->
   </div>
   
-
-
-
-  <!-- <ion-list>
-      <ion-item text-center>
-
-        <h1>Bem vindo {{user.nome}}!</h1>
-        <img [src]='user.foto' width="192" height="192" style="border-radius: 50%">
-
-        <loader *ngIf="loading"></loader>
-        <h1><strong>Performance</strong></h1>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              Hoje
-              <div padding-top>
-                <chart [percent]="55" [color]="waterChartColor" [img]="imgTeste" [size]="sizeTeste" (click)="gotoHistorico()"></chart>
-              </div>
-            </ion-col>
-            <ion-col>
-              Essa semana
-              <div padding-top>
-                <chart [percent]="55" [color]="waterChartColor"></chart>
-              </div>
-
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-
-        <hr>
-        <h1> Detalhes da Performance</h1>
-        meta de calorias do dia : {{kcalMeta}}
-      </ion-item>
-    </ion-list> -->
 </ion-content>

@@ -44,4 +44,8 @@ export class HomePostService extends Connect {
     return this.callMethod("deleteComments", { comentarios });
   }
 
+  getPostById(id_post: number, id_usuario: number){
+    return this.callMethod("getPostById", { id_post, id_usuario })
+  }
+
 }

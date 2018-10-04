@@ -1,3 +1,4 @@
+import { VerPostPage } from './../ver-post/ver-post';
 import { SettingsPage } from "./../settings/settings";
 import { Component } from "@angular/core";
 import {
@@ -74,21 +75,14 @@ export class ProfilePage {
 
   profileImage: any;
 
-  constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    _settings: SettingsService,
-    private toastCtrl: ToastController,
-    private post: ProfilePostService,
-    sanitizer: DomSanitizer
-  ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              _settings: SettingsService, private toastCtrl: ToastController,
+              private post: ProfilePostService, sanitizer: DomSanitizer) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
     this.user = JSON.parse(localStorage.getItem("userData"));
 
     if (this.user.foto) {
-      this.profileImage = sanitizer.bypassSecurityTrustStyle(
-        `url(${this.user.foto})`
-      );
+      this.profileImage = sanitizer.bypassSecurityTrustStyle(`url(${this.user.foto})`);
     } else {
       let url = "../../assets/imgs/user.jpg";
       this.profileImage = sanitizer.bypassSecurityTrustStyle(`url(${url})`);
@@ -99,15 +93,15 @@ export class ProfilePage {
 
   async ionViewWillEnter() {
     let result = await this.post.getUserPosts(this.user.id_usuario, 9, 0);
-    if (result)
+    if (result && result.success){
       this.posts = result.result;
-    console.log("post", this.posts)
+    }
+    console.log("posts", this.posts)
     this.user = JSON.parse(localStorage.getItem("userData"));
   }
 
   openPostComments(post: IPost){
-    this.navCtrl.push(CommentsPage, {
-      selectKeyboard: true,
+    this.navCtrl.push(VerPostPage, {
       post: post
     })
   }

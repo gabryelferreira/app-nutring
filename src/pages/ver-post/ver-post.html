@@ -1,0 +1,70 @@
+<!--
+  Generated template for the VerPostPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="{{selectedTheme}}">
+    <ion-title text-left>
+      Foto
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+
+  <loader *ngIf="loading"></loader>
+  <div class="feed" *ngIf="!loading && selectedPost">
+    <div>
+      <div class="feed-info">
+        <div class="user-info">
+            <img *ngIf="!selectedPost.foto" class="user-picture" src="../../assets/imgs/user.jpg">
+            <img *ngIf="selectedPost.foto" class="user-picture" [src]="selectedPost.foto">
+            <div class="text">
+              <h1>{{ selectedPost.nome }}</h1>
+              <p>5h atrás</p>
+            </div>
+        </div>
+        
+        <div class="post-info">
+            <img class="info-picture" [src]="selectedPost.post">
+        </div>
+        
+        <div class="tabs-info">
+          <div (click)="likeUnlikePost(selectedPost)" class="tab">
+              <div class="align">
+                <ion-icon [id]="selectedPost.gostei ? 'liked' : 'unliked'" name="md-thumbs-up"></ion-icon>
+                <p [class]="selectedPost.gostei ? 'liked' : ''">Gostei</p>
+              </div>
+          </div>
+          <div (click)="openPostComments(selectedPost)" class="tab">
+            <div class="align">
+              <ion-icon name="md-chatbubbles"></ion-icon>
+              <p>Comentar</p>
+            </div>
+          </div>
+        </div>
+        <div (click)="seeComments(selectedPost)" class="description-info">
+            <h2 *ngIf="!selectedPost.curtidas || (selectedPost.curtidas && selectedPost.curtidas == 0)">Seja o primeiro a curtir</h2>
+          <h2 *ngIf="selectedPost.curtidas && selectedPost.curtidas == 1">{{ selectedPost.curtidas | curtidas }} curtida</h2>
+          <h2 *ngIf="selectedPost.curtidas && selectedPost.curtidas > 1">{{ selectedPost.curtidas | curtidas }} curtidas</h2>
+          <p>{{ selectedPost.descricao }}</p>
+        </div>
+        <div (click)="seeComments(selectedPost)" *ngIf="selectedPost.comentarios && selectedPost.comentarios > 0" class="comment-info">
+          <p>Ver todos os {{selectedPost.comentarios}} comentários</p>
+        </div>
+        <form class="comment-bar" (ngSubmit)="commentPost(selectedPost)">
+          <img [src]="user.foto">
+          <!-- <textarea class="txt-send-comment" placeholder="Deixe um comentário"></textarea> -->
+          <ion-input type="text" [(ngModel)]="selectedPost.actualComment" name="actualComment" id="send-comment" class="txt-send-comment" placeholder="Deixe um comentário"></ion-input>
+          <button type="submit" class="btn-send-comment">Comentar</button>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+
+</ion-content>
