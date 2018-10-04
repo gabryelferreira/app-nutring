@@ -11,6 +11,23 @@ page-contact-messages {
         }
     }
 
+    ion-list {
+        ion-list-header {
+            font-size: 11px !important;
+        }
+    }
     
+    ion-badge {
+        font-size: 11px !important;
+    }
+
+    ion-card {
+        ion-card-content {
+            font-size: 12px !important;
+            p {
+                font-size: 12px !important;
+            }
+        }
+    }
 
 }
