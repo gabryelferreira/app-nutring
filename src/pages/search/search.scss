@@ -1,4 +1,4 @@
-page-search {
+page-search, page-search-result {
   .list-avatar-page {
     ion-note {
       font-size: 12px;
@@ -14,4 +14,22 @@ page-search {
     width: 192px;
     height: 192px;
   }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  ion-item {
+    h2 {
+      font-size: 13px !important;
+    }
+    p {
+      font-size: 11px !important;
+    }
+  }
+
+  .ver-todas-button {
+    font-size: 12px !important;
+  }
+
 }

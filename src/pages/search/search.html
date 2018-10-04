@@ -43,7 +43,7 @@
           <h2>{{food.nome}}</h2>
           <p>{{food.kcal | number:'1.0-2'}} kcal</p>
         </ion-item>
-        <button ion-button small outline (click)="pushSearchResultPage('food')">ver todas</button>
+        <button class="ver-todas-button" ion-button small outline (click)="pushSearchResultPage('food')">ver todas</button>
       </div>
 
       <div *ngIf="users && users.length > 0">
@@ -56,7 +56,7 @@
           <!-- <p>seguidores: {{food.kcal | number:'1.0-2'}} kcal</p> -->
           <!-- <ion-note item-end>#{{i+1}}</ion-note> -->
         </ion-item>
-        <button ion-button small outline (click)="pushSearchResultPage('people')">ver todas</button>
+        <button class="ver-todas-button" ion-button small outline (click)="pushSearchResultPage('people')">ver todas</button>
       </div>
     </div>
 
