@@ -87,12 +87,15 @@ export class ProfilePage {
       let url = "../../assets/imgs/user.jpg";
       this.profileImage = sanitizer.bypassSecurityTrustStyle(`url(${url})`);
     }
-    
+    this.getUserPosts(this.user.id_usuario, 9, 0);
     this.validateRate();
   }
 
   async ionViewWillEnter() {
-    let result = await this.post.getUserPosts(this.user.id_usuario, 9, 0);
+  }
+
+  async getUserPosts(id_usuario: number, limit: number, offset: number){
+    let result = await this.post.getUserPosts(id_usuario, limit, offset);
     if (result && result.success){
       this.posts = result.result;
     }

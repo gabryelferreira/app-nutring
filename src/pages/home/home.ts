@@ -5,6 +5,8 @@ import * as types from "../../app/types";
 import * as service from "./home.service";
 import { PostPicturePage } from "../post-picture/post-picture";
 import { CommentsPage } from "./comments/comments";
+import { CurtidasPage } from "../curtidas/curtidas";
+import { ProfilePage } from "../profile/profile";
 /**
  * Generated class for the HomePage page.
  *
@@ -117,10 +119,24 @@ export class HomePage {
     this.user = JSON.parse(localStorage.getItem("userData"));
   }
 
-  seeComments(post: any){
+  seeComments(post: types.IPost){
     this.navCtrl.push(CommentsPage, {
       post: post
     })
+  }
+
+  getCurtidores(post: types.IPost){
+    this.navCtrl.push(CurtidasPage, {
+      post: post
+    })
+  }
+
+  visitUserPage(post: types.IPost){
+    if (post.id_usuario == this.user.id_usuario){
+      this.navCtrl.parent.select(4);
+    } else {
+      // this.navCtrl.push
+    }
   }
 
   ionViewDidLoad() {}

@@ -32,7 +32,7 @@
   <div class="feed" *ngIf="!loading || (posts && posts.length > 0)">
     <div *ngFor="let post of posts; let i = index">
       <div class="feed-info">
-        <div class="user-info">
+        <div (click)="visitUserPage(post)" class="user-info">
             <img *ngIf="!post.foto" class="user-picture" src="../../assets/imgs/user.jpg">
             <img *ngIf="post.foto" class="user-picture" [src]="post.foto">
             <div class="text">
@@ -59,11 +59,13 @@
             </div>
           </div>
         </div>
-        <div (click)="seeComments(post)" class="description-info">
+        <div class="description-info">
             <h2 *ngIf="!post.curtidas || (post.curtidas && post.curtidas == 0)">Seja o primeiro a curtir</h2>
-          <h2 *ngIf="post.curtidas && post.curtidas == 1">{{ post.curtidas | curtidas }} curtida</h2>
-          <h2 *ngIf="post.curtidas && post.curtidas > 1">{{ post.curtidas | curtidas }} curtidas</h2>
-          <p>{{ post.descricao }}</p>
+          <h2 (click)="getCurtidores(post)" *ngIf="post.curtidas && post.curtidas == 1">{{ post.curtidas | curtidas }} curtida</h2>
+          <h2 (click)="getCurtidores(post)" *ngIf="post.curtidas && post.curtidas > 1">{{ post.curtidas | curtidas }} curtidas</h2>
+          <div (click)="seeComments(post)">
+            <p>{{ post.descricao }}</p>
+          </div>
         </div>
         <div (click)="seeComments(post)" *ngIf="post.comentarios && post.comentarios > 0" class="comment-info">
           <p>Ver todos os {{post.comentarios}} comentários</p>

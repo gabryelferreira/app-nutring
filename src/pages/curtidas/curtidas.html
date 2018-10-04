@@ -1,0 +1,39 @@
+<!--
+  Generated template for the CurtidasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="{{selectedTheme}}">
+    <ion-title text-left>
+      Curtidas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <loader *ngIf="loading"></loader>
+
+  <div class="curtidas" *ngIf="!loading && curtidores && curtidores.length > 0">
+    <div class="curtida" *ngFor="let curtidor of curtidores; let i = index">
+      <div class="user-info">
+        <img class="user-picture" *ngIf="!curtidor.foto" src="../../assets/imgs/user.jpg">
+        <img class="user-picture" *ngIf="curtidor.foto" [src]="curtidor.foto">
+        <div class="text">
+          <div class="info">
+            <h1>{{ curtidor.nome }}</h1>
+          </div>
+          <div class="details-info">
+              <div class="likes-info">
+                <p>Ontem</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

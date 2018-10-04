@@ -38,6 +38,7 @@ import { PostPicturePage } from "../pages/post-picture/post-picture";
 import { Camera } from "@ionic-native/camera";
 import { SearchResultPage } from "../pages/search/search-result/search-result";
 import { VerPostPage } from "../pages/ver-post/ver-post";
+import { CurtidasPage } from "../pages/curtidas/curtidas";
 @NgModule({
   declarations: [
     MyApp,
@@ -65,7 +66,8 @@ import { VerPostPage } from "../pages/ver-post/ver-post";
     CommentsPage,
     SearchResultPage,
     NtListHeaderComponent,
-    VerPostPage
+    VerPostPage,
+    CurtidasPage
   ],
   imports: [
     BrowserModule,
@@ -97,7 +99,8 @@ import { VerPostPage } from "../pages/ver-post/ver-post";
     EditProfilePage,
     CommentsPage,
     SearchResultPage,
-    VerPostPage
+    VerPostPage,
+    CurtidasPage
   ],
   providers: [
     StatusBar,

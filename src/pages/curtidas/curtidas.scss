@@ -1,0 +1,71 @@
+page-curtidas {
+
+    .curtidas {
+        position: relative;
+        width: 100%;
+        background: #fff;
+        .curtida {
+            position: relative;
+            display: flex;
+            box-sizing: border-box;
+            padding: 5px;
+            .user-info {
+                position: relative;
+                display: flex;
+                width: 100%;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0 35px 0 5px !important;
+                .user-picture {
+                    position: relative;
+                    height: 39px;
+                    width: 39px;
+                    border-radius: 50%;
+                    border: 1px solid #e1e1e1;
+                    margin: 1px 5px 0 5px;
+                }
+                .text {
+                    position: relative;
+                    .info {
+                        display: flex;
+                        overflow: hidden;
+                        h1 {
+                            font-size: 13px;
+                            margin: 6px 3px 0 6px;
+                            line-height: 17px;
+                            height: 16px;
+                            overflow: hidden;
+                            font-weight: 600;
+                        }
+                        p {
+                            font-size: 11px;
+                            margin: 3px 3px 0 3px;
+                            color: #222;
+                        }
+                    }
+                    .details-info {
+                        p {
+                            color: #111;
+                            font-size: 13px;
+                            margin: 2px 6px 2px 6px;
+                        }
+                        
+                        .likes-info {
+                            position: relative;
+                            display: flex;
+                            p {
+                                color: #777;
+                                font-size: 11px;
+                                margin: 0 15px 4px 6px;
+                            }
+                            .likes {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

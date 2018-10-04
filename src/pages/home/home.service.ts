@@ -45,7 +45,11 @@ export class HomePostService extends Connect {
   }
 
   getPostById(id_post: number, id_usuario: number){
-    return this.callMethod("getPostById", { id_post, id_usuario })
+    return this.callMethod("getPostById", { id_post, id_usuario });
+  }
+
+  getCurtidores(id_post: number, id_usuario: number, offset: number, limit: number = 30){
+    return this.callMethod("getCurtidores", { id_post, id_usuario, offset, limit });
   }
 
 }
