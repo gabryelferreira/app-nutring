@@ -20,12 +20,20 @@ nt-searchbar {
             color: #fff;
         }
     }
-    .searchbar .fa { 
+    .searchbar .fa{ 
     position: absolute;
-    top: 15px;
+    top: 16px;
     left: 15px;
     font-size: 15px;
     color: #fff;
+    }
+    ion-icon {
+        position: absolute !important;
+        top: 7px !important;
+        right: 10px !important;
+        font-size: 34px !important;
+        font-weight: bold;
+        color: #fff !important;
     }
     #on-header {
         input[type="search"]{
