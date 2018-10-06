@@ -1,8 +1,10 @@
 import { SettingsService } from './../settings/settings.service';
 import { Component } from '@angular/core';
+import { ModalController } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as service from './principal.service';
 import * as types from '../../app/types';
+import { CriarRefeicaoPage } from './criar-refeicao/criar-refeicao';
 
 @IonicPage()
 @Component({
@@ -21,7 +23,8 @@ export class PrincipalPage {
   user: types.IUser = {};
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              _settings: SettingsService, private post: service.PrincipalPostService) {
+              _settings: SettingsService, private post: service.PrincipalPostService,
+              private modalCtrl: ModalController) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
     this.user = JSON.parse(localStorage.getItem("userData"));
     this.getRefeicoes();
@@ -52,7 +55,7 @@ export class PrincipalPage {
   }
 
   openCriarRefeicao(){
-
+    this.navCtrl.push(CriarRefeicaoPage);
   }
 
 }

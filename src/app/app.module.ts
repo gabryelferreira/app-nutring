@@ -40,6 +40,7 @@ import { SearchResultPage } from "../pages/search/search-result/search-result";
 import { VerPostPage } from "../pages/ver-post/ver-post";
 import { CurtidasPage } from "../pages/curtidas/curtidas";
 import { PrincipalPage } from "../pages/principal/principal";
+import { CriarRefeicaoPage } from "../pages/principal/criar-refeicao/criar-refeicao";
 @NgModule({
   declarations: [
     MyApp,
@@ -69,7 +70,8 @@ import { PrincipalPage } from "../pages/principal/principal";
     NtListHeaderComponent,
     VerPostPage,
     CurtidasPage,
-    PrincipalPage
+    PrincipalPage,
+    CriarRefeicaoPage
   ],
   imports: [
     BrowserModule,
@@ -103,7 +105,8 @@ import { PrincipalPage } from "../pages/principal/principal";
     SearchResultPage,
     VerPostPage,
     CurtidasPage,
-    PrincipalPage
+    PrincipalPage,
+    CriarRefeicaoPage
   ],
   providers: [
     StatusBar,
