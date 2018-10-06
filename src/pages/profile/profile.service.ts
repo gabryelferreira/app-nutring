@@ -27,6 +27,9 @@ export class ProfilePostService extends Connect {
     return this.callMethod("updateUserInfo", { data });
   }
 
+  updateUserAvatar(id:number,img:any){
+    return this.callMethod("updateUserAvatar", {id, img})
+  }
   getUserPosts(id: number, limit:number, offset:number) {
     return this.callMethod("getUserPosts", { id, limit, offset });
   }

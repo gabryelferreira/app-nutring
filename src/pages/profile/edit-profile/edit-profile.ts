@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { SettingsService } from '../../settings/settings.service';
 import { IUser } from '../../../app/types';
 import { UpdateLoginInfoPage } from '../update-login-info/update-login-info';
+import { Camera, CameraOptions } from "@ionic-native/camera";
 
 /**
  * Generated class for the EditProfilePage page.
@@ -22,6 +23,7 @@ import { UpdateLoginInfoPage } from '../update-login-info/update-login-info';
 })
 export class EditProfilePage {
 
+  picture:any = '';
   selectedTheme: String = "";
   user:IUser = {
     altura_m:"", 
@@ -47,7 +49,7 @@ export class EditProfilePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
               _settings: SettingsService, private post: ProfilePostService,
-              private toastCtrl: ToastController) {
+              private toastCtrl: ToastController, private camera:Camera) {
     this.user = navParams.get("user");
     this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
     this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
@@ -87,7 +89,10 @@ export class EditProfilePage {
     if (this.validPersonalFields() && this.validFields()){
       this.loading = true;
       this.setOptionalInfo();
-      let result = await this.post.updateUserInfo(JSON.stringify(this.user));
+      let result 
+      if (this.picture != '')
+        result = await this.post.updateUserAvatar(this.user.id_usuario, this.picture);
+      result = await this.post.updateUserInfo(JSON.stringify(this.user));
       if (result.success){
         localStorage.setItem("userData", JSON.stringify(result.result))
         this.navCtrl.pop();
@@ -137,5 +142,23 @@ export class EditProfilePage {
 
   openUpdateLoginInfo(){
     this.navCtrl.push(UpdateLoginInfoPage);
+  }
+
+  openGaleria() {
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+      saveToPhotoAlbum:false
+    };
+    this.camera.getPicture(options).then(
+      imageData => {
+        let img = "data:image/jpeg;base64," + imageData;
+        this.picture = img;
+      },
+      err => {
+        // Handle error
+      }
+    );
   }
 }
