@@ -18,6 +18,7 @@ export class NtSearchbarComponent {
   @Output() backButton: EventEmitter<any> = new EventEmitter();
   @Input('placeholder') placeholder = "Buscar";
   @Input('onHeader') onHeader = false;
+  @Input('withIcon') withIcon = true;
   item: String = "";
 
   constructor(){

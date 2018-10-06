@@ -25,16 +25,13 @@
 
   <div *ngIf="!loading" class="principal">
 
-    <div class="refeicoes-custom">
+    <div class="refeicoes-custom" >
         
-        <div class="refeicao">
-          <img src="../../assets/imgs/food2.jpeg">
-          <h2>Personalizado 1</h2>
+        <div class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
+          <img [src]="refeicao.foto">
+          <h2>{{refeicao.nome}}</h2>
         </div>
-        <div class="refeicao">
-          <img src="../../assets/imgs/food3.jpg">
-          <h2>Da Madruga</h2>
-        </div>
+
         <div (click)="openCriarRefeicao()" class="refeicao">
           <ion-icon name="add"></ion-icon>
           <img src="../../assets/imgs/blur2.jpg">
@@ -42,13 +39,12 @@
         </div>
     </div>
 
-
     <div class="title">
       <p>Opções padrões</p>
     </div>
 
     <div class="opcoes" *ngIf="refeicoesPadroes && refeicoesPadroes.length > 0">
-      <div class="opcao" *ngFor="let refeicao of refeicoesPadroes; let i = index">
+      <div (click)="openMontarPrato(refeicao)" class="opcao" *ngFor="let refeicao of refeicoesPadroes; let i = index">
         <img [src]="refeicao.foto">
         <h2>{{refeicao.ds_refeicao}}</h2>
       </div>

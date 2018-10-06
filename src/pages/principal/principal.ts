@@ -1,3 +1,4 @@
+import { MontarPratoPage } from './../montar-prato/montar-prato';
 import { SettingsService } from './../settings/settings.service';
 import { Component } from '@angular/core';
 import { ModalController } from 'ionic-angular';
@@ -56,6 +57,12 @@ export class PrincipalPage {
 
   openCriarRefeicao(){
     this.navCtrl.push(CriarRefeicaoPage);
+  }
+
+  openMontarPrato(refeicao: any){
+    this.navCtrl.push(MontarPratoPage, {
+      prato: refeicao
+    })
   }
 
 }
