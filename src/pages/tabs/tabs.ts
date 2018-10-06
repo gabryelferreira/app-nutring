@@ -6,16 +6,18 @@ import { MontarPratoPage } from "../montar-prato/montar-prato";
 import { SearchPage } from "../search/search";
 import { MeusPratosPage } from "../meus-pratos/meus-pratos";
 import { SettingsService } from "../settings/settings.service";
+import { PrincipalPage } from "../principal/principal";
 
 @Component({
   templateUrl: "tabs.html"
 })
 export class TabsPage {
-  tab1Root = HomePage;
-  tab2Root = MontarPratoPage;
-  tab3Root = SearchPage;
-  tab4Root = MeusPratosPage;
-  tab5Root = ProfilePage;
+  tab1Root = PrincipalPage;
+  // tab2Root = MontarPratoPage;
+  tab2Root = SearchPage;
+  tab3Root = MeusPratosPage;
+  tab4Root = ProfilePage;
+  tab5Root = SettingsPage;
   selectedTheme: String = "";
   show: boolean = true;
 

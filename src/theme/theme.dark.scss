@@ -343,5 +343,37 @@
     }
 
 
+
+
+
+
+
+
+
+
+
+
+    //PAGINA PRINCIPAL MONTAR PRATO
+    .principal {
+      .title {
+          p {
+              color: #bbb;
+          }
+      }
+      .refeicoes-custom {
+        .refeicao {
+            box-shadow: 0 2px 1px #222;
+        }
+      }
+
+
+      .opcoes {
+        .opcao {
+            box-shadow: 0 3px 2px #222;
+        }
+    }
+
+    }
+
     
   }
