@@ -56,13 +56,23 @@ export class PrincipalPage {
   }
 
   openCriarRefeicao(){
-    this.navCtrl.push(CriarRefeicaoPage);
+    this.navCtrl.push(CriarRefeicaoPage, {
+      callback: this.myCallbackFunction
+    });
   }
+
+  myCallbackFunction = (_params) => {
+    return new Promise((resolve, reject) => {
+      this.getRefeicoes();
+      resolve();
+    });
+   }
 
   openMontarPrato(refeicao: any){
     this.navCtrl.push(MontarPratoPage, {
       prato: refeicao
     })
+
   }
 
 }

@@ -19,10 +19,13 @@ import { IUser } from '../../../app/types';
   providers:[PrincipalPostService]
 })
 export class CriarRefeicaoPage {
+
+  callback;
   refeicao:string = "";
   loading:boolean = false;
   selectedTheme: String = "";
   picture:any = "/assets/imgs/food1.jpg";
+  actualPicture: any = "/assets/imgs/food1.jpg";
   imageOptions: boolean = false;
   user:IUser;
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -34,16 +37,27 @@ export class CriarRefeicaoPage {
   ionViewDidLoad() {
   }
 
+  ionViewWillEnter() {
+    this.callback = this.navParams.get("callback")
+  }
+
+  ionViewWillLeave() {
+    this.callback().then(()=>{
+    });
+  }
+
   async sendRefeicao(){
     let result;
     this.loading = true;
-    result = await this.post.createRefeicaoCustom(this.user.id_usuario, this.refeicao, this.picture);
-    if (result && result.success){
-      this.loading = false;
-      this.navCtrl.pop();
-    } else{
-      this.loading = false;
+    var picture = this.picture;
+    if (picture == this.actualPicture){
+      picture = null;
     }
+    result = await this.post.createRefeicaoCustom(this.user.id_usuario, this.refeicao, picture);
+    if (result && result.success){
+      this.navCtrl.pop();
+    }
+    this.loading = false;
   }
 
   openGaleria() {
