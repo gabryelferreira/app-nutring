@@ -27,7 +27,7 @@
 
     <div class="refeicoes-custom" >
         
-        <div class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
+        <div (click)="openMontarPrato(refeicao, 'id_refeicao_usuario')" class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
           <img *ngIf="!refeicao.foto" src="../../assets/imgs/food2.jpeg">
           <img *ngIf="refeicao.foto" [src]="refeicao.foto">
           <h2>{{refeicao.refeicao}}</h2>
@@ -45,7 +45,7 @@
     </div>
 
     <div class="opcoes" *ngIf="refeicoesPadroes && refeicoesPadroes.length > 0">
-      <div (click)="openMontarPrato(refeicao)" class="opcao" *ngFor="let refeicao of refeicoesPadroes; let i = index">
+      <div (click)="openMontarPrato(refeicao, 'cd_refeicao')" class="opcao" *ngFor="let refeicao of refeicoesPadroes; let i = index">
         <img [src]="refeicao.foto">
         <h2>{{refeicao.ds_refeicao}}</h2>
       </div>

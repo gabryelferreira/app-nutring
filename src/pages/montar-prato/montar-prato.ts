@@ -177,6 +177,10 @@ export class MontarPratoPage {
   ionViewDidLoad() {
   }
 
+  ionViewWillEnter(){
+    
+  }
+
   mudarPorcao(porcao: number, food: any){
     let foodInPlate = false;
     this.allSelectedFoods.forEach((element, index) => {

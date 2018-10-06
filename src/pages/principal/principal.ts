@@ -68,9 +68,10 @@ export class PrincipalPage {
     });
    }
 
-  openMontarPrato(refeicao: any){
+  openMontarPrato(refeicao: any, type: string){
     this.navCtrl.push(MontarPratoPage, {
-      prato: refeicao
+      refeicao: refeicao,
+      type: type
     })
 
   }
