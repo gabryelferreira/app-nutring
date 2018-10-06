@@ -29,7 +29,7 @@
         
         <div class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
           <img [src]="refeicao.foto">
-          <h2>{{refeicao.nome}}</h2>
+          <h2>{{refeicao.refeicao}}</h2>
         </div>
 
         <div (click)="openCriarRefeicao()" class="refeicao">
