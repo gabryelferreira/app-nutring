@@ -17,6 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CriarRefeicaoPage {
 
   selectedTheme: String = "";
+  imageOptions: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               _settings: SettingsService) {

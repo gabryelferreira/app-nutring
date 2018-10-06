@@ -18,13 +18,25 @@
 
 <ion-content>
 
+  <div class="imageOptions">
+    <div class="options-header">
+      <h2>Alterar foto da refeição</h2>
+    </div>
+    <div class="options">
+        <h2>Tirar uma foto</h2>
+        <h2>Abrir galeria</h2>
+    </div>
+  </div>
+
+  <div class="background"></div>
+
   <form class="all">
       <ion-item padding-right>
         <div class="div-user-img">
           <img class="user-img" src="../../../assets/imgs/eu.jpg">
           <!-- <img class="user-img" *ngIf="user.foto" [src]='user.foto'> -->
         </div>
-        <p text-center padding><a (click)="openGaleria()">Alterar foto</a></p>
+        <p text-center padding><a (click)="openImageOptions()">Alterar foto</a></p>
       </ion-item>
     <ion-item padding-right>
       <ion-label floating>Nome da refeição</ion-label>
