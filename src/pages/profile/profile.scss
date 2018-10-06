@@ -127,6 +127,7 @@ page-profile {
         .feed-img {
             width: 100%;
             .img{
+                overflow: hidden;
                 position: relative;
                 float: left;
                 width: 33%;

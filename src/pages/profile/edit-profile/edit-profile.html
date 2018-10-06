@@ -31,10 +31,11 @@
   <ion-list no-padding no-border>
     <ion-item padding-right>
       <div class="div-user-img">
-        <img class="user-img" *ngIf="!user.foto" src="../../assets/imgs/user.jpg">
-        <img class="user-img" *ngIf="user.foto" [src]='user.foto'>
+        <!-- <img class="user-img" *ngIf="!user.foto" src="../../assets/imgs/user.jpg"> -->
+        <img class="user-img" *ngIf="(picture == '')" [src]='user.foto'>
+        <img class="user-img" *ngIf="!(picture == '')" [src]='picture'>
       </div>
-      <p text-center padding><a>Alterar foto</a></p>
+      <p text-center padding><a (click)="openGaleria()">Alterar foto</a></p>
     </ion-item>
 
     <ion-item padding-right>
