@@ -14,7 +14,9 @@
         <ion-icon name="checkmark"></ion-icon>
       </button>
       <button *ngIf="loading" ion-button>
-          <ion-note item-end color="white"><ion-spinner color="white"></ion-spinner></ion-note>
+        <ion-note item-end color="white">
+          <ion-spinner color="white"></ion-spinner>
+        </ion-note>
       </button>
     </ion-buttons>
 
@@ -26,51 +28,58 @@
 <ion-content>
 
 
-    <ion-list no-padding no-border>
-        
+  <ion-list no-padding no-border>
+    <ion-item padding-right>
+      <div class="div-user-img">
+        <img class="user-img" *ngIf="!user.foto" src="../../assets/imgs/user.jpg">
+        <img class="user-img" *ngIf="user.foto" [src]='user.foto'>
+      </div>
+      <p text-center padding><a>Alterar foto</a></p>
+    </ion-item>
 
-      <ion-item padding-right>
-        <ion-label stacked>Nome Completo</ion-label>
-        <ion-input [(ngModel)]="user.nome" name="nome" type="text"></ion-input>
-      </ion-item>
+    <ion-item padding-right>
+      <ion-label stacked>Nome Completo</ion-label>
+      <ion-input [(ngModel)]="user.nome" name="nome" type="text"></ion-input>
+    </ion-item>
 
-      <ion-item padding-right>
-        <ion-label stacked>Telefone</ion-label>
-        <ion-input type="text" [(ngModel)]="user.telefone" name="telefone" [brmasker]="{phone: true}"></ion-input>
-      </ion-item>
+    <ion-item padding-right>
+      <ion-label stacked>Telefone</ion-label>
+      <ion-input type="text" [(ngModel)]="user.telefone" name="telefone" [brmasker]="{phone: true}"></ion-input>
+    </ion-item>
 
-      <ion-item padding-right>
-        <ion-label stacked>E-mail</ion-label>
-        <ion-input disabled [(ngModel)]="user.email" name="email" type="email"></ion-input>
-      </ion-item>
+    <ion-item padding-right>
+      <ion-label stacked>E-mail</ion-label>
+      <ion-input disabled [(ngModel)]="user.email" name="email" type="email"></ion-input>
+    </ion-item>
 
-      <ion-item padding-right>
-        <ion-label stacked>Sexo</ion-label>
-        <ion-select [(ngModel)]="user.sexo" name="sexo">
-          <ion-option value="F">Feminino</ion-option>
-          <ion-option value="M">Masculino</ion-option>
-        </ion-select>
-      </ion-item>
+    <ion-item padding-right>
+      <ion-label stacked>Sexo</ion-label>
+      <ion-select [(ngModel)]="user.sexo" name="sexo">
+        <ion-option value="F">Feminino</ion-option>
+        <ion-option value="M">Masculino</ion-option>
+      </ion-select>
+    </ion-item>
 
-      <ion-item padding-right>
-        <ion-label stacked>Data de nascimento</ion-label>
-        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="user.dt_nasc" name="dt_nasc" 
-        style="border-bottom: 1px solid rgb(222, 222, 222)">
+    <ion-item padding-right>
+      <ion-label stacked>Data de nascimento</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="user.dt_nasc" name="dt_nasc" style="border-bottom: 1px solid rgb(222, 222, 222)">
       </ion-datetime>
-      </ion-item>
+    </ion-item>
 
-      <ion-item padding-right>
-        <ion-label stacked>Peso</ion-label>
-        <ion-input type="text" name="peso_kg" (keypress)="validNumericField(user.peso_kg)" [(ngModel)]="user.peso_kg"></ion-input>
-      </ion-item>
+    <ion-item padding-right>
+      <ion-label stacked>Peso</ion-label>
+      <ion-input type="text" name="peso_kg" (keypress)="validNumericField(user.peso_kg)" [(ngModel)]="user.peso_kg"></ion-input>
+    </ion-item>
 
-      <ion-item padding-right>
-        <ion-label stacked>Altura</ion-label>
-        <ion-input type="text" name="altura_m" (keypress)="validNumericField(user.altura_m)" [(ngModel)]="user.altura_m"></ion-input>
-      </ion-item>
+    <ion-item padding-right>
+      <ion-label stacked>Altura</ion-label>
+      <ion-input type="text" name="altura_m" (keypress)="validNumericField(user.altura_m)" [(ngModel)]="user.altura_m"></ion-input>
+    </ion-item>
 
-    </ion-list>
+    <ion-item  (click)="openUpdateLoginInfo()" padding>
+        <ion-icon name="finger-print" item-start></ion-icon>Alterar informções de acesso
+    </ion-item>
 
-
-
+  </ion-list>
+  
 </ion-content>

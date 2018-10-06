@@ -1,9 +1,23 @@
 page-edit-profile {
-
-    ion-input {
-        border-bottom: 1px solid lightgray !important;
+  ion-input {
+    border-bottom: 1px solid lightgray !important;
+  }
+  .div-user-img {
+    position: relative;
+    height: 106px;
+    width: 106px;
+    margin: auto;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    img {
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      margin: auto;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
     }
-
-
-
+  }
 }

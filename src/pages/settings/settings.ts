@@ -92,9 +92,10 @@ export class SettingsPage {
       this._settings.setActiveTheme('light-theme');
       this._settings.setTabActiveTheme('light-theme-tab');
     }
-    
-      
-    
+  }
+
+  gotoPerfil(){
+    this.navCtrl.push(ProfilePage);
   }
 
   share(){

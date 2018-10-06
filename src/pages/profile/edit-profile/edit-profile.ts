@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { SettingsService } from '../../settings/settings.service';
 import { IUser } from '../../../app/types';
+import { UpdateLoginInfoPage } from '../update-login-info/update-login-info';
 
 /**
  * Generated class for the EditProfilePage page.
@@ -134,4 +135,7 @@ export class EditProfilePage {
       
   }
 
+  openUpdateLoginInfo(){
+    this.navCtrl.push(UpdateLoginInfoPage);
+  }
 }
