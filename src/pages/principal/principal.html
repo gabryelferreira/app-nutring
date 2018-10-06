@@ -21,19 +21,21 @@
 
 <ion-content>
 
-  <div class="principal">
+  <loader *ngIf="loading"></loader>
+
+  <div *ngIf="!loading" class="principal">
 
     <div class="refeicoes-custom">
         
-        <div class="refeicao">
+        <!-- <div class="refeicao">
           <img src="../../assets/imgs/food2.jpeg">
           <h2>Personalizado 1</h2>
         </div>
         <div class="refeicao">
           <img src="../../assets/imgs/food3.jpg">
           <h2>Da Madruga</h2>
-        </div>
-        <div class="refeicao">
+        </div> -->
+        <div (click)="openCriarRefeicao()" class="refeicao">
           <ion-icon name="add"></ion-icon>
           <img src="../../assets/imgs/blur2.jpg">
           <h2>Nova refeição</h2>
@@ -45,22 +47,10 @@
       <p>Opções padrões</p>
     </div>
 
-    <div class="opcoes">
-      <div class="opcao">
-        <img src="../../assets/imgs/food2.jpeg">
-        <h2>Café da manhã</h2>
-      </div>
-      <div class="opcao">
-        <img src="../../assets/imgs/food2.jpg">
-        <h2>Almoço</h2>
-      </div>
-      <div class="opcao">
-        <img src="../../assets/imgs/food3.jpg">
-        <h2>Lanche</h2>
-      </div>
-      <div class="opcao">
-        <img src="../../assets/imgs/food4.jpg">
-        <h2>Jantar</h2>
+    <div class="opcoes" *ngIf="refeicoesPadroes && refeicoesPadroes.length > 0">
+      <div class="opcao" *ngFor="let refeicao of refeicoesPadroes; let i = index">
+        <img [src]="refeicao.foto">
+        <h2>{{refeicao.ds_refeicao}}</h2>
       </div>
     </div>
   </div>
