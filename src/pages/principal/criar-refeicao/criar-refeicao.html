@@ -18,7 +18,7 @@
 
 <ion-content>
 
-  <div class="imageOptions">
+  <div *ngIf="imageOptions" class="imageOptions">
     <div class="options-header">
       <h2>Alterar foto da refeição</h2>
     </div>
@@ -28,7 +28,7 @@
     </div>
   </div>
 
-  <div class="background"></div>
+  <div (click)="imageOptions = false" *ngIf="imageOptions" class="background"></div>
 
   <form class="all">
       <ion-item padding-right>
@@ -36,7 +36,7 @@
           <img class="user-img" src="../../../assets/imgs/eu.jpg">
           <!-- <img class="user-img" *ngIf="user.foto" [src]='user.foto'> -->
         </div>
-        <p text-center padding><a (click)="openImageOptions()">Alterar foto</a></p>
+        <p text-center padding><a (click)="imageOptions = true">Alterar foto</a></p>
       </ion-item>
     <ion-item padding-right>
       <ion-label floating>Nome da refeição</ion-label>
