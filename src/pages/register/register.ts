@@ -104,7 +104,6 @@ export class RegisterPage {
         var year = fullDate.substring(4, 8);
         date = new Date(year + "-" + month  + "-" + day);
     }
-    console.log("date kkkk", date)
     return date != null && date != undefined && date != "Invalid Date"
   }
   
@@ -133,7 +132,6 @@ export class RegisterPage {
     }
     this.loading = true;
     this.user.dt_nasc = this.getDtNascFormatted(this.dt_nasc);
-    console.log("aaa", this.user.dt_nasc)
     let result = await this.post.register(JSON.stringify(this.user));
     if (result.success){
       if (result.result == "USER_EXISTS"){
@@ -153,9 +151,6 @@ export class RegisterPage {
     var length = this.validUser.length + this.validUserOut.length;
     var count = 0;
     this.validUser.forEach(element => {
-      console.log("element", element)
-      console.log("this.user", this.user[element])
-      console.log("--------------")
       this.user[element] != "" ? count++ : '';
     });
     this.validUserOut.forEach(element => {
