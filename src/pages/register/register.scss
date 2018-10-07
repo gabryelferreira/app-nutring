@@ -19,11 +19,10 @@ page-register {
         }
     
         #logo {
-          position: absolute;
-          top: 10%;
-          left: 50%;
+          position: relative;
+          margin-top: 16%;
+          text-align: center;
           margin-left: 20px;
-          transform: translateX(-50%);
           width: 100%;
           box-sizing: border-box;
           padding: 0 35px;
@@ -36,9 +35,9 @@ page-register {
         }
     
         .register {
-          position: absolute;
-          top: 32%;
-          left: 50%;
+          position: relative;
+          margin-top: 12%;
+          margin-left: 50%;
           width: 100%;
           padding: 0 25px;
           text-align: center;
@@ -65,7 +64,7 @@ page-register {
               left: 20px;
               position: absolute;
             }
-            input[type="text"], input[type="password"], button, select {
+            .input-text, button, select {
               position: relative;
               width: 100%;
               height: 100%;
@@ -73,13 +72,14 @@ page-register {
               border-radius: 23px;
               color: #fff;
               outline: none;
+              margin: 0;
             }
-            input[type="text"], input[type="password"], select {
+            .input-text, select {
               background: rgba(255, 255, 255, .13);
               padding: 0 15px 0 60px;
               border: 0;
             }
-            input[type="text"]::placeholder, input[type="password"]::placeholder {
+            .input-text::placeholder {
               color: #aaa;
             }
           }
