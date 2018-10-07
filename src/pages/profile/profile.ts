@@ -164,5 +164,9 @@ export class ProfilePage {
     });
   }
 
+  goBack(){
+    this.navCtrl.pop();
+  }
+
   ionViewDidLoad() {}
 }

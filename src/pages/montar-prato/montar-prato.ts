@@ -38,7 +38,8 @@ export class MontarPratoPage {
     shouldShowCancel: false,
     searchText: ""
   }
-  
+  searchText: string = "";
+
   offset: number = 0;
   selectedFood: number = -1;
 
@@ -116,6 +117,7 @@ export class MontarPratoPage {
   onInput(event){
     let allFoods = this.getFoodsBackup();
     let text = event;
+    this.searchText = text;
     if (text == undefined) 
       text = ""
     let foodsFiltered = allFoods.filter(function(element, i){

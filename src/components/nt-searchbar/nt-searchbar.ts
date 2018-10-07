@@ -17,8 +17,9 @@ export class NtSearchbarComponent {
   // @Input("item") item;
   @Output() callback: EventEmitter<any> = new EventEmitter();
   @Output() backButton: EventEmitter<any> = new EventEmitter();
-  @Input('placeholder') placeholder = "Buscar";
+  @Input('placeholder') placeholder = "Pesquisar...";
   @Input('onHeader') onHeader = false;
+  @Input('text') text = "";
   @Input('withIcon') withIcon = true;
   item: String = "";
 
@@ -35,6 +36,11 @@ export class NtSearchbarComponent {
 
   goBack(){
     this.backButton.emit();
+  }
+
+  clear(){
+    this.callback.emit("");
+    this.text = "";
   }
 
   onChange(){

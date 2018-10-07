@@ -6,6 +6,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as service from './principal.service';
 import * as types from '../../app/types';
 import { CriarRefeicaoPage } from './criar-refeicao/criar-refeicao';
+import { ScrollHideConfig } from '../../components/hide-on-scrolling/scroll-hide-directive';
 
 @IonicPage()
 @Component({
@@ -16,7 +17,7 @@ import { CriarRefeicaoPage } from './criar-refeicao/criar-refeicao';
   ]
 })
 export class PrincipalPage {
-
+  headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 46 };
   selectedTheme: String = "";
   refeicoesPadroes = [];
   refeicoesCustom = [];

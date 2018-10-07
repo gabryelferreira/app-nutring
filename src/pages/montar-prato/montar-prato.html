@@ -12,11 +12,11 @@
         <ion-icon name="search"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title text-left>{{refeicao.ds_refeicao}}</ion-title>
+    <ion-title text-left>Montar prato - {{refeicao.ds_refeicao}}</ion-title>
   </ion-navbar>
 
   <ion-navbar [style.display]="isSearching ? '' : 'none'" color="{{selectedTheme}}">
-      <nt-searchbar (backButton)="isSearching=false" [onHeader]="true" (callback)="onInput($event)"></nt-searchbar>
+      <nt-searchbar (backButton)="isSearching=false" [text]="searchText" [onHeader]="true" (callback)="onInput($event)"></nt-searchbar>
       <ion-buttons end>
         <button ion-button *ngIf="!isSearching" (click)="isSearching=true">
           <ion-icon name="search"></ion-icon>

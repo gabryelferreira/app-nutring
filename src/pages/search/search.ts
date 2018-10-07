@@ -54,7 +54,7 @@ export class SearchPage {
   }
   async findFoods(name) {
     this.loading = true;
-    let result = await this.post.getFood(name, 0, 4);
+    let result = await this.post.getFood(name, 0);
     if (result.success) {
       this.foods = result.result;
       this.loading = false;
@@ -77,7 +77,7 @@ export class SearchPage {
     if (name && !this.showSad) {
       this.showWelcome = 0;
       await this.findFoods(name);
-      await this.findPeople(name);
+      // await this.findPeople(name);
       this.showSad = this.foods.length == 0 && this.users.length == 0;
     } else {
       this.showWelcome = 1;
