@@ -28,7 +28,11 @@ export class RegisterPage {
     senha: "",
     telefone: ""
   }
-  validUser = ["nome", "dt_nasc", "sexo", "email", "usuario", "senha", "telefone"];
+
+  dt_nasc = "";
+
+  validUser = ["nome", "sexo", "email", "usuario", "senha", "telefone"];
+  validUserOut = ["dt_nasc"];
   loading: boolean = false;
   validRegister: boolean = false;
 
@@ -44,25 +48,25 @@ export class RegisterPage {
     if (allowedKeys.indexOf(e.keyCode) == -1){
         var replace = true;
         while (replace == true){
-            if (this.user.dt_nasc.indexOf('/') != -1)
-              this.user.dt_nasc = this.user.dt_nasc.replace('/', '')
+            if (this.dt_nasc.indexOf('/') != -1)
+              this.dt_nasc = this.dt_nasc.replace('/', '')
             else
                 replace = false;
         }
-        if (this.user.dt_nasc.length <= 2)
-          this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})/g,"\$1/")
-        else if (this.user.dt_nasc.length <= 3)
-            this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})(\d{1})/g,"\$1/\$2")
-        else if (this.user.dt_nasc.length <= 4)
-            this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})(\d{2})/g,"\$1/\$2/")
-        else if (this.user.dt_nasc.length <= 5)
-            this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})(\d{2})(\d{1})/g,"\$1/\$2/\$3")
-        else if (this.user.dt_nasc.length <= 6)
-            this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})(\d{2})(\d{2})/g,"\$1/\$2/\$3")
-        else if (this.user.dt_nasc.length <= 7)
-            this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})(\d{2})(\d{3})/g,"\$1/\$2/\$3")
-        else if (this.user.dt_nasc.length <= 8)
-            this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})(\d{2})(\d{4})/g,"\$1/\$2/\$3")
+        if (this.dt_nasc.length <= 2)
+          this.dt_nasc = this.dt_nasc.replace(/(\d{2})/g,"\$1/")
+        else if (this.dt_nasc.length <= 3)
+            this.dt_nasc = this.dt_nasc.replace(/(\d{2})(\d{1})/g,"\$1/\$2")
+        else if (this.dt_nasc.length <= 4)
+            this.dt_nasc = this.dt_nasc.replace(/(\d{2})(\d{2})/g,"\$1/\$2/")
+        else if (this.dt_nasc.length <= 5)
+            this.dt_nasc = this.dt_nasc.replace(/(\d{2})(\d{2})(\d{1})/g,"\$1/\$2/\$3")
+        else if (this.dt_nasc.length <= 6)
+            this.dt_nasc = this.dt_nasc.replace(/(\d{2})(\d{2})(\d{2})/g,"\$1/\$2/\$3")
+        else if (this.dt_nasc.length <= 7)
+            this.dt_nasc = this.dt_nasc.replace(/(\d{2})(\d{2})(\d{3})/g,"\$1/\$2/\$3")
+        else if (this.dt_nasc.length <= 8)
+            this.dt_nasc = this.dt_nasc.replace(/(\d{2})(\d{2})(\d{4})/g,"\$1/\$2/\$3")
     }
     
     
@@ -79,7 +83,7 @@ export class RegisterPage {
 
   validateDtNasc(){
     var date = null;
-    var fullDate = this.user.dt_nasc;
+    var fullDate = this.dt_nasc;
     var length = fullDate.length;
     var count = 0;
     for (var i = 0; i < fullDate.length; i++){
@@ -100,9 +104,26 @@ export class RegisterPage {
         var year = fullDate.substring(4, 8);
         date = new Date(year + "-" + month  + "-" + day);
     }
+    console.log("date kkkk", date)
+    return date != null && date != undefined && date != "Invalid Date"
   }
   
-
+  getDtNascFormatted(dt_nasc: string){
+    var fullDate = this.dt_nasc;
+    var length = fullDate.length;
+      var replace = true;
+      while (replace == true){
+          if (fullDate.indexOf("/") != -1){
+              fullDate = fullDate.replace("/", "");
+          } else {
+              replace = false;
+          }
+      }
+      var day = fullDate.substring(0, 2);
+      var month = fullDate.substring(2, 4);
+      var year = fullDate.substring(4, 8);
+    return year + "-" + month  + "-" + day;
+  }
 
 
   async register(){
@@ -111,6 +132,8 @@ export class RegisterPage {
       return false;
     }
     this.loading = true;
+    this.user.dt_nasc = this.getDtNascFormatted(this.dt_nasc);
+    console.log("aaa", this.user.dt_nasc)
     let result = await this.post.register(JSON.stringify(this.user));
     if (result.success){
       if (result.result == "USER_EXISTS"){
@@ -127,8 +150,7 @@ export class RegisterPage {
   }
 
   validFields(){
-    console.log("to aqui")
-    var length = this.validUser.length;
+    var length = this.validUser.length + this.validUserOut.length;
     var count = 0;
     this.validUser.forEach(element => {
       console.log("element", element)
@@ -136,6 +158,9 @@ export class RegisterPage {
       console.log("--------------")
       this.user[element] != "" ? count++ : '';
     });
+    this.validUserOut.forEach(element => {
+      this[element] != "" ? count++ : '';
+    })
     var valid = false;
     count == length ? valid = true : valid = false
     this.validRegister = valid;

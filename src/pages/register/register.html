@@ -89,11 +89,11 @@
     <form class="register">
       <div class="register-info">
         <img src="../../assets/icones/nome-completo.png">
-        <input class="input-text" type="text" maxlength="60" [(ngModel)]="user.nome" name="nome" (keyup)="validFields()" placeholder="Nome completo">
+        <input class="input-text" type="text" maxlength="60" autocomplete="off" [(ngModel)]="user.nome" name="nome" (keyup)="validFields()" placeholder="Nome completo">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/telefone.png">
-        <input class="input-text" type="text" [(ngModel)]="user.telefone" name="telefone" (keyup)="transformTelefone($event); validFields()" (keypress)="validateKeyTelefone($event)" placeholder="Telefone">
+        <input class="input-text" autocomplete="off" type="text" [(ngModel)]="user.telefone" name="telefone" (keyup)="transformTelefone($event); validFields()" (keypress)="validateKeyTelefone($event)" placeholder="Telefone">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/genero.png">
@@ -105,19 +105,19 @@
       </div>
       <div class="register-info">
         <img src="../../assets/icones/nascimento.png">
-        <input class="input-text" type="text" maxlength="10" [(ngModel)]="user.dt_nasc" name="dt_nasc" (keyup)="transformDtNasc($event); validFields()" (keypress)="validateKeyDtNasc($event)" placeholder="Data de nascimento">
+        <input class="input-text" autocomplete="off" type="text" maxlength="10" [(ngModel)]="dt_nasc" name="dt_nasc" (keyup)="transformDtNasc($event); validFields()" (keypress)="validateKeyDtNasc($event)" placeholder="Data de nascimento">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/email.png">
-        <input class="input-text" type="text" maxlength="90" [(ngModel)]="user.email" name="email" (keyup)="validFields()" placeholder="E-mail">
+        <input class="input-text" autocomplete="off" type="text" maxlength="90" [(ngModel)]="user.email" name="email" (keyup)="validFields()" placeholder="E-mail">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/user.png">
-        <input class="input-text" type="text" maxlength="30" [(ngModel)]="user.usuario" name="usuario" (keyup)="validFields()" placeholder="Usuário">
+        <input class="input-text" autocomplete="off" type="text" maxlength="30" [(ngModel)]="user.usuario" name="usuario" (keyup)="validFields()" placeholder="Usuário">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/password.png">
-        <input class="input-text" type="password" maxlength="60" [(ngModel)]="user.senha" name="senha" (keyup)="validFields()" placeholder="Senha">
+        <input class="input-text" autocomplete="off" type="password" maxlength="60" [(ngModel)]="user.senha" name="senha" (keyup)="validFields()" placeholder="Senha">
       </div>
       <div class="register-info">
           <button [disabled]="!validRegister" type="submit" class="green" *ngIf="!loading" (click)="register()">Comece agora</button>

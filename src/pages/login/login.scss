@@ -53,10 +53,10 @@ page-login {
           position: relative;
           width: 100%;
           height: 100%;
-          
           font-weight: bold;
           border-radius: 23px;
           color: #fff;
+          outline: none;
         }
         input[type="text"], input[type="password"] {
           background: rgba(255, 255, 255, .5);

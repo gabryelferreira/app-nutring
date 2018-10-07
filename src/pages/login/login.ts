@@ -100,18 +100,11 @@ export class LoginPage {
       } else {
         let userData = result.result;
         localStorage.setItem("userData", JSON.stringify(userData));
-        if (userData.acessos == 1)
-          this.navCtrl.setRoot(
-            IntroductionPage,
-            {},
-            { animate: true, direction: "forward" }
-          );
-        else
-          this.navCtrl.setRoot(
-            TabsPage,
-            {},
-            { animate: true, direction: "forward" }
-          );
+        this.navCtrl.setRoot(
+          TabsPage,
+          {},
+          { animate: true, direction: "forward" }
+        );
       }
     }
     if (!localStorage.getItem("userData")) this.stopLoading();
