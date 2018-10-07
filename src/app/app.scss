@@ -44,6 +44,13 @@ button {
 ion-header {
   border: 0 !important;
   box-shadow: none !important;
+  ion-navbar {
+    ion-buttons {
+      button {
+        font-size: 12px !important;
+      }
+    }
+  }
 }
 ion-content {
   min-height: 100% !important;

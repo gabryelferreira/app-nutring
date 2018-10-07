@@ -22,8 +22,8 @@ import { ScrollHideConfig } from '../../components/hide-on-scrolling/scroll-hide
 })
 export class MontarPratoPage {
 
-  headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 44 };
-  refeicao:any;
+  headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 46 };
+  refeicao:any = {}
   type:string;
   selectedTheme: String = "";
   loading: boolean = false;
@@ -51,6 +51,15 @@ export class MontarPratoPage {
 
     settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.findFoods();
+  }
+
+  ionViewDidLoad() {
+  }
+
+  ionViewWillEnter(){
+    this.refeicao = this.navParams.get("refeicao");
+    console.log("refeicao = ", this.refeicao)
+    this.type = this.navParams.get("type");
   }
  
 
@@ -174,14 +183,6 @@ export class MontarPratoPage {
 
   selectFood(food: any){
     food["selected"] = !food["selected"];
-  }
-
-  ionViewDidLoad() {
-  }
-
-  ionViewWillEnter(){
-    this.refeicao = this.navParams.get("refeicao");
-    this.type = this.navParams.get("type");
   }
 
   mudarPorcao(porcao: number, food: any){
