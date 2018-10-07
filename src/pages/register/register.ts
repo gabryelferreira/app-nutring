@@ -30,6 +30,7 @@ export class RegisterPage {
   }
   validUser = ["nome", "dt_nasc", "sexo", "email", "usuario", "senha", "telefone"];
   loading: boolean = false;
+  validRegister: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private post: service.RegisterPostService, private toastCtrl: ToastController) {
   }
@@ -37,24 +38,64 @@ export class RegisterPage {
   ionViewDidLoad() {
   }
 
-  async register(){
-    if (this.validFields()){
-      this.loading = true;
-      let result = await this.post.register(JSON.stringify(this.user));
-      if (result.success){
-        if (result.result == "USER_EXISTS"){
-          this.showToast("Nome de usuário já cadastrado", "top");
-        } else if (result.result == "EMAIL_EXISTS"){
-          this.showToast("E-mail já cadastrado", "top");
-        } else {
-          localStorage.setItem("userData", JSON.stringify(result.result));
-          this.navCtrl.setRoot(IntroductionPage, {}, {animate: true, direction: 'forward'});
+  transformDtNasc(e: any){
+    var allowedKeys = [8, 13, 16, 17, 37, 39, 46] 
+    console.log("aquiiiiiii", e.keyCode)
+    if (allowedKeys.indexOf(e.keyCode) == -1){
+        var replace = true;
+        console.log("chegando")
+        while (replace == true){
+          console.log("entrei")
+            if (this.user.dt_nasc.indexOf('/') != -1)
+              this.user.dt_nasc = this.user.dt_nasc.replace('/', '')
+            else
+                replace = false;
         }
-      }
-      this.loading = false;
-    } else {
-      this.showToast("Preencha os campos corretamente", "top");
+        console.log("aaa passei")
+        if (this.user.dt_nasc.length <= 2)
+          this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})/g,"\$1/")
+        else if (this.user.dt_nasc.length <= 3)
+            this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})(\d{1})/g,"\$1/\$2")
+        else if (this.user.dt_nasc.length <= 4)
+            this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})(\d{2})/g,"\$1/\$2/")
+        else if (this.user.dt_nasc.length <= 5)
+            this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})(\d{2})(\d{1})/g,"\$1/\$2/\$3")
+        else if (this.user.dt_nasc.length <= 6)
+            this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})(\d{2})(\d{2})/g,"\$1/\$2/\$3")
+        else if (this.user.dt_nasc.length <= 7)
+            this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})(\d{2})(\d{3})/g,"\$1/\$2/\$3")
+        else if (this.user.dt_nasc.length <= 8)
+            this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})(\d{2})(\d{4})/g,"\$1/\$2/\$3")
     }
+    
+    
+    
+  }
+
+
+  validateDtNasc(e: any){
+      var allowed = "0123456789";
+      if (allowed.indexOf(e.key) != -1)
+          return true;
+      return false;
+      
+  };
+
+
+  async register(){
+    this.loading = true;
+    let result = await this.post.register(JSON.stringify(this.user));
+    if (result.success){
+      if (result.result == "USER_EXISTS"){
+        this.showToast("Nome de usuário já cadastrado", "top");
+      } else if (result.result == "EMAIL_EXISTS"){
+        this.showToast("E-mail já cadastrado", "top");
+      } else {
+        localStorage.setItem("userData", JSON.stringify(result.result));
+        this.navCtrl.setRoot(IntroductionPage, {}, {animate: true, direction: 'forward'});
+      }
+    }
+    this.loading = false;
 
   }
 
@@ -66,7 +107,7 @@ export class RegisterPage {
     });
     var valid = false;
     count == length ? valid = true : valid = false
-    return valid
+    this.validRegister = valid;
   }
 
   goToLogin(){

@@ -89,34 +89,35 @@
     <form class="register">
       <div class="register-info">
         <img src="../../assets/icones/nome-completo.png">
-        <input type="text" [(ngModel)]="user.nome" name="nome" (keyup)="validateRegister()" placeholder="Nome completo">
+        <input type="text" maxlength="60" [(ngModel)]="user.nome" name="nome" (keyup)="validFields()" placeholder="Nome completo">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/telefone.png">
-        <input type="text" [(ngModel)]="user.telefone" name="telefone" (keyup)="validateRegister()" placeholder="Telefone">
+        <input type="text" [(ngModel)]="user.telefone" name="telefone" (keyup)="validFields()" [brmasker]="{phone: true}" placeholder="Telefone">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/genero.png">
-        <select [(ngModel)]="user.sexo" name="sexo">
+        <p *ngIf="!user.sexo" id="float-select">Gênero</p>
+        <select [(ngModel)]="user.sexo" (ngModelChange)="validFields()" name="sexo">
           <option value="F">Feminino</option>
           <option value="M">Masculino</option>
         </select>
       </div>
       <div class="register-info">
         <img src="../../assets/icones/nascimento.png">
-        <input type="text" [(ngModel)]="user.dt_nasc" name="dt_nasc" (keyup)="validateRegister()" placeholder="Data de nascimento">
+        <input type="text" maxlength="10" [(ngModel)]="user.dt_nasc" name="dt_nasc" (keyup)="transformDtNasc($event); validFields()" (keypress)="validateDtNasc($event)" placeholder="Data de nascimento">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/email.png">
-        <input type="text" [(ngModel)]="user.email" name="email" (keyup)="validateRegister()" placeholder="E-mail">
+        <input type="text" maxlength="90" [(ngModel)]="user.email" name="email" (keyup)="validFields()" placeholder="E-mail">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/user.png">
-        <input type="text" [(ngModel)]="user.usuario" name="usuario" (keyup)="validateRegister()" placeholder="Usuário">
+        <input type="text" maxlength="30" [(ngModel)]="user.usuario" name="usuario" (keyup)="validFields()" placeholder="Usuário">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/password.png">
-        <input type="text" [(ngModel)]="user.senha" name="senha" (keyup)="validateRegister()" placeholder="Senha">
+        <input type="password" maxlength="60" [(ngModel)]="user.senha" name="senha" (keyup)="validFields()" placeholder="Senha">
       </div>
       <div class="register-info">
           <button [disabled]="!validRegister" type="submit" class="green" *ngIf="!loadingRegister" (click)="register()">Comece agora</button>
