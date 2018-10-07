@@ -7,6 +7,7 @@ import { SearchPage } from "../search/search";
 import { MeusPratosPage } from "../meus-pratos/meus-pratos";
 import { SettingsService } from "../settings/settings.service";
 import { PrincipalPage } from "../principal/principal";
+import { HideService } from "../../app/hide.service";
 
 @Component({
   templateUrl: "tabs.html"
@@ -19,10 +20,12 @@ export class TabsPage {
   tab4Root = ProfilePage;
   tab5Root = SettingsPage;
   selectedTheme: String = "";
-  show: boolean = true;
+  show: boolean;
 
-  constructor(settings: SettingsService) {
+  constructor(settings: SettingsService, hide:HideService) {
     settings.getTabActiveTheme().subscribe(val => (this.selectedTheme = val));
+    hide.getShow().subscribe(val => {this.show = val;console.log("ae",this.show)});
+    console.log("ae",this.show)
     if (
       this.selectedTheme == "" ||
       this.selectedTheme == null ||

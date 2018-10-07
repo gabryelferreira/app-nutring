@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Oct 07 01:25:30 BRT 2018
+#Sun Oct 07 01:50:05 BRT 2018
 20.base=C\:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_
 143.base=C\:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_
 340.file=C\:\\wamp64\\www\\app-nutring\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\service-worker.js

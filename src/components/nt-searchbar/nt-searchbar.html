@@ -1,5 +1,5 @@
 <div class="searchbar" [id]="onHeader ? 'on-header' : 'not-on-header'">
   <span *ngIf="!onHeader" class="fa fa-search"></span>
   <ion-icon *ngIf="onHeader" name="ios-close-outline" (click)="goBack()"></ion-icon>
-  <input [style.text-indent]="onHeader ? '10px' : '40px'" type="search" [(ngModel)]="item" [placeholder]="placeholder" (keyup)="onChange()">
+  <input (focus)="setHide(true)" (focusout)="setHide(false)" [style.text-indent]="onHeader ? '10px' : '40px'" type="search" [(ngModel)]="item" [placeholder]="placeholder" (keyup)="onChange()">
 </div>

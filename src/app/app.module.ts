@@ -42,6 +42,7 @@ import { VerPostPage } from "../pages/ver-post/ver-post";
 import { CurtidasPage } from "../pages/curtidas/curtidas";
 import { PrincipalPage } from "../pages/principal/principal";
 import { CriarRefeicaoPage } from "../pages/principal/criar-refeicao/criar-refeicao";
+import { HideService } from "./hide.service";
 @NgModule({
   declarations: [
     MyApp,
@@ -118,6 +119,7 @@ import { CriarRefeicaoPage } from "../pages/principal/criar-refeicao/criar-refei
     LocalNotifications,
     Camera,
     Keyboard,
+    HideService,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
