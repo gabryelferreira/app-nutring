@@ -25,10 +25,10 @@
     </div>
   </form>
 
-  <div class="option option1" [hidden]="show">
+  <div class="option option1" [id]="show ? 'hide' : 'show'">
     <button [disabled]="loadingSomething" (click)="goToRegister()">Criar conta</button>
   </div>
-  <div class="option option2" [hidden]="show">
+  <div class="option option2" [id]="show ? 'hide' : 'show'">
     <button [disabled]="loadingSomething">Precisa de ajuda?</button>
   </div>
 

@@ -80,6 +80,17 @@ page-login {
       }
     }
 
+    #hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #show {
+      opacity: 1;
+      pointer-events: visible;
+      transition: 2s;
+    }
+
     .option1 {
       left: 20px;
     }
