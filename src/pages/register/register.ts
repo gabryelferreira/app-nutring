@@ -40,18 +40,15 @@ export class RegisterPage {
 
   transformDtNasc(e: any){
     var allowedKeys = [8, 13, 16, 17, 37, 39, 46] 
-    console.log("aquiiiiiii", e.keyCode)
+
     if (allowedKeys.indexOf(e.keyCode) == -1){
         var replace = true;
-        console.log("chegando")
         while (replace == true){
-          console.log("entrei")
             if (this.user.dt_nasc.indexOf('/') != -1)
               this.user.dt_nasc = this.user.dt_nasc.replace('/', '')
             else
                 replace = false;
         }
-        console.log("aaa passei")
         if (this.user.dt_nasc.length <= 2)
           this.user.dt_nasc = this.user.dt_nasc.replace(/(\d{2})/g,"\$1/")
         else if (this.user.dt_nasc.length <= 3)
