@@ -34,6 +34,7 @@ import { EditProfilePage } from "../pages/profile/edit-profile/edit-profile";
 import { PipesModule } from "../pipes/pipes.module";
 import { LocalNotifications } from "@ionic-native/local-notifications";
 import { NtListHeaderComponent } from "../components/nt-list-header/nt-list-header";
+import { Keyboard } from '@ionic-native/keyboard';
 import { PostPicturePage } from "../pages/post-picture/post-picture";
 import { Camera } from "@ionic-native/camera";
 import { SearchResultPage } from "../pages/search/search-result/search-result";
@@ -116,6 +117,7 @@ import { CriarRefeicaoPage } from "../pages/principal/criar-refeicao/criar-refei
     SocialSharing,
     LocalNotifications,
     Camera,
+    Keyboard,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

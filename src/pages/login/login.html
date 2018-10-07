@@ -1,4 +1,3 @@
-
 <ion-content id="page">
 
   <div id="logo">
@@ -8,26 +7,30 @@
   <form class="login">
     <div class="login-info">
       <img src="../../assets/icones/pena.png">
-      <input type="text" [(ngModel)]="user.email" name="email" (keyup)="validateLogin()"  placeholder="Usuário ou e-mail">
+      <input (focus)="show=true" (focusout)="show=false" type="text" [(ngModel)]="user.email" name="email" (keyup)="validateLogin()"
+        placeholder="Usuário ou e-mail">
     </div>
+
     <div class="login-info">
       <img src="../../assets/icones/lock.png">
-      <input type="text" [(ngModel)]="user.senha" name="senha" (keyup)="validateLogin()"  placeholder="Senha">
+      <input (focus)="show=true" (focusout)="show=false" type="text" [(ngModel)]="user.senha" name="senha" (keyup)="validateLogin()"
+        placeholder="Senha">
     </div>
+
     <div class="login-info">
-        <button [disabled]="!validLogin" type="submit" class="green" *ngIf="!loadingLogin" (click)="login()">Comece agora</button>
-        <button *ngIf="loadingLogin" class="green" ion-button full>
-            <ion-spinner color="white" name="dots"></ion-spinner>
-        </button>
+      <button [disabled]="!validLogin" type="submit" class="green" *ngIf="!loadingLogin" (click)="login()">Comece agora</button>
+      <button *ngIf="loadingLogin" class="green" ion-button full>
+        <ion-spinner color="white" name="dots"></ion-spinner>
+      </button>
     </div>
   </form>
 
-    <div class="option option1">
-      <button [disabled]="loadingSomething" (click)="goToRegister()">Criar conta</button>
-    </div>
-    <div class="option option2">
-      <button [disabled]="loadingSomething">Precisa de ajuda?</button>
-    </div>
+  <div class="option option1" [hidden]="show">
+    <button [disabled]="loadingSomething" (click)="goToRegister()">Criar conta</button>
+  </div>
+  <div class="option option2" [hidden]="show">
+    <button [disabled]="loadingSomething">Precisa de ajuda?</button>
+  </div>
 
 </ion-content>
 <!-- <ion-footer padding no-border>

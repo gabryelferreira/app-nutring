@@ -6,6 +6,7 @@ import { IonicPage, NavController, NavParams } from "ionic-angular";
 import * as service from "./login.service";
 import { Facebook, FacebookLoginResponse } from "@ionic-native/facebook";
 import { ToastController } from "ionic-angular";
+import { Keyboard } from "ionic-angular";
 
 @IonicPage()
 @Component({
@@ -23,15 +24,13 @@ export class LoginPage {
   loadingFacebookLogin: boolean = false;
   loadingSomething: boolean = false;
   validLogin: boolean = false;
-
+  show:boolean
   constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    private get: service.LoginGetService,
-    private post: service.LoginPostService,
-    private fb: Facebook,
-    private toastCtrl: ToastController
-  ) {}
+    public navCtrl: NavController,public navParams: NavParams,private get: service.LoginGetService,private post: service.LoginPostService,private fb: Facebook,private toastCtrl: ToastController, public Keyboard:Keyboard
+  ) {
+  Keyboard.willShow.subscribe(()=>this.show = true)
+  Keyboard.willHide.subscribe(()=>this.show = false)
+  }
 
   getLoadingLogin() {
     return this.loadingLogin;
