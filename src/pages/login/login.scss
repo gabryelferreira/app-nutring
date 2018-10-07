@@ -1,50 +1,89 @@
 page-login {
-  .no-account-span {
-    color: #888;
-  }
-  h2 {
-    width: 94%;
-    text-align: center;
-    border-bottom: 1px solid #aaa;
-    line-height: 0.1em;
-    margin: 10px 0 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
-  h2 span {
-    background: #fff;
-    padding: 0 10px;
-    font-size: 15px;
-    color: #aaa;
-  }
 
-  #login {
-    display: block;
-    input[type="text"],
-    input[type="password"] {
+  #page {
+    background-image: url('../../assets/imgs/background-login.png');
+    background-position: center;
+    background-size: cover;
+
+    #logo {
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      margin-left: 20px;
+      transform: translateX(-50%);
       width: 100%;
-      margin-bottom: 15px;
-      border: 1px solid lightgray;
-      border-radius: 5px;
       box-sizing: border-box;
-      padding: 10px 15px;
-      height: 40px;
-      background: #f5f5f5;
+      padding: 0 35px;
+      height: 120px;
+      img {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
     }
+
+    .login {
+      position: fixed;
+      top: 42%;
+      left: 50%;
+      width: 100%;
+      padding: 0 25px;
+      text-align: center;
+      transform: translateX(-50%);
+      .login-info {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        margin: 14px 0;
+        img {
+          height: 25px;
+          width: 25px;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 20px;
+          position: absolute;
+        }
+        input[type="text"], input[type="password"], button {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          
+          font-weight: bold;
+          border-radius: 23px;
+          color: #fff;
+        }
+        input[type="text"], input[type="password"] {
+          background: rgba(255, 255, 255, .5);
+          padding: 0 15px 0 60px;
+        }
+        input[type="text"]::placeholder, input[type="password"]::placeholder {
+          color: #fff;
+        }
+      }
+    }
+
+    .option {
+      position: fixed;
+      bottom: 25px;
+      
+      button {
+        font-size: 12px;
+        color: #ddd;
+        font-weight: bold;
+        background: none;
+      }
+    }
+
+    .option1 {
+      left: 20px;
+    }
+
+    .option2 {
+      right: 20px;
+    }
+
   }
 
-  #loginButton {
-    border: 1px solid #27ae60;
-    width: 100%;
-    box-sizing: border-box;
-    height: 40px;
-    border-radius: 5px;
-  }
 
-  ion-footer {
-    button {
-      margin-bottom: 15px !important;
-    }
-  }
 }
