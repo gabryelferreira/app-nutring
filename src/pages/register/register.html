@@ -89,11 +89,11 @@
     <form class="register">
       <div class="register-info">
         <img src="../../assets/icones/nome-completo.png">
-        <input type="text" [(ngModel)]="user.nome" name="nome" placeholder="Nome completo">
+        <input type="text" [(ngModel)]="user.nome" name="nome" (keyup)="validateRegister()" placeholder="Nome completo">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/telefone.png">
-        <input type="text" [(ngModel)]="user.telefone" name="telefone"  placeholder="Telefone">
+        <input type="text" [(ngModel)]="user.telefone" name="telefone" (keyup)="validateRegister()" placeholder="Telefone">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/genero.png">
@@ -104,23 +104,23 @@
       </div>
       <div class="register-info">
         <img src="../../assets/icones/nascimento.png">
-        <input type="text" [(ngModel)]="user.dt_nasc" name="dt_nasc" placeholder="Data de nascimento">
+        <input type="text" [(ngModel)]="user.dt_nasc" name="dt_nasc" (keyup)="validateRegister()" placeholder="Data de nascimento">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/email.png">
-        <input type="text" [(ngModel)]="user.email" name="email" placeholder="E-mail">
+        <input type="text" [(ngModel)]="user.email" name="email" (keyup)="validateRegister()" placeholder="E-mail">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/user.png">
-        <input type="text" [(ngModel)]="user.usuario" name="usuario" placeholder="Usuário">
+        <input type="text" [(ngModel)]="user.usuario" name="usuario" (keyup)="validateRegister()" placeholder="Usuário">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/password.png">
-        <input type="text" [(ngModel)]="user.senha" name="senha" placeholder="Senha">
+        <input type="text" [(ngModel)]="user.senha" name="senha" (keyup)="validateRegister()" placeholder="Senha">
       </div>
       <div class="register-info">
-          <button [disabled]="!validLogin" type="submit" class="green" *ngIf="!loadingLogin" (click)="login()">Comece agora</button>
-          <button *ngIf="loadingLogin" class="green" ion-button full>
+          <button [disabled]="!validRegister" type="submit" class="green" *ngIf="!loadingRegister" (click)="register()">Comece agora</button>
+          <button *ngIf="loadingRegister" class="green" ion-button full>
               <ion-spinner color="white" name="bubbles"></ion-spinner>
           </button>
       </div>

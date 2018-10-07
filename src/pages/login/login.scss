@@ -7,7 +7,7 @@ page-login {
     background-size: cover;
 
     #logo {
-      position: fixed;
+      position: absolute;
       top: 10%;
       left: 50%;
       margin-left: 20px;
@@ -24,7 +24,7 @@ page-login {
     }
 
     .login {
-      position: fixed;
+      position: absolute;
       top: 42%;
       left: 50%;
       width: 100%;
@@ -64,7 +64,7 @@ page-login {
     }
 
     .option {
-      position: fixed;
+      position: absolute;
       bottom: 25px;
       
       button {
