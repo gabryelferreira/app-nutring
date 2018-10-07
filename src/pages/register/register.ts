@@ -70,12 +70,11 @@ export class RegisterPage {
   }
 
 
-  validateDtNasc(e: any){
+  validateKeyDtNasc(e: any){
       var allowed = "0123456789";
       if (allowed.indexOf(e.key) != -1)
           return true;
       return false;
-      
   };
 
 

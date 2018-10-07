@@ -105,7 +105,7 @@
       </div>
       <div class="register-info">
         <img src="../../assets/icones/nascimento.png">
-        <input type="text" maxlength="10" [(ngModel)]="user.dt_nasc" name="dt_nasc" (keyup)="transformDtNasc($event); validFields()" (keypress)="validateDtNasc($event)" placeholder="Data de nascimento">
+        <input type="text" maxlength="10" [(ngModel)]="user.dt_nasc" name="dt_nasc" (keyup)="transformDtNasc($event); validFields()" (keypress)="validateKeyDtNasc($event)" placeholder="Data de nascimento">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/email.png">
