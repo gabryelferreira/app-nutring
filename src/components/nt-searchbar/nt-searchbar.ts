@@ -1,6 +1,7 @@
 import { Component, Input, Output, ViewChild, EventEmitter } from '@angular/core';
 import { NG_VALUE_ACCESSOR, NgModel } from '@angular/forms';
 import { ValueAccessorBase } from '../../app/value-accessor-base';
+import { HideService } from '../../app/hide.service';
  
 @Component({
     selector: 'nt-searchbar',
@@ -8,8 +9,8 @@ import { ValueAccessorBase } from '../../app/value-accessor-base';
     providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: NtSearchbarComponent,
-    multi: true,
-  }],
+    multi: true
+  }, HideService],
 })
 export class NtSearchbarComponent {
 
@@ -21,10 +22,15 @@ export class NtSearchbarComponent {
   @Input('withIcon') withIcon = true;
   item: String = "";
 
-  constructor(){
+  constructor(public hide:HideService){
+    
   }
 
   ngAfterViewInit(){
+  }
+
+  setHide(val){
+    this.hide.setShow(val)
   }
 
   goBack(){
