@@ -28,7 +28,7 @@ export class SearchPage {
 
   lastType: string = "";
   showWelcome: number = 1;
-  viewMode: number = 0;
+  // viewMode: number = 0;
   maxViewMode: number = 1;
   selectedTheme: String = "";
   searched: string = "";
@@ -84,26 +84,26 @@ export class SearchPage {
     }
   }
 
-  pushSearchResultPage(typeOfResult: string) {
-    let searched = this.searched;
-    let firstLoaded = [];
+  // pushSearchResultPage(typeOfResult: string) {
+  //   let searched = this.searched;
+  //   let firstLoaded = [];
 
-    // if (typeOfResult == "food") {
-    //   firstLoaded = this.foods;
-    //   this.old = [];
-    //   firstLoaded.forEach(item=>this.old.push(item))
-    //   this.lastType = typeOfResult;
-    // } else {
-    //   firstLoaded = this.users;
-    //   this.old = [];
-    //   firstLoaded.forEach(item=>this.old.push(item))
-    //   this.lastType = typeOfResult;
-    // }
-    this.navCtrl.push(SearchResultPage, {
-      searched,
-      typeOfResult
-    });
-  }
+  //   // if (typeOfResult == "food") {
+  //   //   firstLoaded = this.foods;
+  //   //   this.old = [];
+  //   //   firstLoaded.forEach(item=>this.old.push(item))
+  //   //   this.lastType = typeOfResult;
+  //   // } else {
+  //   //   firstLoaded = this.users;
+  //   //   this.old = [];
+  //   //   firstLoaded.forEach(item=>this.old.push(item))
+  //   //   this.lastType = typeOfResult;
+  //   // }
+  //   this.navCtrl.push(SearchResultPage, {
+  //     searched,
+  //     typeOfResult
+  //   });
+  // }
 
   showToast(message: string, position: string) {
     let toast = this.toastCtrl.create({
@@ -116,8 +116,8 @@ export class SearchPage {
     toast.present(toast);
   }
 
-  toggleViewMode() {
-    if (this.viewMode == this.maxViewMode) this.viewMode = 0;
-    else this.viewMode = this.viewMode + 1;
-  }
+  // toggleViewMode() {
+  //   if (this.viewMode == this.maxViewMode) this.viewMode = 0;
+  //   else this.viewMode = this.viewMode + 1;
+  // }
 }
