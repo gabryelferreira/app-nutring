@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import { VerPratoPostService, VerPratoGetService } from './ver-prato.service';
 import { MontarPratoPage } from '../../montar-prato/montar-prato';
+import { PrincipalPage } from '../../principal/principal';
 
 /**
  * Generated class for the VerPratoPage page.
@@ -23,6 +24,8 @@ import { MontarPratoPage } from '../../montar-prato/montar-prato';
 export class VerPratoPage {
 
   selectedTheme: String = "";
+  refeicao:any;
+  type:string;
   foods = [];
   callback;
 
@@ -46,10 +49,12 @@ export class VerPratoPage {
   }
 
   ionViewWillEnter() {
-    this.callback = this.navParams.get("callback")
-    this.foods = this.navParams.get("allSelectedFoods")
-    this.foodsReturn = this.foods;
-    this.foodsFiltered = this.foods;
+    this.callback      = this.navParams.get("callback")
+    this.foods         = this.navParams.get("allSelectedFoods")
+    this.foodsReturn   = this.foods
+    this.foodsFiltered = this.foods
+    this.refeicao      = this.navParams.get("refeicao")
+    this.type          = this.navParams.get("type")
   }
 
   ionViewWillLeave() {
@@ -86,7 +91,7 @@ export class VerPratoPage {
     this.foods.forEach(element => {
       this.sendPrato.push({id_usuario: parseInt(id_usuario), id_alimento: parseInt(element.id_alimento), quantidade: parseInt(element.porcao_comida)})
     });
-    let result = await this.post.createPrato(JSON.stringify(this.sendPrato));
+    let result = await this.post.createPrato(JSON.stringify(this.sendPrato), JSON.stringify(this.refeicao), this.type);
     let message = "";
     let title = "";
     if (result.success){
@@ -132,7 +137,7 @@ export class VerPratoPage {
         {
           text: 'Ok',
           handler: () => {
-            this.navCtrl.setRoot(MontarPratoPage)
+            this.navCtrl.setRoot(PrincipalPage)
           }
         }
       ]

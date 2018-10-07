@@ -29,11 +29,11 @@
 
   <div *ngIf="dateSeparator && dateSeparator.length > 0" class="allPratos">
 
-      <ion-fab right bottom>
+      <!-- <ion-fab right bottom>
         <button (click)="goToMontarPrato()" ion-fab color="primary">
           <ion-icon name="add"></ion-icon>
         </button>
-      </ion-fab>
+      </ion-fab> -->
 
     <div class="date-pratos">
 
@@ -59,7 +59,7 @@
           <div *ngIf="prato.kcal_consumo >= 1250" class="traco bad"></div>
           <div class="info-prato">
             <p>{{prato.hr_consumo}}</p>
-            <h1>{{prato.hr_consumo | ntNomePrato}}</h1>
+            <h1>{{prato.refeicao}}</h1>
             <div class="info-icon">
               <div class="info">
                 <ion-icon name="md-heart" color="claro"></ion-icon>

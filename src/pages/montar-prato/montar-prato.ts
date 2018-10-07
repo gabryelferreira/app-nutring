@@ -23,7 +23,8 @@ import { ScrollHideConfig } from '../../components/hide-on-scrolling/scroll-hide
 export class MontarPratoPage {
 
   headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 44 };
-  
+  refeicao:any;
+  type:string;
   selectedTheme: String = "";
   loading: boolean = false;
   
@@ -51,6 +52,7 @@ export class MontarPratoPage {
     settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.findFoods();
   }
+ 
 
   getSelectedFood(){return this.selectedFood;}
   setSelectedFood(selectedFood: number){this.selectedFood = selectedFood;}
@@ -178,7 +180,8 @@ export class MontarPratoPage {
   }
 
   ionViewWillEnter(){
-    
+    this.refeicao = this.navParams.get("refeicao");
+    this.type = this.navParams.get("type");
   }
 
   mudarPorcao(porcao: number, food: any){
@@ -214,7 +217,9 @@ export class MontarPratoPage {
     });
     this.navCtrl.push(VerPratoPage, {
       callback: this.myCallbackFunction,
-      allSelectedFoods: this.allSelectedFoods
+      allSelectedFoods: this.allSelectedFoods,
+      refeicao: this.refeicao,
+      type: this.type
     });
   }
 }
