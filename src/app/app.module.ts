@@ -1,3 +1,4 @@
+import { EditRefeicoesPage } from './../pages/edit-refeicoes/edit-refeicoes';
 import { CommentsPage } from "./../pages/home/comments/comments";
 import { NtSearchbarComponent } from "./../components/nt-searchbar/nt-searchbar";
 import { LoaderComponent } from "./../components/loader/loader";
@@ -73,7 +74,8 @@ import { HideService } from "./hide.service";
     VerPostPage,
     CurtidasPage,
     PrincipalPage,
-    CriarRefeicaoPage
+    CriarRefeicaoPage,
+    EditRefeicoesPage
   ],
   imports: [
     BrowserModule,
@@ -108,7 +110,8 @@ import { HideService } from "./hide.service";
     VerPostPage,
     CurtidasPage,
     PrincipalPage,
-    CriarRefeicaoPage
+    CriarRefeicaoPage,
+    EditRefeicoesPage
   ],
   providers: [
     StatusBar,

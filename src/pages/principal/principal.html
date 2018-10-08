@@ -27,6 +27,9 @@
 
       <div class="title">
           <p>Suas opções customizadas</p>
+          <div *ngIf="refeicoesCustom && refeicoesCustom.length > 0" class="edit">
+            <h3 (click)="openEditarRefeicao()">Editar</h3>
+          </div>
         </div>
 
     <div class="refeicoes-custom" >

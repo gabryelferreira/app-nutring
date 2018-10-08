@@ -1,0 +1,66 @@
+<!--
+  Generated template for the EditRefeicoesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="{{selectedTheme}}">
+    <ion-title text-left>
+      Suas refeições
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="principal">
+
+    <div class="opcoes"  *ngFor="let refeicao of refeicoes; let i = index">
+      <div class="opcao">
+        <div class="foto">
+          <img *ngIf="!refeicao.foto" src="../../assets/imgs/food2.jpeg">
+          <img *ngIf="refeicao.foto" [src]="refeicao.foto">
+        </div>
+        <div class="info">
+          <div class="info-opcao">
+            <h2>{{refeicao.ds_refeicao}}</h2>
+          </div>
+          <div class="btns">
+            <button type="button" (click)="openModalConfirm(refeicao)" class="default-button small red padding">Excluir</button>
+          </div>
+        </div>
+        
+      </div>
+      <div *ngIf="refeicoes && i < refeicoes.length - 1" class="divider"></div>
+      
+
+    </div>
+
+  </div>
+
+  <div class="background" [id]="popupOpen ? 'showBackground' : ''">
+
+      <div [id]="popupOpen ? 'showPopup' : ''" class="popup">
+        <div class="header">
+          <img *ngIf="!selectedRefeicao.foto" src="../../assets/imgs/user.jpg">
+          <img *ngIf="selectedRefeicao.foto" style="border-radius: 50%; width: 50px; height: 50px;" [src]="selectedRefeicao.foto">
+          <h1>{{selectedRefeicao.ds_refeicao}}</h1>
+          <h2>
+            Tem certeza que deseja <span>excluir sua refeição personalizada?</span>
+            Todos os pratos dessa refeição terão o nome de "Refeição".
+          </h2>
+        </div>
+        <div class="buttons">
+          <button *ngIf="!excluindo" type="button" (click)="closeModalConfirm()" class="default-button small lightgray padding">Cancelar</button>
+          <button *ngIf="!excluindo" type="button" (click)="deletarRefeicaoCustom(selectedRefeicao)" class="default-button small red padding">Excluir</button>
+          <button *ngIf="excluindo" type="button" class="default-button small red padding"><ion-spinner color="white" name="dots"></ion-spinner></button>
+        </div>
+      </div>
+
+  </div>
+
+  
+
+</ion-content>

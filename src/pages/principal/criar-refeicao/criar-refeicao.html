@@ -40,12 +40,12 @@
     </ion-item>
     <ion-item padding-right>
       <ion-label floating>Nome da refeição</ion-label>
-      <ion-input maxlength="17" name="nome" type="text" [(ngModel)]="refeicao"></ion-input>
+      <ion-input maxlength="14" name="refeicao" type="text" [(ngModel)]="refeicao"></ion-input>
     </ion-item>
     <div padding text-right>
-      <button *ngIf="!loading" type="submit" class="default-button green full" (click)="sendRefeicao()">Salvar</button>
+      <button [disabled]="refeicao.length < 1" *ngIf="!loading" type="submit" class="default-button green full" (click)="sendRefeicao()">Salvar</button>
       <button *ngIf="loading" class="default-button green full">
-        <ion-spinner color="white" name="bubbles"></ion-spinner>
+        <ion-spinner color="white" name="dots"></ion-spinner>
       </button>
     </div>
   </form>
