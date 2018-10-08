@@ -27,6 +27,24 @@ export class NtSearchbarComponent {
     
   }
 
+  hideTab() {
+    let tabs = document.querySelectorAll('.tabbar');
+    if ( tabs !== null ) {
+      Object.keys(tabs).map((key) => {
+        tabs[ key ].style.transform = 'translateY(51px)';
+      });
+    } // end if
+  }
+
+  showTab() {
+    let tabs = document.querySelectorAll('.tabbar');
+    if ( tabs !== null ) {
+      Object.keys(tabs).map((key) => {
+        tabs[ key ].style.transform = 'translateY(0)';
+      });
+    } // end if
+  }
+
   ngAfterViewInit(){
   }
 

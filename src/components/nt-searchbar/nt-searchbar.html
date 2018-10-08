@@ -2,5 +2,5 @@
   <ion-icon id="left" *ngIf="!onHeader" name="md-search"></ion-icon>
   <ion-icon id="left" *ngIf="onHeader" name="ios-arrow-back" (click)="goBack()"></ion-icon>
   <ion-icon id="right" *ngIf="onHeader && text.length > 0" name="ios-close-outline" (click)="clear()"></ion-icon>
-  <input (focus)="setHide(true)" [(ngModel)]="text" name="text" (focusout)="setHide(false)" type="search" [(ngModel)]="item" [placeholder]="placeholder" (keyup)="onChange()">
+  <input (focus)="hideTab()" [(ngModel)]="text" name="text" (focusout)="showTab()" type="search" [(ngModel)]="item" [placeholder]="placeholder" (keyup)="onChange()">
 </div>
