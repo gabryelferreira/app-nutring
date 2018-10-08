@@ -13,6 +13,6 @@ export class HideService {
  
     setShow(val: boolean) { console.log("OIIO",val) ; this.show.next(val) }
 
-    getShow() { console.log("OIIO") ;return this.show.asObservable() ; }
+    getShow() { console.log("aaa") ;return this.show.asObservable() ; }
   
 }

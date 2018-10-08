@@ -20,11 +20,11 @@ export class TabsPage {
   tab4Root = ProfilePage;
   tab5Root = SettingsPage;
   selectedTheme: String = "";
-  show: boolean;
+  show: boolean = false;
 
-  constructor(settings: SettingsService, hide:HideService) {
+  constructor(settings: SettingsService, private hide:HideService) {
     settings.getTabActiveTheme().subscribe(val => (this.selectedTheme = val));
-    hide.getShow().subscribe(val => {this.show = val;console.log("ae",this.show)});
+    this.hide.getShow().subscribe(val => {this.show = val;console.log("ae",this.show)});
     console.log("ae",this.show)
     if (
       this.selectedTheme == "" ||
@@ -35,5 +35,6 @@ export class TabsPage {
   }
 
   ionViewDidEnter() {
+    this.hide.getShow().subscribe(val => {this.show = val;console.log("ae",this.show)});
   }
 }
