@@ -44,7 +44,26 @@ button {
 ion-header {
   border: 0 !important;
   box-shadow: none !important;
+  ion-navbar {
+    ion-title {
+      font-size: 20px !important;
+    }
+    ion-buttons {
+      button {
+        font-size: 12px !important;
+        ion-icon {
+          font-size: 22px !important;
+        }
+      }
+    }
+  }
 }
+
+.back-button {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
 ion-content {
   min-height: 100% !important;
 }
@@ -93,7 +112,8 @@ ion-fab {
 .default-button {
   height: 40px;
   border-radius: 23px;
-  font-size: 15px;
+  font-size: 13.333px;
+  font-weight: bold;
 }
 
 .full {

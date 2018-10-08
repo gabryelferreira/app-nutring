@@ -21,14 +21,14 @@
     <div *ngFor="let messageByDate of messagesByDate">
       <ion-list >
 
-          <ion-list-header>
-            {{messageByDate.dt_duvida | date:'fullDate'}}
+          <ion-list-header text-center padding-right>
+            {{messageByDate.dt_duvida | ntDate}}
             <!-- <button ion-button item-end (click)="toggleViewMode()" icon-only color="transparent">
                 <ion-icon name="options"></ion-icon>
             </button> -->
           </ion-list-header>
           <div *ngFor="let message of messageByDate.messages; let i = index">
-            <div padding-left padding-right text-left>
+            <div padding-left padding-right text-center>
               <ion-badge item-end>{{message.hr_duvida}}</ion-badge>
               
             </div>

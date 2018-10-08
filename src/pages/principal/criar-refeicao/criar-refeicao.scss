@@ -27,6 +27,18 @@ page-criar-refeicao {
         top: 0;
         background: rgba(0, 0, 0, .8);
         z-index: 9998;
+        opacity: 0;
+        transition: .3s;
+        pointer-events: none;
+    }
+
+    ion-header {
+        z-index: 1 !important;
+    }
+
+    #showImageOptions {
+        opacity: 1;
+        pointer-events: visible;
     }
 
     .imageOptions {
@@ -39,6 +51,8 @@ page-criar-refeicao {
         z-index: 9999;
         border: 1px solid lightgray;
         background: #fff;
+        opacity: 0;
+        pointer-events: none;
         .options-header {
             position: relative;
             width: 100%;

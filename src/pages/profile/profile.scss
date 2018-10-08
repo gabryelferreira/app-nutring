@@ -33,6 +33,13 @@ page-profile {
         background-image: url('../../assets/imgs/blur.jpg');
         background-position: center;
         background-size: cover;
+        ion-buttons {
+            button {
+                ion-icon {
+                    font-size: 26px;
+                }
+            }
+        }
         .user-data {
             position: absolute;
             left: 50%;
@@ -89,6 +96,7 @@ page-profile {
                 border-radius: 40px !important;
                 background: #fcfcfc;
                 color: #222;
+                font-size: 12px;
             }
 
         }

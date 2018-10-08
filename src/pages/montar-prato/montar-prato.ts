@@ -25,12 +25,10 @@ import { ScrollHideConfig } from "../../components/hide-on-scrolling/scroll-hide
   providers: [service.MontarPratoGetService, service.MontarPratoPostService]
 })
 export class MontarPratoPage {
-  headerScrollConfig: ScrollHideConfig = {
-    cssProperty: "margin-top",
-    maxValue: 44
-  };
-  refeicao: any;
-  type: string;
+
+  headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 46 };
+  refeicao:any = {}
+  type:string;
   selectedTheme: String = "";
   loading: boolean = false;
 
@@ -41,7 +39,7 @@ export class MontarPratoPage {
   foodsFiltered = [];
 
   selectedFood: number = -1;
-
+  searchText: string = "";
   allSelectedFoods = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -51,7 +49,7 @@ export class MontarPratoPage {
     settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
     this.findFoods();
   }
-
+  
   async findFoods() {
     this.loading = true;
     let result = await this.post.findFoods();

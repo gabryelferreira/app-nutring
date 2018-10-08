@@ -21,7 +21,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <ion-card *ngIf="user">
 
     <ion-card-content>
@@ -36,23 +36,20 @@
       </p>
     </ion-card-content>
     <ion-item>
-        <ion-label color="primary"  floating>Nome do Alimento</ion-label>
+        <ion-label floating>Nome do Alimento</ion-label>
         <ion-input [(ngModel)]="alimento_nome"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>breve descrição</ion-label>
+      <ion-label floating>Descrição</ion-label>
       <ion-textarea [(ngModel)]="descricao" name="descricao" rows="4"></ion-textarea>
     </ion-item>
 
   </ion-card>
   <div padding text-right>
-    <button [disabled]="alimento_nome.length < 3" *ngIf="!loading" ion-button full (click)="sendSuggestionToNutring()">ENVIAR
-      SUGESTÃO</button>
-    <button *ngIf="loading" ion-button full>
-      <ion-spinner color="white" name="bubbles"></ion-spinner>
-    </button>
-  </div>
+      <button type="submit" [disabled]="alimento_nome.length < 3" class="default-button green full" *ngIf="!loading">Enviar</button>
+      <button *ngIf="loading" class="default-button green"><ion-spinner color="white" name="bubbles"></ion-spinner></button>
+    </div>
 
 
 </ion-content>

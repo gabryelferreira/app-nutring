@@ -91,19 +91,26 @@ button {
   font-family: Roboto Condensed, sans-serif !important;
 }
 
-$tabs-md-tab-font-size: 10px;
+ion-navbar.toolbar {
+  min-height: 46px;
+  height: 46px;
+}
 
-$toolbar-ios-title-font-size: 16px;
-$toolbar-md-title-font-size: 16px;
-$toolbar-wp-title-font-size: 16px;
+$toolbar-ios-title-font-size: 17.7px;
+$toolbar-md-title-font-size: 17.7px;
+$toolbar-wp-title-font-size: 17.7px;
 
-$tabs-ios-tab-min-height: 54px;
-$tabs-md-tab-min-height: 54px;
-$tabs-wp-tab-min-height: 54px;
+$tabs-ios-tab-min-height: 51px;
+$tabs-md-tab-min-height: 51px;
+$tabs-wp-tab-min-height: 51px;
 
-$tabs-ios-tab-icon-size: 26px;
-$tabs-md-tab-icon-size: 26px;
-$tabs-wp-tab-icon-size: 26px;
+$tabs-ios-tab-font-size: 11px;
+$tabs-md-tab-font-size: 11px;
+$tabs-wp-tab-font-size: 11px;
+
+$tabs-ios-tab-icon-size: 24px;
+$tabs-md-tab-icon-size: 24px;
+$tabs-wp-tab-icon-size: 24px;
 
 
 $toggle-ios-width: 45px;
@@ -113,10 +120,7 @@ $toggle-ios-height: 27px;
 //   min-height: 50px !important;
 // }
 
-ion-navbar.toolbar {
-  min-height: 46px;
-  height: 46px;
-}
+
 
 .tabbar {
 	a.tab-button[aria-selected=true] {

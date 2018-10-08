@@ -8,25 +8,82 @@ page-ver-prato {
         }
     }
 
+    ion-buttons {
+        button {
+            ion-note {
+                font-size: 12px;
+            }
+        }
+    }
+
+    ion-fab {
+        transition: .3s !important;
+    }
 
     ion-item {
         h2 {
             font-size: 13px !important;
         }
         p {
-            font-size: 12px !important;
+            font-size: 11px !important;
         }
         ion-icon {
             font-size: 20px !important;
         }
     }
+    
+    ion-searchbar{
+        box-shadow: none !important;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0 !important;
+        left: 0;
+        right: 0;
+        padding: 0px !important;
+        margin: 0px !important;
+        input{
+            padding: 0px;
+        }
+    }
+    ion-navbar{
+        padding: 0px !important;
+        margin: 0px !important;
+    }
 
-    ion-buttons {
-        button {
-            ion-note {
-                font-size: 11px !important;
+    .food-select-dropdown {
+        ion-list-header {
+            margin: 0 !important;
+            padding: 0 15px !important;
+            box-sizing: border-box !important;
+            border: 0 !important;
+            font-size: 12px !important;
+            ion-badge {
+                font-size: 11px;
+            }
+        }
+        ion-item {
+            border: 0 !important;
+            margin: 0 !important;
+            padding: 0 15px !important;
+            box-sizing: border-box !important;
+            display: flex;
+            .food-quantidade {
+                position: relative;
+                box-sizing: border-box;
+                padding-left: 10px;
+                padding-right: 10px;
+                width: 45%;
+                margin: 0 10px;
+                border: 0;
+                height: 40px;
+                border-radius: 20px;
+            }
+        }
+        ion-range {
+            ion-label {
+                font-size: 12px;
             }
         }
     }
-
 }
