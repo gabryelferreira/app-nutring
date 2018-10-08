@@ -14,10 +14,27 @@ page-principal {
             width: 100%;
             position: relative;
             p {
-                font-size: 12px;
+                font-size: 13px;
                 margin-left: 5px;
                 font-weight: bold;
                 color: #555;
+            }
+            .edit {
+                position: absolute;
+                right: 10px;
+                top: 0;
+                display: flex;
+                h3 {
+                    font-size: 13px;
+                    font-weight: bold;
+                    color: #555;
+                    margin: 0;
+                    padding: 5px;
+                }
+                ion-icon {
+                    font-size: 18px;
+                    margin: 1px 2px;
+                }
             }
         }
         .refeicoes-custom {
@@ -43,6 +60,7 @@ page-principal {
                 box-sizing: border-box;
                 box-shadow: 0 2px 1px #777;
                 display: inline-block;
+                overflow: hidden;
                 ion-icon {
                     position: absolute;
                     left: 50%;

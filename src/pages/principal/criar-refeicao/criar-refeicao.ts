@@ -24,8 +24,8 @@ export class CriarRefeicaoPage {
   refeicao:string = "";
   loading:boolean = false;
   selectedTheme: String = "";
-  picture:any = "/assets/imgs/food1.jpg";
-  actualPicture: any = "/assets/imgs/food1.jpg";
+  picture:any = "/assets/imgs/food2.jpeg";
+  actualPicture: any = "/assets/imgs/food2.jpeg";
   imageOptions: boolean = false;
   user:IUser;
   constructor(public navCtrl: NavController, public navParams: NavParams,

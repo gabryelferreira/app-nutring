@@ -1,3 +1,4 @@
+import { EditRefeicoesPage } from './../edit-refeicoes/edit-refeicoes';
 import { MontarPratoPage } from './../montar-prato/montar-prato';
 import { SettingsService } from './../settings/settings.service';
 import { Component } from '@angular/core';
@@ -74,7 +75,13 @@ export class PrincipalPage {
       refeicao: refeicao,
       type: type
     })
+  }
 
+  openEditarRefeicao(){
+    this.navCtrl.push(EditRefeicoesPage, {
+      refeicoes: this.refeicoesCustom,
+      callback: this.myCallbackFunction
+    });
   }
 
 }
