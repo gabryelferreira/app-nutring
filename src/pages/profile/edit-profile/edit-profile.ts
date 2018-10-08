@@ -87,6 +87,11 @@ export class EditProfilePage {
   }
 
   async updateUserInfo(){
+    if (!this.validateDtNasc()){
+      this.showToast("Data de nascimento inválida", "top");
+      return false;
+    }
+    this.user.dt_nasc = this.getDtNascFormatted(this.dt_nasc);
     if (this.validPersonalFields() && this.validFields()){
       this.loading = true;
       this.setOptionalInfo();
@@ -102,6 +107,23 @@ export class EditProfilePage {
       }
       this.loading = false;
     }
+  }
+
+  getDtNascFormatted(dt_nasc: string){
+    var fullDate = this.dt_nasc;
+    var length = fullDate.length;
+      var replace = true;
+      while (replace == true){
+          if (fullDate.indexOf("/") != -1){
+              fullDate = fullDate.replace("/", "");
+          } else {
+              replace = false;
+          }
+      }
+      var day = fullDate.substring(0, 2);
+      var month = fullDate.substring(2, 4);
+      var year = fullDate.substring(4, 8);
+    return year + "-" + month  + "-" + day;
   }
 
   validFields(){

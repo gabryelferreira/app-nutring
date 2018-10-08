@@ -63,8 +63,9 @@
 
     <ion-item padding-right>
       <ion-label stacked>Data de nascimento</ion-label>
-      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="user.dt_nasc" name="dt_nasc" style="border-bottom: 1px solid rgb(222, 222, 222)">
-      </ion-datetime>
+      <ion-input autocomplete="off" type="text" maxlength="10" [(ngModel)]="dt_nasc" name="dt_nasc" (keyup)="transformDtNasc($event); validFields()" (keypress)="validateKeyDtNasc($event)" ></ion-input> 
+      <!-- <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="user.dt_nasc" name="dt_nasc" style="border-bottom: 1px solid rgb(222, 222, 222)"> -->
+      <!-- </ion-datetime> -->
     </ion-item>
 
     <ion-item padding-right>
