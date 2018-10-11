@@ -68,26 +68,26 @@ export class MontarPratoPage {
     }
   }
 
-  onInput(event) {
+  async onInput(event) {
     let text = event;
+    this.searchText = text;
     if (text == undefined) text = "";
-    if (text == "") this.findFoods();
-    this.foods = this.foods.filter(function(element, i) {
-      if (
-        element.nome.toLowerCase().indexOf(text.toLowerCase()) != -1 ||
-        parseFloat(element.kcal)
-          .toFixed(2)
-          .toString()
-          .indexOf(text.toLowerCase()) != -1
-      )
-        return true;
-      return false;
-    });
+    if (text == "") {
+      this.findFoods();
+      this.isSearching = false
+    } else{
+      this.isSearching = true
+    }
+    let result = await this.post.getFood(text)
+    if (result.success){
+      this.foods = result.result 
+    }
   }
 
   async doInfinite(infiniteScroll) {
     let result;
-    result = await this.post.findFoods(this.foods.length);
+    if (this.isSearching) result = await this.post.getFood(this.searchText,this.foods.length,10)
+    else result = await this.post.findFoods(this.foods.length);
 
     if (result && result.result.length > 0)
       result.result.forEach(item => this.foods.push(item));

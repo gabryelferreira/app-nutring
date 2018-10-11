@@ -64,6 +64,8 @@ export class EditProfilePage {
     this.user = JSON.parse(localStorage.getItem("userData"));
     this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
     this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
+    let date = this.user.dt_nasc.toString().split("-")
+    this.dt_nasc = `${date[2]}/${date[1]}/${date[0]}`
   }
 
   async setOptionalInfo(){

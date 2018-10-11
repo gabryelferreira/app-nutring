@@ -7,13 +7,13 @@
   <form class="login">
     <div class="login-info">
       <img src="../../assets/icones/pena.png">
-      <input (focus)="show=true" (focusout)="show=false" autocomplete="off" type="text" [(ngModel)]="user.email" name="email" (keyup)="validateLogin()"
+      <input (focus)="show=true" (focusout)="show=false" autocomplete="off" type="text" autocapitalize="none" [(ngModel)]="user.email" name="email" (keyup)="validateLogin()"
         placeholder="Usuário ou e-mail">
     </div>
 
     <div class="login-info">
       <img src="../../assets/icones/lock.png">
-      <input (focus)="show=true" (focusout)="show=false" autocomplete="off" type="text" [(ngModel)]="user.senha" name="senha" (keyup)="validateLogin()"
+      <input (focus)="show=true" (focusout)="show=false" autocomplete="off" type="password" autocapitalize="none" [(ngModel)]="user.senha" name="senha" (keyup)="validateLogin()"
         placeholder="Senha">
     </div>
 
