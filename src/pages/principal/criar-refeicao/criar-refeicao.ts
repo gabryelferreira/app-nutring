@@ -62,7 +62,7 @@ export class CriarRefeicaoPage {
 
   openGaleria() {
     const options: CameraOptions = {
-      quality: 100,
+      quality: 60,
       destinationType: this.camera.DestinationType.DATA_URL,
       sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
       saveToPhotoAlbum:false
@@ -81,7 +81,7 @@ export class CriarRefeicaoPage {
 
   openCamera() {
     const options: CameraOptions = {
-      quality: 100,
+      quality: 40,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
