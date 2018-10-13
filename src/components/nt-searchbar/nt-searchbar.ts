@@ -31,7 +31,7 @@ export class NtSearchbarComponent {
     let tabs = document.querySelectorAll('.tabbar');
     if ( tabs !== null ) {
       Object.keys(tabs).map((key) => {
-        tabs[ key ].style.transform = 'translateY(51px)';
+        tabs[ key ].style.transform = 'translateY(76px)';
       });
     } // end if
   }
