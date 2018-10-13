@@ -9,7 +9,7 @@
     <ion-navbar color="{{selectedTheme}}">
         <ion-title text-left>Seu prato</ion-title>
         <ion-buttons end>
-            <button *ngIf="!loading" [disabled]="!foods || foods.length == 0" (click)="presentConfirm()" ion-button>
+            <button *ngIf="!loading" [disabled]="!foods || foods.length == 0" (tap)="presentConfirm()" ion-button>
                 <ion-note item-end color="white">Confirmar</ion-note>
             </button>
 
@@ -35,7 +35,7 @@
 
     <ion-list *ngIf="foods && foods.length > 0">
     
-        <div [class.active]="food.selected" (click)="selectFood(food)" *ngFor="let food of foods; let i = index">
+        <div [class.active]="food.selected" (tap)="selectFood(food)" *ngFor="let food of foods; let i = index">
     
     
           <ion-item>

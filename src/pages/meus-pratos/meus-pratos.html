@@ -8,13 +8,13 @@
 
   <ion-navbar color="{{selectedTheme}}">
     <ion-buttons left>
-      <button ion-button (click)="refreshHistory()">
+      <button ion-button (tap)="refreshHistory()">
         <ion-icon name="clipboard"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>Histórico</ion-title>
     <ion-buttons end>
-      <button ion-button (click)="refreshHistory()">
+      <button ion-button (tap)="refreshHistory()">
         <ion-icon name="refresh"></ion-icon>
       </button>
     </ion-buttons>
@@ -30,7 +30,7 @@
   <div *ngIf="dateSeparator && dateSeparator.length > 0" class="allPratos">
 
       <!-- <ion-fab right bottom>
-        <button (click)="goToMontarPrato()" ion-fab color="primary">
+        <button (tap)="goToMontarPrato()" ion-fab color="primary">
           <ion-icon name="add"></ion-icon>
         </button>
       </ion-fab> -->
@@ -38,7 +38,7 @@
     <div class="date-pratos">
 
       <div *ngFor="let date of dateSeparator; let i = index" [class]="date.selected ? 'date-prato selected' : 'date-prato'"
-        (click)="selectDate(i)">
+        (tap)="selectDate(i)">
         <div class="info-date-prato">
           <h1>{{date.dia}}</h1>
           <h2>{{date.mes | ntMonth}}</h2>
@@ -52,7 +52,7 @@
 
     <div class="pratos">
 
-      <div *ngFor="let prato of pratos; let i = index" class="padding-prato" (click)="openPrato(prato)">
+      <div *ngFor="let prato of pratos; let i = index" class="padding-prato" (tap)="openPrato(prato)">
         <div class="prato">
           <div *ngIf="prato.kcal_consumo < 750" class="traco great"></div>
           <div *ngIf="prato.kcal_consumo >= 750 && prato.kcal_consumo < 1250" class="traco warning"></div>
@@ -83,7 +83,7 @@
   <div class="no-food" *ngIf="!loading && (!dateSeparator || dateSeparator.length == 0)">
     <h1>Seus pratos</h1>
     <h2>Você ainda não possui nenhum prato. Monte seu primeiro agora mesmo.</h2>
-    <button type="button" class="default-button green" (click)="goToMontarPrato()">Montar prato</button>
+    <button type="button" class="default-button green" (tap)="goToMontarPrato()">Montar prato</button>
   </div>
 
 

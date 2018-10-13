@@ -16,7 +16,7 @@ export class ChartComponent {
   @Input('color') color;
   @Input('size') size;
   @Input('text') text;
-  @Input('img') img;
+  @Input('img') image;
 
   classes: String = "c100 ";
 

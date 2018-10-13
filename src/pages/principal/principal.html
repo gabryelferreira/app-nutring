@@ -11,7 +11,7 @@
       <img src="../../assets/imgs/nutring-no-color.png">
     </ion-title>
     <!-- <ion-buttons end>
-      <button ion-button (click)="gotoFotoPage()">
+      <button ion-button (tap)="gotoFotoPage()">
         <ion-icon name="camera"></ion-icon>
       </button>
     </ion-buttons> -->
@@ -28,19 +28,19 @@
       <div class="title">
           <p>Suas opções customizadas</p>
           <div *ngIf="refeicoesCustom && refeicoesCustom.length > 0" class="edit">
-            <h3 (click)="openEditarRefeicao()">Editar</h3>
+            <h3 (tap)="openEditarRefeicao()">Editar</h3>
           </div>
         </div>
 
     <div class="refeicoes-custom" >
         
-        <div (click)="openMontarPrato(refeicao, 'id_refeicao_usuario')" class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
+        <div (tap)="openMontarPrato(refeicao, 'id_refeicao_usuario')" class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
           <img *ngIf="!refeicao.foto" src="../../assets/imgs/food2.jpeg">
           <img *ngIf="refeicao.foto" [src]="refeicao.foto">
           <h2>{{refeicao.ds_refeicao}}</h2>
         </div>
 
-        <div (click)="openCriarRefeicao()" class="refeicao">
+        <div (tap)="openCriarRefeicao()" class="refeicao">
           <ion-icon name="add"></ion-icon>
           <img src="../../assets/imgs/blur2.jpg">
           <h2>Nova refeição</h2>
@@ -52,7 +52,7 @@
     </div>
 
     <div class="opcoes" *ngIf="refeicoesPadroes && refeicoesPadroes.length > 0">
-      <div (click)="openMontarPrato(refeicao, 'cd_refeicao')" class="opcao" *ngFor="let refeicao of refeicoesPadroes; let i = index">
+      <div (tap)="openMontarPrato(refeicao, 'cd_refeicao')" class="opcao" *ngFor="let refeicao of refeicoesPadroes; let i = index">
         <img [src]="refeicao.foto">
         <h2>{{refeicao.ds_refeicao}}</h2>
       </div>

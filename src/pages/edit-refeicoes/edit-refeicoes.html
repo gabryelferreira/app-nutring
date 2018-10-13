@@ -28,7 +28,7 @@
             <h2>{{refeicao.ds_refeicao}}</h2>
           </div>
           <div class="btns">
-            <button type="button" (click)="openModalConfirm(refeicao)" class="default-button small red padding">Excluir</button>
+            <button type="button" (tap)="openModalConfirm(refeicao)" class="default-button small red padding">Excluir</button>
           </div>
         </div>
         
@@ -53,8 +53,8 @@
           </h2>
         </div>
         <div class="buttons">
-          <button *ngIf="!excluindo" type="button" (click)="closeModalConfirm()" class="default-button small lightgray padding">Cancelar</button>
-          <button *ngIf="!excluindo" type="button" (click)="deletarRefeicaoCustom(selectedRefeicao)" class="default-button small red padding">Excluir</button>
+          <button *ngIf="!excluindo" type="button" (tap)="closeModalConfirm()" class="default-button small lightgray padding">Cancelar</button>
+          <button *ngIf="!excluindo" type="button" (tap)="deletarRefeicaoCustom(selectedRefeicao)" class="default-button small red padding">Excluir</button>
           <button *ngIf="excluindo" type="button" class="default-button small red padding"><ion-spinner color="white" name="dots"></ion-spinner></button>
         </div>
       </div>

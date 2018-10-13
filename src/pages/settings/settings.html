@@ -14,7 +14,7 @@
       {{user.nome}}
     </ion-title>
     <ion-buttons end>
-      <button id="ver-perfil" ion-button (click)="gotoPerfil()">
+      <button id="ver-perfil" ion-button (tap)="gotoPerfil()">
         Ver perfil
       </button>
     </ion-buttons>
@@ -48,7 +48,7 @@
         Alimentos
       </ion-list-header>
 
-      <ion-item (click)="openSuggestionPage()">
+      <ion-item (tap)="openSuggestionPage()">
         Sugerir um alimento
         <ion-icon name='color-wand' item-start></ion-icon>
       </ion-item>
@@ -71,7 +71,7 @@
       </ion-list-header>
 
 
-      <ion-item (click)="share()">
+      <ion-item (tap)="share()">
         <ion-icon name='share-alt' item-start></ion-icon>
         Compartilhar com amigos
       </ion-item>
@@ -82,12 +82,12 @@
         <ion-note item-end>Precisa de ajuda?</ion-note>
       </ion-item>
 
-      <ion-item (click)="openContactUsPage()">
+      <ion-item (tap)="openContactUsPage()">
         <ion-icon name='mail-open' item-start></ion-icon>
         Contate-nos
       </ion-item>
 
-      <ion-item (click)="showConfirmLogout()">
+      <ion-item (tap)="showConfirmLogout()">
         <ion-icon name='power' item-start></ion-icon>
         Sair
 

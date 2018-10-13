@@ -9,7 +9,7 @@
   <ion-navbar color="{{selectedTheme}}" no-border-bottom>
     <ion-title text-left>Perfil</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="updateUser()">
+      <button ion-button icon-only (tap)="updateUser()">
         <ion-icon name="checkmark" color="white"></ion-icon>
       </button>
     </ion-buttons>
@@ -34,7 +34,7 @@
     <div class="profile-header">
 
       <ion-buttons left>
-        <button ion-button style="background: none; box-shadow: none;" (click)="goBack()">
+        <button ion-button style="background: none; box-shadow: none;" (tap)="goBack()">
           <ion-icon name="ios-arrow-back"></ion-icon>
         </button>
       </ion-buttons>
@@ -50,12 +50,12 @@
         <!-- <div class="div-percentage-day">
           <ion-icon *ngFor="let star of stars" [name]="star.star" color="white"></ion-icon>
         </div> -->
-        <button type="button" id="edit-profile" (click)="editProfile()">Editar perfil</button>
+        <button type="button" id="edit-profile" (tap)="editProfile()">Editar perfil</button>
       </div>
 
     </div>
     <div class="profile-tabs">
-      <div *ngFor="let tab of tabs" (click)="selectTab(tab)" class="profile-tab" [class.active]="tab.selected">
+      <div *ngFor="let tab of tabs" (tap)="selectTab(tab)" class="profile-tab" [class.active]="tab.selected">
         <ion-icon [name]="tab.image"></ion-icon>
       </div>
     </div>
@@ -84,7 +84,7 @@
       <div class="all-feed">
         <div class="feed-img" >
           <div class="img" *ngFor="let userPost of posts">
-            <img class="content" [src]='userPost.foto' (click)="openPostComments(userPost)" (dblclick)="likeUnlikePost(post)">
+            <img class="content" [src]='userPost.foto' (tap)="openPostComments(userPost)" (dblclick)="likeUnlikePost(post)">
           </div>
         </div>
       </div>

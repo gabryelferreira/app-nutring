@@ -8,7 +8,7 @@
 
 <ion-content id="page">
 
-  <div (click)="goToLogin()" id="go-back">
+  <div (tap)="goToLogin()" id="go-back">
     <ion-icon name="ios-arrow-back"></ion-icon>
   </div>
 
@@ -71,11 +71,11 @@
         </ion-item>
 
         <div padding>
-          <button *ngIf="!loading" ion-button full (click)="register()">Cadastrar</button>
+          <button *ngIf="!loading" ion-button full (tap)="register()">Cadastrar</button>
           <button *ngIf="loading" ion-button full><ion-spinner color="white" name="bubbles"></ion-spinner></button>
         </div>
         <div class="align-center">
-          <a href="#" (click)="goToLogin()">Já tenho uma conta</a>
+          <a href="#" (tap)="goToLogin()">Já tenho uma conta</a>
         </div>
       </ion-list>
       
@@ -120,7 +120,7 @@
         <input class="input-text" autocomplete="off" type="password" maxlength="60" [(ngModel)]="user.senha" name="senha" (keyup)="validFields()" placeholder="Senha">
       </div>
       <div class="register-info">
-          <button [disabled]="!validRegister" type="submit" class="green" *ngIf="!loading" (click)="register()">Comece agora</button>
+          <button [disabled]="!validRegister" type="submit" class="green" *ngIf="!loading" (tap)="register()">Comece agora</button>
           <button *ngIf="loading" class="green" ion-button full>
               <ion-spinner color="white" name="dots"></ion-spinner>
           </button>

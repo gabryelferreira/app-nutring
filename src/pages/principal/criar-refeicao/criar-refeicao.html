@@ -23,12 +23,12 @@
       <h2>Alterar foto da refeição</h2>
     </div>
     <div class="options">
-      <h2 (click)="openCamera()">Tirar uma foto</h2>
-      <h2 (click)="openGaleria()"> Abrir galeria</h2>
+      <h2 (tap)="openCamera()">Tirar uma foto</h2>
+      <h2 (tap)="openGaleria()"> Abrir galeria</h2>
     </div>
   </div>
 
-  <div (click)="imageOptions = false" [id]="imageOptions ? 'showImageOptions' : ''" class="background"></div>
+  <div (tap)="imageOptions = false" [id]="imageOptions ? 'showImageOptions' : ''" class="background"></div>
 
   <form class="all">
     <ion-item padding-right>
@@ -36,14 +36,14 @@
         <img class="user-img" [src]="picture">
         <!-- <img class="user-img" *ngIf="user.foto" [src]='user.foto'> -->
       </div>
-      <p text-center padding><a (click)="imageOptions = true">Alterar foto</a></p>
+      <p text-center padding><a (tap)="imageOptions = true">Alterar foto</a></p>
     </ion-item>
     <ion-item padding-right>
       <ion-label floating>Nome da refeição</ion-label>
       <ion-input maxlength="14" name="refeicao" type="text" [(ngModel)]="refeicao"></ion-input>
     </ion-item>
     <div padding text-right>
-      <button [disabled]="refeicao.length < 1" *ngIf="!loading" type="submit" class="default-button green full" (click)="sendRefeicao()">Salvar</button>
+      <button [disabled]="refeicao.length < 1" *ngIf="!loading" type="submit" class="default-button green full" (tap)="sendRefeicao()">Salvar</button>
       <button *ngIf="loading" class="default-button green full">
         <ion-spinner color="white" name="dots"></ion-spinner>
       </button>

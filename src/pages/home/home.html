@@ -15,7 +15,7 @@
     </ion-title>
 
     <ion-buttons end>
-      <button ion-button (click)="gotoFotoPage()">
+      <button ion-button (tap)="gotoFotoPage()">
         <ion-icon name="camera"></ion-icon>
       </button>
     </ion-buttons>
@@ -32,7 +32,7 @@
   <div class="feed" *ngIf="!loading || (posts && posts.length > 0)">
     <div *ngFor="let post of posts; let i = index">
       <div class="feed-info">
-        <div (click)="visitUserPage(post)" class="user-info">
+        <div (tap)="visitUserPage(post)" class="user-info">
             <img *ngIf="!post.foto" class="user-picture" src="../../assets/imgs/user.jpg">
             <img *ngIf="post.foto" class="user-picture" [src]="post.foto">
             <div class="text">
@@ -46,13 +46,13 @@
         </div>
         
         <div class="tabs-info">
-          <div (click)="likeUnlikePost(post)" class="tab">
+          <div (tap)="likeUnlikePost(post)" class="tab">
               <div class="align">
                 <ion-icon [id]="post.gostei ? 'liked' : 'unliked'" name="md-thumbs-up"></ion-icon>
                 <p [class]="post.gostei ? 'liked' : ''">Gostei</p>
               </div>
           </div>
-          <div (click)="openPostComments(post)" class="tab">
+          <div (tap)="openPostComments(post)" class="tab">
             <div class="align">
               <ion-icon name="md-chatbubbles"></ion-icon>
               <p>Comentar</p>
@@ -61,13 +61,13 @@
         </div>
         <div class="description-info">
             <h2 *ngIf="!post.curtidas || (post.curtidas && post.curtidas == 0)">Seja o primeiro a curtir</h2>
-          <h2 (click)="getCurtidores(post)" *ngIf="post.curtidas && post.curtidas == 1">{{ post.curtidas | curtidas }} curtida</h2>
-          <h2 (click)="getCurtidores(post)" *ngIf="post.curtidas && post.curtidas > 1">{{ post.curtidas | curtidas }} curtidas</h2>
-          <div (click)="seeComments(post)">
+          <h2 (tap)="getCurtidores(post)" *ngIf="post.curtidas && post.curtidas == 1">{{ post.curtidas | curtidas }} curtida</h2>
+          <h2 (tap)="getCurtidores(post)" *ngIf="post.curtidas && post.curtidas > 1">{{ post.curtidas | curtidas }} curtidas</h2>
+          <div (tap)="seeComments(post)">
             <p>{{ post.descricao }}</p>
           </div>
         </div>
-        <div (click)="seeComments(post)" *ngIf="post.comentarios && post.comentarios > 0" class="comment-info">
+        <div (tap)="seeComments(post)" *ngIf="post.comentarios && post.comentarios > 0" class="comment-info">
           <p>Ver todos os {{post.comentarios}} comentários</p>
         </div>
         <form class="comment-bar" (ngSubmit)="commentPost(post)">
