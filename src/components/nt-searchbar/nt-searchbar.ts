@@ -2,6 +2,7 @@ import { Component, Input, Output, ViewChild, EventEmitter } from '@angular/core
 import { NG_VALUE_ACCESSOR, NgModel } from '@angular/forms';
 import { ValueAccessorBase } from '../../app/value-accessor-base';
 import { HideService } from '../../app/hide.service';
+import { SettingsService } from '../../pages/settings/settings.service';
  
 @Component({
     selector: 'nt-searchbar',
@@ -22,9 +23,14 @@ export class NtSearchbarComponent {
   @Input('text') text = "";
   @Input('withIcon') withIcon = true;
   item: String = "";
-
-  constructor(public hide:HideService){
-    
+  selectedTheme:String;
+  constructor(public hide:HideService, setting:SettingsService){
+    setting.getActiveTheme().subscribe(val => (this.selectedTheme = val));
+    if (this.selectedTheme == "light-theme"){
+      this.selectedTheme = "#222"
+    } else {
+      this.selectedTheme = "aliceblue"
+    }
   }
 
   hideTab() {
