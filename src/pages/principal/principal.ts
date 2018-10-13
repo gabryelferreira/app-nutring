@@ -34,6 +34,7 @@ export class PrincipalPage {
   }
 
   ionViewDidLoad() {
+      console.log(this.selectedTheme);
   }
 
   async getRefeicoes(){

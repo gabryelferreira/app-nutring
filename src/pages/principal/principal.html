@@ -7,14 +7,12 @@
 <ion-header no-padding no-border>
 
   <ion-navbar color="{{selectedTheme}}">
-    <ion-title text-center>
+    <ion-title text-center *ngIf="selectedTheme == 'light-theme'">
       <img src="../../assets/imgs/nutring-color.png">
     </ion-title>
-    <!-- <ion-buttons end>
-      <button ion-button (tap)="gotoFotoPage()">
-        <ion-icon name="camera"></ion-icon>
-      </button>
-    </ion-buttons> -->
+    <ion-title text-center *ngIf="selectedTheme != 'light-theme'">
+      <img src="../../assets/imgs/nutring-no-color.png">
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
