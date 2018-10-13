@@ -10,7 +10,7 @@
 
 
 
-<ion-header no-padding>
+<ion-header no-padding no-border>
   <!-- [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" -->
   <ion-navbar color="{{selectedTheme}}">
     <nt-searchbar showCancelButton="true" (callback)="onInput($event)"></nt-searchbar>
@@ -24,7 +24,7 @@
   <div *ngIf="showSad && searched !=''" padding>
     <div padding center>
       <div class="align-center" padding>
-        <img width="192" height="192" src="https://i.imgur.com/jqzTnHU.png">
+        <img width="192" height="192" src="../../assets/imgs/folhinha da macunha.png">
         <p style="color: dimgrey"><strong> Desculpa não conseguimos achar seu alimento ;( </strong></p>
       </div>
     </div>
@@ -60,13 +60,10 @@
       </div> -->
     </div>
 
-    <div *ngIf="showWelcome == 1" padding>
-      <div padding center>
-        <div class="align-center">
-          <img src="https://cdn.xl.thumbs.canstockphoto.com.br/ma%C3%A7%C3%A3-com-fala-bubble-pretas-grunge-badge-balloon-sticker-bye-vetorial-illustration-vetor-eps_csp49300989.jpg">
-          <p style="color: dimgrey"><strong> Faça sua pesquisa rapida de alimentos aqui, use a barra de pesquisa ao lado da lupa ;)</strong></p>
-        </div>
-      </div>
+    <div class="centralizar" *ngIf="showWelcome == 1">
+      <img src="../../assets/imgs/folhinha da macunha.png">
+      <h2>Pesquise no Nutring</h2>
+      <p>Encontre seus alimentos preferidos.</p>
     </div>
 
     <div *ngIf="viewMode == 1 && showWelcome == 0 && !showSad">

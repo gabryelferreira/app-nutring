@@ -46,8 +46,8 @@ $colors: (
   fb:      #3b5998,
   dark-theme: #202020,
   dark-theme-tab: #202020,
-  light-theme: #27ae60,
-  light-theme-tab: #fff,
+  light-theme: #fff,
+  light-theme-tab: rgba(0, 0, 0, .1),
   transparent: transparent,
   lightgray: #ccc,
   claro: #ddd,
@@ -92,21 +92,21 @@ button {
 }
 
 ion-navbar.toolbar {
-  min-height: 46px;
-  height: 46px;
+  min-height: 51px;
+  height: 51px;
 }
 
 $toolbar-ios-title-font-size: 17.7px;
 $toolbar-md-title-font-size: 17.7px;
 $toolbar-wp-title-font-size: 17.7px;
 
-$tabs-ios-tab-min-height: 51px;
-$tabs-md-tab-min-height: 51px;
-$tabs-wp-tab-min-height: 51px;
+$tabs-ios-tab-min-height: 76px;
+$tabs-md-tab-min-height: 76px;
+$tabs-wp-tab-min-height: 76px;
 
-$tabs-ios-tab-font-size: 11px;
-$tabs-md-tab-font-size: 11px;
-$tabs-wp-tab-font-size: 11px;
+$tabs-ios-tab-font-size: 12px;
+$tabs-md-tab-font-size: 12px;
+$tabs-wp-tab-font-size: 12px;
 
 $tabs-ios-tab-icon-size: 24px;
 $tabs-md-tab-icon-size: 24px;

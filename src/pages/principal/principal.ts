@@ -18,7 +18,7 @@ import { ScrollHideConfig } from '../../components/hide-on-scrolling/scroll-hide
   ]
 })
 export class PrincipalPage {
-  headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 46 };
+  headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 51 };
   selectedTheme: String = "";
   refeicoesPadroes = [];
   refeicoesCustom = [];
