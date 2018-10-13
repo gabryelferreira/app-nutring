@@ -13,13 +13,13 @@ nt-searchbar {
             background-color: transparent;
             font-size: 16px;
             text-indent: 0;
-            color: #fff;
+            color: #222;
             padding-right: 25px;
             text-indent: 55px;
         }
         input[type="search"]::placeholder,
         input[type="search"]::-webkit-input-placeholder {
-            color: #eee;
+            color: #888;
         }
     }
     .searchbar .fa{ 
@@ -28,7 +28,7 @@ nt-searchbar {
     top: 11px;
     left: 15px;
     font-size: 15px;
-    color: #fff;
+    color: #222;
     }
     ion-icon {
         position: absolute !important;
@@ -36,7 +36,7 @@ nt-searchbar {
         padding: 5px;
         font-size: 24px !important;
         
-        color: #fff !important;
+        color: #888 !important;
     }
     #left {
         left: 15px !important;

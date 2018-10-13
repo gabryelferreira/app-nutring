@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" no-padding>
+<ion-header no-padding no-border>
   <!-- [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" -->
   <ion-navbar [style.display]="isSearching ? 'none' : ''" color="{{selectedTheme}}">
     <ion-buttons end>
@@ -12,7 +12,7 @@
         <ion-icon name="search"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title text-left>Montar prato - {{refeicao.ds_refeicao}}</ion-title>
+    <ion-title text-left>{{refeicao.ds_refeicao}}</ion-title>
   </ion-navbar>
 
   <ion-navbar [style.display]="isSearching ? '' : 'none'" color="{{selectedTheme}}">
