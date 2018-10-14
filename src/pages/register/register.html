@@ -109,11 +109,11 @@
       </div>
       <div class="register-info">
         <img src="../../assets/icones/email.png">
-        <input class="input-text" autocomplete="off" type="text" maxlength="90" [(ngModel)]="user.email" name="email" (keyup)="validFields()" placeholder="E-mail">
+        <input class="input-text" autocomplete="off" type="email" maxlength="90" [(ngModel)]="user.email" name="email" autocapitalize="none" (keyup)="validFields()" placeholder="E-mail">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/user.png">
-        <input class="input-text" autocomplete="off" type="text" maxlength="30" [(ngModel)]="user.usuario" name="usuario" (keyup)="validFields()" placeholder="Usuário">
+        <input class="input-text" autocomplete="off" type="text" maxlength="30" [(ngModel)]="user.usuario" name="usuario" autocapitalize="none" (keyup)="validFields()" placeholder="Usuário">
       </div>
       <div class="register-info">
         <img src="../../assets/icones/password.png">

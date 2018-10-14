@@ -1,4 +1,9 @@
 .light-theme {
+  nt-searchbar{
+    input{
+      color: #222 !important;
+    }
+  }
   ion-content {
     background: #fff;
     transition: .3s;
@@ -41,7 +46,7 @@
     }
   }
 
-
+  
 
 
 
@@ -92,29 +97,29 @@
       }
     }
 
-    ion-segment-button {
-      color: #fff !important;
-    }
+    // ion-segment-button {
+    //   color: #27ae60 !important;
+    // }
    
-    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated, .segment-ios .segment-button {
-      border-color: #fff !important;
-      color: #fff !important;
-    }
+    // .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated, .segment-ios .segment-button {
+    //   border-color: #fff !important;
+    //   color: #fff !important;
+    // }
 
-    .segment-ios .segment-button.segment-activated {
-      background: #fff !important;
-      color: #27ae60 !important;
-      border-color: #fff !important;
-    }
+    // .segment-ios .segment-button.segment-activated {
+    //   background: #fff !important;
+    //   color: #27ae60 !important;
+    //   border-color: #fff !important;
+    // }
 
 
-    .segment-md .segment-button {
-      color: #fff !important;
-    }
+    // .segment-md .segment-button {
+    //   color: #fff !important;
+    // }
 
-    .header-segment {
-      background: #aaa !important;
-    }
+    // .header-segment {
+    //   background: #aaa !important;
+    // }
 
 
 
