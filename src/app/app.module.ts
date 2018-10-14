@@ -1,3 +1,4 @@
+import { ModalComponent } from './../components/modal/modal';
 import { EditRefeicoesPage } from './../pages/edit-refeicoes/edit-refeicoes';
 import { CommentsPage } from "./../pages/home/comments/comments";
 import { NtSearchbarComponent } from "./../components/nt-searchbar/nt-searchbar";
@@ -65,6 +66,7 @@ import { HideService } from "./hide.service";
     ContactMessagesPage,
     ChartComponent,
     LoaderComponent,
+    ModalComponent,
     NtSearchbarComponent,
     ScrollHideDirective,
     EditProfilePage,

@@ -40,7 +40,7 @@
 
   </div>
 
-  <div class="background" [id]="popupOpen ? 'showBackground' : ''">
+  <!-- <div class="background" [id]="popupOpen ? 'showBackground' : ''">
 
       <div [id]="popupOpen ? 'showPopup' : ''" class="popup">
         <div class="header">
@@ -59,7 +59,11 @@
         </div>
       </div>
 
-  </div>
+  </div> -->
+
+  <modal *ngIf="popupOpen" [loading]="excluindo" [btnConfirm]="'Excluir'"
+  (onCancel)="popupOpen = false" (onConfirm)="deletarRefeicaoCustom(selectedRefeicao)" [text]="deleteText"
+  [title]="selectedRefeicao.ds_refeicao"></modal>
 
   
 

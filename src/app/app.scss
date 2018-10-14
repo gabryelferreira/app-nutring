@@ -110,6 +110,11 @@ ion-fab {
   padding-bottom: 20px;
 }
 
+.big-padding {
+  padding-left: 33px;
+  padding-right: 33px;
+}
+
 .default-button {
   height: 40px;
   border-radius: 23px;
@@ -119,6 +124,7 @@ ion-fab {
 
 .small {
   height: 30px;
+  font-size: 12px;
 }
 
 .full {
@@ -148,6 +154,10 @@ ion-fab {
 .success {
   background: #4cd137;
   color: white;
+}
+
+.color-green {
+  color: #27ae60;
 }
 
 .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus)

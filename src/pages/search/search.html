@@ -21,13 +21,10 @@
 
   <loader *ngIf="loading && (!users || (users && users.length == 0)) && (!foods || (foods && foods.length == 0))"></loader>
 
-  <div *ngIf="showSad && searched !=''" padding>
-    <div padding center>
-      <div class="align-center" padding>
-        <img width="192" height="192" src="../../assets/imgs/folhinha da macunha.png">
-        <p style="color: dimgrey"><strong> Desculpa não conseguimos achar seu alimento ;( </strong></p>
-      </div>
-    </div>
+  <div class="centralizar" *ngIf="showSad && searched !=''">
+    <img src="../../assets/imgs/folhinha da macunha.png">
+    <h2></h2>
+    <p>Não foram encontrados alimentos com o texto especificado.</p>
   </div>
 
   <ion-list>

@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header no-border>
 
   <ion-navbar color="{{selectedTheme}}">
     <ion-title text-left>Editar perfil</ion-title>
@@ -27,13 +27,13 @@
 
 <ion-content>
   <ion-list no-padding no-border>
-    <ion-item padding-right>
+    <ion-item padding-right class="align-center">
       <div class="div-user-img">
         <!-- <img class="user-img" *ngIf="!user.foto" src="../../assets/imgs/user.jpg"> -->
         <img class="user-img" *ngIf="(picture == '')" [src]='user.foto'>
         <img class="user-img" *ngIf="!(picture == '')" [src]='picture'>
       </div>
-      <p text-center padding><a (tap)="openGaleria()">Alterar foto</a></p>
+      <button id="btnFoto" type="button" (tap)="openGaleria()" class="default-button padding transparent">Alterar foto</button>
     </ion-item>
 
     <ion-item padding-right>
@@ -77,9 +77,9 @@
       <ion-input type="text" name="altura_m" (keypress)="validNumericField(user.altura_m)" [(ngModel)]="user.altura_m"></ion-input>
     </ion-item>
 
-    <ion-item (tap)="openUpdateLoginInfo()" padding>
-      <ion-icon name="finger-print" item-start></ion-icon>Alterar informções de acesso
-    </ion-item>
+    <!-- <ion-item (tap)="openUpdateLoginInfo()" padding>
+      <ion-icon name="finger-print" item-start></ion-icon>Alterar informações de acesso
+    </ion-item> -->
 
   </ion-list>
 

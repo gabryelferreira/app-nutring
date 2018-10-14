@@ -65,12 +65,13 @@ export class ProfilePage {
     { star: "md-star-outline", value: 5 }
   ];
 
-  selectedTab: string = "food";
+  selectedTab: string = "user";
 
   tabs = [
-    { name: "food", image: "ios-paper-outline", selected: true },
-    { name: "user", image: "ios-person-outline", selected: false },
+    // { name: "food", image: "ios-paper-outline", selected: true },
+    { name: "user", image: "ios-person-outline", selected: true },
     { name: "info", image: "ios-podium-outline", selected: false }
+    
   ];
 
   profileImage: any;

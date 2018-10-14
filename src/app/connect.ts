@@ -1,10 +1,5 @@
 import { Config } from "./config";
-import {
-  HttpClient,
-  HttpHeaders,
-  HttpResponse,
-  HttpErrorResponse
-} from "@angular/common/http";
+import { HttpClient, HttpHeaders, HttpResponse, HttpErrorResponse } from "@angular/common/http";
 import { urlencode } from "./url";
 
 export abstract class Connect {

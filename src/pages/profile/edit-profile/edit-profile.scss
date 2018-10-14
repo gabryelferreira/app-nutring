@@ -1,13 +1,18 @@
 page-edit-profile {
   ion-input {
     border-bottom: 1px solid lightgray !important;
+    font-size: 13px !important;
+  }
+  ion-select {
+    font-size: 13px !important;
+    border-bottom: 2px solid lightgray;
   }
   .div-user-img {
     position: relative;
     height: 106px;
     width: 106px;
     margin: auto;
-    background: #fff;
+    background: transparent;
     border-radius: 50%;
     text-align: center;
     img {
@@ -19,5 +24,9 @@ page-edit-profile {
       width: 100px;
       border-radius: 50%;
     }
+  }
+
+  #btnFoto {
+    color: #27ae60;
   }
 }

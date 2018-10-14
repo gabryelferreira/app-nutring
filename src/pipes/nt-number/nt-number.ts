@@ -46,7 +46,10 @@ export class NtNumberPipe extends DeprecatedDecimalPipe implements PipeTransform
         newInput += elem;
       });
       if (input.indexOf('.') != -1){
-        newInput += ',' + input.split('.')[1];
+        var afterComma = input.split('.')[1];
+        if (afterComma != '00'){
+          newInput += ',' + input.split('.')[1];
+        }
       }
       return newInput;
     }

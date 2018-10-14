@@ -28,6 +28,7 @@ export class EditRefeicoesPage {
   user: IUser = {};
   callback;
   excluindo: boolean = false;
+  deleteText = 'Tem certeza que deseja <b>excluir sua refeição personalizada?</b> Todos os pratos dessa refeição terão o nome de "Refeição".';
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               _settings: SettingsService, private post: EditRefeicoesPostService,

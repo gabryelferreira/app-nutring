@@ -23,11 +23,11 @@ export class MontarPratoPostService extends Connect {
     super(_http, "post");
   }
 
-  findFoods(offset: number = 0, limit: number = 10) {
+  findFoods(offset: number = 0, limit: number = 15) {
     return this.callMethod("findFoods", { offset, limit });
   }
 
-  getFood(food: string, offset: number = 0, limit:number = 10) {
+  getFood(food: string, offset: number = 0, limit:number = 15) {
     return this.callMethod("getFood", { food, offset, limit });
   }
 }

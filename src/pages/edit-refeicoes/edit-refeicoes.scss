@@ -13,6 +13,7 @@ page-edit-refeicoes {
                 width: 100%;
                 border-bottom: 1px solid lightgray;
                 display: flex;
+                box-shadow: none;
                 .foto {
                     position: relative;
                     width: 38px;
@@ -52,74 +53,33 @@ page-edit-refeicoes {
 
     }
 
-    .background {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, .5);
-        z-index: 9999;
-        opacity: 0;
-        pointer-events: none;
-        transition: .33s;
-        .popup {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background: #fff;
-            border-radius: 5px;
-            box-sizing: border-box;
-            padding: 35px 25px;
-            width: 245px;
-            text-align: center;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
-            .header {
-                position: relative;
-                width: 100%;
-                padding-bottom: 10px;
-                img {
-                    width: 60px;
-                    height: auto;
-                }
-                h1 {
-                    font-size: 13px;
-                    font-weight: bold;
-                    margin: 5px 0 22px 0;
-                }
-                h2 {
-                    font-size: 13px;
-                    line-height: 18px;
-                    span {
-                        font-weight: bold;
+    ion-header {
+        z-index: 1 !important;
+    }
+
+
+}
+
+
+
+
+
+
+//DARK THEME
+.dark-theme {
+    .principal {
+        .opcoes {
+            .opcao {
+                border-bottom: 1px solid #333;
+                box-shadow: none;
+                .info {
+                    .info-opcao {
+                        h2 {
+                            color: #eee;
+                        }
                     }
                 }
             }
         }
-
     }
-
-    #showBackground {
-        opacity: 1;
-        pointer-events: visible;
-        
-    }
-
-    #showPopup {
-        animation: tremer .3s linear;
-    }
-
-    @keyframes tremer {
-        0% {
-            transform: translate(-50%, -50%) scale(0.2);
-        }
-        100% {
-            transform: translate(-50%, -50%) scale(1);
-        }
-    }
-
-
-
-
 }
