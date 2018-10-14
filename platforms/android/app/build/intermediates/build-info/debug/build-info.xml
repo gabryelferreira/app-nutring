@@ -6,7 +6,7 @@
     density="560dpi"
     format="10"
     plugin-version="3.0.0"
-    timestamp="1539467011359"
+    timestamp="1539468346326"
     token="-7409206492977472909"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -70,7 +70,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1539467011359"
+        timestamp="1539468346326"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\wamp64\www\app-nutring\platforms\android\app\build\outputs\apk\debug\app-debug.apk"

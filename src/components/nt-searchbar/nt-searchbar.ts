@@ -25,12 +25,7 @@ export class NtSearchbarComponent {
   item: String = "";
   selectedTheme:String;
   constructor(public hide:HideService, setting:SettingsService){
-    setting.getActiveTheme().subscribe(val => (this.selectedTheme = val));
-    if (this.selectedTheme == "light-theme"){
-      this.selectedTheme = "#222"
-    } else {
-      this.selectedTheme = "aliceblue"
-    }
+    
   }
 
   hideTab() {
