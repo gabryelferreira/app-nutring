@@ -11,10 +11,7 @@ export abstract class Connect {
   url: string = "http://nutring.com.br/api/";
   constructor(private http: HttpClient, private method: string) {}
 
-  protected async callMethod(
-    _function: string,
-    args?: { [id: string]: any }
-  ): Promise<any> {
+  protected async callMethod(_function: string, args?: { [id: string]: any }): Promise<any> {
     let options = {
       headers: new HttpHeaders({
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
@@ -30,10 +27,7 @@ export abstract class Connect {
     let body = urlencode(data);
     if (this.method.toUpperCase() == "GET") {
       try {
-        result = await this.http
-          .get(this.url + _function, options)
-          .toPromise()
-          .then();
+        result = await this.http.get(this.url + _function, options).toPromise().then();
         console.log(result);
         return result;
       } catch (err) {
@@ -43,10 +37,7 @@ export abstract class Connect {
     } else if (this.method.toUpperCase() == "POST") {
       try {
         console.log(body);
-        result = await this.http
-          .post(this.url + _function, body, options)
-          .toPromise()
-          .then();
+        result = await this.http.post(this.url + _function, body, options).toPromise().then();
         console.log(result);
         return result;
       } catch (err) {

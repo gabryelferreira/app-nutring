@@ -55,17 +55,9 @@ export class MontarPratoPage {
     let result = await this.post.findFoods();
     if (result.success) {
       this.foods = result.result;
-      this.loading = false;
     }
-    if (this.allSelectedFoods.length > 0) {
-      this.foods.forEach(food => {
-        this.allSelectedFoods.forEach(elem => {
-          if (food.id_alimento == elem.id_alimento) {
-            food.porcao_comida = elem.porcao_comida;
-          }
-        });
-      });
-    }
+    this.loading = false;
+    
   }
 
   async onInput(event) {
@@ -73,14 +65,23 @@ export class MontarPratoPage {
     this.searchText = text;
     if (text == undefined) text = "";
     if (text == "") {
-      this.findFoods();
       this.isSearching = false
     } else{
       this.isSearching = true
     }
     let result = await this.post.getFood(text)
     if (result.success){
-      this.foods = result.result 
+      var foods = result.result
+      if (this.allSelectedFoods.length > 0) {
+        for (var x = 0; x < foods.length; x++){
+          for (var y = 0; y < this.allSelectedFoods.length; y++){
+            if (foods[x].id_alimento == this.allSelectedFoods[y].id_alimento){
+              foods[x] = this.allSelectedFoods[y];
+            }
+          }
+        }
+      }
+      this.foods = foods 
     }
   }
 
