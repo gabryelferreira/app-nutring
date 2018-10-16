@@ -34,10 +34,12 @@ export class PrincipalPage {
     
   }
 
-  async ionViewDidLoad() {
+  async ionViewDidEnter() {
       console.log(this.selectedTheme);
-      this.user = await this.post.reloadUserInfo(this.user.id_usuario);
-      localStorage.setItem("userData", JSON.stringify(this.user));
+      // this.user = await this.post.reloadUserInfo(this.user.id_usuario);
+      // localStorage.removeItem("userData");
+      // localStorage.setItem("userData", JSON.stringify(this.user));
+      console.log("refresh", this.user)
   }
 
   async getRefeicoes(){
