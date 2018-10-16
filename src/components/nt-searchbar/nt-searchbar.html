@@ -1,6 +1,6 @@
 <div class="searchbar" [id]="onHeader ? 'on-header' : 'not-on-header'">
   <ion-icon id="left" *ngIf="!onHeader" name="md-search"></ion-icon>
   <ion-icon id="left" *ngIf="onHeader" name="ios-arrow-back" (tap)="goBack()"></ion-icon>
-  <ion-icon id="right" *ngIf="onHeader && text.length > 0" name="ios-close-outline" (tap)="clear()"></ion-icon>
+  <ion-icon id="right" *ngIf="text.length > 0" name="ios-close-outline" (tap)="clear()"></ion-icon>
   <input (focus)="hideTab()" [(ngModel)]="text" name="text" (focusout)="showTab()" type="search"  [(ngModel)]="item" [placeholder]="placeholder" (keyup)="onChange()">
 </div>
