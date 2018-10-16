@@ -30,4 +30,9 @@ export class MeusPratosPostService extends Connect {
   getPratosByDate(id_usuario: number, date: any) {
     return this.callMethod("getPratosByDate", { id_usuario, date });
   }
+
+  deletePrato(id_usuario: number, id_prato_feito: number, id_prato: number){
+    return this.callMethod("deletePrato", { id_usuario, id_prato_feito, id_prato });
+  }
+
 }

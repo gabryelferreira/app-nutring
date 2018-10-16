@@ -29,7 +29,7 @@ export class ModalComponent {
 
   ngAfterViewInit(){
     var text = this.text;
-    if (text.indexOf('<b>') != -1){
+    if (text && text.indexOf('<b>') != -1){
       var arrayText = text.split('<b>');
       var arrayNewText = arrayText[1].split('</b>');
       var newText = arrayNewText[0].bold();

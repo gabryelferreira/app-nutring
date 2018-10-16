@@ -8,6 +8,11 @@
 
   <ion-navbar color="{{selectedTheme}}" no-border-bottom>
     <ion-title text-left>Informações</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="openDeletePopup()">
+          <ion-icon name="md-trash"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
   <ion-toolbar color="{{selectedTheme}}" no-border-top>
@@ -138,5 +143,9 @@
     </ion-card>
 
   </div>
+
+  <modal *ngIf="popupDelete" [loading]="loadingDelete" [btnConfirm]="'Excluir'"
+  (onCancel)="popupDelete = false" (onConfirm)="deletePrato()" [text]="deleteText"
+  [title]="'Confirmação'" [color]="'red'"></modal>
   
 </ion-content>
