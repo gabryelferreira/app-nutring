@@ -64,11 +64,6 @@ export class MontarPratoPage {
     let text = event;
     this.searchText = text;
     if (text == undefined) text = "";
-    if (text == "") {
-      this.isSearching = false
-    } else{
-      this.isSearching = true
-    }
     let result = await this.post.getFood(text)
     if (result.success){
       var foods = result.result
