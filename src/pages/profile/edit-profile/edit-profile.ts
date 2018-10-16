@@ -74,6 +74,7 @@ export class EditProfilePage {
     }
     let date = this.user.dt_nasc.toString().split("-")
     this.dt_nasc = `${date[2]}/${date[1]}/${date[0]}`
+    this.picture = ''
   }
 
   async setOptionalInfo(){

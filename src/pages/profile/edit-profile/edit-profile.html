@@ -31,7 +31,8 @@
       <div class="div-user-img">
         <!-- <img class="user-img" *ngIf="!user.foto" src="../../assets/imgs/user.jpg"> -->
         <img class="user-img" *ngIf="(picture == '')" src='../../../assets/imgs/user.jpg'>
-        <img class="user-img" *ngIf="!(picture == '')" [src]='user.foto'>
+        <img class="user-img" *ngIf="user.foto != '' && picture == ''" [src]='user.foto'>
+        <img class="user-img" *ngIf="picture != ''" [src]='picture'>
       </div>
       <button id="btnFoto" type="button" (tap)="openGaleria()" class="default-button padding transparent">Alterar foto</button>
     </ion-item>
