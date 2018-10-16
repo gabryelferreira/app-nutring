@@ -32,6 +32,8 @@ export class InfoPratoPage {
   loadingDelete: boolean = false;
   deleteText: string = "Tem certeza que deseja <b>excluir seu prato?</b> Você não poderá voltar atrás.";
   popupDelete: boolean = false;
+  popupCheck: boolean = false;
+  checkText: string = "Seu prato foi excluído com sucesso.";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, _settings: SettingsService,
               private post: MeusPratosPostService) {
@@ -63,10 +65,17 @@ export class InfoPratoPage {
   async deletePrato(){
     this.loadingDelete = true;
     let result = await this.post.deletePrato(this.user.id_usuario, this.prato["id_prato_feito"], this.prato["id_prato"]);
-    if (result.success){
-
-    }
     this.loadingDelete = false;
+    if (result.success){
+      localStorage.setItem("loadHistorico", "true");
+      this.popupDelete = false;
+      this.popupCheck = true;
+    }
+  }
+
+  goToHistorico(){
+    this.popupCheck = false;
+    this.navCtrl.parent.select(2);
   }
 
 }

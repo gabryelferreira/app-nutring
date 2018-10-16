@@ -99,11 +99,7 @@ export class VerPratoPage {
     let message = "";
     let title = "";
     if (result.success){
-      title = "Sucesso";
-      message = "Prato feito com sucesso!";
-    } else {
-      title = "Erro";
-      message = "Ocorreu um erro! Tente novamente.";
+      localStorage.setItem("loadHistorico", "true");
     }
     this.loading = false;
     this.popupOpen = false;

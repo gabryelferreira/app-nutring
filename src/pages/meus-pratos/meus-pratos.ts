@@ -50,7 +50,6 @@ export class MeusPratosPage {
     if (load){
       this.getMonthsOfPratos(this.id_usuario);
       localStorage.removeItem("loadHistorico");
-
     }
   }
   
