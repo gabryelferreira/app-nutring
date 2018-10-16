@@ -1,3 +1,5 @@
+import { PrincipalPage } from './../../principal/principal';
+import { MeusPratosPage } from './../../meus-pratos/meus-pratos';
 import { SettingsService } from '../../settings/settings.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
@@ -112,6 +114,8 @@ export class VerPratoPage {
 
   verPrato(){
     this.popupCheck = false;
+    this.navCtrl.setRoot(PrincipalPage)
+    this.navCtrl.parent.select(2);
   }
 
 }
