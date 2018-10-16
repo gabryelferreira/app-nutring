@@ -12,7 +12,7 @@ import { IFood } from '../../../app/types';
 
 @IonicPage()
 @Component({
-  selector: 'page-info-aliemento',
+  selector: 'page-info-alimento',
   templateUrl: 'info-alimento.html',
   providers: [
   ]

@@ -13,16 +13,22 @@
 
 
 <ion-content>
-  <ion-card>
 
-    <ion-card-content>
-      <ion-card-title>
-        Informações Nutricionais: {{ food.nome }}
-      </ion-card-title>
-      <p>
-        Saiba as calorias, proteínas e outras informações deste alimento.
-      </p>
-    </ion-card-content>
+  <ion-card>
+      
+      <ion-card-content>
+        <ion-card-title no-padding>
+            <ion-item no-padding>
+              <ion-avatar item-start>
+                <img [src]="food.img_url">
+              </ion-avatar>
+            <h3>{{food.nome}}</h3>
+          </ion-item>
+        </ion-card-title>
+        <p>
+          Saiba as calorias, proteínas e outras informações deste alimento em uma porção de 100g.
+        </p>
+      </ion-card-content>
 
     <ion-item>
       Cálcio

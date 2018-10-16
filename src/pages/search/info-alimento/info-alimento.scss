@@ -27,3 +27,15 @@ page-info-alimento {
     }
 
 }
+
+.dark-theme {
+    ion-card {
+        ion-card-content {
+            ion-item {
+                h3 {
+                    color: #eee;
+                }
+            }
+        }
+    }
+}
