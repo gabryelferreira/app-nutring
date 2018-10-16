@@ -189,7 +189,9 @@ export class EditProfilePage {
       quality: 40,
       destinationType: this.camera.DestinationType.DATA_URL,
       sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
-      saveToPhotoAlbum:false
+      saveToPhotoAlbum:false,
+      targetWidth: 600,
+      correctOrientation: true
     };
     this.camera.getPicture(options).then(
       imageData => {

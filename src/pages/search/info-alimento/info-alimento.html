@@ -1,0 +1,105 @@
+<!--
+  Generated template for the InfoAlimentoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="header-segment" no-border>
+
+  <ion-navbar color="{{selectedTheme}}" no-border-bottom>
+    <ion-title text-left>Informações Nutricionais</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+
+    <ion-card-content>
+      <ion-card-title>
+        Informações Nutricionais: {{ food.nome }}
+      </ion-card-title>
+      <p>
+        Saiba as calorias, proteínas e outras informações deste alimento.
+      </p>
+    </ion-card-content>
+
+    <ion-item>
+      Cálcio
+      <ion-badge item-end>{{food.calcio | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Calorias
+      <ion-badge item-end>{{food.kcal | number:'1.0-2'}} kcal</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Carboidratos
+      <ion-badge item-end>{{food.carboidrato | number:'1.0-2'}} g</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Cobre
+      <ion-badge item-end>{{food.cobre | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Ferro
+      <ion-badge item-end>{{food.ferro | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Fibra
+      <ion-badge item-end>{{food.fibra_alimentar | number:'1.0-2'}} g</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Fósforo
+      <ion-badge item-end>{{food.fosforo | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Lipídios
+      <ion-badge item-end>{{food.lipideos | number:'1.0-2'}}%</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Magnésio
+      <ion-badge item-end>{{food.magnesio | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Manganês
+      <ion-badge item-end>{{food.manganes | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Potássio
+      <ion-badge item-end>{{food.potassio | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Proteínas
+      <ion-badge item-end>{{food.proteina | number:'1.0-2'}} g</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Sódio
+      <ion-badge item-end>{{food.sodio | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Vitamina C
+      <ion-badge item-end>{{food.vitamina_c | number:'1.0-2'}}%</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Zinco
+      <ion-badge item-end>{{food.zinco | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+  </ion-card>
+
+
+</ion-content>
