@@ -21,7 +21,7 @@ import { SettingsService } from "../settings/settings.service";
 export class PostPicturePage {
   picture: any;
   selectedTheme: String = "";
-  descricao:string = "";
+  descricao: string = "";
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -37,7 +37,9 @@ export class PostPicturePage {
       quality: 30,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
+      mediaType: this.camera.MediaType.PICTURE,
+      targetWidth: 600,
+      correctOrientation: true
     };
     this.camera.getPicture(options).then(
       imageData => {
@@ -52,7 +54,11 @@ export class PostPicturePage {
 
   async postPicture() {
     let user: IUser = JSON.parse(localStorage.getItem("userData"));
-    let result = await this.post.postPicture(user.id_usuario,this.picture,this.descricao);
+    let result = await this.post.postPicture(
+      user.id_usuario,
+      this.picture,
+      this.descricao
+    );
   }
 
   //seta Para img padrão

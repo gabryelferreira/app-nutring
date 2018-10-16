@@ -45,6 +45,7 @@ import { CurtidasPage } from "../pages/curtidas/curtidas";
 import { PrincipalPage } from "../pages/principal/principal";
 import { CriarRefeicaoPage } from "../pages/principal/criar-refeicao/criar-refeicao";
 import { HideService } from "./hide.service";
+import { InfoAlimentoPage } from '../pages/search/info-alimento/info-alimento';
 @NgModule({
   declarations: [
     MyApp,
@@ -77,7 +78,8 @@ import { HideService } from "./hide.service";
     CurtidasPage,
     PrincipalPage,
     CriarRefeicaoPage,
-    EditRefeicoesPage
+    EditRefeicoesPage,
+    InfoAlimentoPage
   ],
   imports: [
     BrowserModule,
@@ -113,7 +115,8 @@ import { HideService } from "./hide.service";
     CurtidasPage,
     PrincipalPage,
     CriarRefeicaoPage,
-    EditRefeicoesPage
+    EditRefeicoesPage,
+    InfoAlimentoPage
   ],
   providers: [
     StatusBar,

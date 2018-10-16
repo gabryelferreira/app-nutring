@@ -9,6 +9,7 @@ import {
 } from "ionic-angular";
 import { ScrollHideConfig } from "../../components/hide-on-scrolling/scroll-hide-directive";
 import { SearchResultPage } from "./search-result/search-result";
+import { InfoAlimentoPage } from "./info-alimento/info-alimento";
 
 @IonicPage()
 @Component({
@@ -127,6 +128,10 @@ export class SearchPage {
     });
 
     toast.present(toast);
+  }
+
+  openFoodInfo(food) {
+    this.navCtrl.push(InfoAlimentoPage, { food });
   }
 
   // toggleViewMode() {

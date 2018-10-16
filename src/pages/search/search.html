@@ -33,7 +33,7 @@
     <div *ngIf="showWelcome == 0 && !showSad && (!loading ||  (foods && foods.length > 0))">
       <!-- <div *ngIf="foods && foods.length > 0"> -->
       <!-- <h2 text-center>Alimentos</h2> -->
-      <ion-item *ngFor="let food of foods">
+      <ion-item *ngFor="let food of foods" (tap)="openFoodInfo(food)">
         <ion-avatar item-start>
           <img [src]="food.img_url">
         </ion-avatar>
