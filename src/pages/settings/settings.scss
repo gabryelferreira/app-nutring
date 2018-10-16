@@ -17,6 +17,10 @@ page-settings {
         }
     }
 
+    ion-header {
+        z-index: 1 !important;
+    }
+
     #ver-perfil {
         font-size: 12px !important;
         color: #27ae60;

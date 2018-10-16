@@ -47,6 +47,9 @@ export class SettingsPage {
     senha: ""
   }
 
+  popupLogout: boolean = false;
+  logoutText: string = "Tem certeza que deseja <b>fazer logout</b>?"
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private _settings: SettingsService, private socialSharing: SocialSharing) {
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.darkTheme = this.selectedTheme == "dark-theme";
@@ -63,25 +66,7 @@ export class SettingsPage {
   }
 
   showConfirmLogout() {
-    const confirm = this.alertCtrl.create({
-      title: 'Confirmação',
-      message: 'Tem certeza que deseja sair?',
-      buttons: [
-        {
-          text: 'Cancelar',
-          handler: () => {
-            
-          }
-        },
-        {
-          text: 'Sair',
-          handler: () => {
-            this.logout();
-          }
-        }
-      ]
-    });
-    confirm.present();
+    this.popupLogout = true;
   }
 
   toggleDarkTheme(e) {
@@ -118,7 +103,5 @@ export class SettingsPage {
     localStorage.clear();
     location.reload();
   }
-
-
 
 }

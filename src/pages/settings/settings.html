@@ -24,7 +24,7 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content style="margin-top: 2px">
     <ion-list no-border style="border: 0;">
 
       <ion-list-header>
@@ -95,4 +95,9 @@
 
 
     </ion-list>
+
+    <modal *ngIf="popupLogout" [loading]="loading" [btnConfirm]="'Confirmar'"
+    (onCancel)="popupLogout = false" (onConfirm)="logout()" [text]="logoutText"
+    [title]="'Confirmação'" [color]="'red'"></modal>
+
 </ion-content>
