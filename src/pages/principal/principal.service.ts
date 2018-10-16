@@ -34,5 +34,9 @@ export class PrincipalPostService extends Connect {
             return this.callMethod("createRefeicaoCustom", { id_usuario, refeicao });
         }
     }
+    
+    reloadUserInfo(id_usuario:number){
+        return this.callMethod("reloadUserInfo", { id_usuario })
+    }
 
 }

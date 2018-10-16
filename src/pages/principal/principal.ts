@@ -31,10 +31,13 @@ export class PrincipalPage {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
     this.user = JSON.parse(localStorage.getItem("userData"));
     this.getRefeicoes();
+    
   }
 
-  ionViewDidLoad() {
+  async ionViewDidLoad() {
       console.log(this.selectedTheme);
+      this.user = await this.post.reloadUserInfo(this.user.id_usuario);
+      localStorage.setItem("userData", JSON.stringify(this.user));
   }
 
   async getRefeicoes(){
