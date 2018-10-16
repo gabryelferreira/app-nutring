@@ -94,7 +94,7 @@ export class MeusPratosPage {
   }
 
   goToMontarPrato(){
-    this.navCtrl.parent.select(1);
+    this.navCtrl.parent.select(0);
   }
 
   ionViewDidLoad() {}

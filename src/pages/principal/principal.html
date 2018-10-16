@@ -32,8 +32,8 @@
 
     <div class="refeicoes-custom" >
         
-        <div (tap)="openMontarPrato(refeicao, 'id_refeicao_usuario')" class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
-          <img *ngIf="!refeicao.foto" src="../../assets/imgs/food2.jpeg">
+        <div style="background: #111" (tap)="openMontarPrato(refeicao, 'id_refeicao_usuario')" class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
+          <img *ngIf="!refeicao.foto" src="../../assets/imgs/folhinha_da_macunha.png">
           <img *ngIf="refeicao.foto" [src]="refeicao.foto">
           <h2>{{refeicao.ds_refeicao}}</h2>
         </div>

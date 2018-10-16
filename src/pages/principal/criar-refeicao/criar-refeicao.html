@@ -33,7 +33,8 @@
   <form class="all">
     <ion-item padding-right class="align-center">
       <div class="div-user-img">
-        <img class="user-img" [src]="picture">
+        <img id="folhinha" *ngIf="picture == actualPicture" [src]="picture">
+        <img id="picture" *ngIf="picture != actualPicture" [src]="picture">
         <!-- <img class="user-img" *ngIf="user.foto" [src]='user.foto'> -->
       </div>
       <button (tap)="imageOptions = true" type="button" class="default-button padding transparent color-green">Alterar foto</button>

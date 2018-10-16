@@ -12,14 +12,15 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ModalComponent {
 
-  @Input('type') type = "confirm"; //tipo do modal - info, confirm
+  @Input('type') type = "confirm"; //tipo do modal - info, confirm, check
   @Input('btnConfirm') btnConfirm = "Confirmar"; //texto do botão de confirmação
   @Input('btnCancel') btnCancel = "Cancelar"; //texto do botão de cancelar
-  @Input('withImg') withImg = false; //modal tem imagem?
-  @Input('img') img = '../../assets/imgs/folhinha da macunha.png'; //imagem do modal
+  @Input('withImg') withImg = true; //modal tem imagem?
+  @Input('img') img = '../../assets/imgs/folhinha_da_macunha.png'; //imagem do modal
   @Input('title') title = "Título aqui."; //título do modal
   @Input('text') text = "Texto aqui."; //texto do modal
   @Input('loading') loading = false;
+  @Input('color') color = "green"; //cor do botão de confirmação
   @Output() onConfirm: EventEmitter<any> = new EventEmitter(); //clique no botão de confirmação
   @Output() onCancel: EventEmitter<any> = new EventEmitter(); //clique no botão de cancelar
 
@@ -43,6 +44,10 @@ export class ModalComponent {
 
   confirm(){
     this.onConfirm.emit();
+  }
+
+  nada(){
+    
   }
 
 }

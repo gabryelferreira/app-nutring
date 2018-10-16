@@ -16,6 +16,10 @@ page-ver-prato {
         }
     }
 
+    ion-header {
+        z-index: 1;
+    }
+
     ion-fab {
         transition: .3s !important;
     }

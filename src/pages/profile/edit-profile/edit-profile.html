@@ -15,7 +15,7 @@
       </button>
       <button *ngIf="loading" ion-button>
         <ion-note item-end color="white">
-          <ion-spinner color="white"></ion-spinner>
+          <ion-spinner color="primary"></ion-spinner>
         </ion-note>
       </button>
     </ion-buttons>
@@ -30,8 +30,8 @@
     <ion-item padding-right class="align-center">
       <div class="div-user-img">
         <!-- <img class="user-img" *ngIf="!user.foto" src="../../assets/imgs/user.jpg"> -->
-        <img class="user-img" *ngIf="(picture == '')" [src]='user.foto'>
-        <img class="user-img" *ngIf="!(picture == '')" [src]='picture'>
+        <img class="user-img" *ngIf="(picture == '')" src='../../../assets/imgs/user.jpg'>
+        <img class="user-img" *ngIf="!(picture == '')" [src]='user.foto'>
       </div>
       <button id="btnFoto" type="button" (tap)="openGaleria()" class="default-button padding transparent">Alterar foto</button>
     </ion-item>

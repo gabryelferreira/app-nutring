@@ -11,8 +11,8 @@
     </div>
     <div class="buttons">
       <button *ngIf="!loading" (tap)="cancel()" type="button" class="default-button small lightgray padding">{{btnCancel}}</button>
-      <button *ngIf="!loading" (tap)="confirm()" type="button" class="default-button small red padding">{{btnConfirm}}</button>
-      <button *ngIf="loading" type="button" class="default-button small red padding"><ion-spinner color="white" name="dots"></ion-spinner></button>
+      <button *ngIf="!loading" (tap)="confirm()" [id]="color" type="button" class="default-button small padding">{{btnConfirm}}</button>
+      <button *ngIf="loading" type="button" [id]="color" class="default-button small padding"><ion-spinner color="white" name="dots"></ion-spinner></button>
     </div>
   </div>
 
@@ -26,7 +26,21 @@
       </h2>
     </div>
     <div class="buttons">
-      <button (tap)="confirm()" type="button" class="default-button small red padding">{{btnConfirm}}</button>
+      <button (tap)="confirm()" type="button" [id]="color" class="default-button small padding">{{btnConfirm}}</button>
+    </div>
+  </div>
+
+  <div *ngIf="type == 'check'" id="showPopup" class="popup">
+    <div class="header">
+      <img *ngIf="withImg" [src]="img">
+      <!-- <img *ngIf="selectedRefeicao.foto" style="border-radius: 50%; width: 50px; height: 50px;" [src]="selectedRefeicao.foto"> -->
+      <h1>{{title}}</h1>
+      <h2 id="textoModal">
+        {{text}}
+      </h2>
+    </div>
+    <div class="buttons">
+      <button (tap)="confirm()" [id]="color" type="button" class="default-button small padding">{{btnConfirm}}</button>
     </div>
   </div>
 
