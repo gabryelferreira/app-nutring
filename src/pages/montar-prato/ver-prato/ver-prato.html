@@ -9,7 +9,7 @@
     <ion-navbar color="{{selectedTheme}}">
         <ion-title text-left>Seu prato</ion-title>
         <ion-buttons end>
-            <button *ngIf="!loading" [disabled]="!foods || foods.length == 0" (tap)="presentConfirm()" ion-button>
+            <button *ngIf="!loading" [disabled]="!foods || foods.length == 0 || popupOpen || popupCheck" (tap)="presentConfirm()" ion-button>
                 <ion-note item-end color="primary">Confirmar</ion-note>
             </button>
 
