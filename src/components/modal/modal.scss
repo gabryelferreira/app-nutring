@@ -10,7 +10,7 @@ modal {
         z-index: 9999;
         opacity: 0;
         pointer-events: none;
-        transition: .3s;
+        transition: .15s;
         .popup {
             position: absolute;
             left: 50%;
@@ -20,7 +20,7 @@ modal {
             border-radius: 5px;
             box-sizing: border-box;
             padding: 35px 25px;
-            width: 245px;
+            width: 265px;
             text-align: center;
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
             .header {
@@ -56,7 +56,7 @@ modal {
     #showBackground {
         opacity: 1;
         pointer-events: visible;
-        animation: showSlowly  .3s linear;
+        animation: showSlowly  .15s linear;
     }
 
     @keyframes showSlowly {
@@ -69,12 +69,12 @@ modal {
     }
 
     #showPopup {
-        animation: tremer .3s linear;
+        animation: scale .15s linear;
     }
 
-    @keyframes tremer {
+    @keyframes scale {
         0% {
-            transform: translate(-50%, -50%) scale(0.2);
+            transform: translate(-50%, -50%) scale(0.5);
         }
         100% {
             transform: translate(-50%, -50%) scale(1);

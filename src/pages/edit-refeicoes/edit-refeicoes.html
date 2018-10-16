@@ -20,7 +20,7 @@
     <div class="opcoes"  *ngFor="let refeicao of refeicoes; let i = index">
       <div class="opcao">
         <div class="foto">
-          <img *ngIf="!refeicao.foto" src="../../assets/imgs/food2.jpeg">
+          <img *ngIf="!refeicao.foto" style="border-radius: 0; height: auto; margin-top: 6px; margin-left: 5px;" src="../../assets/imgs/folhinha_da_macunha.png">
           <img *ngIf="refeicao.foto" [src]="refeicao.foto">
         </div>
         <div class="info">
@@ -61,7 +61,7 @@
 
   </div> -->
 
-  <modal *ngIf="popupOpen" [loading]="excluindo" [btnConfirm]="'Excluir'"
+  <modal *ngIf="popupOpen" [loading]="excluindo" [btnConfirm]="'Excluir'" [color]="'red'"
   (onCancel)="popupOpen = false" (onConfirm)="deletarRefeicaoCustom(selectedRefeicao)" [text]="deleteText"
   [title]="selectedRefeicao.ds_refeicao"></modal>
 

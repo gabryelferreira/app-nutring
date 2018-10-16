@@ -43,7 +43,7 @@
       </ion-card>
       <div padding text-right>
         <button type="submit" [disabled]="message.length < 6" class="default-button green full" *ngIf="!loading">Enviar</button>
-        <button *ngIf="loading" class="default-button green"><ion-spinner color="white" name="bubbles"></ion-spinner></button>
+        <button *ngIf="loading" class="default-button green full"><ion-spinner color="white" name="dots"></ion-spinner></button>
       </div>
   </form>
 

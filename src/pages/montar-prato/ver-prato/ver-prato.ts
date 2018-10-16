@@ -41,6 +41,10 @@ export class VerPratoPage {
 
   sendPrato = [];
   loading: boolean = false;
+  confirmText: string = "Deseja montar seu prato?";
+  popupOpen: boolean = false;
+  popupCheck: boolean = false;
+  checkText: string = "Seu prato foi feito com sucesso."
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private settings: SettingsService,
               private post: VerPratoPostService, private toastCtrl: ToastController,
@@ -102,47 +106,16 @@ export class VerPratoPage {
       message = "Ocorreu um erro! Tente novamente.";
     }
     this.loading = false;
-    this.presentAlert(title, message);
+    this.popupOpen = false;
+    this.popupCheck = true;
   }
 
   presentConfirm() {
-    let alert = this.alertCtrl.create({
-      title: 'Confirmação',
-      message: 'Deseja montar seu prato?',
-      buttons: [
-        {
-          text: 'Cancelar',
-          role: 'cancel',
-          handler: () => {
-            
-          }
-        },
-        {
-          text: 'Confirmar',
-          handler: () => {
-            this.montarPrato();
-            localStorage.setItem("loadHistorico","True");
-          }
-        }
-      ]
-    });
-    alert.present();
+    this.popupOpen = true;
   }
 
-  presentAlert(title: string, subTitle: string) {
-    let alert = this.alertCtrl.create({
-      title: title,
-      subTitle: subTitle,
-      buttons: [
-        {
-          text: 'Ok',
-          handler: () => {
-            this.navCtrl.setRoot(PrincipalPage)
-          }
-        }
-      ]
-    });
-    alert.present();
+  verPrato(){
+    this.popupCheck = false;
   }
 
 }

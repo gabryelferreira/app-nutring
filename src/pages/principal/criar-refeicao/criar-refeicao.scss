@@ -8,14 +8,21 @@ page-criar-refeicao {
         background: #fff;
         border-radius: 50%;
         text-align: center;
-        img {
-          position: absolute;
-          left: 3px;
-          top: 3px;
-          margin: auto;
-          height: 100px;
-          width: 100px;
-          border-radius: 50%;
+        #folhinha {
+            position: absolute;
+            left: 3px;
+            bottom: 3px;
+            margin: auto;
+            width: 100px;
+        }
+        #picture {
+            position: absolute;
+            left: 3px;
+            bottom: 3px;
+            margin: auto;
+            width: 100px;
+            max-height: 100px;
+            border-radius: 50%;
         }
     }
 

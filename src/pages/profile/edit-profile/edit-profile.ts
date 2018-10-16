@@ -52,8 +52,12 @@ export class EditProfilePage {
               _settings: SettingsService, private post: ProfilePostService,
               private toastCtrl: ToastController, private camera:Camera) {
     this.user = navParams.get("user");
-    this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
-    this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
+    if (this.user.peso_kg){
+      this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
+    }
+    if (this.user.altura_m){
+      this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
+    }
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }
 
@@ -62,30 +66,41 @@ export class EditProfilePage {
 
   async ionViewWillEnter() {
     this.user = JSON.parse(localStorage.getItem("userData"));
-    this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
-    this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
+    if (this.user.peso_kg){
+      this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
+    }
+    if (this.user.altura_m){
+      this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
+    }
     let date = this.user.dt_nasc.toString().split("-")
     this.dt_nasc = `${date[2]}/${date[1]}/${date[0]}`
   }
 
   async setOptionalInfo(){
-      let field = this.optionalData["peso_kg"];
-      if (field != null && field != "" && field != undefined){
-        if (field.indexOf(',') != -1){
-          this.optionalData["peso_kg"] = field.replace(',', '.');
-        }
+    let field = this.optionalData["peso_kg"];
+    if (field != null && field != "" && field != undefined){
+      if (field.indexOf(',') != -1){
+        this.optionalData["peso_kg"] = field.replace(',', '.');
       }
-      field = this.optionalData["altura_m"];
-      if (field != null && field != "" && field != undefined){
-        if (field.indexOf(',') != -1){
-          this.optionalData["altura_m"] = field.replace(',', '.');
-        }
+    }
+    field = this.optionalData["altura_m"];
+    if (field != null && field != "" && field != undefined){
+      if (field.indexOf(',') != -1){
+        this.optionalData["altura_m"] = field.replace(',', '.');
       }
-
-    let altura = parseFloat(this.optionalData["altura_m"]);
-    let peso = parseFloat(this.optionalData["peso_kg"]);
+    }
+    let altura = 0;
+    let peso = 0;
+    if (this.optionalData["altura_m"] && this.optionalData["altura_m"] != null && this.optionalData["altura_m"] != undefined){
+      altura = parseFloat(this.optionalData["altura_m"]);
+    }
+    if (this.optionalData["peso_kg"] && this.optionalData["peso_kg"] != null && this.optionalData["peso_kg"] != undefined){
+      peso = parseFloat(this.optionalData["peso_kg"]);
+    }
+    console.log("altura = ", altura)
     this.user.altura_m = altura.toString();
-    this.user.peso_kg = peso.toString();
+    this.user.peso_kg = altura.toString();
+    console.log("user altura", this.user.altura_m)
   }
 
   async updateUserInfo(){

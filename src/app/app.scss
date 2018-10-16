@@ -131,6 +131,8 @@ ion-fab {
   width: 100%;
 }
 
+
+//CLASSES DE COR
 .blue {
   background: #488aff;
   color: white;
@@ -147,9 +149,33 @@ ion-fab {
 }
 
 .lightgray {
-  background: lightgray;
+  background: #eee;
   color: #222;
 }
+
+//IDS DE COR - IGUAL AS CLASSES
+#blue {
+  background: #488aff;
+  color: white;
+}
+
+#red {
+  background: #f53d3d;
+  color: white;
+}
+
+#green {
+  background: #27ae60;
+  color: white;
+}
+
+#lightgray {
+  background: #eee;
+  color: #222;
+}
+
+
+// ------------------
 
 .success {
   background: #4cd137;

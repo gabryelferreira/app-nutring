@@ -78,21 +78,22 @@ export class ProfilePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               _settings: SettingsService, private toastCtrl: ToastController,
-              private post: ProfilePostService, sanitizer: DomSanitizer) {
+              private post: ProfilePostService, private sanitizer: DomSanitizer) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
-    this.user = JSON.parse(localStorage.getItem("userData"));
-
-    if (this.user.foto) {
-      this.profileImage = sanitizer.bypassSecurityTrustStyle(`url(${this.user.foto})`);
-    } else {
-      let url = "../../assets/imgs/user.jpg";
-      this.profileImage = sanitizer.bypassSecurityTrustStyle(`url(${url})`);
-    }
-    this.getUserPosts(this.user.id_usuario, 9, 0);
-    this.validateRate();
+    
+    // this.getUserPosts(this.user.id_usuario, 9, 0);
+    // this.validateRate();
   }
 
   async ionViewWillEnter() {
+    this.user = JSON.parse(localStorage.getItem("userData"));
+
+    if (this.user.foto) {
+      this.profileImage = this.sanitizer.bypassSecurityTrustStyle(`url(${this.user.foto})`);
+    } else {
+      let url = "../../assets/imgs/user.jpg";
+      this.profileImage = this.sanitizer.bypassSecurityTrustStyle(`url(${url})`);
+    }
   }
 
   async getUserPosts(id_usuario: number, limit: number, offset: number){
