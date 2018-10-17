@@ -25,10 +25,12 @@ import { ScrollHideConfig } from "../../components/hide-on-scrolling/scroll-hide
   providers: [service.MontarPratoGetService, service.MontarPratoPostService]
 })
 export class MontarPratoPage {
-
-  headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 46 };
-  refeicao:any = {}
-  type:string;
+  headerScrollConfig: ScrollHideConfig = {
+    cssProperty: "margin-top",
+    maxValue: 46
+  };
+  refeicao: any = {};
+  type: string;
   selectedTheme: String = "";
   loading: boolean = false;
 
@@ -42,14 +44,19 @@ export class MontarPratoPage {
   searchText: string = "";
   allSelectedFoods = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-              private get: service.MontarPratoGetService, private post: service.MontarPratoPostService,
-              private toastCtrl: ToastController, private settings: SettingsService,
-              public modalCtrl: ModalController) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private get: service.MontarPratoGetService,
+    private post: service.MontarPratoPostService,
+    private toastCtrl: ToastController,
+    private settings: SettingsService,
+    public modalCtrl: ModalController
+  ) {
     settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
     this.findFoods();
   }
-  
+
   async findFoods() {
     this.loading = true;
     let result = await this.post.findFoods();
@@ -57,32 +64,35 @@ export class MontarPratoPage {
       this.foods = result.result;
     }
     this.loading = false;
-    
   }
 
+  backButtonVisibility() {
+    setTimeout(() => { this.isSearching = !this.isSearching }, 2);
+  }
   async onInput(event) {
     let text = event;
     this.searchText = text;
     if (text == undefined) text = "";
-    let result = await this.post.getFood(text)
-    if (result.success){
-      var foods = result.result
+    let result = await this.post.getFood(text);
+    if (result.success) {
+      var foods = result.result;
       if (this.allSelectedFoods.length > 0) {
-        for (var x = 0; x < foods.length; x++){
-          for (var y = 0; y < this.allSelectedFoods.length; y++){
-            if (foods[x].id_alimento == this.allSelectedFoods[y].id_alimento){
+        for (var x = 0; x < foods.length; x++) {
+          for (var y = 0; y < this.allSelectedFoods.length; y++) {
+            if (foods[x].id_alimento == this.allSelectedFoods[y].id_alimento) {
               foods[x] = this.allSelectedFoods[y];
             }
           }
         }
       }
-      this.foods = foods 
+      this.foods = foods;
     }
   }
 
   async doInfinite(infiniteScroll) {
     let result;
-    if (this.isSearching) result = await this.post.getFood(this.searchText,this.foods.length,10)
+    if (this.isSearching)
+      result = await this.post.getFood(this.searchText, this.foods.length, 10);
     else result = await this.post.findFoods(this.foods.length);
 
     if (result && result.result.length > 0)

@@ -39,12 +39,12 @@
 
     <ion-item padding-right>
       <ion-label stacked>Nome Completo</ion-label>
-      <ion-input [(ngModel)]="user.nome" name="nome" type="text"></ion-input>
+      <ion-input [(ngModel)]="user.nome" name="nome" type="text"  maxlength="60"></ion-input>
     </ion-item>
 
     <ion-item padding-right>
       <ion-label stacked>Telefone</ion-label>
-      <ion-input type="text" [(ngModel)]="user.telefone" name="telefone" [brmasker]="{phone: true}"></ion-input>
+      <ion-input type="telephone" [(ngModel)]="user.telefone" name="telefone" [brmasker]="{phone: true}"></ion-input>
     </ion-item>
 
     <ion-item padding-right>
@@ -70,12 +70,12 @@
 
     <ion-item padding-right>
       <ion-label stacked>Peso</ion-label>
-      <ion-input type="text" name="peso_kg" (keypress)="validNumericField(user.peso_kg)" [(ngModel)]="user.peso_kg"></ion-input>
+      <ion-input type="number" name="peso_kg" (keypress)="validNumericField(user.peso_kg)" [(ngModel)]="user.peso_kg"></ion-input>
     </ion-item>
 
     <ion-item padding-right>
       <ion-label stacked>Altura</ion-label>
-      <ion-input type="text" name="altura_m" (keypress)="validNumericField(user.altura_m)" [(ngModel)]="user.altura_m"></ion-input>
+      <ion-input type="number" name="altura_m" (keypress)="validNumericField(user.altura_m)" [(ngModel)]="user.altura_m"></ion-input>
     </ion-item>
 
     <!-- <ion-item (tap)="openUpdateLoginInfo()" padding>

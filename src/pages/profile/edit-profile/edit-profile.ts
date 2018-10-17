@@ -100,7 +100,7 @@ export class EditProfilePage {
     }
     console.log("altura = ", altura)
     this.user.altura_m = altura.toString();
-    this.user.peso_kg = altura.toString();
+    this.user.peso_kg = peso.toString();
     console.log("user altura", this.user.altura_m)
   }
 
