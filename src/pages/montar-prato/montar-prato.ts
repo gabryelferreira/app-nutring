@@ -67,7 +67,7 @@ export class MontarPratoPage {
   }
 
   backButtonVisibility() {
-    setTimeout(() => { this.isSearching = !this.isSearching }, 2);
+    setTimeout(() => { this.isSearching = !this.isSearching }, 50);
   }
   async onInput(event) {
     let text = event;
