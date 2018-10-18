@@ -32,18 +32,35 @@
 
     <div class="refeicoes-custom" >
         
-        <div style="background: #111" (tap)="openMontarPrato(refeicao, 'id_refeicao_usuario')" class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
+        <div (click)="openMontarPrato(refeicao, 'id_refeicao_usuario')" class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
           <img *ngIf="!refeicao.foto" src="../../assets/imgs/folhinha_da_macunha.png">
           <img *ngIf="refeicao.foto" [src]="refeicao.foto">
-          <h2>{{refeicao.ds_refeicao}}</h2>
+          <div class="info">
+            <h2>{{refeicao.ds_refeicao}}</h2>
+          </div>
         </div>
 
-        <div (tap)="openCriarRefeicao()" class="refeicao">
+        <div (click)="openCriarRefeicao()" class="refeicao">
           <ion-icon name="add"></ion-icon>
           <img src="../../assets/imgs/blur2.jpg">
-          <h2>Nova refeição</h2>
+          <div class="info">
+            <h2>Nova refeição</h2>
+          </div>
         </div>
     </div>
+
+    <!-- <ion-scroll scrollX="true" style="white-space: nowrap; height: 145px;">
+      <div class="refeicao" (click)="openMontarPrato(refeicao, 'id_refeicao_usuario')" *ngFor="let refeicao of refeicoesCustom; let i = index">
+        <img *ngIf="!refeicao.foto" src="../../assets/imgs/folhinha_da_macunha.png">
+        <img *ngIf="refeicao.foto" [src]="refeicao.foto">
+        <h2>{{refeicao.ds_refeicao}}</h2>
+      </div>
+      <div (tap)="openCriarRefeicao()" class="refeicao">
+        <ion-icon name="add"></ion-icon>
+        <img src="../../assets/imgs/blur2.jpg">
+        <h2>Nova refeição</h2>
+      </div>
+    </ion-scroll> -->
 
     <div class="title">
       <p>Opções padrões</p>

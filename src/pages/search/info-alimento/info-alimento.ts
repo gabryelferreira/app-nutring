@@ -24,10 +24,18 @@ export class InfoAlimentoPage {
   selectedTheme: String = "";
   page: string = "alimentos";
   loading: boolean = false;
+  hasPorcao: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, _settings: SettingsService) {
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
     this.food = navParams.get("food");
+  }
+
+  ionViewWillEnter(){
+    let hasPorcao = this.navParams.get("hasPorcao");
+    if (hasPorcao){
+      this.hasPorcao = hasPorcao;
+    }
   }
 
   ionViewDidLoad() {

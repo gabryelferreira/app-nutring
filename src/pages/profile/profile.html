@@ -29,9 +29,11 @@
           <img class="user-img" *ngIf="!user.foto" src="../../assets/imgs/user.jpg">
           <img class="user-img" *ngIf="user.foto" [src]='user.foto'>
         </div>
-
-        <h1 style="line-height: 9px">{{user.nome}}</h1>
-        <h2>{{user.idade}} anos</h2>
+        <div class="info">
+          <h1>{{user.nome}}</h1>
+          <h2>{{user.idade}} anos</h2>
+        </div>
+        
         <!-- <div class="div-percentage-day">
           <ion-icon *ngFor="let star of stars" [name]="star.star" color="white"></ion-icon>
         </div> -->
