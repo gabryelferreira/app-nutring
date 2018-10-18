@@ -39,9 +39,10 @@ page-principal {
         }
         .refeicoes-custom {
             width: 100%;
-            position: relative;
+            // position: relative;
             overflow-x: scroll;
             white-space: nowrap;
+            
             margin-top: 5px;
             .refeicao:first-child {
                 margin-left: 4px;

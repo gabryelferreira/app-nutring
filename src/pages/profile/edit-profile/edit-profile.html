@@ -44,7 +44,7 @@
 
     <ion-item padding-right>
       <ion-label stacked>Telefone</ion-label>
-      <ion-input type="telephone" [(ngModel)]="user.telefone" name="telefone" [brmasker]="{phone: true}"></ion-input>
+      <ion-input type="tel" [(ngModel)]="user.telefone" name="telefone" [brmasker]="{phone: true}" pattern="\d*"></ion-input>
     </ion-item>
 
     <ion-item padding-right>
@@ -63,7 +63,7 @@
     <ion-item padding-right>
       <ion-label stacked>Data de nascimento</ion-label>
       <ion-input autocomplete="off" type="text" maxlength="10" [(ngModel)]="dt_nasc" name="dt_nasc" (keyup)="transformDtNasc($event); validFields()"
-        (keypress)="validateKeyDtNasc($event)"></ion-input>
+        (keypress)="validateKeyDtNasc($event)" type="tel" pattern="\d*"></ion-input>
       <!-- <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="user.dt_nasc" name="dt_nasc" style="border-bottom: 1px solid rgb(222, 222, 222)"> -->
       <!-- </ion-datetime> -->
     </ion-item>
