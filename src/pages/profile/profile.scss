@@ -61,20 +61,24 @@ page-profile {
                     border-radius: 50%;
                 }
             }
-            h1 {
-                color: #222;
-                font-size: 14px;
-                font-weight: bold;
-                margin-bottom: 0;
-                max-height: 20px;
+            .info {
+                position: relative;
                 overflow: hidden;
-            }
-            h2 {
-                color: #111;
-                font-size: 12px;
-                margin-top: 3px;
-                max-height: 16px;
-                overflow: hidden;
+                h1 {
+                    color: #222;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                    max-height: 18px;
+                    overflow: hidden;
+                }
+                h2 {
+                    color: #111;
+                    font-size: 12px;
+                    margin-top: 3px;
+                    max-height: 16px;
+                    overflow: hidden;
+                }
             }
             
             .stars {
@@ -190,11 +194,13 @@ page-profile {
             .div-user-img {
                 background: transparent;
             }
-            h1 {
-                color: #eee;
-            }
-            h2 {
-                color: #eee;
+            .info {
+                h1 {
+                    color: #eee;
+                }
+                h2 {
+                    color: #eee;
+                }
             }
     
         }

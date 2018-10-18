@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders, HttpResponse, HttpErrorResponse } from "@angul
 import { urlencode } from "./url";
 
 export abstract class Connect {
-  url: string = "http://nutring.com.br/api/";
+  url: string = "http://localhost/nutring-api/api/";
   constructor(private http: HttpClient, private method: string) {}
 
   protected async callMethod(_function: string, args?: { [id: string]: any }): Promise<any> {

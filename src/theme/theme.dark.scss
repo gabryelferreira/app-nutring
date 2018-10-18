@@ -3,19 +3,7 @@
       background: #4b4b4b;
       transition: .3s;
     }
-    .no-food {
-      
-      h1 {
-        font-size: 15px;
-        font-weight: bold;
-        color: #aeaeae;
-      }
-      h2 {
-        font-size: 14px;
-        color: #eeeeee;
-      }
-      
-    }
+    
     ion-item {
       background: #4b4b4b;
       color: #fff;
@@ -136,6 +124,20 @@
         }
 
       }
+    }
+
+    .no-food {
+      
+      h1 {
+        font-size: 15px;
+        font-weight: bold;
+        color: #eee;
+      }
+      h2 {
+        font-size: 14px;
+        color: #eee;
+      }
+      
     }
 
     .header-segment {

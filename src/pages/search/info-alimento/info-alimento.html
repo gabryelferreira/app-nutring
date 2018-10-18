@@ -14,7 +14,7 @@
 
 <ion-content>
 
-  <ion-card>
+  <ion-card *ngIf="!hasPorcao">
       
       <ion-card-content>
         <ion-card-title no-padding>
@@ -103,6 +103,102 @@
     <ion-item>
       Zinco
       <ion-badge item-end>{{food.zinco | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+  </ion-card>
+
+
+
+
+  <ion-card *ngIf="hasPorcao">
+      
+      <ion-card-content>
+        <ion-card-title no-padding>
+            <ion-item no-padding>
+              <ion-avatar item-start>
+                <img [src]="food.img_url">
+              </ion-avatar>
+            <h3>{{food.nome}}</h3>
+          </ion-item>
+        </ion-card-title>
+        <p>
+          Saiba as calorias, proteínas e outras informações deste alimento em uma porção de {{food.porcao_consumo}}g.
+        </p>
+      </ion-card-content>
+
+    <ion-item>
+      Cálcio
+      <ion-badge item-end>{{food.calcio_consumo | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Calorias
+      <ion-badge item-end>{{food.kcal_consumo | number:'1.0-2'}} kcal</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Carboidratos
+      <ion-badge item-end>{{food.carboidrato_consumo | number:'1.0-2'}} g</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Cobre
+      <ion-badge item-end>{{food.cobre_consumo | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Ferro
+      <ion-badge item-end>{{food.ferro_consumo | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Fibra
+      <ion-badge item-end>{{food.fibra_alimentar_consumo | number:'1.0-2'}} g</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Fósforo
+      <ion-badge item-end>{{food.fosforo_consumo | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Lipídios
+      <ion-badge item-end>{{food.lipideos_consumo | number:'1.0-2'}}%</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Magnésio
+      <ion-badge item-end>{{food.magnesio_consumo | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Manganês
+      <ion-badge item-end>{{food.manganes_consumo | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Potássio
+      <ion-badge item-end>{{food.potassio_consumo | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Proteínas
+      <ion-badge item-end>{{food.proteina_consumo | number:'1.0-2'}} g</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Sódio
+      <ion-badge item-end>{{food.sodio_consumo | number:'1.0-2'}} mg</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Vitamina C
+      <ion-badge item-end>{{food.vitamina_c_consumo | number:'1.0-2'}}%</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      Zinco
+      <ion-badge item-end>{{food.zinco_consumo | number:'1.0-2'}} mg</ion-badge>
     </ion-item>
 
   </ion-card>

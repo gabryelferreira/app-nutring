@@ -35,4 +35,8 @@ export class MeusPratosPostService extends Connect {
     return this.callMethod("deletePrato", { id_usuario, id_prato_feito, id_prato });
   }
 
+  reloadUserInfo(id_usuario:number){
+    return this.callMethod("reloadUserInfo", { id_usuario })
+  }
+
 }

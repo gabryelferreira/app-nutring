@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SettingsService } from '../../settings/settings.service';
 import { IUser } from '../../../app/types';
+import { InfoAlimentoPage } from '../../search/info-alimento/info-alimento';
 
 /**
  * Generated class for the InfoPratoPage page.
@@ -51,6 +52,7 @@ export class InfoPratoPage {
     let result = await this.post.getPratoInfoById(id_prato);
     if (result.success){
       this.foods = result.result;
+      console.log("foods = ", this.foods)
     }
     this.loading = false;
   }
@@ -70,12 +72,27 @@ export class InfoPratoPage {
       localStorage.setItem("loadHistorico", "true");
       this.popupDelete = false;
       this.popupCheck = true;
+      this.reloadUserInfo();
     }
+  }
+
+  async reloadUserInfo(){
+    let result = await this.post.reloadUserInfo(this.user.id_usuario);
+    if (result.success){
+      this.user = result.result;
+      localStorage.setItem("userData", JSON.stringify(this.user));
+    }
+
   }
 
   goToHistorico(){
     this.popupCheck = false;
     this.navCtrl.parent.select(2);
+  }
+
+  openFoodInfo(food) {
+    console.log("food = ", food)
+    this.navCtrl.push(InfoAlimentoPage, { food, hasPorcao: true });
   }
 
 }

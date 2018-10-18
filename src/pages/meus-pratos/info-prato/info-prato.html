@@ -44,7 +44,7 @@
       </p>
     </ion-card-content>
 
-    <ion-item *ngFor="let food of foods">
+    <ion-item (tap)="openFoodInfo(food)" *ngFor="let food of foods">
         <ion-avatar item-start>
           <img [src]="food.img_url">
         </ion-avatar>
