@@ -10,7 +10,7 @@
       </h2>
     </div>
     <div class="buttons">
-      <button *ngIf="!loading" (tap)="cancel()" type="button" class="default-button small lightgray padding">{{btnCancel}}</button>
+      <button *ngIf="!loading" (tap)="cancel()" type="button" class="default-button small no-color padding">{{btnCancel}}</button>
       <button *ngIf="!loading" (tap)="confirm()" [id]="color" type="button" class="default-button small padding">{{btnConfirm}}</button>
       <button *ngIf="loading" type="button" [id]="color" class="default-button small padding"><ion-spinner color="white" name="dots"></ion-spinner></button>
     </div>

@@ -6,7 +6,7 @@ modal {
         top: 0;
         width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, .7);
+        background: rgba(0, 0, 0, .6);
         z-index: 9999;
         opacity: 0;
         pointer-events: none;
@@ -16,37 +16,45 @@ modal {
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            background: #fff;
+            background: #fafafa;
             border-radius: 5px;
             box-sizing: border-box;
-            padding: 35px 25px;
             width: 265px;
             text-align: center;
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
             .header {
                 position: relative;
                 width: 100%;
-                padding-bottom: 10px;
+                box-sizing: border-box;
+                padding: 0 10px 5px 10px;
                 img {
                     width: 60px;
                     height: auto;
+                    padding: 12px 0;
                 }
                 h1 {
-                    font-size: 13px;
-                    font-weight: bold;
+                    font-size: 16px;
+                    font-weight: bolder;
+                    color: #222;
                     margin: 5px 0 22px 0;
                 }
                 h2 {
-                    font-size: 13px;
+                    font-size: 14px;
                     line-height: 18px;
+                    color: #222;
                     b {
                         font-weight: bold;
                     }
                 }
             }
             .buttons {
+                position: relative;
+                width: 100%;
+                display: flex;
+                padding: 6px 5px 10px 5px;
                 button {
-                    margin: 5px 2px;
+                    width: 100%;
+                    margin: 0 4px;
                 }
             }
         }

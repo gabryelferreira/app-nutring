@@ -19,7 +19,7 @@
 
     <div class="login-info">
       <button [disabled]="!validLogin" type="submit" class="green" *ngIf="!loadingLogin" (tap)="login()">Comece agora</button>
-      <button *ngIf="loadingLogin" class="green" ion-button full>
+      <button *ngIf="loadingLogin" class="green">
         <ion-spinner color="white" name="dots"></ion-spinner>
       </button>
     </div>

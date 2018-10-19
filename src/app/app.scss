@@ -27,7 +27,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, p, ion-card-title, ion-badge, ion-item, 
-ion-list-header, ion-note, ion-button, ion-title, button, ion-card-content, 
+ion-list-header, ion-note, ion-title, ion-card-content, 
 input[type="text"], input[type="password"], .item-inner {
   font-family: 'Open Sans', sans-serif !important;
   border: 0 !important;
@@ -37,8 +37,9 @@ ion-avatar img {
   border-radius: 50% !important;
 }
 
-button {
+button, ion-button {
   transition: 0.3s !important;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 ion-header {
@@ -116,15 +117,15 @@ ion-fab {
 }
 
 .default-button {
-  height: 40px;
+  height: 50px;
   border-radius: 23px;
   font-size: 13.333px;
   font-weight: bold;
+  outline: none;
 }
 
 .small {
-  height: 30px;
-  font-size: 12px;
+  height: 40px;
 }
 
 .full {
@@ -151,6 +152,18 @@ ion-fab {
 .lightgray {
   background: #eee;
   color: #222;
+}
+
+.no-color {
+  background: transparent;
+  border: 1px solid #ccc !important;
+  color: #222;
+}
+
+.dark-theme {
+  .no-color {
+    color: #eee;
+  }
 }
 
 //IDS DE COR - IGUAL AS CLASSES
