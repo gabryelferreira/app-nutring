@@ -80,7 +80,7 @@ export class SettingsPage {
   }
 
   gotoPerfil(){
-    this.navCtrl.push(ProfilePage);
+    this.navCtrl.push('ProfilePage');
   }
 
   share(){
@@ -92,16 +92,16 @@ export class SettingsPage {
   }
 
   openContactUsPage(){
-    this.navCtrl.push(ContactUsPage);
+    this.navCtrl.push('ContactUsPage');
   }
 
   openSuggestionPage(){
-    this.navCtrl.push(SugestaoAlimentoPage);
+    this.navCtrl.push('SugestaoAlimentoPage');
   }
 
   logout() {
     localStorage.clear();
-    location.reload();
+    this.navCtrl.push('LoginPage')
   }
 
 }

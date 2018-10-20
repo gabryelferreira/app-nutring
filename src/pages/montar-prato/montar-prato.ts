@@ -156,7 +156,7 @@ export class MontarPratoPage {
     this.allSelectedFoods.forEach(element => {
       element.selected = false;
     });
-    this.navCtrl.push(VerPratoPage, {
+    this.navCtrl.push('VerPratoPage', {
       callback: this.myCallbackFunction,
       allSelectedFoods: this.allSelectedFoods,
       refeicao: this.refeicao,

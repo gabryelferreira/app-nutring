@@ -64,7 +64,7 @@ export class VerPostPage {
   }
 
   openPostComments(post: types.IPost){
-    this.navCtrl.push(CommentsPage, {
+    this.navCtrl.push('CommentsPage', {
       selectKeyboard: true,
       post: post
     })
@@ -79,7 +79,7 @@ export class VerPostPage {
   }
 
   seeComments(post: any){
-    this.navCtrl.push(CommentsPage, {
+    this.navCtrl.push('CommentsPage', {
       post: post
     })
   }

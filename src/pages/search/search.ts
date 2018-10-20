@@ -131,7 +131,7 @@ export class SearchPage {
   }
 
   openFoodInfo(food) {
-    this.navCtrl.push(InfoAlimentoPage, { food });
+    this.navCtrl.push('InfoAlimentoPage', { food });
   }
 
   // toggleViewMode() {

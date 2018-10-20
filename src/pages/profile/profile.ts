@@ -106,7 +106,7 @@ export class ProfilePage {
   }
 
   openPostComments(post: IPost){
-    this.navCtrl.push(VerPostPage, {
+    this.navCtrl.push('VerPostPage', {
       post: post
     })
   }
@@ -143,13 +143,13 @@ export class ProfilePage {
   }
 
   editProfile() {
-    this.navCtrl.push(EditProfilePage, {
+    this.navCtrl.push('EditProfilePage', {
       user: this.user
     });
   }
 
   openSettings() {
-    this.navCtrl.push(SettingsPage);
+    this.navCtrl.push('SettingsPage');
   }
 
   validateRate() {

@@ -12,7 +12,7 @@ import { Keyboard } from "@ionic-native/keyboard";
   templateUrl: "app.html"
 })
 export class MyApp {
-  rootPage: any = LoginPage;
+  rootPage: any = 'LoginPage';
   selectedTheme: String;
 
   constructor(platform: Platform,statusBar: StatusBar,splashScreen: SplashScreen,
@@ -22,7 +22,7 @@ export class MyApp {
     if (localStorage.getItem("userData")) {
       this.rootPage = TabsPage;
     } else {
-      this.rootPage = LoginPage;
+      this.rootPage = 'LoginPage';
     }
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

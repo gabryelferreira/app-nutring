@@ -140,7 +140,7 @@ export class RegisterPage {
         this.showToast("E-mail já cadastrado", "top");
       } else {
         localStorage.setItem("userData", JSON.stringify(result.result));
-        this.navCtrl.setRoot(IntroductionPage, {}, {animate: true, direction: 'forward'});
+        this.navCtrl.push('IntroductionPage', {}, {animate: true, direction: 'forward'});
       }
     }
     this.loading = false;

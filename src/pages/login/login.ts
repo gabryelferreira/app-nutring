@@ -71,7 +71,7 @@ export class LoginPage {
   }
 
   goToRegister() {
-    this.navCtrl.push(RegisterPage);
+    this.navCtrl.push('RegisterPage');
   }
 
   loginFacebook() {
@@ -100,7 +100,7 @@ export class LoginPage {
       } else {
         let userData = result.result;
         localStorage.setItem("userData", JSON.stringify(userData));
-        this.navCtrl.setRoot(
+        this.navCtrl.push(
           TabsPage,
           {},
           { animate: true, direction: "forward" }

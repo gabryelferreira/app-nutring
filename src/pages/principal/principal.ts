@@ -65,7 +65,7 @@ export class PrincipalPage {
   }
 
   openCriarRefeicao(){
-    this.navCtrl.push(CriarRefeicaoPage, {
+    this.navCtrl.push('CriarRefeicaoPage', {
       callback: this.myCallbackFunction
     });
   }
@@ -78,14 +78,14 @@ export class PrincipalPage {
    }
 
   openMontarPrato(refeicao: any, type: string){
-    this.navCtrl.push(MontarPratoPage, {
+    this.navCtrl.push('MontarPratoPage', {
       refeicao: refeicao,
       type: type
     })
   }
 
   openEditarRefeicao(){
-    this.navCtrl.push(EditRefeicoesPage, {
+    this.navCtrl.push('EditRefeicoesPage', {
       refeicoes: this.refeicoesCustom,
       callback: this.myCallbackFunction
     });
