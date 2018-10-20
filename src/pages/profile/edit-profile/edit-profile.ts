@@ -182,7 +182,7 @@ export class EditProfilePage {
   }
 
   openUpdateLoginInfo(){
-    this.navCtrl.push(UpdateLoginInfoPage);
+    this.navCtrl.push('UpdateLoginInfoPage');
   }
 
   openGaleria() {

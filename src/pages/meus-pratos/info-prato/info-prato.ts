@@ -92,7 +92,7 @@ export class InfoPratoPage {
 
   openFoodInfo(food) {
     console.log("food = ", food)
-    this.navCtrl.push(InfoAlimentoPage, { food, hasPorcao: true });
+    this.navCtrl.push('InfoAlimentoPage', { food, hasPorcao: true });
   }
 
 }

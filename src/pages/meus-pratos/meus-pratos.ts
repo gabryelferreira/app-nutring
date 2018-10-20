@@ -87,7 +87,7 @@ export class MeusPratosPage {
   }
 
   openPrato(prato) {
-    this.navCtrl.push(InfoPratoPage, {
+    this.navCtrl.push('InfoPratoPage', {
       prato: prato
     });
   }

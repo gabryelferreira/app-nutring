@@ -59,7 +59,7 @@ export class ContactUsPage {
   }
 
   seeMessages(){
-    this.navCtrl.push(ContactMessagesPage)
+    this.navCtrl.push('ContactMessagesPage')
   }
 
 

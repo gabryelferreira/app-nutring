@@ -87,7 +87,7 @@ export class HomePage {
   }
 
   openPostComments(post: types.IPost){
-    this.navCtrl.push(CommentsPage, {
+    this.navCtrl.push('CommentsPage', {
       selectKeyboard: true,
       post: post
     })
@@ -120,13 +120,13 @@ export class HomePage {
   }
 
   seeComments(post: types.IPost){
-    this.navCtrl.push(CommentsPage, {
+    this.navCtrl.push('CommentsPage', {
       post: post
     })
   }
 
   getCurtidores(post: types.IPost){
-    this.navCtrl.push(CurtidasPage, {
+    this.navCtrl.push('CurtidasPage', {
       post: post
     })
   }
@@ -142,7 +142,7 @@ export class HomePage {
   ionViewDidLoad() {}
 
   gotoFotoPage(){
-    this.navCtrl.push(PostPicturePage);
+    this.navCtrl.push('PostPicturePage');
   }
 
 }
