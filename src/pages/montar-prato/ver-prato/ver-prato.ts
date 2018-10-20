@@ -113,7 +113,8 @@ export class VerPratoPage {
 
   verPrato(){
     this.popupCheck = false;
-    this.navCtrl.setRoot(PrincipalPage)
+    this.navCtrl.popToRoot()
+    //  setRoot(PrincipalPage)
     this.navCtrl.parent.select(2);
   }
 

@@ -1,10 +1,5 @@
-import { ProfilePage } from "./../profile/profile";
 import { Component } from "@angular/core";
-import { SettingsPage } from "../settings/settings";
-import { SearchPage } from "../search/search";
-import { MeusPratosPage } from "../meus-pratos/meus-pratos";
 import { SettingsService } from "../settings/settings.service";
-import { PrincipalPage } from "../principal/principal";
 import { HideService } from "../../app/hide.service";
 
 @Component({
