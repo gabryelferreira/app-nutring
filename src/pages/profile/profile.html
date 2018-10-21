@@ -4,133 +4,135 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header class="header-segment" no-border>
 
-  <ion-navbar color="{{selectedTheme}}" no-border-bottom>
-    <ion-title text-left>Perfil</ion-title>
-    <ion-buttons end>
-      <button id="ver-perfil" color="primary" ion-button (tap)="editProfile()">
-        Editar
-      </button>
-    </ion-buttons>
-  </ion-navbar>
-
-</ion-header>
 
 
 <ion-content class="content-profile">
-  <div *ngIf="user">
-
-    <div class="profile-header">
-
-
-      <div class="user-data">
-        <div class="div-user-img">
-          <img class="user-img" *ngIf="!user.foto" src="../../assets/imgs/user.jpg">
-          <img class="user-img" *ngIf="user.foto" [src]='user.foto'>
-        </div>
-        <div class="info">
-          <h1>{{user.nome}}</h1>
-          <h2>{{user.idade}} anos</h2>
-        </div>
-        
-        <!-- <div class="div-percentage-day">
-          <ion-icon *ngFor="let star of stars" [name]="star.star" color="white"></ion-icon>
-        </div> -->
-        <!-- <button type="button" id="edit-profile" (tap)="editProfile()">Editar perfil</button> -->
-      </div>
-
-    </div>
-    <div class="profile-tabs">
-      <div *ngFor="let tab of tabs" (tap)="selectTab(tab)" class="profile-tab" [class.active]="tab.selected">
-        <ion-icon [name]="tab.image"></ion-icon>
-      </div>
-    </div>
-
-    <div *ngIf="selectedTab == 'user'" class="profile-info">
-      <ion-list>
-        <ion-item>
-          <h2>Nome</h2>
-          <p>{{user.nome}}</p>
-        </ion-item>
-
-        <ion-item>
-          <h2>Data de nascimento</h2>
-          <p>{{user.dt_nasc | ntDate}}</p>
-        </ion-item>
-
-        <ion-item>
-          <h2>Sexo</h2>
-          <p>{{user.sexo | ntGender}}</p>
-        </ion-item>
-        
-        <ion-item>
-          <h2>Telefone</h2>
-          <p>{{user.telefone}}</p>
-        </ion-item>
-
-        <ion-item>
-          <h2>E-mail</h2>
-          <p>{{user.email}}</p>
-        </ion-item>
-
-        <ion-item>
-          <h2>Usuário</h2>
-          <p>{{user.usuario}}</p>
-        </ion-item>
-
-        <ion-item>
-          <h2>Peso</h2>
-          <p>{{user.peso_kg | ntNumber}}kg</p>
-        </ion-item>
-
-        <ion-item>
-          <h2>Altura</h2>
-          <p>{{user.altura_m | ntNumber}}m</p>
-        </ion-item>
-
-      </ion-list>
-    </div>
-
-    <!-- <div *ngIf="selectedTab == 'food'" class="profile-info">
-      <div class="all-feed">
-        <div class="feed-img" >
-          <div class="img" *ngFor="let userPost of posts">
-            <img class="content" [src]='userPost.foto' (tap)="openPostComments(userPost)" (dblclick)="likeUnlikePost(post)">
+  
+  <loader *ngIf="loading"></loader>
+  <div *ngIf="!loading && user">
+    <div class="header-profile">
+      <div class="back">
+        <div class="tabzinha">
+          <div class="full left">
+            <!-- <ion-icon name="md-create" color="white"></ion-icon> -->
+          </div>
+          <div class="user">
+            <h1>GABRYEL</h1>
+          </div>
+          <div class="full end">
+            <ion-icon (tap)="goToSettings()" name="ios-settings-outline" color="white"></ion-icon>
           </div>
         </div>
+        <img src="../../assets/imgs/nutring-background.png">
       </div>
-      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-        <ion-infinite-scroll-content></ion-infinite-scroll-content>
-      </ion-infinite-scroll>
-    </div> -->
 
-    <div *ngIf="selectedTab == 'info'" class="profile-info">
-      <ion-list>
-        <!-- <ion-item>
-          <ion-icon name="checkmark" color="success" item-start></ion-icon>
-          <h2>Dias na meta</h2>
-          <p>dias</p>
-          <h3 item-end>3</h3>
-        </ion-item> -->
-
-        <ion-item>
-          <ion-icon name="ios-restaurant-outline" color="secondary" item-start></ion-icon>
-          <h2>Pratos montados</h2>
-          <p>quantidade</p>
-          <h3 item-end>{{user.pratos_feitos}}</h3>
-        </ion-item>
-
-        <ion-item>
-          <ion-icon name="heart" color="pink" item-start></ion-icon>
-          <h2>Calorias consumidas</h2>
-          <p>kcal</p>
-          <h3 item-end>{{user.kcal_pratos | ntNumber}}</h3>
-        </ion-item>
-
-      </ion-list>
+        <div class="info">
+          
+          <div class="user-info">
+            <img class="user-img" src='https://images.pexels.com/photos/414553/pexels-photo-414553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'>
+            <div class="personal">
+              <h1>Gabryel Ferreira</h1>
+              <!-- <h2>@gabryel</h2> -->
+              <button type="button" (tap)="editProfile()" class="default-button no-color smaller padding">Editar perfil</button>
+            </div>
+          </div>
+          <div class="almost-tabs">
+            <div class="almost-tab">
+              <h1>30</h1>
+              <div class="info-tab">
+                <ion-icon name="ios-restaurant-outline"></ion-icon>
+                <h2>PRATOS</h2>
+              </div>
+            </div>
+            <div class="almost-tab">
+              <h1>304,5</h1>
+              <div class="info-tab">
+                <ion-icon name="ios-heart-outline"></ion-icon>
+                <h2>KCAL</h2>
+              </div>
+            </div>
+            <div class="almost-tab">
+              <h1>20</h1>
+              <div class="info-tab">
+                <ion-icon name="ios-person-outline"></ion-icon>
+                <h2>ACESSOS</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="tabs-profile">
+      <div *ngFor="let tab of tabs; let i = index;" class="tab-profile" [id]="tab.selected? 'active': ''" (tap)="selectTab(tab)">
+        {{tab.text}}
+      </div>
     </div>
 
+
+    <div class="refeicoes-custom" *ngIf="selectedTab == 'personalizadas'">
+          
+        <div class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
+          <img *ngIf="!refeicao.foto" src="../../assets/imgs/folhinha_da_macunha.png">
+          <img *ngIf="refeicao.foto" [src]="refeicao.foto">
+          <div class="info">
+            <h2>{{refeicao.ds_refeicao}}</h2>
+          </div>
+        </div>
+
+        <div (click)="openCriarRefeicao()" class="refeicao">
+          <ion-icon name="add"></ion-icon>
+          <img src="../../assets/imgs/blur2.jpg">
+          <div class="info">
+            <h2>Nova refeição</h2>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="timeline" *ngIf="selectedTab == 'pratos'">
+      <div class="line"></div>
+      <div class="item">
+        <div class="date">
+          <h1>5:33PM</h1>
+        </div>
+        <div class="put-ball">
+          <div class="ball"></div>
+        </div>
+        <div class="text">
+          <h1>Café da manhã</h1>
+          <p>144 KCAL</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="date">
+          <h1>5:33PM</h1>
+        </div>
+        <div class="put-ball">
+          <div class="ball"></div>
+        </div>
+        <div class="text">
+          <h1>Almoço</h1>
+          <p>333 KCAL</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="date">
+          <h1>1:22AM</h1>
+        </div>
+        <div class="put-ball">
+          <div class="ball" style="border: 2px solid #27ae60"></div>
+        </div>
+        <div class="text">
+          <h1>Jantar</h1>
+          <p>242 KCAL</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+
+
 
 </ion-content>

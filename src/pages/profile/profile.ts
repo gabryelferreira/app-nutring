@@ -29,56 +29,36 @@ import { CommentsPage } from "../home/comments/comments";
   providers: [ProfilePostService, ProfileGetService]
 })
 export class ProfilePage {
-  posts = [];
+  // posts = [];
+  
   selectedTheme: String = "";
-  user: IUser = {
-    altura_m: "",
-    cep: "",
-    usuario: "",
-    telefone: "",
-    sobrenome: "",
-    sexo: "",
-    email: "",
-    senha: "",
-    dt_nasc: "",
-    peso_kg: "",
-    foto: "",
-    nome: "",
-    id_usuario: 0
-  };
-  page = "pessoais";
+  user: IUser = {};
 
-  loadingOptional: boolean = false;
-  loadingPersonal: boolean = false;
+  // rate: number = 3.55245;
+  // stars = [
+  //   { star: "md-star-outline", value: 1 },
+  //   { star: "md-star-outline", value: 2 },
+  //   { star: "md-star-outline", value: 3 },
+  //   { star: "md-star-outline", value: 4 },
+  //   { star: "md-star-outline", value: 5 }
+  // ];
 
-  checkOptional = [
-    { field: "peso_kg", name: "Peso", end: "inválido" },
-    { field: "altura_m", name: "Altura", end: "inválida" }
-  ];
-  optionalData = [];
-  rate: number = 3.55245;
-  stars = [
-    { star: "md-star-outline", value: 1 },
-    { star: "md-star-outline", value: 2 },
-    { star: "md-star-outline", value: 3 },
-    { star: "md-star-outline", value: 4 },
-    { star: "md-star-outline", value: 5 }
-  ];
-
-  selectedTab: string = "user";
+  selectedTab: string = "personalizadas";
 
   tabs = [
-    // { name: "food", image: "ios-paper-outline", selected: true },
-    { name: "user", image: "ios-person-outline", selected: true },
-    { name: "info", image: "ios-podium-outline", selected: false }
+    { name: "personalizadas", text: "PERSONALIZADAS", selected: true },
+    { name: "pratos", text: "PRATOS", selected: false }
     
   ];
 
+  refeicoesCustom = [];
+
   profileImage: any;
+  loading: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               _settings: SettingsService, private toastCtrl: ToastController,
-              private post: ProfilePostService, private sanitizer: DomSanitizer) {
+              private post: ProfilePostService) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
     
     // this.getUserPosts(this.user.id_usuario, 9, 0);
@@ -87,52 +67,9 @@ export class ProfilePage {
 
   async ionViewWillEnter() {
     this.user = JSON.parse(localStorage.getItem("userData"));
-
-    if (this.user.foto) {
-      this.profileImage = this.sanitizer.bypassSecurityTrustStyle(`url(${this.user.foto})`);
-    } else {
-      let url = "../../assets/imgs/user.jpg";
-      this.profileImage = this.sanitizer.bypassSecurityTrustStyle(`url(${url})`);
-    }
   }
 
-  async getUserPosts(id_usuario: number, limit: number, offset: number){
-    let result = await this.post.getUserPosts(id_usuario, limit, offset);
-    if (result && result.success){
-      this.posts = result.result;
-    }
-    console.log("posts", this.posts)
-    this.user = JSON.parse(localStorage.getItem("userData"));
-  }
 
-  openPostComments(post: IPost){
-    this.navCtrl.push('VerPostPage', {
-      post: post
-    })
-  }
-
-  async likeUnlikePost(post: IPost){
-    post.gostei = !post.gostei;
-    if (!post.curtidas) post.curtidas = 0
-    if (post.gostei){
-      post.curtidas = post.curtidas + 1;
-    } else {
-      post.curtidas = post.curtidas - 1;
-    }
-    this.post.likeUnlikePost(post.id_post, this.user.id_usuario);
-  }
-
-  async doInfinite(infiniteScroll) {
-    let result;
-    result = await this.post.getUserPosts(
-      this.user.id_usuario,
-      9,
-      this.posts.length
-    );
-    if (result && result.result.length > 0)
-      result.result.forEach(item => this.posts.push(item));
-    infiniteScroll.complete();
-  }
 
   selectTab(tab) {
     this.selectedTab = tab["name"];
@@ -152,23 +89,110 @@ export class ProfilePage {
     this.navCtrl.push('SettingsPage');
   }
 
-  validateRate() {
-    let full = "md-star";
-    let half = "md-star-half";
-    let none = "md-star-outline";
-
-    let rate = this.rate;
-
-    this.stars.forEach(element => {
-      if (element.value <= rate + 0.25) element.star = full;
-      else if (element.value <= rate + 0.75) element.star = half;
-      else element.star = none;
-    });
-  }
+  
 
   goBack(){
     this.navCtrl.pop();
   }
 
+  goToSettings(){
+    this.navCtrl.push('SettingsPage');
+  }
+
+  openCriarRefeicao(){
+    this.navCtrl.push('CriarRefeicaoPage', {
+      callback: this.myCallbackFunction
+    });
+  }
+
+  myCallbackFunction = (_params) => {
+    return new Promise((resolve, reject) => {
+      this.getRefeicoes();
+      resolve();
+    });
+  }
+
+   async getRefeicoes(){
+    this.loading = true;
+    let result2 = await this.getRefeicoesCustom(this.user.id_usuario);
+    this.loading = false;
+  }
+
+  async getRefeicoesCustom(id_usuario: number){
+    let result = await this.post.getRefeicoesCustom(id_usuario);
+    if (result.success){
+      this.refeicoesCustom = result.result;
+    }
+  }
+
+  
+
   ionViewDidLoad() {}
+
+
+
+
+
+
+
+
+
+
+  //FUNCOES FUTURAS DE PERFIL COM REDE SOCIAL
+
+
+
+  // validateRate() {
+  //   let full = "md-star";
+  //   let half = "md-star-half";
+  //   let none = "md-star-outline";
+
+  //   let rate = this.rate;
+
+  //   this.stars.forEach(element => {
+  //     if (element.value <= rate + 0.25) element.star = full;
+  //     else if (element.value <= rate + 0.75) element.star = half;
+  //     else element.star = none;
+  //   });
+  // }
+
+    // async getUserPosts(id_usuario: number, limit: number, offset: number){
+  //   let result = await this.post.getUserPosts(id_usuario, limit, offset);
+  //   if (result && result.success){
+  //     this.posts = result.result;
+  //   }
+  //   console.log("posts", this.posts)
+  //   this.user = JSON.parse(localStorage.getItem("userData"));
+  // }
+
+  // openPostComments(post: IPost){
+  //   this.navCtrl.push('VerPostPage', {
+  //     post: post
+  //   })
+  // }
+
+  // async likeUnlikePost(post: IPost){
+  //   post.gostei = !post.gostei;
+  //   if (!post.curtidas) post.curtidas = 0
+  //   if (post.gostei){
+  //     post.curtidas = post.curtidas + 1;
+  //   } else {
+  //     post.curtidas = post.curtidas - 1;
+  //   }
+  //   this.post.likeUnlikePost(post.id_post, this.user.id_usuario);
+  // }
+
+  // async doInfinite(infiniteScroll) {
+  //   let result;
+  //   result = await this.post.getUserPosts(
+  //     this.user.id_usuario,
+  //     9,
+  //     this.posts.length
+  //   );
+  //   if (result && result.result.length > 0)
+  //     result.result.forEach(item => this.posts.push(item));
+  //   infiniteScroll.complete();
+  // }
+
+
 }

@@ -71,18 +71,16 @@ export class SearchPage {
     }
   }
   async doInfinite(infiniteScroll) {
+    console.log("opa irmao")
     let result;
     result = await this.post.getFood(this.searched, this.foods.length);
-
-    if (result && result.result.length > 0)
-      result.result.forEach(item => this.foods.push(item));
-
-    infiniteScroll.complete();
-    if (result.result.length == 0) {
-      this.showToast("Não foram encontrados mais resultados", "top");
+      if (result && result.result.length > 0)
+        result.result.forEach(item => this.foods.push(item));
+  
+      if (result.result.length == 0) {
+        this.showToast("Não foram encontrados mais resultados", "top");
+      }
       infiniteScroll.complete();
-    }
-    infiniteScroll.complete();
   }
   async onInput(event) {
     let name = event;

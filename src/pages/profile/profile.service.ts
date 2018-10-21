@@ -15,12 +15,8 @@ export class ProfilePostService extends Connect {
     super(_http, "post");
   }
 
-  updateUserOptionalInfo(data: any) {
-    return this.callMethod("updateUserOptionalInfo", { data })
-  }
-
-  updateUserPersonalInfo(data: any) {
-    return this.callMethod("updateUserPersonalInfo", { data })
+  getRefeicoesCustom(id_usuario: number){
+    return this.callMethod("getRefeicoesCustom", { id_usuario });
   }
 
   updateUserInfo(data: any) {
@@ -37,4 +33,6 @@ export class ProfilePostService extends Connect {
   likeUnlikePost(id_post: number, id_usuario: number){
     return this.callMethod("likeUnlikePost", { id_post, id_usuario });
   }
+
+
 }
