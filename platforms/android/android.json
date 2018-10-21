@@ -79,6 +79,22 @@
             {
               "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"BackgroundMode\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.background.BackgroundMode\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"KeepRunning\" value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"AndroidLaunchMode\" value=\"singleInstance\" />",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"AppMinimize\"><param name=\"android-package\" value=\"tomloprod.AppMinimize\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -171,6 +187,10 @@
             {
               "xml": "<activity android:exported=\"false\" android:launchMode=\"singleInstance\" android:name=\"de.appplant.cordova.plugin.localnotification.ClickReceiver\" android:theme=\"@android:style/Theme.Translucent\" />",
               "count": 1
+            },
+            {
+              "xml": "<service android:name=\"de.appplant.cordova.plugin.background.ForegroundService\" />",
+              "count": 1
             }
           ],
           "/manifest": [
@@ -231,6 +251,12 @@
       "PACKAGE_NAME": "com.nutring.nutring"
     },
     "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.nutring.nutring"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.nutring.nutring"
+    },
+    "cordova-plugin-appminimize": {
       "PACKAGE_NAME": "com.nutring.nutring"
     }
   },
@@ -388,6 +414,23 @@
       "clobbers": [
         "CameraPopoverHandle"
       ]
+    },
+    {
+      "id": "cordova-plugin-background-mode.BackgroundMode",
+      "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
+      "pluginId": "cordova-plugin-background-mode",
+      "clobbers": [
+        "cordova.plugins.backgroundMode",
+        "plugin.backgroundMode"
+      ]
+    },
+    {
+      "id": "cordova-plugin-appminimize.AppMinimize",
+      "file": "plugins/cordova-plugin-appminimize/www/AppMinimize.js",
+      "pluginId": "cordova-plugin-appminimize",
+      "clobbers": [
+        "cordova.plugins.appMinimize"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -405,6 +448,8 @@
     "com.telerik.plugins.nativepagetransitions": "0.6.5",
     "cordova-plugin-badge": "0.8.7",
     "cordova-plugin-local-notification": "0.9.0-beta.2",
-    "cordova-plugin-camera": "4.0.3"
+    "cordova-plugin-camera": "4.0.3",
+    "cordova-plugin-background-mode": "0.7.2",
+    "cordova-plugin-appminimize": "1.0"
   }
 }

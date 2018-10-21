@@ -152,6 +152,23 @@ module.exports = [
     "clobbers": [
       "CameraPopoverHandle"
     ]
+  },
+  {
+    "id": "cordova-plugin-background-mode.BackgroundMode",
+    "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
+    "pluginId": "cordova-plugin-background-mode",
+    "clobbers": [
+      "cordova.plugins.backgroundMode",
+      "plugin.backgroundMode"
+    ]
+  },
+  {
+    "id": "cordova-plugin-appminimize.AppMinimize",
+    "file": "plugins/cordova-plugin-appminimize/www/AppMinimize.js",
+    "pluginId": "cordova-plugin-appminimize",
+    "clobbers": [
+      "cordova.plugins.appMinimize"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -171,7 +188,9 @@ module.exports.metadata =
   "com.telerik.plugins.nativepagetransitions": "0.6.5",
   "cordova-plugin-badge": "0.8.7",
   "cordova-plugin-local-notification": "0.9.0-beta.2",
-  "cordova-plugin-camera": "4.0.3"
+  "cordova-plugin-camera": "4.0.3",
+  "cordova-plugin-background-mode": "0.7.2",
+  "cordova-plugin-appminimize": "1.0"
 };
 // BOTTOM OF METADATA
 });
