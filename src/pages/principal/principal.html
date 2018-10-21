@@ -31,6 +31,14 @@
         </div>
 
     <div class="refeicoes-custom" >
+      <div (click)="openCriarRefeicao()" class="refeicao">
+        <ion-icon name="add"></ion-icon>
+        <img src="https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        <div class="por-cima"></div>
+        <div class="info">
+          <h2>Nova refeição</h2>
+        </div>
+      </div>
         
         <div (click)="openMontarPrato(refeicao, 'id_refeicao_usuario')" class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
           <img *ngIf="!refeicao.foto" src="../../assets/imgs/folhinha_da_macunha.png">
@@ -40,13 +48,6 @@
           </div>
         </div>
 
-        <div (click)="openCriarRefeicao()" class="refeicao">
-          <ion-icon name="add"></ion-icon>
-          <img src="../../assets/imgs/blur2.jpg">
-          <div class="info">
-            <h2>Nova refeição</h2>
-          </div>
-        </div>
     </div>
 
     <!-- <ion-scroll scrollX="true" style="white-space: nowrap; height: 145px;">

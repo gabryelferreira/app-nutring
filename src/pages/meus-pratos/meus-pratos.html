@@ -23,11 +23,11 @@
 </ion-header> -->
 
 
-<ion-content>
+<ion-content  #pageContent fullscreen>
 
   <loader *ngIf="loading"></loader>
 
-  <div *ngIf="dateSeparator && dateSeparator.length > 0" class="allPratos">
+  <div *ngIf="dateSeparator && dateSeparator.length > 0" class="allPratos padding-bottom">
 
       <!-- <ion-fab right bottom>
         <button (tap)="goToMontarPrato()" ion-fab color="primary">
@@ -45,11 +45,6 @@
         </div>
       </div>
 
-      <div class="date-prato">
-        <div class="info-date-prato">
-
-        </div>
-      </div>
 
     </div>
 

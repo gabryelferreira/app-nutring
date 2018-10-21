@@ -47,7 +47,7 @@ export class ProfilePage {
 
   tabs = [
     { name: "personalizadas", text: "PERSONALIZADAS", selected: true },
-    { name: "pratos", text: "PRATOS", selected: false }
+    // { name: "pratos", text: "PRATOS", selected: false }
     
   ];
 
@@ -63,6 +63,8 @@ export class ProfilePage {
     
     // this.getUserPosts(this.user.id_usuario, 9, 0);
     // this.validateRate();
+    this.user = JSON.parse(localStorage.getItem("userData"));
+    this.getRefeicoesCustom(this.user.id_usuario);
   }
 
   async ionViewWillEnter() {
@@ -119,10 +121,12 @@ export class ProfilePage {
   }
 
   async getRefeicoesCustom(id_usuario: number){
+    this.loading= true;
     let result = await this.post.getRefeicoesCustom(id_usuario);
     if (result.success){
       this.refeicoesCustom = result.result;
     }
+    this.loading = false;
   }
 
   

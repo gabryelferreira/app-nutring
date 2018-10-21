@@ -7,7 +7,7 @@
 
 
 
-<ion-content class="content-profile">
+<ion-content #pageContent fullscreen>
   
   <loader *ngIf="loading"></loader>
   <div *ngIf="!loading && user">
@@ -15,10 +15,9 @@
       <div class="back">
         <div class="tabzinha">
           <div class="full left">
-            <!-- <ion-icon name="md-create" color="white"></ion-icon> -->
           </div>
           <div class="user">
-            <h1>GABRYEL</h1>
+            <h1>{{user.usuario | uppercase}}</h1>
           </div>
           <div class="full end">
             <ion-icon (tap)="goToSettings()" name="ios-settings-outline" color="white"></ion-icon>
@@ -30,30 +29,31 @@
         <div class="info">
           
           <div class="user-info">
-            <img class="user-img" src='https://images.pexels.com/photos/414553/pexels-photo-414553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'>
+            <img class="user-img" *ngIf="!user.foto" src='../../assets/imgs/user.jpg'>
+            <img class="user-img" *ngIf="user.foto" [src]='user.foto'>
             <div class="personal">
-              <h1>Gabryel Ferreira</h1>
+              <h1>{{user.nome}}</h1>
               <!-- <h2>@gabryel</h2> -->
               <button type="button" (tap)="editProfile()" class="default-button no-color smaller padding">Editar perfil</button>
             </div>
           </div>
           <div class="almost-tabs">
             <div class="almost-tab">
-              <h1>30</h1>
+              <h1>{{user.pratos_feitos}}</h1>
               <div class="info-tab">
                 <ion-icon name="ios-restaurant-outline"></ion-icon>
                 <h2>PRATOS</h2>
               </div>
             </div>
             <div class="almost-tab">
-              <h1>304,5</h1>
+              <h1>{{user.kcal_pratos | ntNumber}}</h1>
               <div class="info-tab">
                 <ion-icon name="ios-heart-outline"></ion-icon>
                 <h2>KCAL</h2>
               </div>
             </div>
             <div class="almost-tab">
-              <h1>20</h1>
+              <h1>{{user.acessos}}</h1>
               <div class="info-tab">
                 <ion-icon name="ios-person-outline"></ion-icon>
                 <h2>ACESSOS</h2>
@@ -71,26 +71,28 @@
 
 
     <div class="refeicoes-custom" *ngIf="selectedTab == 'personalizadas'">
-          
-        <div class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
-          <img *ngIf="!refeicao.foto" src="../../assets/imgs/folhinha_da_macunha.png">
-          <img *ngIf="refeicao.foto" [src]="refeicao.foto">
-          <div class="info">
-            <h2>{{refeicao.ds_refeicao}}</h2>
-          </div>
+        
+      <div (click)="openCriarRefeicao()" class="refeicao">
+        <ion-icon name="add"></ion-icon>
+        <img src="https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        <div class="por-cima"></div>
+        <div class="info">
+          <h2>Nova refeição</h2>
         </div>
+      </div>
 
-        <div (click)="openCriarRefeicao()" class="refeicao">
-          <ion-icon name="add"></ion-icon>
-          <img src="../../assets/imgs/blur2.jpg">
-          <div class="info">
-            <h2>Nova refeição</h2>
-          </div>
+      <div class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
+        <img *ngIf="!refeicao.foto" src="../../assets/imgs/folhinha_da_macunha.png">
+        <img *ngIf="refeicao.foto" [src]="refeicao.foto">
+        <div class="info">
+          <h2>{{refeicao.ds_refeicao}}</h2>
         </div>
+      </div>
+
     </div>
 
 
-    <div class="timeline" *ngIf="selectedTab == 'pratos'">
+    <!-- <div class="timeline" *ngIf="selectedTab == 'pratos'">
       <div class="line"></div>
       <div class="item">
         <div class="date">
@@ -128,7 +130,13 @@
           <p>242 KCAL</p>
         </div>
       </div>
-    </div>
+    </div> -->
+
+
+
+
+
+
   </div>
 
 
