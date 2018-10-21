@@ -69,28 +69,28 @@
       </div>
     </div>
 
-
-    <div class="refeicoes-custom" *ngIf="selectedTab == 'personalizadas'">
-        
-      <div (click)="openCriarRefeicao()" class="refeicao">
-        <ion-icon name="add"></ion-icon>
-        <img src="https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-        <div class="por-cima"></div>
-        <div class="info">
-          <h2>Nova refeição</h2>
+    <div class="principal">
+      <div class="refeicoes-custom" *ngIf="selectedTab == 'personalizadas'">
+          
+        <div (click)="openCriarRefeicao()" class="refeicao">
+          <ion-icon name="add"></ion-icon>
+          <img src="https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+          <div class="por-cima"></div>
+          <div class="info">
+            <h2>Nova refeição</h2>
+          </div>
         </div>
-      </div>
 
-      <div class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
-        <img *ngIf="!refeicao.foto" src="../../assets/imgs/folhinha_da_macunha.png">
-        <img *ngIf="refeicao.foto" [src]="refeicao.foto">
-        <div class="info">
-          <h2>{{refeicao.ds_refeicao}}</h2>
+        <div class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
+          <img *ngIf="!refeicao.foto" src="../../assets/imgs/folhinha_da_macunha.png">
+          <img *ngIf="refeicao.foto" [src]="refeicao.foto">
+          <div class="info">
+            <h2>{{refeicao.ds_refeicao}}</h2>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-
 
     <!-- <div class="timeline" *ngIf="selectedTab == 'pratos'">
       <div class="line"></div>

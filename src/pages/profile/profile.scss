@@ -211,69 +211,66 @@ page-profile {
     }
 
 
-    .timeline {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        .line {
-            position: absolute;
-            top: 0;
-            left: calc(75px + 30px/2);
-            height: 100vh;
-            width: 1px;
-            background: #ddd;
-        }
-        .item {
-            position: relative;
-            display: flex;
-            padding: 20px 0;
-            .date {
-                position: relative;
-                width: 75px;
-                text-align: center;
-                h1 {
-                    margin: 0;
-                    // font-weight: bold;
-                    font-size: 11px;
-                    color: #333;
-                    letter-spacing: 1.5px;
-                }
-            }
-            .put-ball {
-                position: relative;
-                width: 30px;
-                text-align: center;
-                .ball {
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 50%;
-                    border: 2px solid #27ae60;
-                    background: #fff;
-                    margin: auto;
-                }
-            }
-            .text {
-                position: relative;
-                width: calc(100% - 30px - 75px);
-                box-sizing: border-box;
-                padding: 0 18px 0 26px;
-                h1, p {
-                    margin: 0;
-                }
-                h1 {
-                    font-size: 15px;
-                    // font-weight: bold;
-                    margin-bottom: 3px;
-                }
-                p {
-                    font-size: 9.5px;
-                    letter-spacing: 1.5px;
-                    color: #aaa;
-                    // font-weight: bold;
-                }
-            }
-        }
-    }
+    // .timeline {
+    //     position: relative;
+    //     width: 100%;
+    //     overflow: hidden;
+    //     .line {
+    //         position: absolute;
+    //         top: 0;
+    //         left: calc(75px + 30px/2);
+    //         height: 100vh;
+    //         width: 1px;
+    //         background: #ddd;
+    //     }
+    //     .item {
+    //         position: relative;
+    //         display: flex;
+    //         padding: 20px 0;
+    //         .date {
+    //             position: relative;
+    //             width: 75px;
+    //             text-align: center;
+    //             h1 {
+    //                 margin: 0;
+    //                 font-size: 11px;
+    //                 color: #333;
+    //                 letter-spacing: 1.5px;
+    //             }
+    //         }
+    //         .put-ball {
+    //             position: relative;
+    //             width: 30px;
+    //             text-align: center;
+    //             .ball {
+    //                 width: 15px;
+    //                 height: 15px;
+    //                 border-radius: 50%;
+    //                 border: 2px solid #27ae60;
+    //                 background: #fff;
+    //                 margin: auto;
+    //             }
+    //         }
+    //         .text {
+    //             position: relative;
+    //             width: calc(100% - 30px - 75px);
+    //             box-sizing: border-box;
+    //             padding: 0 18px 0 26px;
+    //             h1, p {
+    //                 margin: 0;
+    //             }
+    //             h1 {
+    //                 font-size: 15px;
+    //                 margin-bottom: 3px;
+    //             }
+    //             p {
+    //                 font-size: 9.5px;
+    //                 letter-spacing: 1.5px;
+    //                 color: #aaa;
+    //             }
+    //         }
+    //     }
+    // }
 
 
 
@@ -426,20 +423,46 @@ page-profile {
 
 //DARK THEME
 .dark-theme {
-    .profile-header {
-        .user-data {
-            .div-user-img {
-                background: transparent;
-            }
-            .info {
-                h1 {
-                    color: #eee;
-                }
-                h2 {
-                    color: #eee;
-                }
-            }
     
+
+    .header-profile {
+
+        .info {
+            background: #4b4b4b;
+            border-bottom: 1px solid #444;
+            .user-info {
+                .personal {
+                    h1 {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .almost-tabs {
+                border-top: 1px solid #444;
+                .almost-tab {
+                    border-right: 1px solid #444;
+                    h1 {
+                        color: #ddd;
+                    }
+                    .info-tab {
+                        ion-icon {
+                            color: #777;
+                        }
+                        h2 {
+                            color: #777;
+                        }
+                    }
+                    
+                }
+            }
         }
     }
+
+    .tabs-profile {
+        border-bottom: 1px solid #444;
+    }
+
+
+
 }
