@@ -5,20 +5,10 @@
   Ionic pages and navigation.
 -->
 <ion-header no-padding no-border>
-  <!-- [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" -->
-  <ion-navbar [hideBackButton]="isSearching" [style.display]="isSearching ? 'none' : ''" color="{{selectedTheme}}">
-    <ion-buttons end>
-      <button ion-button *ngIf="!isSearching" (tap)="isSearching=true">
-        <ion-icon name="search"></ion-icon>
-      </button>
-    </ion-buttons>
-    <ion-title text-left>{{refeicao.ds_refeicao}}</ion-title>
-  </ion-navbar>
 
-  <ion-navbar [style.display]="isSearching ? '' : 'none'" color="{{selectedTheme}}">
-      <nt-searchbar (backButton)="backButtonVisibility()" [text]="searchText" [onHeader]="true" (callback)="onInput($event)"></nt-searchbar>
-     
-    </ion-navbar>
+  <ion-navbar color="{{selectedTheme}}">
+    <nt-searchbar [withIcon]="false" [text]="searchText" (callback)="onInput($event)"></nt-searchbar>
+  </ion-navbar>
 
 </ion-header>
 
@@ -80,13 +70,6 @@
     </div>
 
   </ion-list>
-
-  <ion-fab [style.opacity]="allSelectedFoods.length > 0 ? 1 : 0" [style.pointer-events]="allSelectedFoods.length > 0 ? 'visible' : 'none !important'"
-    right bottom>
-    <button (tap)="verPrato()" ion-fab color="primary">
-      <ion-icon name="restaurant"></ion-icon>
-    </button>
-  </ion-fab>
 
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
     <ion-infinite-scroll-content></ion-infinite-scroll-content>

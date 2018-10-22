@@ -35,24 +35,35 @@ export class SearchPage {
   searched: string = "";
   loading: boolean = false;
   showSad: boolean = false;
+  type: string;
+  refeicao: any;
+  callback: any;
+  selectedFoodPrato: any;
 
-  constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    private post: service.SearchPostService,
-    private toastCtrl: ToastController,
-    _settings: SettingsService
-  ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private post: service.SearchPostService, private toastCtrl: ToastController,
+              _settings: SettingsService) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
   }
 
   ionViewWillEnter() {
-    if (this.lastType == "food") {
-      this.foods = this.old;
-    } else if (this.lastType == "people") {
-      this.users = this.old;
-    }
+    // if (this.lastType == "food") {
+    //   this.foods = this.old;
+    // } else if (this.lastType == "people") {
+    //   this.users = this.old;
+    // }
+
+    this.type = this.navParams.get("type");
+    this.refeicao = this.navParams.get("refeicao");
+    this.callback = this.navParams.get("callback");
+
   }
+
+  ionViewWillLeave(){
+    this.callback(this.selectedFoodPrato).then(()=>{
+    });
+  }
+
   async findFoods(name) {
     this.loading = true;
     let result = await this.post.getFood(name, 0);
@@ -129,8 +140,23 @@ export class SearchPage {
   }
 
   openFoodInfo(food) {
-    this.navCtrl.push('InfoAlimentoPage', { food });
+    if (this.type == "montarPrato"){
+      this.navCtrl.push("OpcoesAlimentoPage", {
+        food,
+        refeicao: this.refeicao,
+        callback: this.myCallbackFunction
+      })
+    } else
+      this.navCtrl.push('InfoAlimentoPage', { food });
   }
+
+  myCallbackFunction = _params => {
+    return new Promise((resolve, reject) => {
+      this.selectedFoodPrato = _params;
+      this.navCtrl.pop();
+      resolve();
+    });
+  };
 
   // toggleViewMode() {
   //   if (this.viewMode == this.maxViewMode) this.viewMode = 0;

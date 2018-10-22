@@ -333,6 +333,22 @@ ion-fab {
   background: #ddd;
 }
 
+.width100 {
+  width: 100%;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.centralize {
+  margin: auto;
+}
+
 .tabbar a.tab-button[aria-selected=true] {
   
   .tab-button-icon {

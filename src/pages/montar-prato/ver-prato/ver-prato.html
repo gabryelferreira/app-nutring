@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header no-border>
+<!-- <ion-header no-border>
 
     <ion-navbar color="{{selectedTheme}}">
         <ion-title text-left>Seu prato</ion-title>
@@ -19,65 +19,76 @@
           </ion-buttons>
       </ion-navbar>
 
-</ion-header>
+</ion-header> -->
 
 
-<ion-content class="outer-content" style="margin-top: 2px;">
+<ion-content #pageContent fullscreen>
+  
+  <div class="allPrato" *ngIf="refeicao">
+    <div class="prato-info">
+      <div class="image-prato">
+        <div class="tabs-up">
+          <div class="tab-up">
+            <ion-icon (tap)="closePrato()" name="md-close"></ion-icon>
+          </div>
+        </div>
+        <img *ngIf="refeicao.foto" [src]="refeicao.foto">
+        <img *ngIf="!refeicao.foto" src="https://images.pexels.com/photos/920570/pexels-photo-920570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        <div class="blur"></div>
+        <div class="image-prato-info">
+          <h1>{{refeicao.ds_refeicao}}</h1>
+          <p>55 pratos montados</p>
+        </div>
+      </div>
+    </div>
+    <div class="prato-options">
+      <div class="option">
+        Alimentos
+      </div>
+      <div class="option align-right" (tap)="openSearch()">
+        Adicionar alimento &nbsp;
+        <ion-icon name="add"></ion-icon>
+      </div>
+    </div>
+    
+    <div class="itens-prato" *ngIf="foods && foods.length > 0">
+      <ion-item *ngFor="let food of foods; let i = index;">
+        <ion-avatar item-start>
+          <img [src]="food.img_url">
+        </ion-avatar>
+        <h2>{{food.nome}}</h2>
+        <p>{{food.porcao_comida | number:'1.0-2'}} g</p>
+        <ion-icon (tap)="deleteAlimento(food)" name="md-close" item-end></ion-icon>
+      </ion-item>
+    </div>
+
+    <div class="centralizar" *ngIf="!foods || foods.length == 0">
+      <img src="../../../assets/imgs/folhinha_da_macunha.png">
+      <p>Seu prato está vazio.</p>
+    </div>
+    
+
+
+
+    
+    
+  </div>
   
 
-    <!-- <ion-searchbar
-    [(ngModel)]="searchInput.searchText"
-    [showCancelButton]="searchInput.shouldShowCancel"
-    (ionInput)="onInput($event)"
-    (ionCancel)="onCancel($event)"
-    placeholder="Buscar">
-  </ion-searchbar> -->
+  <modal *ngIf="popupOpen" [loading]="loading" [btnConfirm]="'Confirmar'"
+  (onCancel)="popupOpen = false" (onConfirm)="montarPrato()" [text]="confirmText"
+  [title]="refeicao.ds_refeicao"></modal>
 
-    <ion-list *ngIf="foods && foods.length > 0">
-    
-        <div [class.active]="food.selected" (tap)="selectFood(food)" *ngFor="let food of foods; let i = index">
-    
-    
-          <ion-item>
-            <ion-avatar item-start>
-              <img [src]="food.img_url">
-            </ion-avatar>
-            <h2>{{food.nome}}</h2>
-            <p *ngIf="food.porcao_comida > 0" color="primary">{{food.porcao_comida}} g</p>
-            <ion-icon *ngIf="food.porcao_comida > 0" name="checkmark" color="primary" item-end></ion-icon>
-            <ion-icon  *ngIf="!food.porcao_comida || food.porcao_comida <= 0" name="ios-arrow-down" color="lightgray" item-end></ion-icon>
-          </ion-item>
-    
-    
-          <div *ngIf="food.selected" class="food-select-dropdown active-food-select-dropdown">
-            <ion-list-header>
-              Quantidade (em gramas)
-              <ion-badge item-end *ngIf="food.porcao_comida">{{food.porcao_comida}} g</ion-badge>
-            </ion-list-header>
-            <ion-item>
-              <ion-range  min="0" max="1000" [(ngModel)]="food.porcao_comida" (ngModelChange)="mudarPorcao($event, food)" color="secondary">
-                <ion-label range-left>0</ion-label>
-                <ion-label range-right>1000</ion-label>
-              </ion-range>
-            </ion-item>
-          </div>
-    
-    
-    
-        </div>
-    
-      </ion-list>
-    
-      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-        <ion-infinite-scroll-content></ion-infinite-scroll-content>
-      </ion-infinite-scroll>
+  <modal *ngIf="popupCheck" [btnConfirm]="'Ok'" type="check"
+  (onConfirm)="verPrato()" [text]="checkText"
+  [title]="'Concluído!'"></modal>
 
-      <modal *ngIf="popupOpen" [loading]="loading" [btnConfirm]="'Confirmar'"
-      (onCancel)="popupOpen = false" (onConfirm)="montarPrato()" [text]="confirmText"
-      [title]="refeicao.ds_refeicao"></modal>
-
-      <modal *ngIf="popupCheck" [btnConfirm]="'Ok'" type="check"
-      (onConfirm)="verPrato()" [text]="checkText"
-      [title]="'Concluído!'"></modal>
-
+  
+  
 </ion-content>
+
+<ion-footer style="z-index: 1" no-border no-shadow>
+  <ion-toolbar color="transparent">
+      <button (tap)="presentConfirm()" [disabled]="!foods || foods.length == 0 || loading || popupOpen || popupCheck" type="button" class="default-button full green box-shadow-13">Confirmar</button>
+  </ion-toolbar>
+</ion-footer>

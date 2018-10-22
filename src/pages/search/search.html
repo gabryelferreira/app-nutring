@@ -13,10 +13,11 @@
 <ion-header no-padding no-border>
   <!-- [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" -->
   <ion-navbar color="{{selectedTheme}}">
-    <nt-searchbar (callback)="onInput($event)"></nt-searchbar>
+    <nt-searchbar *ngIf="!type" (callback)="onInput($event)"></nt-searchbar>
+    <nt-searchbar *ngIf="type == 'montarPrato'" [withIcon]="false" (callback)="onInput($event)"></nt-searchbar>
   </ion-navbar>
-
 </ion-header>
+
 <ion-content class="list-avatar-page" #pageContent fullscreen>
 
   <loader *ngIf="loading && (!users || (users && users.length == 0)) && (!foods || (foods && foods.length == 0))"></loader>

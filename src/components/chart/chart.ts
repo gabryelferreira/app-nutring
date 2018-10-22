@@ -13,7 +13,7 @@ import { Component, Input } from '@angular/core';
 export class ChartComponent {
 
   @Input('percent') percent;
-  @Input('color') color;
+  @Input('color') color = "green";
   @Input('size') size;
   @Input('text') text;
   @Input('img') image;

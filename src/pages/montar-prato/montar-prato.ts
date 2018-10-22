@@ -43,15 +43,12 @@ export class MontarPratoPage {
   selectedFood: number = -1;
   searchText: string = "";
   allSelectedFoods = [];
+  callback: any;
 
-  constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    private get: service.MontarPratoGetService,
-    private post: service.MontarPratoPostService,
-    private toastCtrl: ToastController,
-    private settings: SettingsService,
-    public modalCtrl: ModalController
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private get: service.MontarPratoGetService, private post: service.MontarPratoPostService,
+              private toastCtrl: ToastController, private settings: SettingsService,
+              public modalCtrl: ModalController
   ) {
     settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
     this.findFoods();
@@ -126,6 +123,15 @@ export class MontarPratoPage {
   ionViewWillEnter() {
     this.refeicao = this.navParams.get("refeicao");
     this.type = this.navParams.get("type");
+    this.callback = this.navParams.get("callback");
+    this.allSelectedFoods = this.navParams.get("allSelectedFoods");
+  }
+
+  ionViewWillLeave(){
+    if (this.type == 'montarPrato'){
+      this.callback(this.allSelectedFoods).then(()=>{
+      });
+    }
   }
 
   mudarPorcao(porcao: number, food: any) {
@@ -142,25 +148,4 @@ export class MontarPratoPage {
     if (!foodInPlate) if (porcao > 0) this.allSelectedFoods.push(food);
   }
 
-  myCallbackFunction = _params => {
-    return new Promise((resolve, reject) => {
-      this.allSelectedFoods = _params;
-      resolve();
-    });
-  };
-
-  verPrato() {
-    this.foods.forEach(element => {
-      element.selected = false;
-    });
-    this.allSelectedFoods.forEach(element => {
-      element.selected = false;
-    });
-    this.navCtrl.push('VerPratoPage', {
-      callback: this.myCallbackFunction,
-      allSelectedFoods: this.allSelectedFoods,
-      refeicao: this.refeicao,
-      type: this.type
-    });
-  }
 }

@@ -1,0 +1,97 @@
+<!--
+  Generated template for the TimelinePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-padding no-border>
+
+  <ion-navbar color="{{selectedTheme}}">
+    <ion-title text-center *ngIf="selectedTheme == 'light-theme'">
+      <img src="../../assets/imgs/nutring-color.png">
+    </ion-title>
+    <ion-title text-center *ngIf="selectedTheme != 'light-theme'">
+      <img src="../../assets/imgs/nutring-no-color.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content #pageContent fullscreen>
+
+  
+
+  <div class="date-change">
+    <div class="width100 icon align-left">
+      <ion-icon name="ios-arrow-back-outline"></ion-icon>
+    </div>
+    <div class="width100 datetime align-center">
+      <ion-icon name="md-calendar"></ion-icon>
+      Hoje
+    </div>
+    <div class="width100 icon align-right">
+      <ion-icon name="ios-arrow-forward-outline"></ion-icon>
+    </div>
+  </div>
+
+  <div class="user-info-day">
+    <div class="info-day">
+      <div class="align-right inside-info-day">
+        <p>254,5</p>
+      </div>
+      <div class="barra-info">
+        <div class="real-barra">
+            <div class="percent-barra"></div>
+        </div>
+        
+      </div>
+      <div class="align-left inside-info-day">
+        <p>1758</p>
+      </div>
+    </div>
+    <div class="kcal-info">
+      <p>KCAL</p>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="line"></div>
+    <div class="item">
+      <div class="date">
+        <h1>5:33PM</h1>
+      </div>
+      <div class="put-ball">
+        <div class="ball"></div>
+      </div>
+      <div class="text">
+        <h1>Café da manhã</h1>
+        <p>144 KCAL</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="date">
+        <h1>5:33PM</h1>
+      </div>
+      <div class="put-ball">
+        <div class="ball"></div>
+      </div>
+      <div class="text">
+        <h1>Almoço</h1>
+        <p>333 KCAL</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="date">
+        <h1>1:22AM</h1>
+      </div>
+      <div class="put-ball">
+        <div class="ball" style="border: 2px solid #27ae60"></div>
+      </div>
+      <div class="text">
+        <h1>Jantar</h1>
+        <p>242 KCAL</p>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

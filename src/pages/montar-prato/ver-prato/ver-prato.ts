@@ -30,9 +30,6 @@ export class VerPratoPage {
   foods = [];
   callback;
 
-  foodsReturn = [];
-  foodsFiltered = [];
-
   public searchInput = {
     shouldShowCancel: false,
     searchText: ""
@@ -46,6 +43,7 @@ export class VerPratoPage {
   popupOpen: boolean = false;
   popupCheck: boolean = false;
   checkText: string = "Seu prato foi feito com sucesso."
+  montandoPrato: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private settings: SettingsService,
               private post: VerPratoPostService, private toastCtrl: ToastController,
@@ -54,20 +52,13 @@ export class VerPratoPage {
   }
 
   ionViewWillEnter() {
-    this.callback      = this.navParams.get("callback")
-    this.foods         = this.navParams.get("allSelectedFoods")
-    this.foodsReturn   = this.foods
-    this.foodsFiltered = this.foods
-    this.refeicao      = this.navParams.get("refeicao")
-    this.type          = this.navParams.get("type")
+    this.refeicao = this.navParams.get("refeicao");
+    this.type = this.navParams.get("type");
   }
 
   ionViewWillLeave() {
-    this.foods.forEach(element => {
-      element.selected = false;
-    });
-    this.callback(this.foods).then(()=>{
-    });
+    // this.callback(this.foods).then(()=>{
+    // });
   }
 
   ionViewDidLoad() {
@@ -97,8 +88,6 @@ export class VerPratoPage {
       this.sendPrato.push({id_usuario: parseInt(id_usuario), id_alimento: parseInt(element.id_alimento), quantidade: parseInt(element.porcao_comida)})
     });
     let result = await this.post.createPrato(JSON.stringify(this.sendPrato), JSON.stringify(this.refeicao), this.type);
-    let message = "";
-    let title = "";
     if (result.success){
       localStorage.setItem("loadHistorico", "true");
     }
@@ -116,6 +105,46 @@ export class VerPratoPage {
     this.navCtrl.popToRoot()
     //  setRoot(PrincipalPage)
     this.navCtrl.parent.select(2);
+  }
+
+  closePrato(){
+    this.navCtrl.pop();
+  }
+
+  myCallbackFunction = _params => {
+    return new Promise((resolve, reject) => {
+      if (_params){
+        let exists = false;
+        for (var i = 0; i < this.foods.length; i++){
+          if (this.foods[i].id_alimento == _params.id_alimento){
+            this.foods[i] = _params;
+            exists = true;
+            break;
+          }
+        }
+        if (!exists)
+          this.foods = [...this.foods, _params];
+      }
+        
+      resolve();
+    });
+  };
+
+  openSearch(){
+    this.navCtrl.push('SearchPage', {
+      type: 'montarPrato',
+      refeicao: this.refeicao,
+      callback: this.myCallbackFunction
+    })
+  }
+
+  deleteAlimento(food: any){
+    for (var i = this.foods.length - 1; i >= 0; i--){
+      if (this.foods[i].id_alimento == food.id_alimento){
+        this.foods.splice(i, 1);
+        break;
+      }
+    }
   }
 
 }
