@@ -70,6 +70,7 @@ export class InfoPratoPage {
     this.loadingDelete = false;
     if (result.success){
       localStorage.setItem("loadHistorico", "true");
+      localStorage.setItem("loadRefeicoes", "true");
       this.popupDelete = false;
       this.popupCheck = true;
       this.reloadUserInfo();

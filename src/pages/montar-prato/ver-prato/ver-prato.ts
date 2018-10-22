@@ -90,6 +90,7 @@ export class VerPratoPage {
     let result = await this.post.createPrato(JSON.stringify(this.sendPrato), JSON.stringify(this.refeicao), this.type);
     if (result.success){
       localStorage.setItem("loadHistorico", "true");
+      localStorage.setItem("loadRefeicoes", "true");
     }
     this.loading = false;
     this.popupOpen = false;

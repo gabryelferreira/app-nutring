@@ -60,8 +60,10 @@ export class SearchPage {
   }
 
   ionViewWillLeave(){
-    this.callback(this.selectedFoodPrato).then(()=>{
-    });
+    if (this.type == "montarPrato"){
+      this.callback(this.selectedFoodPrato).then(()=>{
+      });
+    }
   }
 
   async findFoods(name) {

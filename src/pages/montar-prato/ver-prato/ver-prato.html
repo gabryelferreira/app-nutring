@@ -37,7 +37,8 @@
         <div class="blur"></div>
         <div class="image-prato-info">
           <h1>{{refeicao.ds_refeicao}}</h1>
-          <p>{{refeicao.quantidade_pratos}}</p>
+          <p *ngIf="refeicao.quantidade_pratos == 1">{{refeicao.quantidade_pratos}} prato montado</p>
+          <p *ngIf="refeicao.quantidade_pratos != 1">{{refeicao.quantidade_pratos}} pratos montados</p>
         </div>
       </div>
     </div>
@@ -57,7 +58,7 @@
           <img [src]="food.img_url">
         </ion-avatar>
         <h2>{{food.nome}}</h2>
-        <p>{{food.porcao_comida | number:'1.0-2'}} g</p>
+        <p>{{food.porcao_comida | ntNumber}} g</p>
         <ion-icon (tap)="deleteAlimento(food)" name="md-close" item-end></ion-icon>
       </ion-item>
     </div>

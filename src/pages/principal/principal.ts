@@ -34,6 +34,13 @@ export class PrincipalPage {
     this.getUserData();
   }
 
+  ionViewWillEnter(){
+    if (localStorage.getItem("loadRefeicoes")){
+      localStorage.removeItem("loadRefeicoes");
+      this.getRefeicoes();
+    }
+  }
+
   async getUserData() {
       let result = await this.post.reloadUserInfo(this.user.id_usuario);
       if (result.success){
