@@ -10,7 +10,7 @@
     <ion-title text-left>Editar perfil</ion-title>
 
     <ion-buttons end>
-      <button *ngIf="!loading" ion-button (tap)="updateUserInfo()">
+      <button *ngIf="!loading" ion-button (click)="updateUserInfo()">
         <ion-icon name="checkmark" color="primary"></ion-icon>
       </button>
       <button *ngIf="loading" ion-button>
@@ -34,7 +34,7 @@
         <img class="user-img" *ngIf="user.foto != '' && picture == ''" [src]='user.foto'>
         <img class="user-img" *ngIf="picture != ''" [src]='picture'>
       </div>
-      <button id="btnFoto" type="button" (tap)="openGaleria()" class="default-button padding transparent">Alterar foto</button>
+      <button id="btnFoto" type="button" (click)="openGaleria()" class="default-button padding transparent">Alterar foto</button>
     </ion-item>
 
     <ion-item padding-right>
@@ -78,7 +78,7 @@
       <ion-input type="number" name="altura_m" (keypress)="validNumericField(user.altura_m)" [(ngModel)]="user.altura_m"></ion-input>
     </ion-item>
 
-    <!-- <ion-item (tap)="openUpdateLoginInfo()" padding>
+    <!-- <ion-item (click)="openUpdateLoginInfo()" padding>
       <ion-icon name="finger-print" item-start></ion-icon>Alterar informações de acesso
     </ion-item> -->
 

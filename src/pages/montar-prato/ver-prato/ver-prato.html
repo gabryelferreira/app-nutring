@@ -9,7 +9,7 @@
     <ion-navbar color="{{selectedTheme}}">
         <ion-title text-left>Seu prato</ion-title>
         <ion-buttons end>
-            <button *ngIf="!loading" [disabled]="!foods || foods.length == 0 || popupOpen || popupCheck" (tap)="presentConfirm()" ion-button>
+            <button *ngIf="!loading" [disabled]="!foods || foods.length == 0 || popupOpen || popupCheck" (click)="presentConfirm()" ion-button>
                 <ion-note item-end color="primary">Confirmar</ion-note>
             </button>
 
@@ -29,7 +29,7 @@
       <div class="image-prato">
         <div class="tabs-up">
           <div class="tab-up">
-            <ion-icon (tap)="closePrato()" name="md-close"></ion-icon>
+            <ion-icon (click)="closePrato()" name="md-close"></ion-icon>
           </div>
         </div>
         <img *ngIf="refeicao.foto" [src]="refeicao.foto">
@@ -46,7 +46,7 @@
       <div class="option">
         Alimentos
       </div>
-      <div class="option align-right" (tap)="openSearch()">
+      <div class="option align-right" (click)="openSearch()">
         Adicionar alimento &nbsp;
         <ion-icon name="add"></ion-icon>
       </div>
@@ -59,7 +59,7 @@
         </ion-avatar>
         <h2>{{food.nome}}</h2>
         <p>{{food.porcao_comida | ntNumber}} g</p>
-        <ion-icon (tap)="deleteAlimento(food)" name="md-close" item-end></ion-icon>
+        <ion-icon (click)="deleteAlimento(food)" name="md-close" item-end></ion-icon>
       </ion-item>
     </div>
 
@@ -90,6 +90,6 @@
 
 <ion-footer style="z-index: 1" no-border no-shadow>
   <ion-toolbar color="transparent">
-      <button (tap)="presentConfirm()" [disabled]="!foods || foods.length == 0 || loading || popupOpen || popupCheck" type="button" class="default-button full green box-shadow-13">Confirmar</button>
+      <button (click)="presentConfirm()" [disabled]="!foods || foods.length == 0 || loading || popupOpen || popupCheck" type="button" class="default-button full green box-shadow-13">Confirmar</button>
   </ion-toolbar>
 </ion-footer>

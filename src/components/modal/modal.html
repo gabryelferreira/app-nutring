@@ -10,8 +10,8 @@
       </h2>
     </div>
     <div class="buttons">
-      <button *ngIf="!loading" (tap)="cancel()" type="button" class="default-button medium no-color padding">{{btnCancel}}</button>
-      <button *ngIf="!loading" (tap)="confirm()" [id]="color" type="button" class="default-button medium padding">{{btnConfirm}}</button>
+      <button *ngIf="!loading" (click)="cancel()" type="button" class="default-button medium no-color padding">{{btnCancel}}</button>
+      <button *ngIf="!loading" (click)="confirm()" [id]="color" type="button" class="default-button medium padding">{{btnConfirm}}</button>
       <button *ngIf="loading" type="button" [id]="color" class="default-button medium padding"><ion-spinner color="white" name="dots"></ion-spinner></button>
     </div>
   </div>
@@ -26,7 +26,7 @@
       </h2>
     </div>
     <div class="buttons">
-      <button (tap)="confirm()" type="button" [id]="color" class="default-button medium padding">{{btnConfirm}}</button>
+      <button (click)="confirm()" type="button" [id]="color" class="default-button medium padding">{{btnConfirm}}</button>
     </div>
   </div>
 
@@ -40,7 +40,7 @@
       </h2>
     </div>
     <div class="buttons">
-      <button (tap)="confirm()" [id]="color" type="button" class="default-button medium padding">{{btnConfirm}}</button>
+      <button (click)="confirm()" [id]="color" type="button" class="default-button medium padding">{{btnConfirm}}</button>
     </div>
   </div>
 

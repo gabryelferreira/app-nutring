@@ -12,7 +12,7 @@
         Editar porção
       </ion-title>
       <ion-buttons end>
-        <button [disabled]="!food || food.porcao_comida.length == 0 || food.porcao_comida <= 0" ion-button (tap)="updatePrato()">
+        <button [disabled]="!food || food.porcao_comida.length == 0 || food.porcao_comida <= 0" ion-button (click)="updatePrato()">
           <ion-icon name="checkmark" color="primary"></ion-icon>
         </button>
       </ion-buttons>
