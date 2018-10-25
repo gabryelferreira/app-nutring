@@ -22,7 +22,7 @@
   <ion-list *ngIf="foods && foods.length > 0">
 
     <div *ngFor="let food of foods; let i = index">
-      <div [class.active]="food.selected" (tap)="selectFood(food)">
+      <div [class.active]="food.selected" (click)="selectFood(food)">
 
 
         <ion-item>

@@ -15,7 +15,7 @@
 
   <ion-navbar [style.display]="selectedComments && selectedComments.length > 0 ? '' : 'none'" color="success">
     <ion-buttons left>
-      <button (tap)="closeOptions()" ion-button>
+      <button (click)="closeOptions()" ion-button>
         <ion-icon id="close-options-button" name="md-close"></ion-icon>
       </button>
     </ion-buttons>
@@ -26,7 +26,7 @@
       {{selectedComments.length}} selecionados
     </ion-title>
     <ion-buttons *ngIf="allSelectedIsMine" end>
-      <button (tap)="deleteComments()" ion-button>
+      <button (click)="deleteComments()" ion-button>
         <ion-icon name="md-trash"></ion-icon>
       </button>
     </ion-buttons>
@@ -42,8 +42,8 @@
     
     <div *ngFor="let comment of comments" class="comment">
         <div [class]="comment.selecionado ? 'selected' : ''"></div>
-        <ion-icon class="like-button" (tap)="likeUnlikeComment(comment)" [id]="comment.gostei ? 'liked2' : 'unliked2'" name="thumbs-up"></ion-icon>
-      <div (tap)="openOptions(comment)" class="user-info">
+        <ion-icon class="like-button" (click)="likeUnlikeComment(comment)" [id]="comment.gostei ? 'liked2' : 'unliked2'" name="thumbs-up"></ion-icon>
+      <div (click)="openOptions(comment)" class="user-info">
         <img class="user-picture" [src]="comment.foto">
         <div class="text">
           <div class="info">

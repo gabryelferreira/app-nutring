@@ -34,26 +34,26 @@
         </div>
         
         <div class="tabs-info">
-          <div (tap)="likeUnlikePost(selectedPost)" class="tab">
+          <div (click)="likeUnlikePost(selectedPost)" class="tab">
               <div class="align">
                 <ion-icon [id]="selectedPost.gostei ? 'liked' : 'unliked'" name="md-thumbs-up"></ion-icon>
                 <p [class]="selectedPost.gostei ? 'liked' : ''">Gostei</p>
               </div>
           </div>
-          <div (tap)="openPostComments(selectedPost)" class="tab">
+          <div (click)="openPostComments(selectedPost)" class="tab">
             <div class="align">
               <ion-icon name="md-chatbubbles"></ion-icon>
               <p>Comentar</p>
             </div>
           </div>
         </div>
-        <div (tap)="seeComments(selectedPost)" class="description-info">
+        <div (click)="seeComments(selectedPost)" class="description-info">
             <h2 *ngIf="!selectedPost.curtidas || (selectedPost.curtidas && selectedPost.curtidas == 0)">Seja o primeiro a curtir</h2>
           <h2 *ngIf="selectedPost.curtidas && selectedPost.curtidas == 1">{{ selectedPost.curtidas | curtidas }} curtida</h2>
           <h2 *ngIf="selectedPost.curtidas && selectedPost.curtidas > 1">{{ selectedPost.curtidas | curtidas }} curtidas</h2>
           <p>{{ selectedPost.descricao }}</p>
         </div>
-        <div (tap)="seeComments(selectedPost)" *ngIf="selectedPost.comentarios && selectedPost.comentarios > 0" class="comment-info">
+        <div (click)="seeComments(selectedPost)" *ngIf="selectedPost.comentarios && selectedPost.comentarios > 0" class="comment-info">
           <p>Ver todos os {{selectedPost.comentarios}} comentários</p>
         </div>
         <form class="comment-bar" (ngSubmit)="commentPost(selectedPost)">

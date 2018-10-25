@@ -18,7 +18,7 @@
     </div>
 
     <div class="login-info">
-      <button [disabled]="!validLogin" type="submit" class="green" *ngIf="!loadingLogin" (tap)="login()">Comece agora</button>
+      <button [disabled]="!validLogin" type="submit" class="green" *ngIf="!loadingLogin" (click)="login()">Comece agora</button>
       <button *ngIf="loadingLogin" class="green">
         <ion-spinner color="white" name="dots"></ion-spinner>
       </button>
@@ -26,7 +26,7 @@
   </form>
 
   <div class="option option1" [id]="show ? 'hide' : 'show'">
-    <button [disabled]="loadingSomething" (tap)="goToRegister()">Criar conta</button>
+    <button [disabled]="loadingSomething" (click)="goToRegister()">Criar conta</button>
   </div>
   <div class="option option2" [id]="show ? 'hide' : 'show'">
     <button [disabled]="loadingSomething">Precisa de ajuda?</button>
@@ -38,7 +38,7 @@
     <h2><span>ou</span></h2>
 
 
-    <button *ngIf="!loadingFacebookLogin" [disabled]="loadingSomething" ion-button full (tap)="loginFacebook()" color="fb"
+    <button *ngIf="!loadingFacebookLogin" [disabled]="loadingSomething" ion-button full (click)="loginFacebook()" color="fb"
       icon-start>
       <ion-icon name="logo-facebook"></ion-icon>
       ENTRAR COM FACEBOOK

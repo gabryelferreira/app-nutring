@@ -32,7 +32,7 @@
           <h2>{{searchResult.nome}}</h2>
           <p>{{searchResult.kcal | number:'1.0-2'}} kcal</p>
         </ion-item>
-        <button *ngIf="showPeople" ion-button small outline (tap)="pushSearchResultPage('food')">ver todas</button>
+        <button *ngIf="showPeople" ion-button small outline (click)="pushSearchResultPage('food')">ver todas</button>
       </div>
 
       <div *ngIf="typeOfResult == 'people'">
@@ -44,7 +44,7 @@
           <!-- <p>seguidores: {{food.kcal | number:'1.0-2'}} kcal</p> -->
           <!-- <ion-note item-end>#{{i+1}}</ion-note> -->
         </ion-item>
-        <button *ngIf="showFood" ion-button small outline (tap)="pushSearchResultPage('people')">ver todas</button>
+        <button *ngIf="showFood" ion-button small outline (click)="pushSearchResultPage('people')">ver todas</button>
       </div>
 
     </div>

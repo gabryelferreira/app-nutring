@@ -8,7 +8,7 @@
 <ion-content>
   <div>
     <ion-buttons end style="position: fixed; right: 10px; top: 10px;">
-      <button (tap)="closeIntroduction()" ion-button style="color: #32db64; background-color: transparent; box-shadow: none;">Pular</button>
+      <button (click)="closeIntroduction()" ion-button style="color: #32db64; background-color: transparent; box-shadow: none;">Pular</button>
     </ion-buttons>
   </div>
   <ion-slides pager padding>
@@ -23,7 +23,7 @@
       </div>
       <img src="assets/imgs/ica-slidebox-img-4.png" class="slide-image" />
       <h2 class="slide-title">Ready to Play?</h2>
-      <button (tap)="closeIntroduction()" ion-button large icon-end color="primary">
+      <button (click)="closeIntroduction()" ion-button large icon-end color="primary">
         Lets bora
         <ion-icon name="arrow-forward"></ion-icon>
       </button>

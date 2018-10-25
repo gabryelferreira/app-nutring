@@ -20,7 +20,7 @@
             <h1>{{user.usuario | uppercase}}</h1>
           </div>
           <div class="full end">
-            <ion-icon (tap)="goToSettings()" name="ios-settings-outline" color="white"></ion-icon>
+            <ion-icon (click)="goToSettings()" name="ios-settings-outline" color="white"></ion-icon>
           </div>
         </div>
         <img src="../../assets/imgs/nutring-background.png">
@@ -34,7 +34,7 @@
             <div class="personal">
               <h1>{{user.nome}}</h1>
               <!-- <h2>@gabryel</h2> -->
-              <button type="button" (tap)="editProfile()" class="default-button no-color smaller padding">Editar perfil</button>
+              <button type="button" (click)="editProfile()" class="default-button no-color smaller padding">Editar perfil</button>
             </div>
           </div>
           <div class="almost-tabs">
@@ -64,7 +64,7 @@
     </div>
     
     <div class="tabs-profile">
-      <div *ngFor="let tab of tabs; let i = index;" class="tab-profile" [id]="tab.selected? 'active': ''" (tap)="selectTab(tab)">
+      <div *ngFor="let tab of tabs; let i = index;" class="tab-profile" [id]="tab.selected? 'active': ''" (click)="selectTab(tab)">
         {{tab.text}}
       </div>
     </div>

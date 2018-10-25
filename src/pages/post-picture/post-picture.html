@@ -14,7 +14,7 @@
 
 
 <ion-content class="image" [ngStyle]="{ 'background-image': 'url(' + picture + ')'}">
-  <!-- <button (tap)="openCamera()" style="width: 100%;height: 92%;position: relative;">
+  <!-- <button (click)="openCamera()" style="width: 100%;height: 92%;position: relative;">
     <img [src]="picture" class="transparent" no-padding>
   </button> -->
   <!-- <div style="height: 92%;background-color: rgba(0,255,0,0.0)">
@@ -24,7 +24,7 @@
   <div class="description" no-padding style="width: 100%">
     <ion-input type="text" placeholder="Escreva sua descrição" style="width: 75%" float-left [(ngModel)]="descricao"></ion-input>
     <button ion-button icon-only float-right style="background-color: rgba(0,255,0,0.0); box-shadow: none; -webkit-box-shadow:none"
-      (tap)="postPicture()">
+      (click)="postPicture()">
       <ion-icon name="arrow-round-forward"></ion-icon>
     </button>
   </div>
