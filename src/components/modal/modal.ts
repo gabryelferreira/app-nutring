@@ -28,11 +28,11 @@ export class ModalComponent {
   }
 
   ngAfterViewInit(){
-    var text = this.text;
+    let text = this.text;
     if (text && text.indexOf('<b>') != -1){
-      var arrayText = text.split('<b>');
-      var arrayNewText = arrayText[1].split('</b>');
-      var newText = arrayNewText[0].bold();
+      let arrayText = text.split('<b>');
+      let arrayNewText = arrayText[1].split('</b>');
+      let newText = arrayNewText[0].bold();
       this.text = arrayText[0] + newText + arrayNewText[1];
       document.getElementById('textoModal').innerHTML = this.text;
     }

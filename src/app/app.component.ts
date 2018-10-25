@@ -35,29 +35,21 @@ export class MyApp {
       statusBar.styleDefault();
       statusBar.overlaysWebView(false);
       splashScreen.hide();
-      Keyboard.onKeyboardShow().subscribe(() => {
-        console.log("AQUI abriu, ai abriu?");
-        document.body.classList.add("keyboard-is-open");
-      });
-      Keyboard.onKeyboardHide().subscribe(() => {
-        console.log("AQUI fechou, ai fechou?");
-        document.body.classList.remove("keyboard-is-open");
-      });
+      // Keyboard.onKeyboardShow().subscribe(() => {
+      //   document.body.classList.add("keyboard-is-open");
+      // });
+      // Keyboard.onKeyboardHide().subscribe(() => {
+      //   document.body.classList.remove("keyboard-is-open");
+      // });
       document.addEventListener(
         "backbutton",
         () => {
           let nav = app.getActiveNavs()[0];
           let activeView = nav.getActive();
         
-          // Checks if can go back before show up the alert
           if (this.pages.indexOf(activeView.id) != -1) {
-            console.log("entrei if ");
-            // nav.popAll();
             min.minimize()
-            // platform.exitApp();
           }else{
-            console.log("nome", activeView.name)
-            console.log("entrei else ")
             if(nav.canGoBack()){
               nav.pop();
             }else{

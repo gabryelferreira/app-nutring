@@ -6,7 +6,7 @@
     density="560dpi"
     format="10"
     plugin-version="3.0.0"
-    timestamp="1540169978480"
+    timestamp="1540432555505"
     token="-7409206492977472909"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -23,13 +23,17 @@
         name="verifier"
         duration="0" />
 
+    <artifact
+        location="C:\wamp64\www\app-nutring\platforms\android\app\build\outputs\apk\debug\app-debug.apk"
+        type="SPLIT_MAIN" />
+
     <build
         build-mode="FULL"
-        timestamp="1540169946943"
+        timestamp="1540430902453"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\wamp64\www\app-nutring\platforms\android\app\build\outputs\apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
         <artifact
             location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
@@ -37,22 +41,10 @@
             location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
             location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
@@ -63,10 +55,26 @@
         <artifact
             location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
+        <artifact
+            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\wamp64\www\app-nutring\platforms\android\app\build\outputs\apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1540169978480"
-        verifier="COLD_SWAP_REQUESTED" />
+        timestamp="1540432555505"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\wamp64\www\app-nutring\platforms\android\app\build\outputs\apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
 
 </instant-run>

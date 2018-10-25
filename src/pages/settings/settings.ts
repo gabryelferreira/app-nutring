@@ -26,10 +26,10 @@ export class SettingsPage {
   darkTheme: boolean = false;
   selectedTheme: String = "";
   sharing:settings.shareApp = {
-    file : 'https://cdn-images-1.medium.com/max/800/0*KiK6x8QTY0PstmPU.png',
+    file : '../src/assets/imgs/nutring-background.png',
     message: 'Estou usando o Nutring, baixe agora na Play Store!',
     subject : null,
-    url : 'https://cdn-images-1.medium.com/max/800/0*KiK6x8QTY0PstmPU.png'
+    url : 'http://nutring.com.br/img/nutring-color.png'
   };
   user:types.IUser = {
     id_usuario: 0,
@@ -100,8 +100,9 @@ export class SettingsPage {
   }
 
   logout() {
-    localStorage.clear();
-    this.navCtrl.push('LoginPage')
+    localStorage.clear()
+    location.href = '/'
+    // this.navCtrl.push('LoginPage')
   }
 
 }
