@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import { VerPratoPostService, VerPratoGetService } from './ver-prato.service';
 import { MontarPratoPage } from '../../montar-prato/montar-prato';
+import { IUser } from '../../../app/types';
 
 /**
  * Generated class for the VerPratoPage page.
@@ -44,6 +45,7 @@ export class VerPratoPage {
   popupCheck: boolean = false;
   checkText: string = "Seu prato foi feito com sucesso."
   montandoPrato: boolean = false;
+  user: IUser = {};
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private settings: SettingsService,
               private post: VerPratoPostService, private toastCtrl: ToastController,
@@ -54,6 +56,7 @@ export class VerPratoPage {
   ionViewWillEnter() {
     this.refeicao = this.navParams.get("refeicao");
     this.type = this.navParams.get("type");
+    this.user = JSON.parse(localStorage.getItem("userData"));
   }
 
   ionViewWillLeave() {
@@ -91,10 +94,19 @@ export class VerPratoPage {
     if (result.success){
       localStorage.setItem("loadHistorico", "true");
       localStorage.setItem("loadRefeicoes", "true");
+      this.reloadUserInfo();
     }
     this.loading = false;
     this.popupOpen = false;
     this.popupCheck = true;
+  }
+
+  async reloadUserInfo(){
+    let result = await this.post.reloadUserInfo(this.user.id_usuario);
+    if (result.success){
+      this.user = result.result;
+      localStorage.setItem("userData", JSON.stringify(this.user));
+    }
   }
 
   presentConfirm() {

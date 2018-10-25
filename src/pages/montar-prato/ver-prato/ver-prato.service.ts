@@ -21,4 +21,8 @@ export class VerPratoPostService extends Connect {
         return this.callMethod("createPrato", {data, refeicao, type});
     }
 
+    reloadUserInfo(id_usuario:number){
+        return this.callMethod("reloadUserInfo", { id_usuario })
+    }
+
 }
