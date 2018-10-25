@@ -6,7 +6,7 @@
     density="560dpi"
     format="10"
     plugin-version="3.0.0"
-    timestamp="1540069038713"
+    timestamp="1540169978480"
     token="-7409206492977472909"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -23,20 +23,16 @@
         name="verifier"
         duration="0" />
 
-    <artifact
-        location="C:\wamp64\www\app-nutring\platforms\android\app\build\outputs\apk\debug\app-debug.apk"
-        type="SPLIT_MAIN" />
-
     <build
         build-mode="FULL"
-        timestamp="1540060253091"
+        timestamp="1540169946943"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
         <artifact
             location="C:\wamp64\www\app-nutring\platforms\android\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
+        <artifact
+            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
         <artifact
             location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
@@ -70,20 +66,7 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1540068931573"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\wamp64\www\app-nutring\platforms\android\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1540069038713"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\wamp64\www\app-nutring\platforms\android\app\build\outputs\apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
+        timestamp="1540169978480"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
