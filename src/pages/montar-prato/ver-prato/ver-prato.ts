@@ -151,6 +151,14 @@ export class VerPratoPage {
     })
   }
 
+  editAlimento(food: any){
+    this.navCtrl.push("OpcoesAlimentoPage", {
+      food,
+      refeicao: this.refeicao,
+      callback: this.myCallbackFunction
+    })
+  }
+
   deleteAlimento(food: any){
     for (var i = this.foods.length - 1; i >= 0; i--){
       if (this.foods[i].id_alimento == food.id_alimento){

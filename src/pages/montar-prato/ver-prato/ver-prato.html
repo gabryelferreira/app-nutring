@@ -53,7 +53,7 @@
     </div>
     
     <div class="itens-prato" *ngIf="foods && foods.length > 0">
-      <ion-item *ngFor="let food of foods; let i = index;">
+      <ion-item (click)="editAlimento(food)" *ngFor="let food of foods; let i = index;">
         <ion-avatar item-start>
           <img [src]="food.img_url">
         </ion-avatar>
