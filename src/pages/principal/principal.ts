@@ -52,7 +52,7 @@ export class PrincipalPage {
 
   async getRefeicoes(){
     this.loading = true;
-    let result = await this.getRefeicoesPadroes();
+    let result = await this.getRefeicoesPadroes(this.user.id_usuario);
     let result2 = await this.getRefeicoesCustom(this.user.id_usuario);
     this.loading = false;
   }
@@ -64,8 +64,8 @@ export class PrincipalPage {
     }
   }
 
-  async getRefeicoesPadroes(){
-    let result = await this.post.getRefeicoesPadroes();
+  async getRefeicoesPadroes(id_usuario: number){
+    let result = await this.post.getRefeicoesPadroes(id_usuario);
     if (result.success){
       this.refeicoesPadroes = result.result;
     }

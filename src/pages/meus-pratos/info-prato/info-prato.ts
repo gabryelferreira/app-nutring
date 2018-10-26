@@ -83,7 +83,6 @@ export class InfoPratoPage {
       this.user = result.result;
       localStorage.setItem("userData", JSON.stringify(this.user));
     }
-
   }
 
   goToHistorico(){

@@ -19,8 +19,8 @@ export class PrincipalPostService extends Connect {
         return this.callMethod("postPicture", { id, img, descricao });
     }
 
-    getRefeicoesPadroes(){
-        return this.callMethod("getRefeicoesPadroes");
+    getRefeicoesPadroes(id_usuario: number){
+        return this.callMethod("getRefeicoesPadroes", { id_usuario });
     }
 
     getRefeicoesCustom(id_usuario: number){
