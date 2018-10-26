@@ -32,8 +32,8 @@ export class OpcoesAlimentoPage {
 
   ionViewWillEnter(){
     this.food = this.navParams.get("food");
-    if (!this.food["porcao_comida"])
-      this.food["porcao_comida"] = "";
+    if (!this.food["porcao_consumo"])
+      this.food["porcao_consumo"] = "";
     this.refeicao = this.navParams.get("refeicao");
     this.callback = this.navParams.get("callback");
   }

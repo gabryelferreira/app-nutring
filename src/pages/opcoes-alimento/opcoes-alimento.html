@@ -12,7 +12,7 @@
         Editar porção
       </ion-title>
       <ion-buttons end>
-        <button [disabled]="!food || food.porcao_comida.length == 0 || food.porcao_comida <= 0" ion-button (click)="updatePrato()">
+        <button [disabled]="!food || food.porcao_consumo.length == 0 || food.porcao_consumo <= 0" ion-button (click)="updatePrato()">
           <ion-icon name="checkmark" color="primary"></ion-icon>
         </button>
       </ion-buttons>
@@ -32,7 +32,7 @@
       </ion-item>
       <ion-item padding-right>
         <ion-label floating>Quantidade (em gramas)</ion-label>
-        <ion-input maxlength="4" name="refeicao" [(ngModel)]="food.porcao_comida" type="number"></ion-input>
+        <ion-input maxlength="4" name="refeicao" [(ngModel)]="food.porcao_consumo" type="number"></ion-input>
       </ion-item>
     </form>
   

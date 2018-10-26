@@ -46,6 +46,7 @@ export class VerPratoPage {
   checkText: string = "Seu prato foi feito com sucesso."
   montandoPrato: boolean = false;
   user: IUser = {};
+  prato;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private settings: SettingsService,
               private post: VerPratoPostService, private toastCtrl: ToastController,
@@ -88,7 +89,7 @@ export class VerPratoPage {
     let id_usuario = JSON.parse(localStorage.getItem("userData")).id_usuario;
     this.sendPrato = [];
     this.foods.forEach(element => {
-      this.sendPrato.push({id_usuario: parseInt(id_usuario), id_alimento: parseInt(element.id_alimento), quantidade: parseInt(element.porcao_comida)})
+      this.sendPrato.push({id_usuario: parseInt(id_usuario), id_alimento: parseInt(element.id_alimento), quantidade: parseInt(element.porcao_consumo)})
     });
     let result = await this.post.createPrato(JSON.stringify(this.sendPrato), JSON.stringify(this.refeicao), this.type);
     if (result.success){

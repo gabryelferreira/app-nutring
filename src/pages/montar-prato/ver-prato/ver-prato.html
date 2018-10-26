@@ -58,7 +58,7 @@
           <img [src]="food.img_url">
         </ion-avatar>
         <h2>{{food.nome}}</h2>
-        <p>{{food.porcao_comida | ntNumber}} g</p>
+        <p>{{food.porcao_consumo | ntNumber}} g</p>
         <ion-icon (click)="deleteAlimento(food)" name="md-close" item-end></ion-icon>
       </ion-item>
     </div>

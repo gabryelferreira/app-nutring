@@ -95,4 +95,11 @@ export class InfoPratoPage {
     this.navCtrl.push('InfoAlimentoPage', { food, hasPorcao: true });
   }
 
+  editPrato(){
+    // this.navCtrl.push('VerPratoPage', {
+      
+    // })
+    console.log("thrheh", this.prato)
+  }
+
 }
