@@ -178,16 +178,6 @@
     }
   }
 
-  a.tab-button[aria-selected="false"] .tab-button-icon {
-    color: rgba(37, 25, 25, 0.7) !important;
-  }
-
-  .tabbar a.tab-button[aria-selected="true"] .tab-button-icon {
-    color: #27ae60 !important;
-  }
-  .tab-button-text{
-    color: rgba(37, 25, 25, 0.7) !important;
-  }
   //FEED HOMEPAGE
   .feed {
     .feed-info {
