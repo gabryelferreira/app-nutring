@@ -15,8 +15,7 @@ export class TabsPage {
 
   constructor(settings: SettingsService, private hide:HideService) {
     settings.getTabActiveTheme().subscribe(val => (this.selectedTheme = val));
-    this.hide.getShow().subscribe(val => {this.show = val;console.log("ae",this.show)});
-    console.log("ae",this.show)
+    this.hide.getShow().subscribe(val => {this.show = val;});
     if (
       this.selectedTheme == "" ||
       this.selectedTheme == null ||
@@ -26,6 +25,6 @@ export class TabsPage {
   }
 
   ionViewDidEnter() {
-    this.hide.getShow().subscribe(val => {this.show = val;console.log("ae",this.show)});
+    this.hide.getShow().subscribe(val => {this.show = val;});
   }
 }

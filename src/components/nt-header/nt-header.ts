@@ -15,7 +15,6 @@ export class NtHeaderComponent {
   text: string;
 
   constructor() {
-    console.log('Hello NtHeaderComponent Component');
     this.text = 'Hello World';
   }
 

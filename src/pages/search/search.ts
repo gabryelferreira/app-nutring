@@ -84,7 +84,6 @@ export class SearchPage {
     }
   }
   async doInfinite(infiniteScroll) {
-    console.log("opa irmao")
     let result;
     result = await this.post.getFood(this.searched, this.foods.length);
       if (result && result.result.length > 0)

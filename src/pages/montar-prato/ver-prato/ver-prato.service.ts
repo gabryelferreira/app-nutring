@@ -25,4 +25,8 @@ export class VerPratoPostService extends Connect {
         return this.callMethod("reloadUserInfo", { id_usuario })
     }
 
+    updatePrato(data: any, refeicao: any, type: string){
+        return this.callMethod("updatePrato", {data, refeicao, type});
+    }
+
 }

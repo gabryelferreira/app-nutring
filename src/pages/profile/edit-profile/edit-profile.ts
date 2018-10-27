@@ -98,10 +98,8 @@ export class EditProfilePage {
     if (this.optionalData["peso_kg"] && this.optionalData["peso_kg"] != null && this.optionalData["peso_kg"] != undefined){
       peso = parseFloat(this.optionalData["peso_kg"]);
     }
-    console.log("altura = ", altura)
     this.user.altura_m = altura.toString();
     this.user.peso_kg = peso.toString();
-    console.log("user altura", this.user.altura_m)
   }
 
   async updateUserInfo(){

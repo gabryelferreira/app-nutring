@@ -19,7 +19,6 @@ export class UpdateLoginInfoPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad UpdateLoginInfoPage');
   }
 
 }

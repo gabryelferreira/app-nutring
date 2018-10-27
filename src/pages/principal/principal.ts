@@ -85,7 +85,6 @@ export class PrincipalPage {
    }
 
   openMontarPrato(refeicao: any, type: string){
-    console.log("refeicao = ", refeicao)
     this.navCtrl.push('VerPratoPage', {
       refeicao: refeicao,
       type: type

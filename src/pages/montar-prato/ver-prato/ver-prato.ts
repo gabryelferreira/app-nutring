@@ -47,6 +47,7 @@ export class VerPratoPage {
   montandoPrato: boolean = false;
   user: IUser = {};
   prato;
+  where: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private settings: SettingsService,
               private post: VerPratoPostService, private toastCtrl: ToastController,
@@ -58,6 +59,10 @@ export class VerPratoPage {
     this.refeicao = this.navParams.get("refeicao");
     this.type = this.navParams.get("type");
     this.user = JSON.parse(localStorage.getItem("userData"));
+    let foods = this.navParams.get("foods");
+    if (foods && foods.length > 0)
+      this.foods = foods;
+    this.where = this.navParams.get("where");
   }
 
   ionViewWillLeave() {
@@ -88,10 +93,16 @@ export class VerPratoPage {
     this.loading = true;
     let id_usuario = JSON.parse(localStorage.getItem("userData")).id_usuario;
     this.sendPrato = [];
+    let result;
     this.foods.forEach(element => {
       this.sendPrato.push({id_usuario: parseInt(id_usuario), id_alimento: parseInt(element.id_alimento), quantidade: parseInt(element.porcao_consumo)})
     });
-    let result = await this.post.createPrato(JSON.stringify(this.sendPrato), JSON.stringify(this.refeicao), this.type);
+    if (this.where == "editPrato"){
+      result = await this.post.updatePrato(JSON.stringify(this.sendPrato), JSON.stringify(this.refeicao), this.type);
+    } else {
+      result = await this.post.createPrato(JSON.stringify(this.sendPrato), JSON.stringify(this.refeicao), this.type);
+    }
+    
     if (result.success){
       localStorage.setItem("loadHistorico", "true");
       localStorage.setItem("loadRefeicoes", "true");
@@ -116,9 +127,12 @@ export class VerPratoPage {
 
   verPrato(){
     this.popupCheck = false;
-    this.navCtrl.popToRoot()
-    //  setRoot(PrincipalPage)
-    this.navCtrl.parent.select(2);
+    if (this.where == 'editPrato'){
+      this.navCtrl.pop();
+    } else {
+      this.navCtrl.popToRoot()
+      this.navCtrl.parent.select(2);
+    }
   }
 
   closePrato(){
@@ -137,7 +151,7 @@ export class VerPratoPage {
           }
         }
         if (!exists)
-          this.foods = [...this.foods, _params];
+          this.foods.push(_params);
       }
         
       resolve();

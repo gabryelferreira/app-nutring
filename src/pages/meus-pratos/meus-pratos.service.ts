@@ -39,4 +39,8 @@ export class MeusPratosPostService extends Connect {
     return this.callMethod("reloadUserInfo", { id_usuario })
   }
 
+  getNutritionalInfoByIdPrato(id_prato: number, id_usuario: number){
+    return this.callMethod("getNutritionalInfoByIdPrato", { id_prato, id_usuario });
+  }
+
 }

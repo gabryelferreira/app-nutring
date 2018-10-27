@@ -11,8 +11,8 @@ export class HideService {
         this.show = new BehaviorSubject(true);
     }
  
-    setShow(val: boolean) { console.log("OIIO",val) ; this.show.next(val) }
+    setShow(val: boolean) { this.show.next(val); }
 
-    getShow() { console.log("aaa") ;return this.show.asObservable() ; }
+    getShow() { return this.show.asObservable(); }
   
 }
