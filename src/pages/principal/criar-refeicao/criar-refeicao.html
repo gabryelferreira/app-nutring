@@ -11,7 +11,12 @@
     <ion-title text-left>
       Nova refeição
     </ion-title>
-
+    <ion-buttons end>
+      <button [disabled]="refeicao.length < 1" ion-button (click)="sendRefeicao()">
+        <ion-icon *ngIf="!loading" name="checkmark" color="primary"></ion-icon>
+        <ion-spinner *ngIf="loading" color="primary" name="dots"></ion-spinner>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -42,12 +47,12 @@
       <ion-label floating>Nome da refeição</ion-label>
       <ion-input maxlength="14" name="refeicao" type="text" [(ngModel)]="refeicao"></ion-input>
     </ion-item>
-    <div padding text-right>
+    <!-- <div padding text-right>
       <button [disabled]="refeicao.length < 1" *ngIf="!loading" type="submit" class="default-button green full" (click)="sendRefeicao()">Salvar</button>
       <button *ngIf="loading" class="default-button green full">
         <ion-spinner color="white" name="dots"></ion-spinner>
       </button>
-    </div>
+    </div> -->
   </form>
 
 </ion-content>

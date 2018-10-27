@@ -18,7 +18,8 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="list-avatar-page" #pageContent fullscreen>
+<!-- #pageContent fullscreen -->
+<ion-content class="list-avatar-page">
 
   <loader *ngIf="loading && (!users || (users && users.length == 0)) && (!foods || (foods && foods.length == 0))"></loader>
 

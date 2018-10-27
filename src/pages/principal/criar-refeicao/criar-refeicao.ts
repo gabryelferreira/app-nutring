@@ -42,8 +42,9 @@ export class CriarRefeicaoPage {
   }
 
   ionViewWillLeave() {
-    this.callback().then(()=>{
-    });
+    if (this.callback)
+      this.callback().then(()=>{
+      });
   }
 
   async sendRefeicao(){

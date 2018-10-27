@@ -24,11 +24,13 @@ export class EditRefeicoesPage {
   selectedTheme: String = "";
   refeicoes = [];
   popupOpen: boolean = false;
+  popupCheck: boolean = false;
   selectedRefeicao = {};
   user: IUser = {};
   callback;
   excluindo: boolean = false;
   deleteText = 'Tem certeza que deseja <b>excluir sua refeição personalizada?</b> Todos os pratos dessa refeição terão o nome de "Refeição".';
+  checkText = 'Refeição excluída com sucesso.';
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               _settings: SettingsService, private post: EditRefeicoesPostService,
@@ -67,14 +69,8 @@ export class EditRefeicoesPage {
         return element.id_refeicao_usuario != refeicao.id_refeicao_usuario;
       });
       this.refeicoes = refeicoes;
-      if (this.refeicoes.length == 0){
-        this.navCtrl.pop();
-      }
       this.popupOpen = false;
-      this.showToast("Refeição excluída.", "top");
-      setTimeout(() => {
-        this.excluindo = false;
-      }, 500);
+      this.popupCheck = true;
       
     }
   }
@@ -88,6 +84,10 @@ export class EditRefeicoesPage {
     });
 
     toast.present(toast);
+  }
+
+  openAdicionarRefeicao(){
+    this.navCtrl.push('CriarRefeicaoPage');
   }
 
 }

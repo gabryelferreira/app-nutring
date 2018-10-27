@@ -9,6 +9,11 @@
     <ion-title text-left>
       Suas refeições
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openAdicionarRefeicao()">
+          <ion-icon style="font-weight: bold;" name="ios-add"></ion-icon>
+      </button>
+    </ion-buttons> 
   </ion-navbar>
 </ion-header>
 
@@ -64,6 +69,10 @@
   <modal *ngIf="popupOpen" [loading]="excluindo" [btnConfirm]="'Excluir'" [color]="'red'"
   (onCancel)="popupOpen = false" (onConfirm)="deletarRefeicaoCustom(selectedRefeicao)" [text]="deleteText"
   [title]="selectedRefeicao.ds_refeicao"></modal>
+
+  <modal *ngIf="popupCheck" [btnConfirm]="'Ok'" type="check"
+  (onConfirm)="popupCheck = false" [text]="checkText"
+  [title]="'Concluído!'"></modal>
 
   
 
