@@ -1,17 +1,17 @@
 .light-theme {
-  nt-searchbar{
-    input{
+  nt-searchbar {
+    input {
       color: #222 !important;
     }
   }
   ion-content {
     background: #fff;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   ion-item {
     background: #fff;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   ion-header {
@@ -25,7 +25,7 @@
 
   ion-list-header {
     background: #fff;
-    transition: .3s;
+    transition: 0.3s;
     button {
       background: transparent;
       color: #222;
@@ -58,187 +58,147 @@
     }
   }
 
-  
-
-
-
-      /* ------------------------------
+  /* ------------------------------
     ------------------------------
     ---------------------------------
     ----------------------------------
     ---------------------------------*/
 
-
-
-
-
-    //TELA DE MONTAR PRATO
+  //TELA DE MONTAR PRATO
   .food-select-dropdown {
     background: #eee;
     ion-list-header {
-        background: #eee !important;
+      background: #eee !important;
     }
     ion-item {
-        background: #eee !important;
+      background: #eee !important;
     }
   }
 
-
-
-
-    // CARD DE VISUALIZAÇÃO NA TELA MEUS PRATOS
-    .inner {
+  // CARD DE VISUALIZAÇÃO NA TELA MEUS PRATOS
+  .inner {
+    border: 0 !important;
+    background: #fff;
+    .card-prato {
+      background: #fff;
+      box-shadow: none;
       border: 0 !important;
-      background: #fff;
-      .card-prato {
+      ion-card-content {
         background: #fff;
-        box-shadow: none;
-        border: 0 !important;
-        ion-card-content {
-          background: #fff;
-        }
-        .inner-card-prato {
-          box-shadow: 0 7px 4px #777;
-          border: 1px solid #dedede;
-        }
+      }
+      .inner-card-prato {
+        box-shadow: 0 7px 4px #777;
+        border: 1px solid #dedede;
+      }
 
-        ion-item {
-          background: #fff;
-        }
-
+      ion-item {
+        background: #fff;
       }
     }
+  }
 
-    // ion-segment-button {
-    //   color: #27ae60 !important;
-    // }
-   
-    // .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated, .segment-ios .segment-button {
-    //   border-color: #fff !important;
-    //   color: #fff !important;
-    // }
+  // ion-segment-button {
+  //   color: #27ae60 !important;
+  // }
 
-    // .segment-ios .segment-button.segment-activated {
-    //   background: #fff !important;
-    //   color: #27ae60 !important;
-    //   border-color: #fff !important;
-    // }
+  // .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated, .segment-ios .segment-button {
+  //   border-color: #fff !important;
+  //   color: #fff !important;
+  // }
 
+  // .segment-ios .segment-button.segment-activated {
+  //   background: #fff !important;
+  //   color: #27ae60 !important;
+  //   border-color: #fff !important;
+  // }
 
-    // .segment-md .segment-button {
-    //   color: #fff !important;
-    // }
+  // .segment-md .segment-button {
+  //   color: #fff !important;
+  // }
 
-    // .header-segment {
-    //   background: #aaa !important;
-    // }
+  // .header-segment {
+  //   background: #aaa !important;
+  // }
 
+  //CIRCLE BACKGROUND
+  .c100:after {
+    background-color: transparent;
+  }
 
+  .no-img-chart-nt {
+    background: #fff;
+  }
 
-    //CIRCLE BACKGROUND
-    .c100:after {
-      background-color: transparent;
-    }
-
-    .no-img-chart-nt {
-      background: #fff;
-    }
-
-
-
-
-
-
-
-
-    //HISTORICO DOS PRATOS
-    .date-pratos {
-      border-right: 1px solid #eee;
-      .selected {
-        background: #f3f3f3;
-        border-top: 1px solid #eee;
-        border-bottom: 1px solid #eee;
-        h1 {
-          color: #333 !important;
-        }
-        h2 {
-            color: #777 !important;
-        }
-      }
-    }
-    
-    .padding-prato {
+  //HISTORICO DOS PRATOS
+  .date-pratos {
+    border-right: 1px solid #eee;
+    .selected {
+      background: #f3f3f3;
+      border-top: 1px solid #eee;
       border-bottom: 1px solid #eee;
       h1 {
-        color: #333;
+        color: #333 !important;
+      }
+      h2 {
+        color: #777 !important;
       }
     }
+  }
 
-    .food-select-dropdown {
-      .food-quantidade {
+  .padding-prato {
+    border-bottom: 1px solid #eee;
+    h1 {
+      color: #333;
+    }
+  }
+
+  .food-select-dropdown {
+    .food-quantidade {
+      background: #fff;
+      box-shadow: inset 0px 11px 8px -10px #ccc;
+    }
+  }
+
+  .content-profile {
+    background: #fff !important;
+    .profile-tabs {
+      background: #fff;
+      .profile-tab {
         background: #fff;
-        box-shadow: inset 0px 11px 8px -10px #CCC;
       }
     }
-
-
-    .content-profile {
+    .profile-info {
       background: #fff !important;
-      .profile-tabs {
-        background: #fff;
-        .profile-tab {
-          background: #fff;
-        }
-      }
-      .profile-info {
+      ion-list {
         background: #fff !important;
-        ion-list {
+        ion-item {
           background: #fff !important;
-          ion-item {
-            background: #fff !important;
-          }
         }
-        
       }
     }
+  }
 
+  a.tab-button[aria-selected="false"] .tab-button-icon {
+    color: rgba(37, 25, 25, 0.7) !important;
+  }
 
-
-
-
-
-
-
-    //FEED HOMEPAGE
-    .feed {
-      .feed-info {
-        background: #fff;
-      }
+  .tabbar a.tab-button[aria-selected="true"] .tab-button-icon {
+    color: #27ae60 !important;
+  }
+  .tab-button-text{
+    color: rgba(37, 25, 25, 0.7) !important;
+  }
+  //FEED HOMEPAGE
+  .feed {
+    .feed-info {
+      background: #fff;
     }
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-    //ENTRE EM CONTATO
-    page-contact-messages {
-
-      .resposta-message {
-        border-top: 1px solid lightgray !important;
-      }
+  //ENTRE EM CONTATO
+  page-contact-messages {
+    .resposta-message {
+      border-top: 1px solid lightgray !important;
     }
-
-
-
-
-
-
-
+  }
 }
