@@ -88,7 +88,7 @@
   
 </ion-content>
 
-<ion-footer style="z-index: 1" no-border no-shadow>
+<ion-footer style="z-index: 1 !important" no-border no-shadow>
   <ion-toolbar color="transparent">
       <button style="border-radius: 0;" (click)="presentConfirm()" [disabled]="!foods || foods.length == 0 || loading || popupOpen || popupCheck" type="button" class="default-button full green box-shadow-13">Confirmar</button>
   </ion-toolbar>
