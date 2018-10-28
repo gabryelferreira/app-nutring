@@ -82,7 +82,7 @@
         </div>
 
         <div class="refeicao" *ngFor="let refeicao of refeicoesCustom; let i = index">
-          <img *ngIf="!refeicao.foto" src="../../assets/imgs/folhinha_da_macunha.png">
+          <img *ngIf="!refeicao.foto" src="https://images.pexels.com/photos/920570/pexels-photo-920570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
           <img *ngIf="refeicao.foto" [src]="refeicao.foto">
           <div class="info">
             <h2>{{refeicao.ds_refeicao}}</h2>

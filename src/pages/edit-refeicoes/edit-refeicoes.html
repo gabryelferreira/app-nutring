@@ -20,7 +20,7 @@
     <div class="opcoes"  *ngFor="let refeicao of refeicoes; let i = index">
       <div class="opcao">
         <div class="foto">
-          <img *ngIf="!refeicao.foto" style="border-radius: 0; height: auto; margin-top: 6px; margin-left: 5px;" src="../../assets/imgs/folhinha_da_macunha.png">
+          <img *ngIf="!refeicao.foto" style="border-radius: 0; height: auto; margin-top: 6px; margin-left: 5px;" src="https://images.pexels.com/photos/920570/pexels-photo-920570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
           <img *ngIf="refeicao.foto" [src]="refeicao.foto">
         </div>
         <div class="info">

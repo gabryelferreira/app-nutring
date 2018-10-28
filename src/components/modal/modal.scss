@@ -56,6 +56,13 @@ modal {
                     width: 100%;
                     margin: 0 4px;
                 }
+                .only-button {
+                    width: 100%;
+                    text-align: center;
+                    button {
+                        width: 50%;
+                    }
+                }
             }
         }
 

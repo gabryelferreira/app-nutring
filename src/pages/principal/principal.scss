@@ -112,7 +112,7 @@ page-principal {
             position: relative;
             width: 100%;
             text-align: center;
-            margin-top: 10px;
+            // margin-top: 10px;
             .opcao {
                 position: relative;
                 width: 100%;
@@ -139,6 +139,9 @@ page-principal {
                     z-index: 2;
                     color: #fff;
                 }
+            }
+            .opcao:first-child {
+                margin-top: 0;
             }
         }
     }

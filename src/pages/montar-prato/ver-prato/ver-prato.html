@@ -22,7 +22,7 @@
 </ion-header> -->
 
 
-<ion-content #pageContent fullscreen>
+<ion-content>
   
   <div class="allPrato" *ngIf="refeicao">
     <div class="prato-info">
@@ -90,6 +90,6 @@
 
 <ion-footer style="z-index: 1" no-border no-shadow>
   <ion-toolbar color="transparent">
-      <button (click)="presentConfirm()" [disabled]="!foods || foods.length == 0 || loading || popupOpen || popupCheck" type="button" class="default-button full green box-shadow-13">Confirmar</button>
+      <button style="border-radius: 0;" (click)="presentConfirm()" [disabled]="!foods || foods.length == 0 || loading || popupOpen || popupCheck" type="button" class="default-button full green box-shadow-13">Confirmar</button>
   </ion-toolbar>
 </ion-footer>

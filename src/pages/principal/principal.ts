@@ -2,7 +2,7 @@ import { EditRefeicoesPage } from './../edit-refeicoes/edit-refeicoes';
 import { MontarPratoPage } from './../montar-prato/montar-prato';
 import { SettingsService } from './../settings/settings.service';
 import { Component } from '@angular/core';
-import { ModalController } from 'ionic-angular';
+import { ModalController, PopoverController } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as service from './principal.service';
 import * as types from '../../app/types';
@@ -27,7 +27,7 @@ export class PrincipalPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               _settings: SettingsService, private post: service.PrincipalPostService,
-              private modalCtrl: ModalController) {
+              private modalCtrl: ModalController, private popoverCtrl: PopoverController) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
     this.user = JSON.parse(localStorage.getItem("userData"));
     this.getRefeicoes();
@@ -96,6 +96,23 @@ export class PrincipalPage {
       refeicoes: this.refeicoesCustom,
       callback: this.myCallbackFunction
     });
+  }
+
+  presentPopover(event){
+    let popover = this.popoverCtrl.create('PopoverPrincipalPage');
+    popover.present({
+      ev: event
+    })
+    
+    popover.onDidDismiss(data => {
+      if (data){
+        if (data.action == 'novaCategoria'){
+          this.openCriarRefeicao();
+        } else if (data.action == 'editCategorias'){
+          this.openEditarRefeicao();
+        }
+      }
+    })
   }
 
 }

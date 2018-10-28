@@ -7,12 +7,17 @@
 <ion-header no-padding no-border>
 
   <ion-navbar color="{{selectedTheme}}">
-    <ion-title text-center *ngIf="selectedTheme == 'light-theme'">
+    <ion-title text-left *ngIf="selectedTheme == 'light-theme'">
       <img src="../../assets/imgs/nutring-color.png">
     </ion-title>
-    <ion-title text-center *ngIf="selectedTheme != 'light-theme'">
+    <ion-title text-left *ngIf="selectedTheme != 'light-theme'">
       <img src="../../assets/imgs/nutring-no-color.png">
     </ion-title>
+    <ion-buttons end>
+      <button id="teste" ion-button icon-only (click)="presentPopover($event)">
+          <ion-icon name="md-more"></ion-icon>
+      </button>
+    </ion-buttons> 
   </ion-navbar>
 </ion-header>
 
@@ -23,14 +28,14 @@
 
   <div *ngIf="!loading" class="principal">
 
-      <div class="title">
+      <!-- <div class="title">
           <p>Suas opções customizadas</p>
           <div *ngIf="refeicoesCustom && refeicoesCustom.length > 0" class="edit">
             <h3 (click)="openEditarRefeicao()">Editar</h3>
           </div>
-        </div>
+        </div> -->
 
-    <div class="refeicoes-custom" >
+    <!-- <div class="refeicoes-custom" >
       <div (click)="openCriarRefeicao()" class="refeicao">
         <ion-icon name="add"></ion-icon>
         <img src="https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
@@ -48,28 +53,20 @@
           </div>
         </div>
 
-    </div>
+    </div> -->
 
-    <!-- <ion-scroll scrollX="true" style="white-space: nowrap; height: 145px;">
-      <div class="refeicao" (click)="openMontarPrato(refeicao, 'id_refeicao_usuario')" *ngFor="let refeicao of refeicoesCustom; let i = index">
-        <img *ngIf="!refeicao.foto" src="../../assets/imgs/folhinha_da_macunha.png">
-        <img *ngIf="refeicao.foto" [src]="refeicao.foto">
-        <h2>{{refeicao.ds_refeicao}}</h2>
-      </div>
-      <div (click)="openCriarRefeicao()" class="refeicao">
-        <ion-icon name="add"></ion-icon>
-        <img src="../../assets/imgs/blur2.jpg">
-        <h2>Nova refeição</h2>
-      </div>
-    </ion-scroll> -->
-
-    <div class="title">
+    <!-- <div class="title">
       <p>Opções padrões</p>
-    </div>
+    </div> -->
 
     <div class="opcoes" *ngIf="refeicoesPadroes && refeicoesPadroes.length > 0">
-      <div (click)="openMontarPrato(refeicao, 'cd_refeicao')" class="opcao" *ngFor="let refeicao of refeicoesPadroes; let i = index">
+      <div (click)="openMontarPrato(refeicao, 'cd_refeicao')" class="opcao" *ngFor="let refeicao of refeicoesPadroes;">
         <img [src]="refeicao.foto">
+        <h2>{{refeicao.ds_refeicao}}</h2>
+      </div>
+      <div (click)="openMontarPrato(refeicao, 'id_refeicao_usuario')" class="opcao" *ngFor="let refeicao of refeicoesCustom;">
+        <img *ngIf="!refeicao.foto" src="https://images.pexels.com/photos/920570/pexels-photo-920570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        <img *ngIf="refeicao.foto" [src]="refeicao.foto">
         <h2>{{refeicao.ds_refeicao}}</h2>
       </div>
     </div>
