@@ -45,7 +45,7 @@ export class PrincipalPage {
       let result = await this.post.reloadUserInfo(this.user.id_usuario);
       if (result.success){
         this.user = result.result
-        localStorage.setItem("userData", JSON.stringify(this.user));
+        localStorage.setItem("userData", JSON.stringify(result.result));
         console.log("refresh", this.user)
       }
   }
