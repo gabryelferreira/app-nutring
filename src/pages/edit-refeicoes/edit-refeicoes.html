@@ -20,51 +20,28 @@
 
 <ion-content>
 
-  <div class="principal">
+  <loader *ngIf="loading"></loader>
 
-    <div class="opcoes"  *ngFor="let refeicao of refeicoes; let i = index">
-      <div class="opcao">
-        <div class="foto">
-          <img *ngIf="!refeicao.foto" style="border-radius: 0; height: auto; margin-top: 6px; margin-left: 5px;" src="https://images.pexels.com/photos/920570/pexels-photo-920570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-          <img *ngIf="refeicao.foto" [src]="refeicao.foto">
-        </div>
-        <div class="info">
-          <div class="info-opcao">
-            <h2>{{refeicao.ds_refeicao}}</h2>
-          </div>
-          <div class="btns">
-            <button type="button" (click)="openModalConfirm(refeicao)" class="default-button small red padding">Excluir</button>
-          </div>
-        </div>
-        
-      </div>
-      <!-- <div *ngIf="refeicoes && i < refeicoes.length - 1" class="divider"></div> -->
-      
-
-    </div>
-
+  <div class="centralizar" *ngIf="(!refeicoes || (refeicoes && refeicoes.length == 0)) && !loading">
+    <img src="../../assets/imgs/folhinha_da_macunha.png">
+    <h2></h2>
+    <p>Você não possui refeições personalizadas.</p>
   </div>
 
-  <!-- <div class="background" [id]="popupOpen ? 'showBackground' : ''">
+  <ion-list class="principal" *ngIf="refeicoes && refeicoes.length > 0 && !loading">
 
-      <div [id]="popupOpen ? 'showPopup' : ''" class="popup">
-        <div class="header">
-          <img *ngIf="!selectedRefeicao.foto" src="../../assets/imgs/user.jpg">
-          <img *ngIf="selectedRefeicao.foto" style="border-radius: 50%; width: 50px; height: 50px;" [src]="selectedRefeicao.foto">
-          <h1>{{selectedRefeicao.ds_refeicao}}</h1>
-          <h2>
-            Tem certeza que deseja <span>excluir sua refeição personalizada?</span>
-            Todos os pratos dessa refeição terão o nome de "Refeição".
-          </h2>
-        </div>
-        <div class="buttons">
-          <button *ngIf="!excluindo" type="button" (click)="closeModalConfirm()" class="default-button small lightgray padding">Cancelar</button>
-          <button *ngIf="!excluindo" type="button" (click)="deletarRefeicaoCustom(selectedRefeicao)" class="default-button small red padding">Excluir</button>
-          <button *ngIf="excluindo" type="button" class="default-button small red padding"><ion-spinner color="white" name="dots"></ion-spinner></button>
-        </div>
-      </div>
+    <ion-item *ngFor="let refeicao of refeicoes;">
+      <ion-avatar item-start>
+        <img *ngIf="refeicao.foto" [src]="refeicao.foto">
+        <img *ngIf="!refeicao.foto" src="https://images.pexels.com/photos/920570/pexels-photo-920570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+      </ion-avatar>
+      <h2>{{refeicao.ds_refeicao}}</h2>
+      <p *ngIf="refeicao.quantidade_pratos != 1">{{refeicao.quantidade_pratos}} pratos</p>
+      <p *ngIf="refeicao.quantidade_pratos == 1">{{refeicao.quantidade_pratos}} prato</p>
+      <ion-icon (click)="presentPopover(refeicao)" item-end name="md-more"></ion-icon>
+    </ion-item>
 
-  </div> -->
+  </ion-list>
 
   <modal *ngIf="popupOpen" [loading]="excluindo" [btnConfirm]="'Excluir'" [color]="'red'"
   (onCancel)="popupOpen = false" (onConfirm)="deletarRefeicaoCustom(selectedRefeicao)" [text]="deleteText"

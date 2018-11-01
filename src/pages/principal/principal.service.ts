@@ -34,7 +34,15 @@ export class PrincipalPostService extends Connect {
             return this.callMethod("createRefeicaoCustom", { id_usuario, refeicao });
         }
     }
-    
+
+    updateRefeicaoCustom(id_usuario: number, id_refeicao_usuario: number, refeicao: string, foto?: any){
+        if (foto){
+            return this.callMethod("updateRefeicaoCustom", { id_usuario, id_refeicao_usuario, refeicao, foto });
+        } else {
+            return this.callMethod("updateRefeicaoCustom", { id_usuario, id_refeicao_usuario, refeicao });
+        }
+    }
+
     reloadUserInfo(id_usuario:number){
         return this.callMethod("reloadUserInfo", { id_usuario })
     }

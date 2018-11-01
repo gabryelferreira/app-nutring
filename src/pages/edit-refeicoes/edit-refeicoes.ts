@@ -1,6 +1,6 @@
 import { IUser } from './../../app/types';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, PopoverController } from 'ionic-angular';
 import { SettingsService } from '../settings/settings.service';
 import { EditRefeicoesPostService } from './edit-refeicoes.service';
 
@@ -31,12 +31,14 @@ export class EditRefeicoesPage {
   excluindo: boolean = false;
   deleteText = 'Tem certeza que deseja <b>excluir sua refeição personalizada?</b> Todos os pratos dessa refeição terão o nome de "Refeição".';
   checkText = 'Refeição excluída com sucesso.';
+  loading: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               _settings: SettingsService, private post: EditRefeicoesPostService,
-              private toastCtrl: ToastController) {
+              private toastCtrl: ToastController, private popoverCtrl: PopoverController) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
     this.user = JSON.parse(localStorage.getItem("userData"));
+    this.getRefeicoesCustom(this.user.id_usuario)
   }
 
   ionViewDidLoad() {
@@ -50,6 +52,15 @@ export class EditRefeicoesPage {
   ionViewWillLeave() {
     this.callback().then(()=>{
     });
+  }
+
+  async getRefeicoesCustom(id_usuario: number){
+    this.loading = true;
+    let result = await this.post.getRefeicoesCustom(id_usuario);
+    if (result.success){
+      this.refeicoes = result.result;
+    }
+    this.loading = false;
   }
 
   openModalConfirm(refeicao: any){
@@ -73,6 +84,7 @@ export class EditRefeicoesPage {
       this.popupCheck = true;
       
     }
+    this.excluindo = false;
   }
 
   showToast(message: string, position: string) {
@@ -88,6 +100,42 @@ export class EditRefeicoesPage {
 
   openAdicionarRefeicao(){
     this.navCtrl.push('CriarRefeicaoPage');
+  }
+
+  presentPopover(refeicao: any){
+    let popover = this.popoverCtrl.create('PopoverEditRefeicoesPage');
+    popover.present({
+      ev: event
+    })
+    
+    popover.onDidDismiss(data => {
+      if (data){
+        if (data.action == 'editarRefeicao'){
+          this.openEditarRefeicao(refeicao);
+        } else if (data.action == 'excluirRefeicao'){
+          this.openModalConfirm(refeicao);
+        }
+      }
+    })
+  }
+
+  myCallbackFunction = _params => {
+    return new Promise((resolve, reject) => {
+      if (_params){
+        this.getRefeicoesCustom(this.user.id_usuario)
+      }
+        
+      resolve();
+    });
+  };
+
+  openEditarRefeicao(refeicao: any){
+    this.selectedRefeicao = refeicao;
+    this.navCtrl.push('CriarRefeicaoPage', {
+      refeicao,
+      type: "edit",
+      callback: this.myCallbackFunction
+    })
   }
 
 }

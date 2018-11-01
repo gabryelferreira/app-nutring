@@ -1,56 +1,36 @@
 page-edit-refeicoes {
 
 
+    .centralizar {
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        h2 {
+          color: #aaa;
+          font-weight: bold;
+          font-size: 16px;
+        }
+        p {
+          font-weight: bold;
+          color: #aaa;
+          font-size: 14px;
+        }
+      }
+
+
 
     .principal {
-        position: relative;
-        width: 100%;
-        .opcoes {
-            position: relative;
-            width: 100%;
-            .opcao {
-                position: relative;
-                width: 100%;
-                border-bottom: 1px solid lightgray;
-                display: flex;
-                box-shadow: none;
-                .foto {
-                    position: relative;
-                    width: 38px;
-                    height: 38px;
-                    margin: 5px;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 50%;
-                    }
-                }
-                .info {
-                    position: relative;
-                    display: flex;
-                    box-sizing: border-box;
-                    padding: 10px;
-                    width: 100%;
-                    text-align: left;
-                    .info-opcao {
-                        position: relative;
-                        width: 100%;
-                        h2 {
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: #222;
-                            margin: 0;
-                            margin-top: 5px;
-                        }
-                    }
-                    .btns {
-                        width: 100%;
-                        text-align: right;
-                    }
-                }
+        margin-top: 2px;
+        ion-item {
+            transition: 0s !important;
+            ion-icon {
+                color: #bbb;
             }
         }
-
     }
 
     ion-header {

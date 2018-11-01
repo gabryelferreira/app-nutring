@@ -20,4 +20,8 @@ export class EditRefeicoesPostService extends Connect {
       return this.callMethod("deletarRefeicaoCustom", { id_usuario, id_refeicao_usuario });
   }
 
+  getRefeicoesCustom(id_usuario){
+    return this.callMethod("getRefeicoesCustom", { id_usuario });
+  }
+
 }

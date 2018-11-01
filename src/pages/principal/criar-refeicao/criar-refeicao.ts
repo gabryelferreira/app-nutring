@@ -28,6 +28,10 @@ export class CriarRefeicaoPage {
   actualPicture: any = "https://images.pexels.com/photos/920570/pexels-photo-920570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
   imageOptions: boolean = false;
   user:IUser;
+  type: string = "";
+  selectedRefeicao: any;
+  refeicaoCallback: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
               _settings: SettingsService, private camera:Camera, private post:PrincipalPostService) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
@@ -38,13 +42,26 @@ export class CriarRefeicaoPage {
   }
 
   ionViewWillEnter() {
-    this.callback = this.navParams.get("callback")
+    this.callback = this.navParams.get("callback");
+    this.type = this.navParams.get("type");
+    if (this.type == "edit"){
+      this.selectedRefeicao = this.navParams.get("refeicao");
+      this.refeicao = this.selectedRefeicao.ds_refeicao;
+      if (this.selectedRefeicao.foto)
+        this.picture == this.selectedRefeicao.foto;
+    }
   }
 
   ionViewWillLeave() {
-    if (this.callback)
-      this.callback().then(()=>{
-      });
+    if (this.callback){
+      if (this.type == "edit"){
+        this.callback(this.refeicaoCallback).then(()=>{
+        });
+      } else {
+        this.callback().then(()=>{
+        });
+      }
+    }
   }
 
   async sendRefeicao(){
@@ -54,8 +71,19 @@ export class CriarRefeicaoPage {
     if (picture == this.actualPicture){
       picture = null;
     }
-    result = await this.post.createRefeicaoCustom(this.user.id_usuario, this.refeicao, picture);
+    if (this.type == "edit"){
+      result = await this.post.updateRefeicaoCustom(this.user.id_usuario, this.selectedRefeicao.id_refeicao_usuario, this.refeicao, picture);
+    } else {
+      result = await this.post.createRefeicaoCustom(this.user.id_usuario, this.refeicao, picture);
+    }
     if (result && result.success){
+      if (this.type == "edit" && this.selectedRefeicao)
+        this.refeicaoCallback = {
+                                  id_refeicao_usuario: this.selectedRefeicao.id_refeicao_usuario, 
+                                  ds_refeicao: this.refeicao, 
+                                  foto: picture, 
+                                  quantidade_pratos: this.selectedRefeicao.quantidade_pratos
+                                }
       this.navCtrl.pop();
     }
     this.loading = false;
