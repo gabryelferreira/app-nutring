@@ -5,13 +5,6 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 import { PrincipalPostService } from '../principal.service';
 import { IUser } from '../../../app/types';
 
-/**
- * Generated class for the CriarRefeicaoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-criar-refeicao',
@@ -54,13 +47,8 @@ export class CriarRefeicaoPage {
 
   ionViewWillLeave() {
     if (this.callback){
-      if (this.type == "edit"){
-        this.callback(this.refeicaoCallback).then(()=>{
-        });
-      } else {
-        this.callback().then(()=>{
-        });
-      }
+      this.callback().then(()=>{
+      });
     }
   }
 
@@ -77,13 +65,6 @@ export class CriarRefeicaoPage {
       result = await this.post.createRefeicaoCustom(this.user.id_usuario, this.refeicao, picture);
     }
     if (result && result.success){
-      if (this.type == "edit" && this.selectedRefeicao)
-        this.refeicaoCallback = {
-                                  id_refeicao_usuario: this.selectedRefeicao.id_refeicao_usuario, 
-                                  ds_refeicao: this.refeicao, 
-                                  foto: picture, 
-                                  quantidade_pratos: this.selectedRefeicao.quantidade_pratos
-                                }
       this.navCtrl.pop();
     }
     this.loading = false;

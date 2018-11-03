@@ -76,10 +76,12 @@ export class EditRefeicoesPage {
     this.excluindo = true;
     let result = await this.post.deletarRefeicaoCustom(this.user.id_usuario, refeicao.id_refeicao_usuario);
     if (result.success){
-      var refeicoes = this.refeicoes.filter(element => {
-        return element.id_refeicao_usuario != refeicao.id_refeicao_usuario;
-      });
-      this.refeicoes = refeicoes;
+      for (var i = this.refeicoes.length - 1; i >= 0; i--){
+        if (this.refeicoes[i].id_refeicao_usuario == refeicao.id_refeicao_usuario){
+          this.refeicoes.splice(i, 1);
+          break;
+        }
+      }
       this.popupOpen = false;
       this.popupCheck = true;
       
@@ -99,7 +101,9 @@ export class EditRefeicoesPage {
   }
 
   openAdicionarRefeicao(){
-    this.navCtrl.push('CriarRefeicaoPage');
+    this.navCtrl.push('CriarRefeicaoPage', {
+      callback: this.myCallbackFunction
+    });
   }
 
   presentPopover(refeicao: any){
@@ -121,10 +125,7 @@ export class EditRefeicoesPage {
 
   myCallbackFunction = _params => {
     return new Promise((resolve, reject) => {
-      if (_params){
-        this.getRefeicoesCustom(this.user.id_usuario)
-      }
-        
+      this.getRefeicoesCustom(this.user.id_usuario)
       resolve();
     });
   };

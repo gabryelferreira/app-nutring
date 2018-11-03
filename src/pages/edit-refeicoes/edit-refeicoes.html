@@ -30,7 +30,7 @@
 
   <ion-list class="principal" *ngIf="refeicoes && refeicoes.length > 0 && !loading">
 
-    <ion-item *ngFor="let refeicao of refeicoes;">
+    <ion-item (press)="presentPopover(refeicao)" *ngFor="let refeicao of refeicoes;">
       <ion-avatar item-start>
         <img *ngIf="refeicao.foto" [src]="refeicao.foto">
         <img *ngIf="!refeicao.foto" src="https://images.pexels.com/photos/920570/pexels-photo-920570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
