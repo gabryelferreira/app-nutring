@@ -1,0 +1,43 @@
+<ion-header no-padding no-border>
+
+  <ion-navbar color="{{selectedTheme}}">
+    <ion-title text-center *ngIf="selectedTheme == 'light-theme'">
+      <img src="../../assets/imgs/nutring-color.png">
+    </ion-title>
+    <ion-title text-center *ngIf="selectedTheme != 'light-theme'">
+      <img src="../../assets/imgs/nutring-no-color.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="foto-top">
+    <img src="../../assets/imgs/background-register.png">
+  </div>
+
+  <div class="estatisticas-geral">
+    <div class="round">
+      <div class="inside">
+        <div class="align-center">
+          <p>08/11/2018</p>
+          <ion-icon name="ios-arrow-down"></ion-icon>
+        </div>
+        <div class="align-left">
+          <h3 class="dar-margin-top">Calorias</h3>
+        </div>
+        <div class="align-center">
+          <h2>0123.45</h2>
+        </div>
+        <div class="align-right">
+          <h3>Kcal</h3>
+        </div>
+      </div>
+    </div>
+      <div class="buttons">
+        <button type="button" class="default-button full green" (click)="goToMontarPrato()">Montar prato</button>
+        <button type="button" class="default-button full green no-color-green" (click)="goToMaisEstatisticas()">Ver mais<ion-icon name="ios-arrow-forward"></ion-icon></button>
+      </div>
+  </div>
+
+</ion-content>

@@ -90,6 +90,10 @@ ion-fab {
   }
 }
 
+.display-flex {
+  display: flex;
+}
+
 .padding-right {
   padding-right: 20px;
 }
@@ -114,6 +118,11 @@ ion-fab {
 .big-padding {
   padding-left: 33px;
   padding-right: 33px;
+}
+
+.bigger-padding {
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .default-button {
@@ -182,6 +191,12 @@ ion-fab {
   background: transparent;
   border: 1px solid #dadada !important;
   color: #222;
+}
+
+.no-color-green {
+  background: transparent;
+  border: 1px solid #dadada !important;
+  color: #dadada;
 }
 
 .dark-theme {

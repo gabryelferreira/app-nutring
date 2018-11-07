@@ -116,6 +116,7 @@ chart {
     -moz-transition-timing-function: ease-in;
     -o-transition-timing-function: ease-in;
     transition-timing-function: ease-in;
+    
   }
   .c100 .slice {
     position: absolute;
@@ -908,6 +909,7 @@ chart {
     width: 0.92em; 
     height: 0.92em;
     z-index: 5;
+    background: transparent;
   }
 
   .no-img-chart-nt {
@@ -920,7 +922,7 @@ chart {
     width: 0.92em; 
     height: 0.92em;
     z-index: 5;
-    background: #fff;
+    background: transparent;
   }
 
 }

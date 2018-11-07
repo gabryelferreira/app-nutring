@@ -7,11 +7,8 @@
 <ion-header no-padding no-border>
 
   <ion-navbar color="{{selectedTheme}}">
-    <ion-title text-left *ngIf="selectedTheme == 'light-theme'">
-      <img src="../../assets/imgs/nutring-color.png">
-    </ion-title>
-    <ion-title text-left *ngIf="selectedTheme != 'light-theme'">
-      <img src="../../assets/imgs/nutring-no-color.png">
+    <ion-title text-left>
+      Montar prato
     </ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="presentPopover($event)">

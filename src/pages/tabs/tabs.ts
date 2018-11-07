@@ -6,7 +6,7 @@ import { HideService } from "../../app/hide.service";
   templateUrl: "tabs.html"
 })
 export class TabsPage {
-  tab1Root = 'PrincipalPage';
+  tab1Root = 'EstatisticasPage';
   tab2Root = 'SearchPage';
   tab3Root = 'MeusPratosPage';
   tab4Root = 'ProfilePage';

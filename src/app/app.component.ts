@@ -13,7 +13,7 @@ import { AppMinimize } from '@ionic-native/app-minimize';
 export class MyApp {
   rootPage: any = "LoginPage";
   selectedTheme: String;
-  pages = ["PrincipalPage", "SearchPage", "MeusPratosPage", "SettingsPage", "LoginPage"];
+  pages = ["EstatisticasPage", "SearchPage", "MeusPratosPage", "ProfilePage", "LoginPage"];
   constructor(
     platform: Platform,
     statusBar: StatusBar,
