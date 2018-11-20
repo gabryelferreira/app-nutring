@@ -8,62 +8,130 @@
 
   <ion-navbar color="{{selectedTheme}}">
     <ion-title text-left>
-      Estatísticas
+      Estatísticas ({{dt_consumo | ntDateBr}})
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="all">
 
-  <div class="mais-estatisticas">
+  <loader *ngIf="loading"></loader>
+
+  <div class="mais-estatisticas" *ngIf="!loading">
     <div class="estatistica">
       <div class="round">
         <div class="text">
           <p>Carboidratos</p>
-          <h2>25g</h2>
+          <h2>{{ informacoesConsumo.carboidrato_consumo | ntNumberKcal }} g</h2>
         </div>
       </div>
     </div>
     <div class="estatistica">
-        <div class="round">
-          <div class="text">
-            <p>Proteínas</p>
-            <h2>145.5g</h2>
-          </div>
+      <div class="round">
+        <div class="text">
+          <p>Proteínas</p>
+          <h2>{{ informacoesConsumo.proteina_consumo | ntNumberKcal }} g</h2>
         </div>
       </div>
-      <div class="estatistica">
-          <div class="round">
-            <div class="text">
-              <p>Cálcio</p>
-              <h2>44mg</h2>
-            </div>
-          </div>
+    </div>
+    <div class="estatistica">
+      <div class="round">
+        <div class="text">
+          <p>Cálcio</p>
+          <h2>{{ informacoesConsumo.calcio_consumo | ntNumberKcal }} mg</h2>
         </div>
-        <div class="estatistica">
-            <div class="round">
-              <div class="text">
-                <p>Cobre</p>
-                <h2>6mg</h2>
-              </div>
-            </div>
-          </div>
-          <div class="estatistica">
-              <div class="round">
-                <div class="text">
-                  <p>Ferro</p>
-                  <h2>16mg</h2>
-                </div>
-              </div>
-            </div>
-            <div class="estatistica">
-                <div class="round">
-                  <div class="text">
-                    <p>Fibra</p>
-                    <h2>12g</h2>
-                  </div>
-                </div>
-              </div>
+      </div>
+    </div>
+    <div class="estatistica">
+      <div class="round">
+        <div class="text">
+          <p>Cobre</p>
+          <h2>{{ informacoesConsumo.cobre_consumo | ntNumberKcal }} mg</h2>
+        </div>
+      </div>
+    </div>
+    <div class="estatistica">
+      <div class="round">
+        <div class="text">
+          <p>Ferro</p>
+          <h2>{{ informacoesConsumo.ferro_consumo | ntNumberKcal }} mg</h2>
+        </div>
+      </div>
+    </div>
+    <div class="estatistica">
+      <div class="round">
+        <div class="text">
+          <p>Fibra</p>
+          <h2>{{ informacoesConsumo.fibra_alimentar_consumo | ntNumberKcal }} g</h2>
+        </div>
+      </div>
+    </div>
+    <div class="estatistica">
+      <div class="round">
+        <div class="text">
+          <p>Fósforo</p>
+          <h2>{{ informacoesConsumo.fosforo_consumo | ntNumberKcal }} mg</h2>
+        </div>
+      </div>
+    </div>
+    <div class="estatistica">
+      <div class="round">
+        <div class="text">
+          <p>Lipídeos</p>
+          <h2>{{ informacoesConsumo.lipideos_consumo | ntNumberKcal }}%</h2>
+        </div>
+      </div>
+    </div>
+    <div class="estatistica">
+      <div class="round">
+        <div class="text">
+          <p>Magnésio</p>
+          <h2>{{ informacoesConsumo.magnesio_consumo | ntNumberKcal }} mg</h2>
+        </div>
+      </div>
+    </div>
+    <div class="estatistica">
+      <div class="round">
+        <div class="text">
+          <p>Manganês</p>
+          <h2>{{ informacoesConsumo.manganes_consumo | ntNumberKcal }} mg</h2>
+        </div>
+      </div>
+    </div>
+    <div class="estatistica">
+      <div class="round">
+        <div class="text">
+          <p>Potássio</p>
+          <h2>{{ informacoesConsumo.potassio_consumo | ntNumberKcal }} mg</h2>
+        </div>
+      </div>
+    </div>
+    <div class="estatistica">
+      <div class="round">
+        <div class="text">
+          <p>Sódio</p>
+          <h2>{{ informacoesConsumo.sodio_consumo | ntNumberKcal }} mg</h2>
+        </div>
+      </div>
+    </div>
+    <div class="estatistica">
+      <div class="round">
+        <div class="text">
+          <p>Vitamina C</p>
+          <h2>{{ informacoesConsumo.vitamina_c_consumo | ntNumberKcal }}%</h2>
+        </div>
+      </div>
+    </div>
+    <div class="estatistica">
+      <div class="round">
+        <div class="text">
+          <p>Zinco</p>
+          <h2>{{ informacoesConsumo.zinco_consumo | ntNumberKcal }} mg</h2>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 
 </ion-content>

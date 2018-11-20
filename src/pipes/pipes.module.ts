@@ -6,6 +6,8 @@ import { NtDatePipe } from "./nt-date/nt-date";
 import { NtGenderPipe } from "./nt-gender/nt-gender";
 import { NtCurtidasPipe } from "./nt-curtidas/nt-curtidas";
 import { IonicModule } from "ionic-angular";
+import { NtDateBrPipe } from './nt-date-br/nt-date-br';
+import { NtNumberKcalPipe } from './nt-number-kcal/nt-number-kcal';
 @NgModule({
   declarations: [
     NtNumberPipe,
@@ -13,7 +15,9 @@ import { IonicModule } from "ionic-angular";
     NtNomePratoPipe,
     NtDatePipe,
     NtGenderPipe,
-    NtCurtidasPipe
+    NtCurtidasPipe,
+    NtDateBrPipe,
+    NtNumberKcalPipe
   ],
   imports: [
       IonicModule
@@ -24,7 +28,9 @@ import { IonicModule } from "ionic-angular";
     NtNomePratoPipe,
     NtDatePipe,
     NtGenderPipe,
-    NtCurtidasPipe
+    NtCurtidasPipe,
+    NtDateBrPipe,
+    NtNumberKcalPipe
   ]
 })
 export class PipesModule {}

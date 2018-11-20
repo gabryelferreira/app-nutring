@@ -23,7 +23,7 @@ export abstract class Connect {
     if (this.method.toUpperCase() == "GET") {
       try {
         result = await this.http.get(this.url + _function, options).toPromise().then();
-        console.log(result);
+        console.log("RESULT", result);
         return result;
       } catch (err) {
         console.error(err);
@@ -33,7 +33,7 @@ export abstract class Connect {
       try {
         console.log(body);
         result = await this.http.post(this.url + _function, body, options).toPromise().then();
-        console.log(result);
+        console.log("RESULT", result);
         return result;
       } catch (err) {
         console.error(err);

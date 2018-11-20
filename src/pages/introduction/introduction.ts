@@ -17,22 +17,28 @@ import { IonicPage, NavController, NavParams } from "ionic-angular";
 export class IntroductionPage {
   slides = [
     {
-      title: "Welcome to the Docs!",
+      title: "Monte seus pratos e controle diariamente as calorias ingeridas.",
       description:
-        "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
-      image: "assets/imgs/ica-slidebox-img-1.png"
+        "Não há melhor investimento do que aquele que você faz em prol da sua saúde, não é mesmo? É isso que fazemos aqui na Nutring.",
+      image: "assets/imgs/intro1.png"
     },
     {
-      title: "What is Ionic?",
+      title: "Nós mostramos gráficos e estatísticas precisas de acordo com o seu objetivo.",
       description:
-        "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      image: "assets/imgs/ica-slidebox-img-2.png"
+        "Tudo para o seu bem estar e para potencializar a sua qualidade de vida. Estamos pensando em você, a mudança começa agora!",
+      image: "assets/imgs/intro2.png"
     },
     {
-      title: "What is Ionic Cloud?",
+      title: "Contabilizando as calorias, fica mais fácil de você saber o que está consumindo.",
       description:
-        "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      image: "assets/imgs/ica-slidebox-img-3.png"
+        "Temos um banco de dados com milhares de alimentos, todos com suas devidas informações nutricionais. Mostramos tudo que você precisa saber!",
+      image: "assets/imgs/intro3.png"
+    },
+    {
+      title: "Vamos começar?",
+      description:
+        "Agora que você já sabe as funções do Nutring, aproveite e entre em um estilo de vida que você jamais irá voltar ao que era antes.",
+      image: "assets/imgs/intro4.png"
     }
   ];
 

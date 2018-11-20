@@ -23,14 +23,16 @@ page-mais-estatisticas {
                     margin: auto;
                     .text {
                         position: relative;
-                        padding: 40px 0;
+                        padding: 32px 0;
                         text-align: center;
                         p, h2 {
                             margin: 0;
                             color: #fff;
                         }
-                        p {
-                            
+                        h2 {
+                            margin-top: 8px;
+                            font-size: 17px;
+                            font-weight: bold;
                         }
     
                     }

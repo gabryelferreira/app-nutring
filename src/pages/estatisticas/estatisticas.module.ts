@@ -1,3 +1,4 @@
+import { PipesModule } from './../../pipes/pipes.module';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { EstatisticasPage } from './estatisticas';
@@ -9,7 +10,8 @@ import { ComponentsModule } from '../../components/components.module';
   ],
   imports: [
     IonicPageModule.forChild(EstatisticasPage),
-    ComponentsModule
+    ComponentsModule,
+    PipesModule
   ],
   exports: [
     EstatisticasPage

@@ -16,18 +16,23 @@
     <img src="../../assets/imgs/background-register.png">
   </div>
 
-  <div class="estatisticas-geral">
+  <loader *ngIf="loading"></loader>
+
+  <div class="estatisticas-geral" *ngIf="!loading">
     <div class="round">
       <div class="inside">
-        <div class="align-center">
-          <p>08/11/2018</p>
+        <div (click)="abrirDatas()" class="align-center">
+          <p>{{dataConsumoSelecionada | ntDateBr}}</p>
           <ion-icon name="ios-arrow-down"></ion-icon>
         </div>
         <div class="align-left">
           <h3 class="dar-margin-top">Calorias</h3>
         </div>
         <div class="align-center">
-          <h2>0123.45</h2>
+          <h2 *ngIf="!loadingKcal">{{kcalConsumidas | ntNumberKcal}}</h2>
+          <div *ngIf="loadingKcal" style="margin-top: 13px; margin-bottom: 13px;">
+            <loaderzin></loaderzin>
+          </div>
         </div>
         <div class="align-right">
           <h3>Kcal</h3>
@@ -36,7 +41,7 @@
     </div>
       <div class="buttons">
         <button type="button" class="default-button full green" (click)="goToMontarPrato()">Montar prato</button>
-        <button type="button" class="default-button full green no-color-green" (click)="goToMaisEstatisticas()">Ver mais<ion-icon name="ios-arrow-forward"></ion-icon></button>
+        <button type="button" [disabled]="loadingKcal" class="default-button full green no-color-green" (click)="goToMaisEstatisticas()">Ver mais<ion-icon name="ios-arrow-forward"></ion-icon></button>
       </div>
   </div>
 

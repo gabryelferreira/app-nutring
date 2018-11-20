@@ -31,7 +31,6 @@ export class PrincipalPage {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
     this.user = JSON.parse(localStorage.getItem("userData"));
     this.getRefeicoes();
-    this.getUserData();
   }
 
   ionViewWillEnter(){
@@ -39,15 +38,6 @@ export class PrincipalPage {
       localStorage.removeItem("loadRefeicoes");
       this.getRefeicoes();
     }
-  }
-
-  async getUserData() {
-      let result = await this.post.reloadUserInfo(this.user.id_usuario);
-      if (result.success){
-        this.user = result.result
-        localStorage.setItem("userData", JSON.stringify(result.result));
-        console.log("refresh", this.user)
-      }
   }
 
   async getRefeicoes(){

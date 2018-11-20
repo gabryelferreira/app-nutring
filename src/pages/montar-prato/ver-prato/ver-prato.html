@@ -1,3 +1,12 @@
+
+<modal *ngIf="popupOpen" [loading]="loading" [btnConfirm]="'Confirmar'"
+(onCancel)="popupOpen = false" (onConfirm)="montarPrato()" [text]="confirmText"
+[title]="refeicao.ds_refeicao"></modal>
+
+<modal *ngIf="popupCheck" [btnConfirm]="'Ok'" type="check"
+(onConfirm)="verPrato()" [text]="checkText"
+[title]="'Concluído!'"></modal>
+
 <ion-content>
   
   <div class="allPrato" *ngIf="refeicao">
@@ -52,13 +61,7 @@
   </div>
   
 
-  <modal *ngIf="popupOpen" [loading]="loading" [btnConfirm]="'Confirmar'"
-  (onCancel)="popupOpen = false" (onConfirm)="montarPrato()" [text]="confirmText"
-  [title]="refeicao.ds_refeicao"></modal>
-
-  <modal *ngIf="popupCheck" [btnConfirm]="'Ok'" type="check"
-  (onConfirm)="verPrato()" [text]="checkText"
-  [title]="'Concluído!'"></modal>
+  
 
   
   

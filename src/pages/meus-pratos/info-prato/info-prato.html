@@ -28,6 +28,14 @@
 
 </ion-header>
 
+<modal *ngIf="popupDelete" [loading]="loadingDelete" [btnConfirm]="'Excluir'"
+  (onCancel)="popupDelete = false" (onConfirm)="deletePrato()" [text]="deleteText"
+  [title]="'Confirmação'" [color]="'red'"></modal>
+
+  <modal *ngIf="popupCheck" [btnConfirm]="'Ok'" type="check"
+  (onConfirm)="goToHistorico()" [text]="checkText"
+  [title]="'Concluído!'"></modal>
+
 
 <ion-content>
   <loader *ngIf="loading"></loader>
@@ -101,7 +109,7 @@
       </ion-item>
 
       <ion-item>
-        Lipídios
+        Lipídeos
         <ion-badge item-end>{{prato.lipideos_consumo | number:'1.0-2'}}%</ion-badge>
       </ion-item>
 
@@ -144,12 +152,6 @@
 
   </div>
 
-  <modal *ngIf="popupDelete" [loading]="loadingDelete" [btnConfirm]="'Excluir'"
-  (onCancel)="popupDelete = false" (onConfirm)="deletePrato()" [text]="deleteText"
-  [title]="'Confirmação'" [color]="'red'"></modal>
-
-  <modal *ngIf="popupCheck" [btnConfirm]="'Ok'" type="check"
-  (onConfirm)="goToHistorico()" [text]="checkText"
-  [title]="'Concluído!'"></modal>
+  
   
 </ion-content>

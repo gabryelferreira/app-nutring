@@ -6,6 +6,7 @@ import { NtListHeaderComponent } from "./nt-list-header/nt-list-header";
 import { NtHeaderComponent } from "./nt-header/nt-header";
 import { ModalComponent } from "./modal/modal";
 import { IonicModule } from "ionic-angular";
+import { LoaderzinComponent } from './loaderzin/loaderzin';
 @NgModule({
   declarations: [
     ChartComponent,
@@ -13,7 +14,8 @@ import { IonicModule } from "ionic-angular";
     NtSearchbarComponent,
     NtListHeaderComponent,
     NtHeaderComponent,
-    ModalComponent
+    ModalComponent,
+    LoaderzinComponent
   ],
   imports: [
       IonicModule
@@ -24,7 +26,8 @@ import { IonicModule } from "ionic-angular";
     NtSearchbarComponent,
     NtListHeaderComponent,
     NtHeaderComponent,
-    ModalComponent
+    ModalComponent,
+    LoaderzinComponent
   ]
 })
 export class ComponentsModule {}
