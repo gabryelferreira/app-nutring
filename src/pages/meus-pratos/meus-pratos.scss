@@ -1,113 +1,69 @@
 page-meus-pratos {
   
-  
-  .allPratos {
-    display: flex;
-    .date-pratos {
-      * {
-        margin: 0 !important;
-      }
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 90px;
-      height: 100vh !important;
-      overflow-y: scroll;
-      .date-prato {
-        text-align: center;
-        position: relative;
-        height: 84px;
-        width: 100%;
-        box-sizing: border-box;
-        .info-date-prato {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          h1 {
-            font-size: 16px;
-            font-weight: 600;
-            color: #aaa;
-            transition: 0.2s;
-          }
-          h2 {
-            font-size: 14px;
-            color: #aaa;
-            transition: 0.2s;
-          }
-        }
-      }
-      .selected {
-        h1 {
-          transition: 0.2s;
-        }
-        h2 {
-          transition: 0.2s;
-        }
-      }
-    }
 
-    .pratos {
-      position: absolute;
-      width: calc(100% - 90px);
-      left: 90px;
-      .padding-prato {
+  .pratos {
+    position: relative;
+    width: 100%;
+    .padding-prato {
+      position: relative;
+      padding: 24px 24px 14px 24px;
+      box-sizing: border-box;
+      // margin-top: 6px;
+      // margin-bottom: 6px;
+      // box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      .prato {
         position: relative;
-        padding: 24px 24px 14px 24px;
-        box-sizing: border-box;
-        .prato {
-          position: relative;
-          width: 100%;
-          h1 {
-            margin: 0;
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 17px;
-          }
-          p {
-            color: #aaa;
-            font-weight: bold;
-            margin: 0;
-            margin-bottom: 8px;
-            font-size: 12px;
-          }
-          .info-icon {
-            margin-bottom: 5px;
+        width: 100%;
+        h1 {
+          margin: 0;
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 17px;
+        }
+        p {
+          color: #aaa;
+          font-weight: bold;
+          margin: 0;
+          margin-bottom: 8px;
+          font-size: 12px;
+        }
+        .info-icon {
+          margin-bottom: 5px;
+          display: flex;
+          .info {
+            margin-right: 32px;
             display: flex;
-            .info {
-              margin-right: 32px;
+            p {
               display: flex;
-              p {
-                display: flex;
-                margin-left: 5px;
-                color: #aaa;
-              }
+              margin-left: 5px;
+              color: #aaa;
             }
           }
+        }
 
-          .great {
-            background: #27ae60;
-          }
+        .great {
+          background: #27ae60;
+        }
 
-          .warning {
-            background: #f39c12;
-          }
+        .warning {
+          background: #f39c12;
+        }
 
-          .bad {
-            background: #f53d3d;
-          }
+        .bad {
+          background: #f53d3d;
+        }
 
-          .traco {
-            height: 25px;
-            width: 3px;
-            position: absolute;
-            right: 5px;
-            top: 5px;
-          }
+        .traco {
+          height: 25px;
+          width: 3px;
+          position: absolute;
+          right: 5px;
+          top: 5px;
         }
       }
     }
   }
+
   .no-food {
     position: fixed;
     top: 40%;

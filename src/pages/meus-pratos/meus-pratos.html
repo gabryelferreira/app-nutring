@@ -1,26 +1,16 @@
-<!--
-  Generated template for the MeusPratosPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<!-- <ion-header>
+<ion-header>
 
   <ion-navbar color="{{selectedTheme}}">
-    <ion-buttons left>
-      <button ion-button (click)="refreshHistory()">
-        <ion-icon name="clipboard"></ion-icon>
-      </button>
-    </ion-buttons>
-    <ion-title>Histórico</ion-title>
+    <ion-title (click)="abrirDatas()" *ngIf="!loading || !firstLoading" text-left>{{ selectedDate | ntDate }}&nbsp;&nbsp;<ion-icon name="ios-arrow-down"></ion-icon></ion-title>
+    <ion-title *ngIf="loading && firstLoading" text-left>Procurando pratos...</ion-title>
     <ion-buttons end>
-      <button ion-button (click)="refreshHistory()">
-        <ion-icon name="refresh"></ion-icon>
+      <button *ngIf="!loading || !firstLoading" ion-button icon-only (click)="refreshPratos()">
+          <ion-icon style="font-weight: bold;" name="ios-refresh"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons> 
   </ion-navbar>
 
-</ion-header> -->
+</ion-header>
 
 
 <!-- #pageContent fullscreen -->
@@ -28,31 +18,10 @@
 
   <loader *ngIf="loading"></loader>
 
-  <div *ngIf="dateSeparator && dateSeparator.length > 0" class="allPratos padding-bottom">
-
-      <!-- <ion-fab right bottom>
-        <button (click)="goToMontarPrato()" ion-fab color="primary">
-          <ion-icon name="add"></ion-icon>
-        </button>
-      </ion-fab> -->
-
-    <div class="date-pratos">
-
-      <div *ngFor="let date of dateSeparator; let i = index" [class]="date.selected ? 'date-prato selected' : 'date-prato'"
-        (click)="selectDate(i)">
-        <div class="info-date-prato">
-          <h1>{{date.dia}}</h1>
-          <h2>{{date.mes | ntMonth}}</h2>
-        </div>
-      </div>
-
-
-    </div>
 
 
 
-
-    <div class="pratos">
+    <div class="pratos" *ngIf="dateSeparator && dateSeparator.length > 0">
 
       <div *ngFor="let prato of pratos; let i = index" class="padding-prato" (click)="openPrato(prato)">
         <div class="prato">
@@ -78,9 +47,6 @@
 
     </div>
 
-
-
-  </div>
 
   <div class="no-food" *ngIf="!loading && (!dateSeparator || dateSeparator.length == 0)">
     <h1>Seus pratos</h1>

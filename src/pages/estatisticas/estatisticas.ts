@@ -87,7 +87,7 @@ async getMonthsOfPratos(){
   abrirDatas(){
     let datasModal = this.modalCtrl.create("EscolherDataPage", { datas: this.datasConsumo });
     datasModal.onDidDismiss(data => {
-      if (data){
+      if (data && data != this.dataConsumoSelecionada){
         this.dataConsumoSelecionada = data;
         this.getKcalConsumidaNoDia(this.user.id_usuario, data);
       }
