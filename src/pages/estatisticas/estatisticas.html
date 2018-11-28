@@ -53,7 +53,15 @@
         <div class="align-right">
           <h3>Kcal</h3>
         </div>
-        <div *ngIf="kcalDiaria" class="calorias-possiveis">
+        <div *ngIf="kcalDiaria && kcalDiaria - kcalConsumidas >= 0" class="calorias-possiveis great">
+          <p>Total a consumir</p>
+          <h2>{{kcalDiaria | ntNumberKcal}}</h2>
+        </div>
+        <div *ngIf="kcalDiaria && kcalDiaria - kcalConsumidas < 0 &&  kcalDiaria - kcalConsumidas > -150" class="calorias-possiveis warning">
+          <p>Total a consumir</p>
+          <h2>{{kcalDiaria | ntNumberKcal}}</h2>
+        </div>
+        <div *ngIf="kcalDiaria && kcalDiaria - kcalConsumidas <= -150" class="calorias-possiveis bad">
           <p>Total a consumir</p>
           <h2>{{kcalDiaria | ntNumberKcal}}</h2>
         </div>

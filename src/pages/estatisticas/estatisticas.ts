@@ -38,6 +38,12 @@ export class EstatisticasPage {
     this.getData();
   }
 
+  ionViewWillEnter(){
+    if (localStorage.getItem("reloadEstatisticas") == "true"){
+      this.getData();
+    }
+  }
+
   async getData(){
     this.loading = true;
     await this.getUserData();

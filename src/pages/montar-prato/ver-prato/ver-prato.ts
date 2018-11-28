@@ -130,8 +130,8 @@ export class VerPratoPage {
     if (this.where == 'editPrato'){
       this.navCtrl.pop();
     } else {
-      this.navCtrl.popToRoot()
-      this.navCtrl.parent.select(2);
+      localStorage.setItem("reloadEstatisticas", "true");
+      this.navCtrl.popToRoot();
     }
   }
 

@@ -156,11 +156,8 @@ page-estatisticas {
                     width: 200px;
                     height: 200px;
                     left: 49px;
-                    border: 10px solid #03df64;
-                    border-left-color: transparent;
-                    border-right-color: transparent;
-                    border-top-color: transparent;
                     border-radius: 50%;
+                    pointer-events: none;
                     p {
                         position: absolute;
                         bottom: 30px;
@@ -176,6 +173,26 @@ page-estatisticas {
                         font-size: 16px;
                     }
                 }
+                .great {
+                    border: 10px solid #27ae60;
+                    border-left-color: transparent;
+                    border-right-color: transparent;
+                    border-top-color: transparent;
+                  }
+          
+                  .warning {
+                    border: 10px solid #f39c12;
+                    border-left-color: transparent;
+                    border-right-color: transparent;
+                    border-top-color: transparent;
+                  }
+          
+                  .bad {
+                    border: 10px solid #f53d3d;
+                    border-left-color: transparent;
+                    border-right-color: transparent;
+                    border-top-color: transparent;
+                  }
             }
         }
         .buttons {
