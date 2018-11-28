@@ -52,12 +52,15 @@ export class EditProfilePage {
               _settings: SettingsService, private post: ProfilePostService,
               private toastCtrl: ToastController, private camera:Camera) {
     this.user = navParams.get("user");
+<<<<<<< HEAD
     // if (this.user.peso_kg){
     //   // this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
     // }
     // if (this.user.altura_m){
     //   this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
     // }
+=======
+>>>>>>> 2a32513036c7d86ca99d7b1770706b823a18d9b2
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }
 
@@ -66,12 +69,15 @@ export class EditProfilePage {
 
   async ionViewWillEnter() {
     this.user = JSON.parse(localStorage.getItem("userData"));
+<<<<<<< HEAD
     // if (this.user.peso_kg){
     //   this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
     // }
     // if (this.user.altura_m){
     //   this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
     // }
+=======
+>>>>>>> 2a32513036c7d86ca99d7b1770706b823a18d9b2
     let date = this.user.dt_nasc.toString().split("-")
     this.dt_nasc = `${date[2]}/${date[1]}/${date[0]}`
     this.picture = ''
