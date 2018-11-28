@@ -12,18 +12,18 @@
 
 <ion-content>
 
-  <div *ngIf="user.ds_objetivo" class="objetivo objetivo-meta box-shadow-2" [class.hide-objetivo]="!verObjetivo" [class.show-objetivo]="verObjetivo" (click)="editarObjetivo()">
+  <div *ngIf="user.ds_objetivo && !loading" class="objetivo objetivo-meta box-shadow-2" [class.hide-objetivo]="!verObjetivo" [class.show-objetivo]="verObjetivo" (click)="editarObjetivo()">
     <ion-icon name="ios-walk"></ion-icon>
     <p *ngIf="user.cd_objetivo == 'MANTER'">Manter o peso</p>
     <p *ngIf="user.cd_objetivo != 'MANTER'">{{user.ds_objetivo}} {{user.vl_objetivo_kg | ntNumberKcal}}kg</p>
   </div>
 
-  <div *ngIf="!user.ds_objetivo" class="objetivo objetivo-meta box-shadow-2" [class.hide-objetivo]="!verObjetivo" [class.show-objetivo]="verObjetivo" (click)="editarObjetivo()">
+  <div *ngIf="!user.ds_objetivo && !loading" class="objetivo objetivo-meta box-shadow-2" [class.hide-objetivo]="!verObjetivo" [class.show-objetivo]="verObjetivo" (click)="editarObjetivo()">
     <ion-icon name="ios-walk"></ion-icon>
     <p>Definir objetivo</p>
   </div>
 
-  <div *ngIf="user.ds_objetivo" class="objetivo left-0 box-shadow-2" (click)="changeVerObjetivo()">
+  <div *ngIf="user.ds_objetivo && !loading" class="objetivo left-0 box-shadow-2" (click)="changeVerObjetivo()">
     <ion-icon *ngIf="verObjetivo" name="ios-eye-off"></ion-icon>
     <ion-icon *ngIf="!verObjetivo" name="ios-eye"></ion-icon>
   </div>
