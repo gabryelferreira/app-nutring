@@ -67,6 +67,7 @@ export class MeusPratosPage {
     this.loading = true;
     let result = await this.post.getMonthsOfPratos(id_usuario);
     if (result.success) {
+      this.dateSeparator = []
       for (var i = 0; i < result.result.length; i++){
         this.dateSeparator.push(result.result[i].full_date);
       }

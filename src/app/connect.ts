@@ -31,7 +31,7 @@ export abstract class Connect {
       }
     } else if (this.method.toUpperCase() == "POST") {
       try {
-        console.log(body);
+        // console.log(body);
         result = await this.http.post(this.url + _function, body, options).toPromise().then();
         console.log("RESULT", result);
         return result;

@@ -19,6 +19,10 @@ export class EstatisticasPage {
   user: types.IUser = {};
   loading: boolean = false;
   loadingKcal: boolean = false;
+  verObjetivo: boolean = true;
+  isObjetivoClicked: boolean = false;
+  
+  kcalDiaria: number = 0;
 
   //info usuario
   kcalConsumidas: number = 0;
@@ -31,7 +35,7 @@ export class EstatisticasPage {
               private get: service.EstatisticasGetService, private modalCtrl: ModalController) {
     _settings.getActiveTheme().subscribe(val => (this.selectedTheme = val));
     this.user = JSON.parse(localStorage.getItem("userData"));
-    this.getData(); 
+    this.getData();
   }
 
   async getData(){
@@ -39,7 +43,15 @@ export class EstatisticasPage {
     await this.getUserData();
     await this.getMonthsOfPratos();
     await this.getKcalConsumidaNoDia(this.user.id_usuario, this.dataConsumoSelecionada);
+    await this.getUserDailyKcal(this.user.id_usuario);
     this.loading = false;
+  }
+
+  async getUserDailyKcal(id_usuario: number){
+    let result = await this.post.getUserDailyKcal(id_usuario);
+    if (result.success){
+      this.kcalDiaria = result.result;
+    }
   }
 
   async getUserData() {
@@ -54,10 +66,10 @@ export class EstatisticasPage {
 async getMonthsOfPratos(){
   let result = await  this.post.getMonthsOfPratos(this.user.id_usuario);
   if (result.success){
+    this.datasConsumo = [];
     for (var i = 0; i < result.result.length; i++){
       this.datasConsumo.push(result.result[i].full_date);
     }
-    console.log("datas = ", this.datasConsumo)
     if (this.datasConsumo.length > 0){
       this.dataConsumoSelecionada = this.datasConsumo[0];
     }
@@ -93,6 +105,20 @@ async getMonthsOfPratos(){
       }
     });
     datasModal.present();
+  }
+
+  editarObjetivo(){
+    let objetivoModal = this.modalCtrl.create("EditarObjetivoPage", { cd_objetivo: this.user.cd_objetivo, vl_objetivo_kg: this.user.vl_objetivo_kg, user: this.user })
+    objetivoModal.onDidDismiss(data => {
+      if (data && data == "salvo")
+        this.getData();
+    })
+    objetivoModal.present();
+  }
+
+  changeVerObjetivo(){
+    this.isObjetivoClicked = true;
+    this.verObjetivo = !this.verObjetivo;
   }
 
 }

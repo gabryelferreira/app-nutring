@@ -32,4 +32,8 @@ export class EstatisticasPostService extends Connect {
         return this.callMethod("getMonthsOfPratos", { id_usuario });
     }
 
+    getUserDailyKcal(id_usuario: number){
+        return this.callMethod("getUserDailyKcal", { id_usuario });
+    }
+
 }

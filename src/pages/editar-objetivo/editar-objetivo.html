@@ -1,0 +1,80 @@
+<ion-header>
+
+  <ion-navbar color="{{selectedTheme}}">
+      <ion-buttons end>
+        <button ion-button icon-only (click)="dismiss()">
+            <ion-icon name="md-close"></ion-icon>
+        </button>
+      </ion-buttons>
+    <ion-title text-left>Alterar objetivo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content id="page">
+
+  <form class="register">
+    <div class="divider-item">
+      Seu peso
+    </div>
+    <div class="register-info">
+      <div class="text-inside">
+        <h3>KG</h3>
+      </div>
+      <input class="input-text" autocomplete="off" type="text" maxlength="30" [(ngModel)]="user.peso_kg" name="peso_kg" (keypress)="salvarValor('peso', user.peso_kg, $event)" (keyup)="validarValor(user.peso_kg)">
+    </div>
+
+    <div class="divider-item">
+      Sua altura
+    </div>
+    <div class="register-info">
+      <div class="text-inside">
+        <h3>M</h3>
+      </div>
+      <input class="input-text" autocomplete="off" type="text" maxlength="30" [(ngModel)]="user.altura_m" name="altura_m" (keypress)="salvarValor('altura', user.altura_m, $event)" (keyup)="validarValor(user.altura_m)">
+    </div>
+
+    <div class="divider-item">
+      Seu objetivo
+    </div>
+    <div class="register-info">
+      <img src="../../assets/icones/genero.png">
+      <!-- <p *ngIf="!cd_objetivo" id="float-select">Selecione seu objetivo</p> -->
+      <select [(ngModel)]="cd_objetivo" (ngModelChange)="modelChangeObjetivo()" name="sexo">
+        <option value="PERDER">Perder peso</option>
+        <option value="GANHAR">Ganhar peso</option>
+        <option value="MANTER">Manter o peso</option>
+      </select>
+    </div>
+
+    <div *ngIf="cd_objetivo && cd_objetivo != 'MANTER'" class="divider-item">
+      Quantos quilos deseja {{ds_objetivo}}?
+    </div>
+    <div *ngIf="cd_objetivo && cd_objetivo != 'MANTER'" class="register-info">
+      <div class="text-inside">
+        <h3>KG</h3>
+      </div>
+      <input class="input-text" autocomplete="off" type="text" maxlength="30" [(ngModel)]="vl_objetivo_kg" name="vl_objetivo_kg" (keypress)="salvarValor('objetivo', vl_objetivo_kg, $event)" (keyup)="validarValor(vl_objetivo_kg)">
+    </div>
+    <div class="register-info">
+      <button [disabled]="!cd_objetivo || 
+              (cd_objetivo && cd_objetivo != 'MANTER' && !vl_objetivo_kg) 
+              || vl_objetivo_kg == ',' 
+              || vl_objetivo_kg == '.' 
+              || (vl_objetivo_kg == 0 
+              && cd_objetivo != 'MANTER')
+              || user.altura_m == ',' 
+              || user.altura_m == '.'
+              || user.altura_m == 0
+              || user.peso_kg == ',' 
+              || user.peso_kg == '.'
+              || user.peso_kg == 0
+              " type="submit" class="green" *ngIf="!salvando" (click)="validarESalvar()">Salvar objetivo</button>
+      <button *ngIf="salvando" class="green" ion-button full>
+          <ion-spinner color="white" name="dots"></ion-spinner>
+      </button>
+    </div>
+  </form>
+
+</ion-content>

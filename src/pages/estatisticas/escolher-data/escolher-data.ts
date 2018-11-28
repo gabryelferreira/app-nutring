@@ -29,7 +29,7 @@ export class EscolherDataPage {
   }
 
   dismiss(data?: any) {
-      this.viewCtrl.dismiss(data);
-    }
+    this.viewCtrl.dismiss(data);
+  }
 
 }

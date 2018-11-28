@@ -41,6 +41,9 @@ export interface IUser {
   cep?: string;
   telefone?: string;
   senha?: string;
+  ds_objetivo?: string;
+  cd_objetivo?: string;
+  vl_objetivo_kg?: string;
 }
 
 export interface IFoodApi {

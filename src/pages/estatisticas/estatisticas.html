@@ -12,6 +12,22 @@
 
 <ion-content>
 
+  <div *ngIf="user.ds_objetivo" class="objetivo objetivo-meta box-shadow-2" [class.hide-objetivo]="!verObjetivo" [class.show-objetivo]="verObjetivo" (click)="editarObjetivo()">
+    <ion-icon name="ios-walk"></ion-icon>
+    <p *ngIf="user.cd_objetivo == 'MANTER'">Manter o peso</p>
+    <p *ngIf="user.cd_objetivo != 'MANTER'">{{user.ds_objetivo}} {{user.vl_objetivo_kg | ntNumberKcal}}kg</p>
+  </div>
+
+  <div *ngIf="!user.ds_objetivo" class="objetivo objetivo-meta box-shadow-2" [class.hide-objetivo]="!verObjetivo" [class.show-objetivo]="verObjetivo" (click)="editarObjetivo()">
+    <ion-icon name="ios-walk"></ion-icon>
+    <p>Definir objetivo</p>
+  </div>
+
+  <div *ngIf="user.ds_objetivo" class="objetivo left-0 box-shadow-2" (click)="changeVerObjetivo()">
+    <ion-icon *ngIf="verObjetivo" name="ios-eye-off"></ion-icon>
+    <ion-icon *ngIf="!verObjetivo" name="ios-eye"></ion-icon>
+  </div>
+
   <div class="foto-top">
     <img src="../../assets/imgs/background-register.png">
   </div>
@@ -36,6 +52,10 @@
         </div>
         <div class="align-right">
           <h3>Kcal</h3>
+        </div>
+        <div *ngIf="kcalDiaria" class="calorias-possiveis">
+          <p>Total a consumir</p>
+          <h2>{{kcalDiaria | ntNumberKcal}}</h2>
         </div>
       </div>
     </div>
