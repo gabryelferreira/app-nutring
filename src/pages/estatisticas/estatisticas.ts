@@ -40,6 +40,7 @@ export class EstatisticasPage {
 
   ionViewWillEnter(){
     if (localStorage.getItem("reloadEstatisticas") == "true"){
+      localStorage.removeItem("reloadEstatisticas");
       this.getData();
     }
   }

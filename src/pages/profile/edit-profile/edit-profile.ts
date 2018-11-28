@@ -48,19 +48,20 @@ export class EditProfilePage {
   checkOptional = [{field: 'peso_kg', name: 'Peso', end: 'inválido'}, {field: 'altura_m', name: 'Altura', end: 'inválida'}];
   optionalData = [];
 
+  backup_peso;
+  backup_altura;
+  backupSelecionado;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, 
               _settings: SettingsService, private post: ProfilePostService,
               private toastCtrl: ToastController, private camera:Camera) {
     this.user = navParams.get("user");
-<<<<<<< HEAD
     // if (this.user.peso_kg){
     //   // this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
     // }
     // if (this.user.altura_m){
     //   this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
     // }
-=======
->>>>>>> 2a32513036c7d86ca99d7b1770706b823a18d9b2
     _settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }
 
@@ -69,15 +70,12 @@ export class EditProfilePage {
 
   async ionViewWillEnter() {
     this.user = JSON.parse(localStorage.getItem("userData"));
-<<<<<<< HEAD
     // if (this.user.peso_kg){
     //   this.user.peso_kg = this.user.peso_kg.match(/^-?\d+(?:\.\d{0,2})?/)[0]
     // }
     // if (this.user.altura_m){
     //   this.user.altura_m = this.user.altura_m.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
     // }
-=======
->>>>>>> 2a32513036c7d86ca99d7b1770706b823a18d9b2
     let date = this.user.dt_nasc.toString().split("-")
     this.dt_nasc = `${date[2]}/${date[1]}/${date[0]}`
     this.picture = ''
@@ -95,6 +93,7 @@ export class EditProfilePage {
   }
 
   async updateUserInfo(){
+    this.formatarCamposNumericos();
     if (!this.validateDtNasc()){
       this.showToast("Data de nascimento inválida", "top");
       return false;
@@ -164,11 +163,60 @@ export class EditProfilePage {
     toast.present(toast);
   }
 
-  validNumericField(field){
-    if (field && field.length > 5)
+  salvarValor(campo, valor, event){
+    console.log("SALVANDO O VALOR DO CAMPO '" + campo + "' que é = " + valor);
+    if (valor && valor.length > 5)
       return false;
-    field = (0+field).replace(/^-?\d+(?:\.\d{0,2})?/)[0]
-      
+    if (event && (event.key == "." || event.key == ","))
+      if (valor && valor.length > 0 && (valor.indexOf(',') != -1 || valor.indexOf('.') != -1))
+        return false;
+
+    this.backup_peso = this.user.peso_kg;
+    this.backup_altura = this.user.altura_m;
+    this.backupSelecionado = campo;
+  }
+
+  validarValor(valor){
+    let regexp = /^\d*\.?\d*\,?\d*$/;
+    let field = valor;
+    console.log("backup selecionado é o " + this.backupSelecionado);
+    console.log("valor eh ", field)
+    if (!regexp.test(field)){
+      console.log("nao passou no teste bb")
+      if (this.backupSelecionado == 'peso'){
+        console.log("eh o peso")
+        this.user.peso_kg = this.backup_peso;
+      } else if (this.backupSelecionado == 'altura'){
+        this.user.altura_m = this.backup_altura;
+      }
+    }
+    console.log("SAINDO DA VALIDACAO")
+    this.backup_peso = "";
+    this.backup_altura = "";
+  }
+
+  async formatarCamposNumericos(){
+    let valid = true;
+
+    //VALIDACAO PESO
+    if (this.user.peso_kg && this.user.peso_kg.length > 0){
+      if (this.user.peso_kg.indexOf(',') != -1){
+        this.user.peso_kg = this.user.peso_kg.replace(',', '.');
+      }
+      if (this.user.peso_kg.indexOf('.') != -1 && this.user.peso_kg[this.user.peso_kg.length - 1] == '.'){
+        this.user.peso_kg = this.user.peso_kg.replace(".", "");
+      }
+    }
+
+    //VALIDACAO ALTURA, SIM, VARIOS CÓDIGO Q PODIAM SER REDUZIDO PQ FODA-SE
+    if (this.user.altura_m && this.user.altura_m.length > 0){
+      if (this.user.altura_m.indexOf(',') != -1){
+        this.user.altura_m = this.user.altura_m.replace(',', '.');
+      }
+      if (this.user.altura_m.indexOf('.') != -1 && this.user.altura_m[this.user.altura_m.length - 1] == '.'){
+        this.user.altura_m = this.user.altura_m.replace(".", "");
+      }
+    }
   }
 
   openUpdateLoginInfo(){

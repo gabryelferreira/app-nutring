@@ -58,7 +58,8 @@ export class EditarObjetivoPage {
     if (this.cd_objetivo == "MANTER"){
       this.vl_objetivo_kg = null;
     }
-    this.ds_objetivo = this.cd_objetivo.toLowerCase();
+    if (this.cd_objetivo)
+      this.ds_objetivo = this.cd_objetivo.toLowerCase();
   }
 
   salvarValor(campo, valor, event){
@@ -104,12 +105,34 @@ export class EditarObjetivoPage {
 
   async validarESalvar(){
     let valid = true;
+
+    //VALIDACAO OBJETIVO
     if (this.vl_objetivo_kg && this.vl_objetivo_kg.length > 0){
-      if (this.vl_objetivo_kg.indexOf('.') != -1 && this.vl_objetivo_kg[this.vl_objetivo_kg.length - 1] == '.'){
-        valid = false;
+      if (this.vl_objetivo_kg.indexOf(',') != -1){
+        this.vl_objetivo_kg = this.vl_objetivo_kg.replace(',', '.');
       }
-      if (this.vl_objetivo_kg.indexOf(',') != -1 && this.vl_objetivo_kg[this.vl_objetivo_kg.length - 1] == ','){
-        valid = false;
+      if (this.vl_objetivo_kg.indexOf('.') != -1 && this.vl_objetivo_kg[this.vl_objetivo_kg.length - 1] == '.'){
+        this.vl_objetivo_kg = this.vl_objetivo_kg.replace('.', "");
+      }
+    }
+
+    //VALIDACAO PESO
+    if (this.user.peso_kg && this.user.peso_kg.length > 0){
+      if (this.user.peso_kg.indexOf(',') != -1){
+        this.user.peso_kg = this.user.peso_kg.replace(',', '.');
+      }
+      if (this.user.peso_kg.indexOf('.') != -1 && this.user.peso_kg[this.user.peso_kg.length - 1] == '.'){
+        this.user.peso_kg = this.user.peso_kg.replace(".", "");
+      }
+    }
+
+    //VALIDACAO ALTURA, SIM, VARIOS CÓDIGO Q PODIAM SER REDUZIDO PQ FODA-SE
+    if (this.user.altura_m && this.user.altura_m.length > 0){
+      if (this.user.altura_m.indexOf(',') != -1){
+        this.user.altura_m = this.user.altura_m.replace(',', '.');
+      }
+      if (this.user.altura_m.indexOf('.') != -1 && this.user.altura_m[this.user.altura_m.length - 1] == '.'){
+        this.user.altura_m = this.user.altura_m.replace(".", "");
       }
     }
     if (valid){
@@ -117,6 +140,8 @@ export class EditarObjetivoPage {
       await this.salvarDadosPessoais();
       await this.salvarObjetivo();
       this.salvando = false;
+    } else {
+      console.log("campos inválidos")
     }
   }
 

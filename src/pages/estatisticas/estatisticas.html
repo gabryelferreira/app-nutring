@@ -37,9 +37,13 @@
   <div class="estatisticas-geral" *ngIf="!loading">
     <div class="round">
       <div class="inside">
-        <div (click)="abrirDatas()" class="align-center">
+        <div *ngIf="dataConsumoSelecionada" (click)="abrirDatas()" class="align-center">
           <p>{{dataConsumoSelecionada | ntDateBr}}</p>
           <ion-icon name="ios-arrow-down"></ion-icon>
+        </div>
+        <div *ngIf="!dataConsumoSelecionada" class="align-center">
+          <p><br></p>
+          <!-- <ion-icon name="ios-arrow-down"></ion-icon> -->
         </div>
         <div class="align-left">
           <h3 class="dar-margin-top">Calorias</h3>

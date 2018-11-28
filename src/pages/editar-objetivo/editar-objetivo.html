@@ -22,7 +22,7 @@
       <div class="text-inside">
         <h3>KG</h3>
       </div>
-      <input class="input-text" autocomplete="off" type="text" maxlength="30" [(ngModel)]="user.peso_kg" name="peso_kg" (keypress)="salvarValor('peso', user.peso_kg, $event)" (keyup)="validarValor(user.peso_kg)">
+      <input class="input-text" autocomplete="off" type="tel" maxlength="30" [(ngModel)]="user.peso_kg" name="peso_kg" (keypress)="salvarValor('peso', user.peso_kg, $event)" (keyup)="validarValor(user.peso_kg)" placeholder="Digite seu peso">
     </div>
 
     <div class="divider-item">
@@ -32,7 +32,7 @@
       <div class="text-inside">
         <h3>M</h3>
       </div>
-      <input class="input-text" autocomplete="off" type="text" maxlength="30" [(ngModel)]="user.altura_m" name="altura_m" (keypress)="salvarValor('altura', user.altura_m, $event)" (keyup)="validarValor(user.altura_m)">
+      <input class="input-text" autocomplete="off" type="tel" maxlength="30" [(ngModel)]="user.altura_m" name="altura_m" (keypress)="salvarValor('altura', user.altura_m, $event)" (keyup)="validarValor(user.altura_m)" placeholder="Digite sua altura">
     </div>
 
     <div class="divider-item">
@@ -40,7 +40,7 @@
     </div>
     <div class="register-info">
       <img src="../../assets/icones/genero.png">
-      <!-- <p *ngIf="!cd_objetivo" id="float-select">Selecione seu objetivo</p> -->
+      <p *ngIf="!cd_objetivo" id="float-select">Selecione seu objetivo</p>
       <select [(ngModel)]="cd_objetivo" (ngModelChange)="modelChangeObjetivo()" name="sexo">
         <option value="PERDER">Perder peso</option>
         <option value="GANHAR">Ganhar peso</option>
@@ -55,7 +55,7 @@
       <div class="text-inside">
         <h3>KG</h3>
       </div>
-      <input class="input-text" autocomplete="off" type="text" maxlength="30" [(ngModel)]="vl_objetivo_kg" name="vl_objetivo_kg" (keypress)="salvarValor('objetivo', vl_objetivo_kg, $event)" (keyup)="validarValor(vl_objetivo_kg)">
+      <input class="input-text" autocomplete="off" type="tel" maxlength="30" [(ngModel)]="vl_objetivo_kg" name="vl_objetivo_kg" (keypress)="salvarValor('objetivo', vl_objetivo_kg, $event)" (keyup)="validarValor(vl_objetivo_kg)" placeholder="Digite quanto deseja {{ds_objetivo}}">
     </div>
     <div class="register-info">
       <button [disabled]="!cd_objetivo || 

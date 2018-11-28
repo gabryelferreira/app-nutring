@@ -80,6 +80,7 @@ export class InfoPratoPage {
     if (result.success){
       localStorage.setItem("loadHistorico", "true");
       localStorage.setItem("loadRefeicoes", "true");
+      localStorage.setItem("reloadEstatisticas", "true");
       this.popupDelete = false;
       this.popupCheck = true;
       this.reloadUserInfo();
