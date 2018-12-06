@@ -74,6 +74,10 @@ export class LoginPage {
     this.navCtrl.push('RegisterPage');
   }
 
+  goToForgotPass() {
+    this.navCtrl.push('ForgotPassPage');
+  }
+
   loginFacebook() {
     this.setLoadingFacebookLogin(true);
     this.fb
