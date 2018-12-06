@@ -19,18 +19,36 @@ import { ForgotPassPostService } from './forgot-pass.service';
 })
 export class ForgotPassPage {
   user = {
-    email: "",
-    senha: ""
+    email: ""
   };
-  validLogin = false
+  
+  loading: boolean = false;
+
+  popupNaoEncontrado: boolean = false;
+  popupEnviado: boolean = false;
+
+  textNaoEncontrado: string = "O e-mail inserido <b>não foi encontrado.</b>";
+  textEnviado: string = "As instruções para recuperação de senha <b>foram enviadas para seu e-mail.</b>"
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private post: ForgotPassPostService) {
   }
 
   async forgotPass(){
+    this.loading = true;
     let result = await this.post.forgotPass(this.user.email);
     if (result.success){
-      
+      if (result.result == "INVALID_EMAIL"){
+        this.popupNaoEncontrado = true;
+      } else if (result.result == true){
+        this.popupEnviado = true;
+      }
     }
+    this.loading = false;
+  }
+
+  voltarParaLogin(){
+    this.popupEnviado = false;
+    this.navCtrl.pop();
   }
 
 

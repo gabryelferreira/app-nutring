@@ -1,8 +1,22 @@
 page-forgot-pass {
+
+  
   #page {
     background-image: url("../../assets/imgs/background-login.png");
     background-position: center;
     background-size: cover;
+
+    #go-back {
+      position: fixed;
+      top: 10px;
+      left: 18px;
+      padding: 15px;
+      z-index: 9999;
+      ion-icon {
+        font-size: 34px;
+        color: #27ae60;
+      }
+    }
 
     #logo {
       position: absolute;

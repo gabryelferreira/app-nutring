@@ -1,4 +1,18 @@
+
+
+<modal *ngIf="popupNaoEncontrado" [btnConfirm]="'Ok'" type="check"
+  (onConfirm)="popupNaoEncontrado = false" [text]="textNaoEncontrado"
+  [title]="'Ocorreu um erro!'"></modal>
+
+  <modal *ngIf="popupEnviado" [btnConfirm]="'Ok'" type="check"
+  (onConfirm)="voltarParaLogin()" [text]="textEnviado"
+  [title]="'E-mail enviado'"></modal>
+
 <ion-content id="page">
+
+  <div (click)="voltarParaLogin()" id="go-back">
+    <ion-icon name="ios-arrow-back"></ion-icon>
+  </div>
 
   <div id="logo">
     <img [class.small]="show" src="../../assets/imgs/nutring-color.png">
@@ -12,8 +26,8 @@
     </div>
 
     <div class="login-info">
-      <button [disabled]="!user.email || (user.email && user.email.length == 0)" type="submit" class="green" *ngIf="!loadingLogin" (click)="forgotPass()">Confirmar</button>
-      <button *ngIf="loadingLogin" class="green">
+      <button [disabled]="!user.email || (user.email && user.email.length == 0)" type="submit" class="green" *ngIf="!loading" (click)="forgotPass()">Confirmar</button>
+      <button *ngIf="loading" class="green">
         <ion-spinner color="white" name="dots"></ion-spinner>
       </button>
     </div>
