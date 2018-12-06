@@ -31,4 +31,24 @@ page-contact-messages {
         }
     }
 
+    .centralizar {
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        h2 {
+          color: #aaa;
+          font-weight: bold;
+          font-size: 16px;
+        }
+        p {
+          font-weight: bold;
+          color: #aaa;
+          font-size: 14px;
+        }
+      }
+
 }

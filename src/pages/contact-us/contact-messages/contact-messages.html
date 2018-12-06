@@ -16,6 +16,12 @@
 <ion-content>
   <loader *ngIf="loading"></loader>
 
+  <div class="centralizar" *ngIf="!loading && (!messagesByDate || (messagesByDate && messagesByDate.length == 0))">
+    <img src="../../../assets/imgs/folhinha_da_macunha.png">
+    <h2></h2>
+    <p>Você não possui mensagens com nosso suporte.</p>
+  </div>
+
   <div *ngIf="messages">
 
     <div *ngFor="let messageByDate of messagesByDate">
