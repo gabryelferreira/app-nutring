@@ -22,7 +22,7 @@ export abstract class Connect {
     let body = urlencode(data);
     if (this.method.toUpperCase() == "GET") {
       try {
-        result = await this.http.get(this.url + _function, options).toPromise().then();
+        result = await this.http.get(this.url + _function + "?" + body, options).toPromise().then();
         console.log("RESULT", result);
         return result;
       } catch (err) {

@@ -9,11 +9,11 @@ export class EstatisticasGetService extends Connect {
     }
 
     getKcalConsumidaNoDia(id_usuario: number, dt_consumo: string){
-        return this.callMethod("getKcalConsumidaNoDia?id_usuario=" + id_usuario + "&dt_consumo=" + dt_consumo);
+        return this.callMethod("getKcalConsumidaNoDia", { id_usuario, dt_consumo });
     }
 
     getTudoConsumidoNoDia(id_usuario: number, dt_consumo: string){
-        return this.callMethod("getTudoConsumidoNoDia?id_usuario=" + id_usuario + "&dt_consumo=" + dt_consumo);
+        return this.callMethod("getTudoConsumidoNoDia", { id_usuario, dt_consumo });
     }
 
 }
