@@ -103,6 +103,7 @@ export class LoginPage {
         this.showToast("Ocorreu um erro! Tente novamente.", "top");
       } else {
         let userData = result.result;
+        console.log("user dataaaaa", userData)
         localStorage.setItem("userData", JSON.stringify(userData));
         if (userData.acessos == 1){
           this.navCtrl.setRoot("IntroductionPage");

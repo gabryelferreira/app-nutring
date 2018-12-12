@@ -1,11 +1,12 @@
 import { Connect } from "../../app/connect";
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { NavController } from "ionic-angular";
 
 @Injectable()
 export class SearchGetService extends Connect {
-  constructor(private _http: HttpClient) {
-    super(_http, "get");
+  constructor(private _http: HttpClient, private _navCtrl: NavController) {
+    super(_http, "get", _navCtrl);
   }
 
   findFoods() {
@@ -15,8 +16,8 @@ export class SearchGetService extends Connect {
 
 @Injectable()
 export class SearchPostService extends Connect {
-  constructor(private _http: HttpClient) {
-    super(_http, "post");
+  constructor(private _http: HttpClient, private _navCtrl: NavController) {
+    super(_http, "post", _navCtrl);
   }
 
   getFood(food: string, offset: number = 0, limit:number = 10) {

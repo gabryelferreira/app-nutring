@@ -100,9 +100,9 @@ export class SettingsPage {
   }
 
   logout() {
-    localStorage.clear()
-    location.href = '/'
-    // this.navCtrl.push('LoginPage')
+    localStorage.clear();
+    location.href = '/';
+    // this.navCtrl.push('LoginPage');
   }
 
 }
