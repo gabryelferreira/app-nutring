@@ -3,8 +3,8 @@ import { urlencode } from "./url";
 import { NavController } from "ionic-angular";
 
 export abstract class Connect {
-  // url: string = "http://nutring.com.br/api/";
-  url: string = "http://localhost/nutring-api/";
+  url: string = "http://nutring.com.br/api/";
+  // url: string = "http://localhost/nutring-api/";
 
   headers = {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"};
 
