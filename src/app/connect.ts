@@ -32,11 +32,9 @@ export abstract class Connect {
         result = await this.http.get(this.url + _function + "?" + body, options).toPromise().then();
         console.log("RESULT", result);
         let error = await this.treatError(result);
-        if (error){
+        if (error)
           await this.logoutUser();
-        } else {
-          return result;
-        }
+        return result;
       } catch (err) {
         console.error(err);
         return "error";
@@ -47,11 +45,9 @@ export abstract class Connect {
         result = await this.http.post(this.url + _function, body, options).toPromise().then();
         console.log("RESULT", result);
         let error = await this.treatError(result);
-        if (error){
+        if (error)
           await this.logoutUser();
-        } else {
-          return result;
-        }
+        return result;
       } catch (err) {
         console.error(err);
         return "error";
