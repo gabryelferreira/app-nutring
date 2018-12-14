@@ -95,6 +95,8 @@
       "cordova-plugin-camera": {},
       "cordova-plugin-appminimize": {}
     },
-    "platforms": []
+    "platforms": [
+      "android"
+    ]
   }
 }

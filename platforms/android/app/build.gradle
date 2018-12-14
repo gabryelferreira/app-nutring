@@ -26,11 +26,10 @@ buildscript {
             url "https://maven.google.com"
         }
         jcenter()
-      google()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.0.1'
     }
 }
 
@@ -92,6 +91,10 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "../cordova-support-google-services/nutring-build.gradle"
+apply from: "../phonegap-plugin-multidex/nutring-multidex.gradle"
+apply from: "../cordova-plugin-badge/nutring-badge.gradle"
+apply from: "../cordova-plugin-local-notification/nutring-localnotification.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras1 = file('build-extras.gradle').exists()
@@ -266,6 +269,13 @@ dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
+    compile "com.android.support:support-annotations:27.+"
+    compile "com.facebook.android:facebook-android-sdk:4.+"
+    compile "com.android.support:support-v4:24.1.1+"
+    compile "com.android.support:support-v13:27.+"
+    compile "me.leolin:ShortcutBadger:1.1.17@aar"
+    compile "com.google.firebase:firebase-messaging:11.6.2"
+    compile "com.android.support:support-v4:26.+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

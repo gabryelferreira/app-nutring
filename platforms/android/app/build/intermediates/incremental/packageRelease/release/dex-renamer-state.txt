@@ -1,0 +1,4 @@
+#Fri Dec 14 00:50:38 BRST 2018
+base.0=C\:\\app-nutring\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

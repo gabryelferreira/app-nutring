@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">726041241127-h4v71uiaoj85id87dtn0pio5ndimjgie.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://nutring-215702.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">726041241127</string>
+    <string name="google_api_key" translatable="false">AIzaSyAQ8u5QjcPOgPzExwU9rCMO5iRpKfpJIKI</string>
+    <string name="google_app_id" translatable="false">1:726041241127:android:2b54506283e01d1e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAQ8u5QjcPOgPzExwU9rCMO5iRpKfpJIKI</string>
+    <string name="google_storage_bucket" translatable="false">nutring-215702.appspot.com</string>
+    <string name="project_id" translatable="false">nutring-215702</string>
+</resources>
